@@ -1,0 +1,108 @@
+<div class="page-title-area">
+  <div class="container">
+    <div class="page-title-content">
+      <!-- <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li>Enquiry Form</li>
+            </ul> -->
+      <h2>SLP Enquiry Form</h2>
+    </div>
+  </div>
+  <div class="shape9"><img src="assets/img/shape8.svg" alt="image" /></div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="dsform">
+        <form id="dsform" (ngSubmit)="eformData()">
+          <label for="name">Name<span>*</span></label>
+          <input
+            type="text"
+            id="name"
+            class="dsformi"
+            name="slpefname"
+            placeholder="Enter Your Name"
+            [(ngModel)]="slpefname"
+          />
+
+          <label for="email">Email<span>*</span></label>
+          <input
+            type="email"
+            id="email"
+            class="dsformi"
+            name="slpefemail"
+            placeholder="Email"
+            [(ngModel)]="slpefemail"
+          />
+
+          <label for="phone">Phone Number<span>*</span></label>
+          <input
+            type="number"
+            id="mnumber"
+            class="dsformi user_number"
+            name="slpefphone"
+            placeholder="Mobile Number"
+            [(ngModel)]="slpefphone"
+          />
+
+          <label for="course">Course<span>*</span></label>
+          <input
+            type="text"
+            id="course"
+            class="dsformi"
+            name="slpefcourse"
+            placeholder="Course"
+            [(ngModel)]="slpefcourse"
+          />
+
+          <label for="city">City<span>*</span></label>
+          <input
+            type="text"
+            id="city"
+            class="dsformi"
+            placeholder="City"
+            name="slpefcity"
+            [(ngModel)]="slpefcity"
+          />
+          <br /><br />
+          <!-- <ngx-recaptcha2 
+                        [siteKey]="siteKey"
+                        [(ngModel)]="recaptchaValue"
+                        name="recaptchaValue"
+                        required>
+                    </ngx-recaptcha2><br> -->
+          <input
+            type="submit"
+            value="Submit"
+            id="efsubmit"
+            class="btn btn-primary"
+          />
+        </form>
+      </div>
+      <!-- <div class="dsform">
+                <label for="name">Name<span>*</span></label>
+                <input type="text" id="name" class="dsformi" name="name" placeholder="Enter Your Name">
+            
+                <label for="email">Email<span>*</span></label>
+                <input type="email" id="email" class="dsformi" name="email" placeholder="Email">
+            
+                <label for="phone">Phone Number<span>*</span></label>
+                <input type="number" id="mnumber" class="dsformi" name="phone" placeholder="Mobile Number">
+            
+                <label for="course">Course<span>*</span></label>
+                <input type="text" id="course" class="dsformi" name="course" placeholder="Course">
+            
+                <label for="city">City<span>*</span></label>
+                <input type="text" id="city" class="dsformi" name="city" placeholder="City">
+                <br>
+                <input type="submit" value="Submit">
+            </div> -->
+    </div>
+    <div class="col-lg-6">
+      <div class="frimg">
+        <img src="../../../../assets/img/frimg.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

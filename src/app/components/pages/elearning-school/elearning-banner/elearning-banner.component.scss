@@ -1,0 +1,394 @@
+// .main-banner {
+//     position: relative;
+//     z-index: 1;
+//     background: {
+//         position: bottom right;
+//         repeat: no-repeat;
+//         size: cover;
+//     };
+//     padding: {
+//         top: 60px;
+//     };
+//     .container-fluid {
+//         max-width: 1395px;
+
+//         .row {
+//             margin: {
+//                 left: 0;
+//                 right: 0;
+//             };
+//             .col-lg-6 {
+//                 padding: {
+//                     left: 0;
+//                     right: 0;
+//                 };
+//             }
+//         }
+//     }
+// }
+// .main-banner-content {
+//     max-width: 595px;
+//     position: relative;
+//     top: -60px;
+//     padding-right: 30px;
+
+//     h1 {
+//         margin-bottom: 25px;
+//         font: {
+//             size: 48px;
+//             weight: 800;
+//         };
+//     }
+//     p {
+//         max-width: 450px;
+//         line-height: 1.8;
+//         font: {
+//             weight: 600;
+//             size: 17px;
+//         };
+//     }
+//     .default-btn {
+//         margin-top: 10px;
+//     }
+// }
+// .main-banner-courses-list {
+//     position: relative;
+//     z-index: 1;
+
+//     .row {
+//         margin: {
+//             right: calc(var(--bs-gutter-x) / -2) !important;
+//             left: calc(var(--bs-gutter-x) / -2) !important;
+//         };
+//         .col-lg-6 {
+//             padding: {
+//                 left: calc(var(--bs-gutter-x) / 2) !important;
+//                 right: calc(var(--bs-gutter-x) / 2) !important;
+//             };
+//             &:nth-child(1) {
+//                 .single-courses-box {
+//                     margin-top: 90px;
+//                 }
+//             }
+//         }
+//     }
+//     .single-courses-box {
+//         margin-bottom: 0;
+
+//         .courses-content {
+//             padding: 20px;
+//         }
+//     }
+// }
+// @import "../../../common/courses/courses.component.scss";
+
+// @media only screen and (max-width: 767px) {
+
+//     .main-banner {
+//         .container-fluid {
+//             max-width: 100%;
+//         }
+//     }
+//     .main-banner-content {
+//         max-width: 100%;
+//         text-align: center;
+//         top: 0;
+//         padding-right: 0;
+
+//         p {
+//             max-width: 100%;
+//             font: {
+//                 weight: 500;
+//                 size: 15px;
+//             };
+//         }
+//         h1 {
+//             margin-bottom: 15px;
+//             font-size: 28px;
+//         }
+//         .default-btn {
+//             margin-top: 5px;
+//         }
+//     }
+//     .main-banner-courses-list {
+//         .row {
+//             .col-lg-6 {
+//                 &:nth-child(1) {
+//                     .single-courses-box {
+//                         margin-top: 0;
+//                     }
+//                 }
+//             }
+//         }
+//         .single-courses-box {
+//             margin-top: 30px !important;
+//         }
+//     }
+
+// }
+// @media only screen and (min-width: 576px) and (max-width: 767px) {
+
+//     .main-banner {
+//         .container-fluid {
+//             max-width: 540px;
+//         }
+//     }
+
+// }
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+//     .main-banner {
+//         .container-fluid {
+//             max-width: 720px;
+//         }
+//     }
+//     .main-banner-content {
+//         max-width: 595px;
+//         top: 0;
+//         padding-right: 0;
+//         text-align: center;
+//         margin: 0 auto;
+
+//         h1 {
+//             margin-bottom: 15px;
+//             font-size: 35px;
+//         }
+//         p {
+//             max-width: 515px;
+//             font-size: 15px;
+//             margin: 0 auto 10px;
+//         }
+//     }
+//     .main-banner-courses-list {
+//         margin-top: 10px;
+
+//         .single-courses-box {
+//             margin-top: 30px !important;
+//         }
+//     }
+
+// }
+// @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+//     .main-banner {
+//         padding-top: 170px;
+
+//         .container-fluid {
+//             max-width: 960px;
+//         }
+//         .col-lg-6 {
+//             flex: 0 0 100%;
+//             max-width: 100%;
+//         }
+//     }
+//     .main-banner-content {
+//         top: 0;
+//         padding-right: 0;
+//         margin-bottom: 60px;
+//         max-width: 605px;
+
+//         p {
+//             max-width: 565px;
+//         }
+//     }
+//     .main-banner-courses-list {
+//         .row {
+//             .col-lg-6 {
+//                 flex: 0 0 50%;
+//                 max-width: 50%;
+//             }
+//             .col-lg-6 {
+//                 &:nth-child(1) {
+//                     .single-courses-box {
+//                         margin-top: 0;
+//                     }
+//                 }
+//                 &:nth-child(2) {
+//                     .single-courses-box {
+//                         margin-top: -60px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+// @media only screen and (min-width: 1200px) and (max-width: 1355px) {
+
+//     .main-banner {
+//         .container-fluid {
+//             max-width: 1165px;
+//         }
+//     }
+//     .main-banner-courses-list {
+//         .single-courses-box {
+//             .courses-content {
+//                 h3 {
+//                     font-size: 22px;
+//                 }
+//             }
+//         }
+//     }
+
+// }
+// @media only screen and (min-width: 1550px) {
+
+//     .main-banner {
+//         .container-fluid {
+//             max-width: 1480px;
+//         }
+//     }
+
+// }
+
+/* home page banner cards style */
+
+.main-banner {
+  position: relative;
+  z-index: 1;
+  // background-image: url(../../assets/img/gray-bg.jpg);
+  background-color: #f8fafc;
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10px;
+}
+
+.bnnrbtn {
+  display: block;
+  background: #1565d8;
+  text-align: center;
+  padding: 11px 47px;
+  width: 80%;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  margin: 5px auto;
+  font-weight: 600;
+}
+@media screen and (max-width: 786px) {
+  .bnnrbtn {
+    font-size: 13px;
+  }
+}
+.bnnrbtn:hover {
+  color: white;
+  transition-duration: 5s;
+}
+.bnnrbt {
+  background: white !important;
+  color: #1565d8 !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* home page title style */
+.main-banner-content {
+  text-align: left;
+}
+.main-banner-content #titleh1 h1 span {
+  color: #f16227;
+  text-align: center;
+  font-size: 53px;
+}
+// #titleh1 span {
+//   font-weight: 800;
+//   color: #000;
+//   font-size: 14px;
+// }
+.main-banner-content #titleh1 h1 {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 787px) {
+  .main-banner {
+    padding-top: 0px;
+  }
+}
+.bnnrcard {
+  /* 		background: #fff;
+      border-radius: 16px;
+      border: 1px solid #cbd5e1;
+      padding: 15px;
+      width: 341px;
+      height: 500px;
+      position: relative;
+      margin-top: -30px;
+      box-shadow: 0 1px 2px 0 rgb(96 97 112 / 16%); */
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+  width: 341px;
+  height: 444px;
+  position: relative;
+  // margin-top: -42px;
+  box-shadow: 0 1px 2px 0 rgb(96 97 112 / 16%);
+}
+
+a#tab-instructor-tab {
+  display: none;
+}
+@media only screen and (max-width: 2000px) and (min-width: 1500px) {
+  .bnnrcard {
+    margin-top: 100px;
+  }
+  #slpImg {
+    max-width: 453px !important;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .bnnrcard {
+    margin-top: 31px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .bnnrcard {
+    margin-top: 26px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .bnnrcard {
+    margin-top: 26px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .bnnrcard {
+    margin-top: 86px;
+  }
+}
+.bnnrcard:hover {
+  box-shadow: 3px 3px 10px gray;
+}
+
+.bcontent {
+  position: absolute;
+  bottom: 10px;
+}
+.card-text {
+  padding: 10px;
+}
+.bnnrcard img {
+  position: absolute;
+  /*     	bottom: 280px; */
+  bottom: 226px;
+  left: 8px;
+}
+@media screen and (max-width: 768px) {
+  .bnnrcard img {
+    position: absolute;
+    bottom: 215px;
+    left: 8px;
+  }
+}
+.bcontent {
+  position: absolute;
+  bottom: 10;
+}
+.bnnrcard .card-body p {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  text-align: justify;
+  font-family: var(--fontFamily);
+}

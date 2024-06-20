@@ -1,0 +1,1475 @@
+<!-- 3 4 scroll display popup -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="text-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closePopup()"
+                    aria-label="Close"></button>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="https://img.freepik.com/free-vector/work-time-concept-illustration_114360-1074.jpg"
+                        class="img-fluid ms-3" width="100%" alt="" />
+                </div>
+                <div class="col-lg-6">
+                    <div id="" class="mt-4">
+                        <form id="csform" class="csvalidationform">
+                            <h3><strong>Heading Here</strong></h3>
+                            <input type="text" id="name" class="cname mt-4" name="scname"
+                                placeholder="Enter Your Name"><br>
+                            <input type="email" id="email" class="cemail" name="scemail"
+                                placeholder="Enter Email Id"><br>
+                            <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber"
+                                placeholder="Enter Phone Number"><br>
+                            <div class="">
+                                <button class="btn btn-primary px-4 py-2" type="button">Book A Free Demo</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- banner text-->
+<div class="container-fluid p-0">
+    <div class="position-relative">
+        <img class="img-fluid" src="https://www.simplilearn.com/ice9/banners/master.jpg" alt="banner img" width="100%"
+            height="100%" />
+        <div class="position-absolute top-0 bottom-0">
+            <div class="container">
+                <div class="row d-flex justify-content-end text-start mt-5 pt-3">
+                    <div class="col-lg-7 left_side_content">
+                        <h1>Data Science</h1>
+                        <h6 class="text-light">Data Science Training Institute in Hyderabad</h6>
+                        <h2>Ranked #1 Data Science Course by <a>Teks Academy</a></h2>
+                        <p>The TEKS Academy 6-month training program covers advanced course curriculum, interview
+                            training sessions, LinkedIn and resume building, and webinars. Our perfectly crafted Data
+                            Science training program helps you learn about data visualisation, predictive modelling,
+                            feature engineering, big data technologies, natural language processing, deep learning, and
+                            many other topics. We have our exclusive branches in Hitec City, Dilsukhnagar, Kukatpally,
+                            Ameerpet, and Secunderabad in Hyderabad. The classroom is designed with more flexibility and
+                            a supportive environment for the students to focus on the course study without any
+                            distractions.</p>
+                        <div class="">
+                            <div class="Collaboration">
+                                <h6>Training Mode :<strong> Offline / Online</strong></h6>
+                                <h6 class="text-light mt-3">Our Associations :<strong> NASSCOM & NSDC</strong></h6>
+                            </div>
+                            <div class="flex-row d-flex mt-2">
+                                <img src="data:image/png;base64,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"
+                                    class="" alt="" width="10%" />
+                                <img src="https://etimg.etb2bimg.com/photo/95713501.cms" class="ms-4" alt=""
+                                    width="10%" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 banner">
+                        <div class="banner">
+                            <div class="col-md-4 right-pannel">
+                                <ul>
+                                    <li><span>Module 1</span><a href="#learning-path-1311">Introduction to R and
+                                            Python</a>
+                                    </li>
+                                    <li><span>Module 2</span><a href="#learning-path-684">Supervised Machine
+                                            Learning</a>
+                                    </li>
+                                    <li><span>Module 3</span><a href="#learning-path-687">Feature Engineering</a></li>
+                                    <li><span>Module 4</span><a href="#learning-path-795">Natural Language
+                                            Processing</a>
+                                    </li>
+                                    <li><span>Module 5</span><a href="#learning-path-1150">Case Studies and Analysis</a>
+                                    </li>
+                                    <li class="master-cert">Course Completion Certificate<span>“Certificate issued on
+                                            the successful completion of the course.”</span></li>
+                                </ul>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary me-5" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        DOWNLOAD SYLLABUS
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- download syllabus button -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="csformmain">
+                    <form id="csform" class="csvalidationform">
+                        <input type="text" id="name" class="cname" name="scname" placeholder="Enter Your Name"><br>
+                        <input type="email" id="email" class="cemail" name="scemail" placeholder="Enter Email Id"><br>
+                        <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber"
+                            placeholder="Enter Phone Number"><br>
+                        <input type="number" id="course" class="ccourse" name="ccourse"
+                            placeholder="Enter Course Name"><br>
+                        <div class="text-center mb-2">
+                            <button class="btn btn-primary px-3">Download</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- goole review -->
+<div class="container">
+    <div class="flex-row d-flex ms-4" style="font-size: 18px;">
+        <p class="mt-3 text-dark"> ⭐⭐⭐⭐⭐ 4.9 (3578) <br>
+            Google Reviews </p>
+        <p class="mt-3 ms-5 text-dark"> 2135 <br>Enrollments</p>
+        <!-- <h2 class="ms-5 mt-5">4.5</h2>
+        <h5 class="ms-5 mt-5">Switch Up</h5>
+        <h2 class="ms-5 mt-5">4.4</h2> -->
+
+    </div>
+
+    <!--6 cards  -->
+    <div class="container header">
+        <h2 class="">Why Teks </h2>
+        <div class="row d-flex justify-content-center">
+            <div class="col-3">
+                <div class="animate__animated animate bounce cards h-100" style="width: 18rem;">
+                    <div class="container_box mt-3">
+                        <img src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" class="cards-img-top " alt="...">
+                    </div>
+                    <div class="cards-body p-3">
+                        <h6 class="cards-title ms-1">400+ Hours of extensive training</h6>
+                        <p class="cards-text mb-5 ms-1">In depth understanding of topics in both theoretical and
+                            practical
+                            mode from our extensive
+                            training.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="animate__animated animate bounce cards h-100" style="width: 18rem;">
+                    <div class="container_box mt-3">
+                        <img src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" class="cards-img-top " alt="...">
+                    </div>
+                    <div class="cards-body p-3">
+                        <h6 class="cards-title ms-1">100% Placement assistance.</h6>
+                        <p class="cards-text mb-5 ms-1"><strong>TEKS Academy</strong> commit to provide excellent career
+                            pathway for our students.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="animate__animated animate bounce cards h-100" style="width: 18rem;">
+                    <div class="container_box mt-3">
+                        <img src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" class="cards-img-top " alt="...">
+                    </div>
+                    <div class="cards-body p-3">
+                        <h6 class="cards-title ms-1">No cost EMI option</h6>
+                        <p class="cards-text mb-5 ms-1">Join our courses without any financial troubles with the help of
+                            no-cost EMI option. Pay less and
+                            learn more.
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+
+            <div class="col-3">
+                <div class="animate__animated animate bounce cards h-100" style="width: 18rem;">
+                    <div class="container_box mt-3">
+                        <img src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" class="cards-img-top " alt="...">
+                    </div>
+                    <div class="cards-body p-3">
+                        <h6 class="cards-title ms-1">Industry professionals with 10+ years of experience</h6>
+                        <p class="cards-text mb-5 ms-1">Our industry professionals help you clear any doubts and keep
+                            you
+                            stay ahead of the competition.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="animate__animated animate bounce cards h-100" style="width: 18rem;">
+                    <div class="container_box mt-3">
+                        <img src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" class="cards-img-top " alt="...">
+                    </div>
+                    <div class="cards-body p-3">
+                        <h6 class="cards-title ms-1">24/7 Support assistance</h6>
+                        <p class="cards-text mb-5 ms-1">Get instant assistance and solve all your issues within 48 hrs
+                            of
+                            time. Our 24/7 support
+                            assistance give you trouble free learning.
+                        <p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="animate__animated animate bounce cards h-100" style="width: 18rem;">
+                    <div class="container_box mt-3">
+                        <img src="https://i.ibb.co/gRpP2Lm/icons8-online-128.png" class="cards-img-top " alt="...">
+                    </div>
+                    <div class="cards-body p-3">
+                        <h6 class="cards-title ms-1">Globally recognized certification</h6>
+                        <p class="cards-text mb-5 ms-1">Get our ISO, NASSCOM, Skill India, Skill AP, NSDC, DDU-GKY
+                            recognized certification that is valid
+                            globally.
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- book a demo middle button -->
+    <div class="text-center mt-5">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Book A Free Demo
+        </button>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="csformmain">
+                        <form id="csform" class="csvalidationform">
+                            <input type="text" id="name" class="cname" name="scname" placeholder="Enter Your Name"><br>
+                            <input type="email" id="email" class="cemail" name="scemail"
+                                placeholder="Enter Email Id"><br>
+                            <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber"
+                                placeholder="Enter Phone Number"><br>
+                            <input type="number" id="branch" class="cbranch" name="cbranch"
+                                placeholder="Enter Branch Name"><br>
+                            <input type="number" id="date" class="cdate" name="date" placeholder="Enter date"><br>
+                            <div class="text-center mb-2">
+                                <button class="btn btn-primary px-3">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- navbar  -->
+<div class="container-fluid p-0 mt-5">
+    <div class="second-navbar nav-scroller" data-bs-spy="scroll" data-bs-target="#navbar2" data-bs-offset="56">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar2"
+                    aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse py-1 " id="navbar2">
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('studentj')">Student Journey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('curriculum')">Curriculum </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('placedstudent')">Placed
+                                Students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('icons')">Skills You Learn </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('companies')">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('video')">Video & Photo
+                                Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('awards')">Awards </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('certificates')">
+                                Certificates </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('photos')">Highlighted Portfolio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border_right" (click)="scrollToSection('faq')">FAQ </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link border_right" (click)="scrollToSection('keyfeatures')">About</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link border_right" (click)="scrollToSection('featured')">Featured In</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="scrollToSection('branches')">Branches </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- student journey side scrollbar -->
+    <div class="container">
+        <div class="div" id="studentj"></div>
+        <div class="row side_one">
+            <div class="col-lg-5 d-none d-md-block">
+                <ul class="list-group side_two mt-4 header">
+                    <h2 class="text-start">Get Ready for Your IT Career in 10 Steps</h2>
+                    <div class="under_line text-center ten_steps">
+                        <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                            class="" alt="" />
+                    </div>
+                    <div class="p-5 me-5">
+                        <div class="shadow-sm card p-3">
+                            <div id="csformmain">
+                                <form id="csform" class="csvalidationform">
+                                    <input type="text" id="name" class="cname" name="scname"
+                                        placeholder="Enter Your Name"><br>
+                                    <input type="email" id="email" class="cemail" name="scemail"
+                                        placeholder="Enter Email Id"><br>
+                                    <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber"
+                                        placeholder="Enter Phone Number"><br>
+                                    <input type="number" id="course" class="ccourse" name="ccourse"
+                                        placeholder="Enter Course Name"><br>
+                                    <div class="text-center mb-2">
+                                        <button class="btn btn-primary px-3">Download</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-md-7">
+                <div class="side_three row d-flex flex-row mt-5">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Visit</h3>
+                        <p>Visit to TEKS Academy will completely change your future.</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Get Career Guidance</h3>
+                        <p>Interact with our counsellor interacting with us will help you clarify your career path.</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Well Planned Curriculum</h3>
+                        <p>Curriculum is created based on the latest industry trends and on learing objectives that
+                            keeps
+                            you updated.</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Learn From Industry Experts</h3>
+                        <p>Learn from top-level industry experts to gain real time knowledge that helps to get better
+                            job
+                            oppurtunities.</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Assessments</h3>
+                        <p>Students are evaluated to understand their progress through tests & assignments.</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Interview Preparation</h3>
+                        <p>We provide communication & job ready skills includes CRT to our students to express their
+                            skills
+                            clearly and
+                            professionally, which helps them get jobs quickly
+                        </p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Real Time IT Industry Exposure</h3>
+                        <p>Real time IT industry exposure is provided to our students to understand & experience real
+                            work
+                            environment</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Intership</h3>
+                        <p>Get internship opportunities we provide you with industry experience through our internship
+                            program</p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Valid International Certification</h3>
+                        <p>Get International valid certification which adds value to your CV and helps to get right job
+                        </p>
+                    </div>
+                </div>
+                <div class="side_three row">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool7_lp.png"
+                            class="" alt="" />
+                    </div>
+                    <div class="col">
+                        <h3>Placement Assistance</h3>
+                        <p>Get placed at reputed organizations.</p>
+                        <p>We help you develop all the skills that every industry expects from a candidate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- curriculum -->
+    <div class="curriculum_bg" id="curriculum">
+        <div class="container">
+            <div class="header">
+                <h2 class="">Curriculum </h2>
+                <div class="text-center">
+                    <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                        class="why_teks" alt="" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9 bg-white">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner border border-1 p-4">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <div class="side_three">
+                                    <h6>Module 01 - Introduction To Basic Statistics Using R
+                                        And Python</h6>
+                                    <ul>
+                                        <li>Data Types
+                                        <li> Measure Of central tendency</li>
+                                        <li> Measures of Dispersion</li>
+                                        <li> Graphical Techniques</li>
+                                        <li> Skewness & Kurtosis</li>
+                                        <li>Box Plot</li>
+                                        <li>R</li>
+                                        <li> R Studio</li>
+                                        <li> Descriptive Stats in R</li>
+                                        <li>Python (Installation and basic commands) and Libraries</li>
+                                        <li>Jupyter notebook</li>
+                                        <li> Set up GitHub</li>
+                                        <li>Descriptive Stats in Python</li>
+                                        <li> Pandas and Matplotlib / Seaborn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="side_three">
+                                    <h6>Module 02 - Introduction To Basic Statistics Using R
+                                        And Python</h6>
+                                    <ul>
+                                        <li>Data Types
+                                        <li> Measure Of central tendency</li>
+                                        <li> Measures of Dispersion</li>
+                                        <li> Graphical Techniques</li>
+                                        <li> Skewness & Kurtosis</li>
+                                        <li>Box Plot</li>
+                                        <li>R</li>
+                                        <li> R Studio</li>
+                                        <li> Descriptive Stats in R</li>
+                                        <li>Python (Installation and basic commands) and Libraries</li>
+                                        <li>Jupyter notebook</li>
+                                        <li> Set up GitHub</li>
+                                        <li>Descriptive Stats in Python</li>
+                                        <li> Pandas and Matplotlib / Seaborn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="side_three">
+                                    <h6>Module 03 - Introduction To Basic Statistics Using R
+                                        And Python</h6>
+                                    <ul>
+                                        <li>Data Types
+                                        <li> Measure Of central tendency</li>
+                                        <li> Measures of Dispersion</li>
+                                        <li> Graphical Techniques</li>
+                                        <li> Skewness & Kurtosis</li>
+                                        <li>Box Plot</li>
+                                        <li>R</li>
+                                        <li> R Studio</li>
+                                        <li> Descriptive Stats in R</li>
+                                        <li>Python (Installation and basic commands) and Libraries</li>
+                                        <li>Jupyter notebook</li>
+                                        <li> Set up GitHub</li>
+                                        <li>Descriptive Stats in Python</li>
+                                        <li> Pandas and Matplotlib / Seaborn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div id="csformmain" class="card shadow-sm p-3">
+                        <form id="csform" class="csvalidationform mt-3">
+                            <input type="text" id="name" class="cname" name="scname" placeholder="Enter Your Name"><br>
+                            <input type="email" id="email" class="cemail" name="scemail"
+                                placeholder="Enter Email Id"><br>
+                            <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber"
+                                placeholder="Enter Phone Number"><br>
+                            <input type="course" id="course" class="ccourse" name="sccourse"
+                                placeholder="Enter Course"><br>
+                            <div class="text-center mb-2">
+                                <button class="btn btn-primary px-3">Download Curriculum</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="placedstudent">
+        <div class="courses-area pb-5">
+            <div class="header text-center side_three">
+                <h2>Placed Students</h2>
+                <h6><span class="big_text">500+</span> Companies have hired Teks academy Learners</h6>
+                <div class="text-start big_text">
+                    <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                        class="" alt="" />
+                </div>
+            </div>
+            <div class="container">
+                <div class="courses-slides-two">
+                    <owl-carousel-o [options]="coursesSlides">
+                        <ng-template carouselSlide>
+                            <div class="row">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                            <div class="row mt-5">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="row">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                            <div class="row mt-5">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="row">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                            <div class="row mt-5">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="row">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                            <div class="row mt-5">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="row">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                            <div class="row mt-5">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="row">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                            <div class="row mt-5">
+                                <img src="http://localhost:4200/assets/img/logo/mainlogo.svg" class="img-fluid"
+                                    width="10%" />
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- icon and content -->
+    <div class="container mt-4 header">
+        <h2 id="icons">Skills You Learn</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card box-item flex-row d-flex align-items-center p-3">
+                    <div class="border_right">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/why/we_icon10.png"
+                            alt="" class="img-fluid" />
+                    </div>
+                    <div>
+                        <p class="ms-3">24/7 Trainer Whatsapp Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card box-item flex-row d-flex align-items-center p-3">
+                    <div class="border_right">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/why/we_icon10.png"
+                            alt="" class="img-fluid" />
+                    </div>
+                    <div class="">
+                        <p class="ms-3">24/7 Trainer Whatsapp Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card box-item flex-row d-flex align-items-center p-3">
+                    <div class="border_right">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/why/we_icon10.png"
+                            alt="" class="img-fluid" />
+                    </div>
+                    <div class="">
+                        <p class="ms-3">24/7 Trainer Whatsapp Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4">
+                <div class="card box-item flex-row d-flex align-items-center p-3">
+                    <div class="border_right">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/why/we_icon10.png"
+                            alt="" class="img-fluid" />
+                    </div>
+                    <div class="">
+                        <p class="ms-3">24/7 Trainer Whatsapp Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card box-item flex-row d-flex align-items-center p-3">
+                    <div class="border_right">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/why/we_icon10.png"
+                            alt="" class="img-fluid" />
+                    </div>
+                    <div class="">
+                        <p class="ms-3">24/7 Trainer Whatsapp Support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card box-item flex-row d-flex align-items-center p-3">
+                    <div class="border_right">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/why/we_icon10.png"
+                            alt="" class="img-fluid" />
+                    </div>
+                    <div class="">
+                        <p class="ms-3">24/7 Trainer Whatsapp Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- companies -->
+    <div class="container mb-3 header">
+        <h2 id="companies">Companies</h2>
+        <!--  testimonial -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="row">
+
+                    <div class="offset-lg-3 col-lg-6">
+
+
+
+                        <div class=" slider1 owl-carousel" data-slider-id="1">
+                            <div>
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters, as opposed to using 'Content here,
+                                    content
+                                    here', making it look like readable English.
+                                </p>
+                            </div>
+                            <div>
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters, as opposed to using 'Content here,
+                                    content
+                                    here', making it look like readable English.
+                                </p>
+                            </div>
+                            <div>
+                                <p>It is a long established fact that a reader will be distracted by the readable
+                                    content of
+                                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                    more-or-less normal distribution of letters, as opposed to using 'Content here,
+                                    content
+                                    here', making it look like readable English.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="owl-thumbs" data-slider-id="1">
+                            <button class="owl-thumb-item">
+                                <div class="userimg">
+                                    <img src="https://source.unsplash.com/random/1200x800" alt="">
+                                </div>
+                            </button>
+                            <button class="owl-thumb-item">
+                                <div class="userimg">
+                                    <img src="https://picsum.photos/id/237/1200/800" alt="">
+                                </div>
+                            </button>
+                            <button class="owl-thumb-item">
+                                <div class="userimg">
+                                    <img src="http://lorempixel.com/1200/800/sports/" alt="">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- video and photo testimonial -->
+    <div class="container mb-3 header">
+        <h2 id="companies">Video & Photo Testimonial</h2>
+        <div class="video_content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <div class="position-relative">
+                            <img src="../../../../assets/img/svt1.jpg" class="img-fluid" />
+                            <div
+                                class="position-absolute top-50 start-50 translate-middle rounded-circle border border-2 border-primary p-3">
+                                <i class="fa-solid fa-play text-primary  " style="font-size: 32px;"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade popup" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="" id="videoModalLabel"></h5>
+                                    <div data-bs-theme="dark">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+
+                                    <iframe #videoModal width="100%" height="315"
+                                        src="https://www.youtube.com/embed/hsuXFCF8qtA?si=ReJaHclpA0-kct8F"
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        <div class="position-relative">
+                            <img src="../../../../assets/img/svt1.jpg" class="img-fluid" />
+                            <div
+                                class="position-absolute top-50 start-50 translate-middle rounded-circle border border-2 border-primary p-3">
+                                <i class="fa-solid fa-play text-primary  " style="font-size: 32px;"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade popup" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="" id="videoModalLabel"></h5>
+                                    <div data-bs-theme="dark">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+
+                                    <iframe width="100%" height="315"
+                                        src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" frameborder="0"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                        <div class="position-relative">
+                            <img src="../../../../assets/img/svt1.jpg" class="img-fluid" />
+                            <div
+                                class="position-absolute top-50 start-50 translate-middle rounded-circle border border-2 border-primary p-3">
+                                <i class="fa-solid fa-play text-primary  " style="font-size: 32px;"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="modal fade popup" id="videoModal3" tabindex="-1" aria-labelledby="videoModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="" id="videoModalLabel"></h5>
+                                    <div data-bs-theme="dark">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+
+                                    <iframe width="100%" height="315"
+                                        src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" frameborder="0"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- awards section -->
+    <div class="container header">
+        <h2 id="awards">Awards</h2>
+        <div class="awards_img">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner p-5">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-6 text-center">
+                                <img src="https://www.teksacademy.com/assets/img/webinars/Certificate-Corporate%20Vision.jpg"
+                                    class="" width="40%" alt="...">
+                                <p class="text-white mt-3" style="font-size: 18px;">Most Innovative Online Education
+                                    Platform 2023 - South India
+                                    <br>By Corporate Vision
+                                </p>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="https://www.teksacademy.com/assets/img/webinars/Pride%20of%20India.jpg"
+                                    class="" width="42%" alt="...">
+                                <p class="text-white mt-4 pt-1" style="font-size: 18px;">Best Emerging Real Time
+                                    Training Academy Of The Year <br>By
+                                    Brands Impact</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-6 text-center">
+                                <img src="https://www.teksacademy.com/assets/img/webinars/Silicon%20India.jpg" class=""
+                                    width="40%" alt="...">
+                                <p class="text-white mt-3" style="font-size: 18px;">Most Promising Data Science Training
+                                    Institute 2023 <br>By
+                                    Silicon India</p>
+                            </div>
+                            <div class="col-lg-6 text-center">
+                                <img src="https://www.teksacademy.com/assets/img/webinars/Hybiz.jpg" class=""
+                                    width="42%" alt="...">
+                                <p class="text-white mt-4" style="font-size: 18px;">Best Online Training Institute Of
+                                    The Year
+                                    <br>By Hybiz Tv Education Excellence
+                                    Awards 2023
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- certificates -->
+    <section class="certificates">
+        <div class="header container">
+            <h2 id="certificates" class="pt-3">Certificates</h2>
+            <div class="text-right mt-4">
+                <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Course Completion
+                            Certificate
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Certificate Form NSDC
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                            type="button" role="tab" aria-controls="contact" aria-selected="false">Internship
+                            Certificate
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="real-tab" data-bs-toggle="tab" data-bs-target="#real" type="button"
+                            role="tab" aria-controls="real" aria-selected="false">Real Time IT Industry Explosure
+                            Program Certificate
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4 text-center" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/Data_Science_IBM.png"
+                            class="img-fluid mb-5" width="50%" height="50%" alt="...">
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/Data_Science_IBM.png"
+                            class="img-fluid mb-5" width="50%" height="50%" alt="...">
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/Data_Science_IBM.png"
+                            class="img-fluid mb-5" width="50%" height="50%" alt="...">
+                    </div>
+                    <div class="tab-pane fade" id="real" role="tabpanel" aria-labelledby="real-tab">
+                        <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/Data_Science_IBM.png"
+                            class="img-fluid mb-5" width="50%" height="50%" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- highlighted portfolio -->
+    <div class="container mt-4">
+        <div class="header">
+            <h2 id="photos">Highlighted Portfolio</h2>
+        </div>
+        <div class="text-center">
+            <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                class="why_teks" alt="" />
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _album; let i=index;">
+                <div class="single-gallery-item">
+                    <img [src]="image.thumb" (click)="open(i)" />
+                    <div class="text-center mt-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- faq -->
+    <div class="container mt-4 header">
+        <h2 id="faq">FAQ</h2>
+        <div class="faq-accordion">
+            <accordion>
+                <accordion-group heading="What shipping methods are available?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                    <p><strong>1.</strong> Sony PlayStation 4 Pro – Best Overall<br>
+                        <strong>2.</strong> Xbox One S – Best Gaming Console for Multimedia<br>
+                        <strong>3.</strong> Nintendo Switch – Best Hybrid Gaming Console<br>
+                        <strong>4.</strong> Nintendo Switch Lite – Best for Portable Play
+                    </p>
+                </accordion-group>
+                <accordion-group heading="What are shipping times and costs?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                    <ul>
+                        <li>a console</li>
+                        <li>Two Joy-Con controllers that are detachable</li>
+                        <li>A grip that enables you to combine them into a single gamepad for play on the TV</li>
+                        <li>Two straps for turning the Joy-Cons into individual controllers</li>
+                        <li>A dock which you can use to connect your console to the television for traditional
+                            gameplay
+                        </li>
+                    </ul>
+                </accordion-group>
+                <accordion-group heading="What payment methods can I use?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                </accordion-group>
+                <accordion-group heading="Can I use my own domain name?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                    <ul>
+                        <li>a console</li>
+                        <li>Two Joy-Con controllers that are detachable</li>
+                        <li>A grip that enables you to combine them into a single gamepad for play on the TV</li>
+                        <li>Two straps for turning the Joy-Cons into individual controllers</li>
+                        <li>A dock which you can use to connect your console to the television for traditional
+                            gameplay
+                        </li>
+                    </ul>
+                </accordion-group>
+                <accordion-group heading="What kind of customer service do you offer?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                </accordion-group>
+                <accordion-group heading="My account says it is locked. How can I unlock it?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                    <ul>
+                        <li>a console</li>
+                        <li>Two Joy-Con controllers that are detachable</li>
+                        <li>A grip that enables you to combine them into a single gamepad for play on the TV</li>
+                        <li>Two straps for turning the Joy-Cons into individual controllers</li>
+                        <li>A dock which you can use to connect your console to the television for traditional
+                            gameplay
+                        </li>
+                    </ul>
+                </accordion-group>
+                <accordion-group heading="How often do I have to change my password?">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                        squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum
+                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+                        nulla
+                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt
+                        sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                </accordion-group>
+            </accordion>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div class="container">
+        <div class="header text-center">
+            <h2 class="" id="keyfeatures">About</h2>
+            <div class="text-center">
+                <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                    class="why_teks" alt="" />
+            </div>
+            <div class="side_three">
+                <h6>Develop Your Skills, Learn Something New, and Grow Your Career!</h6>
+            </div>
+            <p class="mt-3">TEKS Academy is one of the <span class="bold_text">best Data Science Training Institutes in
+                    Hyderabad,</span> distinguished
+                by its commitment to excellence. Boasting <span class="bold_text"> experts with 10 years of
+                    experience,</span>
+                TEKS Academy
+                provides an advanced curriculum that covers the latest advancements in data science, ensuring students
+                are
+                well prepared for the interviews. The academy stands out by providing a flexible learning environment
+                with
+                both offline and online programs. Knowing about the financial conditions of education, TEKS Academy
+                offers a
+                no-cost EMI option for fees, making quality education accessible to all. Moreover, the academy's
+                dedication
+                extends beyond education, guaranteeing<span class="bold_text"> 100% placement assistance to
+                    students.</span> In essence,
+                TEKS Academy not
+                only provides knowledge but also serves as a career catalyst, preparing students for success in the
+                competitive world of data science.</p>
+            <p>The course curriculum covers Fundamentals of Statistics and Mathematics, learning of data science
+                programming
+                languages, exploratory data analysis techniques, and learning of visualisation tools like Matplotlib,
+                Plotly, and Seaborn. Our Data Science placement assistance team helps students and learners develop
+                their
+                skills to their excellence and land their dream jobs. Our perfectly crafted Data Science training
+                program
+                helps you learn about data visualisation, predictive modelling, feature engineering, big data
+                technologies,
+                natural language processing, deep learning, and many other topics. </p>
+
+        </div>
+    </div>
+
+    <!-- featured in -->
+    <section style="background-color: #F8F8F8;">
+        <div class="container pb-5 header">
+            <h2 id="featured" class="pt-4">Featured In</h2>
+            <div class="text-center">
+                <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                    class="why_teks" alt="" />
+            </div>
+            <div class="row text-center mt-3">
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="row mt-4 text-center">
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+            </div>
+            <div class="row mt-4 text-center">
+                <div class="col-lg-3 border_right">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="https://excelrindia.b-cdn.net/data_science_course_training/assets/images/tool2_lp.png"
+                        class="img-fluid" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="mt-5"></div> -->
+    <!-- 5 branches  -->
+    <section class="branches_img">
+        <div class="container header">
+            <h2 id="branches"> Branches</h2>
+            <div class="text-center">
+                <img src="https://nxtwave.imgix.net/ccbp-website/intensive/blue-under-line-Vector.svg?auto=format,compress&q=80"
+                    class="why_teks" alt="" />
+            </div>
+            <div class="p-4">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card location_one h-100">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="div">
+                                    <h5 class="card-title">Kukatpally</h5>
+                                    <h6 class="">Ph: 9966158990</h6>
+                                    <p class="">2-22-293, Maruti Complex, Plot No 1, near KPHB Metro, Bhagya Nagar
+                                        Colony, Kukatpally, Hyderabad, Telangana 500085</p>
+                                </div>
+                                <div class="div">
+                                    <i class='fas fa-map-marker-alt text-primary' style='font-size:18px'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card location_two h-100">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="div">
+                                    <h5 class="card-title">Dilsukhnagar</h5>
+                                    <h6 class="">Ph: 9966158990</h6>
+                                    <p class="">5th Floor, Padmavathi Complex, H.No. 16, 11-477/3/2/1, Dilsukh Nagar
+                                        Main Rd, above Poornima Furnitures, opp. Pillar No 1521, Hyderabad, Telangana
+                                        500060
+                                    </p>
+                                </div>
+                                <div class="div">
+                                    <i class='fas fa-map-marker-alt text-primary' style='font-size:18px'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card location_five h-100">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="div">
+                                    <h5 class="card-title">Secunderabad</h5>
+                                    <h6 class="">Ph: 9966158990</h6>
+                                    <p class="">H.no: 9- 1-127/4, Flat No: 501 & 502 5th Floor, Amsri Faust Building,
+                                        S.D. Road, Secunderabad, Telangana 500025</p>
+                                </div>
+                                <div class="div">
+                                    <i class='fas fa-map-marker-alt text-primary' style='font-size:18px'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-4 mt-3">
+                        <div class="card location_four h-100">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="">
+                                    <h5 class="card-title">Hitech City</h5>
+                                    <h6 class="">Ph: 9966158990</h6>
+                                    <p class="">Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini
+                                        Layout Rd, Madhapur</p>
+                                </div>
+                                <div class="div">
+                                    <i class='fas fa-map-marker-alt text-primary' style='font-size:18px'></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-3">
+                        <div class="card location_three h-100">
+                            <div class="card-body d-flex justify-content-between">
+                                <div class="div">
+                                    <h5 class="card-title">Ameerpet</h5>
+                                    <h6 class="">Ph: 9966158990</h6>
+                                    <p class="mb-2">501,5th Floor, Green House Building, next to Passport Office,
+                                        Ameerpet,
+                                        Hyderabad, Telangana 500016</p>
+                                </div>
+                                <div class="div">
+                                    <i class='fas fa-map-marker-alt text-primary' style='font-size:18px'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- relevent courses -->
+    <div class="container mb-3 header">
+        <h2 id="relevent">Relevent courses</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="single-courses-box" routerLink="/courses/full-stack-python">
+                    <div class="courses-image">
+                        <a routerLink="/courses/full-stack-python/" class="d-block image">
+                            <img src="../../../../assets/img/allcourses/fullstackpython.png" alt="image">
+                        </a>
+                        <!-- <a routerLink="/courses/" class="fav"><i class="flaticon-heart"></i></a> -->
+                        <!-- <div class="price shadow">$99</div> -->
+                    </div>
+                    <div class="courses-content">
+                        <div class="course-author d-flex align-items-center">
+                            <img src="assets/img/user4.jpg" class="rounded-circle" alt="image">
+                            <!-- <span>James Anderson</span> -->
+                        </div>
+                        <h3><a routerLink="/courses/full-stack-python/">Full Stack Python</a></h3>
+                        <p>Three steps make up full-stack development...</p>
+                        <ul class="courses-box-footer d-flex justify-content-between align-items-center">
+                            <li><i class='flaticon-agenda'></i> 44 Lessons</li>
+                            <li><i class='flaticon-people'></i> 440 Students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-courses-box" routerLink="/courses/data-science">
+                    <div class="courses-image">
+                        <a routerLink="/courses/data-science" class="d-block image">
+                            <img src="assets/img/allcourses/Data-Science.jpg" alt="image">
+                        </a>
+                        <!-- <a routerLink="/courses/" class="fav"><i class="flaticon-heart"></i></a> -->
+                        <!-- <div class="price shadow">$99</div> -->
+                    </div>
+                    <div class="courses-content">
+                        <div class="course-author d-flex align-items-center">
+                            <img src="assets/img/user4.jpg" class="rounded-circle" alt="image">
+                            <span>James Anderson</span>
+                        </div>
+                        <h3><a routerLink="/courses/data-science">Data Science</a></h3>
+                        <p>Data science course may be summed up as a mixture of mathematics, business...</p>
+                        <ul class="courses-box-footer d-flex justify-content-between align-items-center">
+                            <li><i class='flaticon-agenda'></i> 44 Lessons</li>
+                            <li><i class='flaticon-people'></i> 440 Students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-courses-box" routerLink="/courses/digital-marketing">
+                    <div class="courses-image">
+                        <a routerLink="/courses/digital-marketing" class="d-block image">
+                            <img src="assets/img/allcourses/Digital-Marketing.jpg" alt="image">
+                        </a>
+                        <!-- <a routerLink="/courses/" class="fav"><i class="flaticon-heart"></i></a> -->
+                        <!-- <div class="price shadow">$99</div> -->
+                    </div>
+                    <div class="courses-content">
+                        <div class="course-author d-flex align-items-center">
+                            <img src="assets/img/user4.jpg" class="rounded-circle" alt="image">
+                            <span>James Anderson</span>
+                        </div>
+                        <h3><a routerLink="/courses/digital-marketing">Digital Marketing</a></h3>
+                        <p>Digital Marketing course covers SEO, YouTube marketing, Facebook...</p>
+                        <ul class="courses-box-footer d-flex justify-content-between align-items-center">
+                            <li><i class='flaticon-agenda'></i> 44 Lessons</li>
+                            <li><i class='flaticon-people'></i> 440 Students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-courses-box" routerLink="/courses/salesforce-course">
+                    <div class="courses-image">
+                        <a routerLink="/courses/salesforce-course" class="d-block image">
+                            <img src="assets/img/allcourses/Salesforce.jpg" alt="image">
+                        </a>
+                    </div>
+                    <div class="courses-content">
+                        <div class="course-author d-flex align-items-center">
+                            <img src="assets/img/user4.jpg" class="rounded-circle" alt="image">
+                            <span>James Anderson</span>
+                        </div>
+                        <h3><a routerLink="/courses/salesforce-course">Salesforce</a></h3>
+                        <p>In this Salesforce course you will learn how to use this in-demand software...</p>
+                        <ul class="courses-box-footer d-flex justify-content-between align-items-center">
+                            <li><i class='flaticon-agenda'></i> 44 Lessons</li>
+                            <li><i class='flaticon-people'></i> 440 Students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-12 col-md-12">
+                    <div class="courses-info">
+                        <a routerLink="/course" class="text-center callbtn" style="margin-bottom: 5px;"><i
+                                class="fa fa-book"></i>&nbsp; View All Courses</a><br><br>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+</div>

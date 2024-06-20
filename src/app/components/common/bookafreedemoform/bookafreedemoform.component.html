@@ -1,0 +1,82 @@
+<form (ngSubmit)="bookfreedemoformdata()">
+  <div class="form-group">
+    <label for="bd-name">Name:</label>
+    <input
+      type="text"
+      class="input form-control p-2"
+      id="bd-name"
+      aria-describedby="emailHelp"
+      placeholder="Enter your name"
+      name="bfdname"
+      [(ngModel)]="bfdname"
+    />
+  </div>
+  <div class="form-group">
+    <label for="bd-email">Email address:</label>
+    <input
+      type="email"
+      class="input form-control p-2"
+      id="bd-email"
+      aria-describedby="emailHelp"
+      name="bfdemail"
+      placeholder="Email"
+      required
+      [(ngModel)]="bfdemail"
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
+  </div>
+  <div class="form-group">
+    <label for="bd-phone">Phone Number: </label>
+    <input
+      type="number"
+      class="input form-control p-2"
+      id="bd-phone"
+      name="bfdcontactnumber"
+      placeholder="Mobile Number"
+      required
+      [(ngModel)]="bfdcontactnumber"
+    />
+  </div>
+  <div class="form-group">
+    <label for="bd-course-name">Course Name: </label>
+    <input
+      type="text"
+      class="input form-control p-2"
+      id="bd-course-name"
+      name="bfdcourse"
+      placeholder="Course"
+      required
+      [(ngModel)]="bfdcourse"
+    />
+  </div>
+  <div class="form-group">
+    <label for="date-time">Date and Time: </label>
+    <input
+      type="datetime-local"
+      class="input form-control p-2"
+      id="date-time"
+      placeholder="Date and Time"
+      name="bfddatetime"
+      required
+      [(ngModel)]="bfddatetime"
+    />
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-dismiss="modal"
+    >
+      Close
+    </button>
+    <input
+      type="submit"
+      class="btn btn-primary"
+      value="Enroll Now ⚡"
+      style="background-color: #2a619d !important"
+    >
+  </div>
+</form>

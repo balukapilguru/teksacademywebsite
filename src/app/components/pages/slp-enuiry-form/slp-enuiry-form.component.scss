@@ -1,0 +1,48 @@
+.dsform {
+  font-family: Arial, sans-serif;
+}
+.dsform {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px #ccc;
+  max-width: 500px;
+  margin: 10px auto;
+}
+.dsform label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+.dsform label span {
+  color: red;
+}
+.dsformi {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+
+  box-sizing: border-box;
+}
+.dsform input[type="submit"] {
+  width: 100%;
+  background-color: #fe4a55;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.dsform input[type="submit"]:hover {
+  background-color: #fe4a55;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

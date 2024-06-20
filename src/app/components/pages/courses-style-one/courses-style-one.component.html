@@ -1,0 +1,1756 @@
+<div class="page-title-area">
+  <div class="container">
+    <div class="page-title-content">
+      <!-- <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li>Courses Grid 01</li>
+            </ul> -->
+      <h2>Courses</h2>
+    </div>
+  </div>
+  <div class="shape9"><img src="assets/img/shape8.svg" alt="image" /></div>
+</div>
+
+<div class="courses-area ptb-100">
+  <div class="container">
+    <div class="odemy-grid-sorting row align-items-center">
+      <div class="col-lg-6 col-md-6 result-count">
+        <p>
+          We found more than <span class="count">40</span> courses available for
+          you
+        </p>
+        <!-- <input type="text" placeholder="Enter Course Name" [(ngModel)]="searchText"> -->
+      </div>
+    </div>
+
+    <div
+      class="row hybrid viewall"
+      *ngIf="selectedSort === 'hybrid' || selectedSort === 'viewall'"
+    >
+      <!-- Full Stack Python -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-full-stack-python-development-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-full-stack-python-development-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="assets/img/allcourses/fullstackpython.png"
+                alt="image"
+              />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$39</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user6.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Alex Morgan</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-full-stack-python-development-course-training-institute"
+                >Full Stack Python</a
+              >
+            </h3>
+            <p>
+              Three steps make up full-stack development, write code that will
+              decide the website’s design Write code to get user input
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 15 Lessons</li>
+              <li><i class="flaticon-people"></i> 145 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Stack Java -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-full-stack-java-development-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-full-stack-java-development-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/fullstackjava.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$59</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user3.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>David Warner</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-full-stack-java-development-course-training-institute"
+                >Full Stack Java</a
+              >
+            </h3>
+            <p>
+              This course is designed in order to make your learning enjoyable
+              and to build an effective online application. The course
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 150 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-digital-marketing-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-digital-marketing-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="assets/img/allcourses/Digital-Marketing.jpg"
+                alt="image"
+              />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a>
+          <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-digital-marketing-course-training-institute"
+                >Digital Marketing</a
+              >
+            </h3>
+            <p>
+              Digital Marketing course covers SEO, YouTube marketing, Facebook
+              marketing, Google AdWords, Google Analytics, and more. Making the
+              most detailed training
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Science -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-data-science-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-data-science-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Data-Science.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-data-science-course-training-institute"
+                >Data Science</a
+              >
+            </h3>
+            <p>
+              Data science course may be summed up as a mixture of mathematics,
+              business knowledge, tools, algorithms, and machine learning
+              tactics.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sapfico -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-sap-fico-finance-and-controlling-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-sap-fico-finance-and-controlling-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Sapfico.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$39</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user6.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Alex Morgan</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-sap-fico-finance-and-controlling-course-training-institute"
+                >SAP FICO</a
+              >
+            </h3>
+            <p>
+              TEKS Academy provides a comprehensive SAP course that is designed
+              to improve the skills...
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 15 Lessons</li>
+              <li><i class="flaticon-people"></i> 145 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAP SD -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-sap-sd-sales-and-distribution-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-sap-sd-sales-and-distribution-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/SAP SD.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$39</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user6.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Alex Morgan</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-sap-sd-sales-and-distribution-course-training-institute"
+                >SAP SD</a
+              >
+            </h3>
+            <p>
+              TEKS Academy provides a comprehensive SAP course that is designed
+              to improve the skills...
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 15 Lessons</li>
+              <li><i class="flaticon-people"></i> 145 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAP PP -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-sap-pp-production-planning-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-sap-pp-production-planning-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/SAP PP.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$39</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user6.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Alex Morgan</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-sap-pp-production-planning-course-training-institute"
+                >SAP PP</a
+              >
+            </h3>
+            <p>
+              TEKS Academy provides a comprehensive SAP course that is designed
+              to improve the skills...
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 15 Lessons</li>
+              <li><i class="flaticon-people"></i> 145 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAP MM -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-sap-mm-meterial-management-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-sap-mm-meterial-management-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/SAP-MM.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$39</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user6.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Alex Morgan</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-sap-mm-meterial-management-course-training-institute"
+                >SAP MM</a
+              >
+            </h3>
+            <p>
+              TEKS Academy provides a comprehensive SAP course that is designed
+              to improve the skills...
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 15 Lessons</li>
+              <li><i class="flaticon-people"></i> 145 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testing tools -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-testingtools-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-testingtools-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="../../../../assets/img/allcourses/Testing_Tools.png"
+                alt="image"
+              />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-testingtools-course-training-institute"
+                >Testing Tools</a
+              >
+            </h3>
+            <p>
+              The TEKS Academy manual and automation software testing course
+              offers unique training principles, techniques, and practices.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWSPLUSDEVOPS -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-awsplusdevops-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-awsplusdevops-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="../../../../assets/img/allcourses/AWS+DEVEOPS.png"
+                alt="image"
+              />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-awsplusdevops-course-training-institute"
+                >AWS+DEVOPS</a
+              >
+            </h3>
+            <p>
+              TEKS Academy provides learners with a simpler language to learn
+              AWS and DevOps settings.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIM -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/bim.png" alt="image" />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
+                >BIM</a
+              >
+            </h3>
+            <p>
+              The architectural, engineering, and construction (AEC) sector is
+              experiencing a digital transition, and BIM Course is its keystone.
+              Autodesk,Industry pioneer
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Salesforce -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-salesforce-admin-development-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-salesforce-admin-development-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Salesforce.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-salesforce-admin-development-course-training-institute"
+                >Salesforce</a
+              >
+            </h3>
+            <p>
+              In this Salesforce course you will learn how to use this in-demand
+              software to cut expenses and boost profitability during
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manual Testing -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-manual-testing-software-testing-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-manual-testing-software-testing-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/manualtesting.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$49</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user5.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Sarah Taylor</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-manual-testing-software-testing-course-training-institute"
+                >Manual Testing</a
+              >
+            </h3>
+            <p>
+              Manual testing refers to the process of manually examining
+              software applications for defects or errors. This type of testing
+              involves
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 100 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI AND ML -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-ai-and-ml-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-ai-and-ml-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/AI.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$49</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user5.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Sarah Taylor</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-ai-and-ml-course-training-institute"
+                >AI and ML</a
+              >
+            </h3>
+            <p>
+              Develop your career with a well-planned and highly recommended
+              course at TEKS Academy.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 100 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multimedia -->
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-multimedia-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-multimedia-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/multimedia.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$49</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user5.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Sarah Taylor</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-multimedia-course-training-institute"
+                >MultiMedia</a
+              >
+            </h3>
+            <p>
+              The TEKS Academy Multimedia course helps students explore various
+              multimedia tools and techniques
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 100 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Coding -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-medical-coding-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-medical-coding-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/medical_coding.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$49</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user5.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Sarah Taylor</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-medical-coding-course-training-institute"
+                >Medical Coding</a
+              >
+            </h3>
+            <p>
+              The TEKS Academy’s advanced medical coding training gives the
+              students more practical
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 100 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-hvac-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-hvac-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/hvac.png" alt="hvac" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$49</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user2.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Sarah Taylor</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-hvac-training-institute">HVAC</a>
+            </h3>
+            <p>
+              Heating, ventilation, and air conditioning are usually referred to
+              as HVAC. This is the system in the structure that deals
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 100 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-3ds-max-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-3ds-max-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/3dsmax.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$59</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user3.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>David Warner</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-3ds-max-course-training-institute"
+                >3ds max</a
+              >
+            </h3>
+            <p>
+              A computer graphics tool called 3ds Max is designed to create 3D
+              models and digital photographs and animations. One of
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 20 Lessons</li>
+              <li><i class="flaticon-people"></i> 150 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-staad-pro-civil-engineering-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-staad-pro-civil-engineering-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/staadpro.png" alt="staad.pro" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-staad-pro-civil-engineering-course-training-institute"
+                >STAAD.PRO</a
+              >
+            </h3>
+            <p>
+              Structural Analysis and Designing Program are mentioned by its
+              full name, STAAD Pro. A computer tool for structural analysis and
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-primavera-p6-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-primavera-p6-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/primavera.png" alt="primavera" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$39</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user1.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>Alex Morgan</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-primavera-p6-course-training-institute"
+                >Primavera</a
+              >
+            </h3>
+            <p>
+              Projects and programs can be scheduled, controlled, and organized
+              using the Primavera software package. It enables industries that
+              prioritize projects
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 15 Lessons</li>
+              <li><i class="flaticon-people"></i> 145 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-artificial-intelligence-best-ai-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-artificial-intelligence-best-ai-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="assets/img/allcourses/artificial-intelligence.png"
+                alt="image"
+              />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-artificial-intelligence-best-ai-course-training-institute"
+                >ARTIFICIAL INTELLIGENCE</a
+              >
+            </h3>
+            <p>
+              Artificial Intelligence program that enables you to explore
+              cutting-edge AI technologies. Through this top-rated AI training,
+              you’ll gain expertise in
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-sketching-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-sketching-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/sketching.png" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-sketching-course-training-institute"
+                >SKETCHING</a
+              >
+            </h3>
+            <p>
+              A Sketch/Sketching is a quickly drawn, sketchy image that is
+              typically not meant to be a complete piece of art.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-devops-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-devops-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/devops.png" alt="image" />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-devops-course-training-institute"
+                >DevOps</a
+              >
+            </h3>
+            <p>
+              DevOps course is designed to provide students with a comprehensive
+              understanding of the principles and best practices, as well as
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-revit-mep-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-revit-mep-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/revit-mep.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-revit-mep-course-training-institute"
+                >Revit MEP</a
+              >
+            </h3>
+            <p>
+              Revit MEP (Mechanical, Electrical, and Plumbing) is a Building
+              Information Modeling (BIM) software that allows engineers and
+              designers to create
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-c-language-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-c-language-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/C-Program.jpg" alt="image" />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-c-language-course-training-institute"
+                >C language</a
+              >
+            </h3>
+            <p>
+              C Language is a broadly used, upfront, and flexible
+              general-purpose computer language that people consider. Developers
+              widely use it to
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-python-developer-programming-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-python-developer-programming-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Python.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-python-developer-programming-course-training-institute"
+                >Python</a
+              >
+            </h3>
+            <p>
+              As a high-level, object-oriented programming language, Python has
+              become very popular. Developers use it to develop a variety of
+              desktop
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-autocad-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-autocad-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/AutoCAD.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-autocad-course-training-institute"
+                >AutoCAD</a
+              >
+            </h3>
+            <p>
+              Simply speaking, AutoCAD is a “CAD” (computer-aided design)
+              program. Autodesk is a business that primarily creates software
+              and solutions for
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-revit-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-revit-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Revit.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-revit-course-training-institute"
+                >Revit</a
+              >
+            </h3>
+            <p>
+              Any professional working in the fields of architecture,
+              engineering, and interior design must have Revit, which is
+              standard software used
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-sql-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-sql-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/SQL.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-sql-course-training-institute"
+                >SQL</a
+              >
+            </h3>
+            <p>
+              Students will gain knowledge on how to model, aggregate, and
+              analyze data using SQL Analytic capabilities. Students will gain
+              knowledge
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-power-bi-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-power-bi-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Power-Bi.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-power-bi-course-training-institute"
+                >Power BI</a
+              >
+            </h3>
+            <p>
+              Students will learn Power BI to create compelling reports and
+              visualizations, derive real-time insights, and deploy them on
+              demand. You
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-tableau-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-tableau-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Tableau.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-tableau-course-training-institute"
+                >Tableau</a
+              >
+            </h3>
+            <p>
+              Tableau aims to help people see and comprehend data that informs
+              everything is done, which is why our solutions are
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-business-analytics-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-business-analytics-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="assets/img/allcourses/Business-Analytics.jpg"
+                alt="image"
+              />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-business-analytics-course-training-institute"
+                >Business Analytics</a
+              >
+            </h3>
+            <p>
+              This course will establish the groundwork for your brilliant
+              Business Analytics abilities, which will help you in a long way.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-ielts-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-ielts-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/IELTS.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a routerLink="/courses/best-ielts-course-training-institute"
+                >IELTS</a
+              >
+            </h3>
+            <p>
+              IELTS course teaches you how to succeed and how to use the
+              approach. It is proved to be a strategy
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-advance-excel-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-advance-excel-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/Advance-Excel.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-advance-excel-course-training-institute"
+                >Advance Excel</a
+              >
+            </h3>
+            <p>
+              During the Advance Excel course, you will learn how to understand
+              Pivot Tables, automate challenging operations, and improve
+              intricate formulas
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-aws-amazon-web-services-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-aws-amazon-web-services-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/AWS.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-aws-amazon-web-services-course-training-institute"
+                >AWS</a
+              >
+            </h3>
+            <p>
+              In AWS you will learn how to develop and deploy highly scalable
+              and fault-tolerant apps, implement AWS security and testing,
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-data-analytics-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-data-analytics-course-training-institute"
+              class="d-block image"
+            >
+              <img src="assets/img/allcourses/AWS.jpg" alt="image" />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-data-analytics-course-training-institute"
+                >Data Analytics</a
+              >
+            </h3>
+            <p>
+              Data analytics courses will make the students ready to help
+              business make better decisions and assess consumer preferences and
+              satisfaction.
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-lg-4 col-md-6">
+        <div class="single-courses-box" routerLink="/courses/best-data-analytics-course-training-institute">
+          <div class="courses-image">
+            <a routerLink="/courses/best-data-analytics-course-training-institute" class="d-block image">
+              <img src="assets/img/allcourses/Data-Analytics.jpg" alt="image" />
+            </a>
+            
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img src="assets/img/user4.jpg" class="rounded-circle" alt="image" />
+              <span>James Anderson</span>
+              
+              
+              <h3>
+                <a routerLink="/courses/best-data-analytics-course-training-institute">Data Analytics</a>
+              </h3>
+              <p>
+                Data analytics courses will make the students ready to help
+                business make better decisions and assess consumer preferences
+                and satisfaction.
+              </p>
+              <ul class="courses-box-footer d-flex justify-content-between align-items-center">
+                <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+                <li><i class="flaticon-people"></i> 440 Students</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-lg-4 col-md-6">
+        <div class="single-courses-box" routerLink="/courses/aws/">
+          <div class="courses-image">
+            <a routerLink="/courses/aws/" class="d-block image">
+              <img src="assets/img/allcourses/AWS.jpg" alt="image" />
+            </a>
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3><a routerLink="/courses/aws/">AWS</a></h3>
+            <p>
+              In AWS you will learn how to develop and deploy highly scalable
+              and fault-tolerant apps, implement AWS security and testing,
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="col-lg-4 col-md-6">
+        <div
+          class="single-courses-box"
+          routerLink="/courses/best-revit-structure-course-training-institute"
+        >
+          <div class="courses-image">
+            <a
+              routerLink="/courses/best-revit-structure-course-training-institute"
+              class="d-block image"
+            >
+              <img
+                src="assets/img/allcourses/revit-structure.png"
+                alt="image"
+              />
+            </a>
+            <!-- <a routerLink="/" class="fav"><i class="flaticon-heart"></i></a> -->
+            <!-- <div class="price shadow">$99</div> -->
+          </div>
+          <div class="courses-content">
+            <div class="course-author d-flex align-items-center">
+              <img
+                src="assets/img/user4.jpg"
+                class="rounded-circle"
+                alt="image"
+              />
+              <span>James Anderson</span>
+            </div>
+            <h3>
+              <a
+                routerLink="/courses/best-revit-structure-course-training-institute"
+                >REVIT STRUCTURE</a
+              >
+            </h3>
+            <p>
+              Autodesk’s Revit Structure is a BIM software solution designed for
+              structural engineering companies and engineers. Its feature-rich
+              toolset enables efficient
+            </p>
+            <ul
+              class="courses-box-footer d-flex justify-content-between align-items-center"
+            >
+              <li><i class="flaticon-agenda"></i> 44 Lessons</li>
+              <li><i class="flaticon-people"></i> 440 Students</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

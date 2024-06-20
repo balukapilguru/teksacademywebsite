@@ -1,0 +1,129 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  max-height: auto;
+}
+.ourbranchescont {
+  padding-top: 30px;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+#ourbranches {
+  width: 90%;
+  margin: 5%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3%;
+  margin: auto;
+  transition: flex-wrap 0.5s ease;
+
+  @media screen and (max-width: 768px) {
+    height: 100% !important;
+    gap: 10px;
+  }
+}
+.element {
+  width: 350px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.5s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.element:hover {
+  width: 370px;
+  height: 230px;
+}
+.element:hover p {
+  opacity: 0;
+  visibility: hidden;
+}
+.element p {
+  font-size: 1.7rem;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  // display: none;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+#first {
+  //  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background-image: url(../../../../assets/img/Teks_Website/Teks_Website/Branch_imgs/Hi-Tech_city.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#second {
+  background-image: url(../../../../assets/img/Teks_Website/Teks_Website/Branch_imgs/Ameerpet.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#third {
+  background-image: url(../../../../assets/img/Teks_Website/Teks_Website/Branch_imgs/Dilshuknagar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#fourth {
+  background-image: url(../../../../assets/img/Teks_Website/Teks_Website/Branch_imgs/Kukatpally.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#fifth {
+  background-image: url(../../../../assets/img/Teks_Website/Teks_Website/Branch_imgs/Secunderabad.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header h2 {
+  color: #334155;
+  letter-spacing: -0.5px;
+  font-size: 44px;
+  margin-bottom: -20px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+.header-styling {
+  position: relative;
+  transition: all 0.3s ease-in;
+  &::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #2a619d;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+    border-radius: 50%;
+  }
+}

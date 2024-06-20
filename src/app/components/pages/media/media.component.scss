@@ -1,0 +1,247 @@
+.single-gallery-item {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: zoom-in;
+    z-index: 1;
+
+    a {
+        display: block;
+        border-radius: 5px;
+        
+        img {
+            transition: var(--transition);
+        }
+    }
+    &:hover {
+        a {
+            img {
+                transform: scale(1.1);
+                filter: blur(2px);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {
+
+}
+
+// imgs testimonials
+
+.tab-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+    cursor: pointer;
+    
+  }
+  .tab-button{
+    background-color: #1565d8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    
+  }
+
+
+//   video testimonils
+
+
+
+
+.video-box {
+    position: relative;
+    border-radius: 5px;
+    max-width: 800px;
+    z-index: 1;
+    margin: {
+        left: auto;
+        right: auto;
+        top: 50px;
+    };
+    .image {
+        overflow: hidden;
+        border-radius: 5px;
+
+        img {
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+    }
+    .video-btn {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+        text-align: center;
+        line-height: 80px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%) translateX(-50%);
+        background-color: var(--mainColor);
+        border-radius: 50%;
+        color: var(--whiteColor);
+    
+        &::after, &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 50%;
+            border: 1px solid var(--mainColor);
+        }
+        &::before {
+            animation: ripple 2s linear infinite;
+        }
+        &::after {
+            animation: ripple 2s linear 1s infinite;
+        }
+        &:hover {
+            color: var(--whiteColor);
+            background-color: var(--blackColor);
+    
+            &::before, &::after {
+                border-color: var(--blackColor);
+            }
+        }
+    }
+    &:hover {
+        .image {
+            img {
+                transform: scale3d(1.1,1.1,1.1);
+            }
+        }
+    }
+}
+.video-area {
+    z-index: 1;
+    position: relative;
+
+    &::before {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        height: 50%;
+        z-index: -1;
+        position: absolute;
+        background-color: #FFF8F8;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .video-box {
+        max-width: 100%;
+        margin: {
+            left: 0;
+            right: 0;
+            top: 60px;
+        };
+        .video-btn {
+            width: 65px;
+            height: 65px;
+            font-size: 30px;
+            line-height: 65px;
+        }
+    }
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {
+
+}
+
+
+
+// new 
+/* Styles for the new custom thumbnail image */
+.custom-thumbnail {
+    max-width: 100%;
+  }
+  
+  /* Styles for the new custom video box */
+  .custom-video-box {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Styles for the new custom play button */
+  .custom-video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Styles for the new custom video popup overlay */
+  .custom-video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Styles for the new custom close button in the video popup */
+  .custom-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Styles for the new custom video iframe in the popup */
+  .custom-video-iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+  }
+  

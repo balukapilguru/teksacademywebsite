@@ -1,0 +1,126 @@
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <!-- <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li>Contact</li>
+            </ul> -->
+            <h2>Contact Us</h2>
+        </div>
+    </div>
+    <div class="shape9"><img src="assets/img/shape8.svg" alt="image"></div>
+</div>
+
+<div class="contact-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="contact-info">
+                    <span class="sub-title">Contact Details</span>
+                    <h2>Get in Touch</h2>
+                    <p>TEKS Academy serves the best education platform that is crafted based on the extensive research made on learning, course curriculum, learning outcomes, job search, and placement rates in MNCs.</p>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <h3>Corporate Office Address</h3>
+                            <!-- <p>Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini Layout Rd, Madhapur</p> -->
+                            <p>H.no: 9- 1-127/4, Flat No: 501 & 502 5th Floor, Amsri Faust Building, S.D. Road, Secunderabad, Telangana 500025</p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <!-- <i class='bx bx-envelop'></i> -->
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@teksacademy.com"> info@teksacademy.com</a></p>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class='bx bx-phone-call'></i>
+                            </div>
+                            <h3>Contact</h3>
+                            <p><a href="tel:18001204748">1800-120-4748</a></p>
+                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div >
+                <div class="contact-form" *ngFor="let Image of bgImage;" style="background-image: url({{Image.img}});">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Your email address will not be published. Required fields are marked *</p>
+                    <!-- #contactForm="ngForm" -->
+                    <form (ngSubmit)="cformSubmit()">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input required minlength="3" maxlength="50" ngModel name="name" type="text"  class="form-control" id="name" placeholder="Your name" [(ngModel)]="name">
+                                    <!-- <div class="alert alert-danger" *ngIf="name.touched && !name.valid"> 
+                                        <div *ngIf="name.errors.required">Name is required.</div>
+                                        <div *ngIf="name.errors.minlength">Name is minimum {{ name.errors.minlength.requiredLength }} character.</div>
+                                        <div *ngIf="name.errors.maxlength">Name is maximum 50 character.</div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input required ngModel name="email" type="text"  class="form-control" id="email" placeholder="Your email address" [(ngModel)]="email">
+                                    <!-- <div class="alert alert-danger" *ngIf="email.touched && !email.valid">Email Address is required.</div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input required ngModel name="number" type="text"  class="form-control" id="number" placeholder="Your phone number" [(ngModel)]="number">
+                                    <!-- <div class="alert alert-danger" *ngIf="number.touched && !number.valid">Phone number is required.</div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input required ngModel name="course" type="text" class="form-control" id="city" placeholder="Course" [(ngModel)]="course">
+                                    <!-- <div class="alert alert-danger" *ngIf="city.touched && !city.valid">city is required.</div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <div class="form-group">
+                                    <input required ngModel name="city" type="text" class="form-control" id="city" placeholder="city" [(ngModel)]="city">
+                                    <!-- <div class="alert alert-danger" *ngIf="city.touched && !city.valid">city is required.</div> -->
+                                </div>
+                            </div>
+                            <!-- <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea required ngModel #message="ngModel" name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Write your message..."></textarea>
+                                    <div class="alert alert-danger" *ngIf="message.touched && !name.valid">Message is required.</div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-lg-12">
+                                <ngx-recaptcha2
+                                [(ngModel)]="recaptchaValue"
+                                [siteKey]="siteKey"
+                                name="recaptchaValue"
+                                required
+                                >
+
+                                </ngx-recaptcha2>
+                            </div> -->
+                            <div class="col-lg-12 col-md-12">
+                                
+                                <button type="submit" class="default-btn" *ngIf="isSubmitted" [disabled]="isSubmitting">Submit<span></span></button>
+                                <!-- <button type="submit" class="default-btn" [class.disabled]="!contactForm.valid">Submit<span></span></button> -->
+                            </div>
+                            <div class="col-lg-12 col-md-12" *ngIf="isSubmitting">Please wait, your request is being processed...</div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d260370.4624153429!2d-74.21074577271956!3d40.67735855419542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sStatue%20of%20Liberty%20National%20Monument!5e0!3m2!1sen!2sbd!4v1599386259810!5m2!1sen!2sbd"></iframe>
+</div> -->

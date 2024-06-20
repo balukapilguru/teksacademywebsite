@@ -1,0 +1,94 @@
+<div class="p-5 me-5">
+  <div class="shadow-sm card p-4 box-shadow-card">
+    <div id="csformmain">
+      <form
+        class="w-100"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          min-height: 50vh;
+        "
+        id="csform"
+        (ngSubmit)="scFormSubmit()"
+      >
+        <div
+          class="form-header d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-2 text-capitalize">
+            Book a live demo
+            <span class="special-styling">for free</span>
+          </h3>
+          <img
+            src="../../../../../assets/img/Teks_Website/Teks_Website/Form_imgs_100x72.72/checklist.png"
+            alt=""
+            style="width: 100px; height: auto; object-fit: cover"
+          />
+        </div>
+
+        <div class="form-group mb-1">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            class="input form-control p-2"
+            name="scname"
+            aria-describedby="Name input field"
+            placeholder="Enter Your Name"
+            id="name"
+            [(ngModel)]="scname"
+          />
+        </div>
+        <div class="form-group mb-1">
+          <label for="email">Email:</label>
+
+          <input
+            type="email"
+            class="input form-control p-2"
+            name="scemail"
+            placeholder="Enter Email Id"
+            id="email"
+            [(ngModel)]="scemail"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group mb-1">
+          <label for="phonenumber">Phone:</label>
+
+          <input
+            type="tel"
+            class="input form-control p-2"
+            name="sccontactnumber"
+            placeholder="Enter Phone Number"
+            id="phonenumber"
+            [(ngModel)]="sccontactnumber"
+            pattern="[0-9]*" maxlength="10"
+          />
+        </div>
+        <div class="form-group mb-1">
+          <label for="course">Course Name:</label>
+
+          <input
+            type="text"
+            class="input form-control p-2"
+            name="sccourse"
+            placeholder="Enter Course Name"
+            id="course"
+            value="Digital Marketing"
+            
+            [(ngModel)]="sccourse"
+          />
+        </div>
+        <span>🎇 Seats are limited </span>
+        <button
+          type="submit"
+          class="btn mt-2"
+          style="background-color: #2a619d; color: white"
+        >
+          Book Now 
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

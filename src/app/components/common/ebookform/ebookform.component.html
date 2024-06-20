@@ -1,0 +1,49 @@
+<div class="custom-div p-5 me-5">
+  <div class="shadow-sm card p-3 box-shadow-card">
+    <div id="csformmain">
+      <form (ngSubmit)="ebsubmitForm()" class="w-100" style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          /* min-height: 50vh; */
+        " id="ebook_form">
+        <div class="form-header d-flex justify-content-between align-items-center">
+          <h3 class="mb-2 text-capitalize custom-h3">
+            Get your E-book <br />
+            <span class="special-styling">for free</span>
+          </h3>
+          <img src="../../../../../assets/img/Teks_Website/Teks_Website/Form_imgs_100x72.72/Form.png" alt=""
+            style="width: 100px; height: auto; object-fit: cover" />
+        </div>
+
+        <div class="form-group mb-1">
+          <label for="ebook_user_name">Name:</label>
+          <input class="input form-control p-2" id="ebook_user_name" type="text" name="ebname"
+            placeholder="Enter Your Full Name" required [(ngModel)]="ebname" />
+        </div>
+        <div class="form-group mb-1">
+          <label for="ebook_user_email">Email:</label>
+
+          <input class="input form-control p-2" name="ebemail" id="ebook_user_email" type="email"
+            placeholder="Enter Your Email" required [(ngModel)]="ebmail" />
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group mb-1">
+          <label for="ebook_user_phone">Phone:</label>
+
+          <input type="tel" class="input form-control p-2" placeholder="Enter Phone Number" id="ebook_user_phone"
+            name="ebphone" required [(ngModel)]="ebphone" />
+        </div>
+        <div class="form-group mb-1">
+          <label for="eboook_course-name">Course Name:</label>
+
+          <input class="input form-control p-2" placeholder="Enter Course Name" id="eboook_course-name" type="text"
+            name="ebcourse" required [(ngModel)]="ebcourse" />
+        </div>
+        <button type="submit" class="btn mt-2" style="background-color: #2a619d; color: white">
+          Download E-book 📖
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

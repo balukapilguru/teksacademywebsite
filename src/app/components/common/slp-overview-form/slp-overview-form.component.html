@@ -1,0 +1,19 @@
+<div id="csformmain">
+    <form id="csform" class="csvalidationform" (ngSubmit)="slpsubmitForm()">
+        <h2 id="fheading">Contact Us</h2><br>
+        <input type="text" id="name" class="cname" name="slpname" placeholder="Enter Your Name" required [(ngModel)]="slpname"><br>
+        <input type="number" id="phonenumber" class="cphonenumber" name="slpcontactnumber" placeholder="Enter Phone Number" required [(ngModel)]="slpcontactnumber"><br>
+        <input type="email" id="email" class="cemail" name="slpemail" placeholder="Enter Email Id" required [(ngModel)]="slpemail"><br>
+        <input type="text" id="course" class="ccourse" name="slpcourse" placeholder="Enter Course"  required [(ngModel)]="slpcourse"><br>
+        <!-- <ngx-recaptcha2
+        [(ngModel)]="recaptchaValue"
+        name="recaptchaValue"
+        required
+        [siteKey]="siteKey"
+        >
+
+        </ngx-recaptcha2> -->
+        <input type="submit" name="submit" class="csubmit" value="Submit" style="background-color: #1565d8; width: 50%; height: 100%; border-radius: 5px; color: white;"><br>
+        <p id="pwp" style="display: none;">Please wait, Your details are submiting</p>
+    </form>
+</div>

@@ -1,0 +1,43 @@
+<app-navbar *ngIf="!(location == '/coming-soon')"></app-navbar>
+
+<router-outlet></router-outlet>
+<app-footer *ngIf="!(location == '/coming-soon')"></app-footer>
+<ngx-scrolltop></ngx-scrolltop>
+<div class="qlwapp-containerw">
+    <!-- <a  ><i class="qlwapp-icon qlwapp-whatsapp-icon" ></i>&nbsp;<span class="qlwapp-text">Chat with us</span></a> -->
+
+    <span class="qlwapp-togglew" id="open-form">
+      <i class="fab fa-whatsapp"></i><span class="cwhatsapp">&nbsp; Chat with us </span>
+    </span>
+    <!-- <a class="qlwapp-togglew" href="https://api.whatsapp.com/send?phone=918688408118&text=I%20want%20to%20chat%20with%20you" target="_blank">
+        <i class="fab fa-whatsapp"></i><span class="cwhatsapp">&nbsp; Chat with us </span>
+      </a> -->
+</div>
+
+<app-whats-app-form></app-whats-app-form>
+
+<!-- <div id="popup-form">
+  <span id="dsformclose">X</span>
+  <span id="dshead">Please Fill The Form and Chat with Us</span>
+  <form id="wForm" (ngSubmit)="wthasappsubmitForm()">
+      <input type="text" id="name" name="wname" placeholder="Enter Your Full Name" required [(ngModel)]="wname">
+
+      
+      <input type="email" id="email" name="wemail" placeholder="Enter Your Email" required [(ngModel)]="wemail">
+
+      
+      <input type="tel" id="phone" name="wphone" placeholder="Enter Your Phone Number" required [(ngModel)]="wphone">
+
+      
+      <input type="text" id="city" name="wcourse" placeholder="Enter Your Course" required [(ngModel)]="wcourse">
+      <ngx-recaptcha2
+        [(ngModel)]="recaptchaValue"
+        name="recaptchaValue"
+        [siteKey]="siteKey"
+        required
+        >
+
+        </ngx-recaptcha2>
+      <button type="submit"><i class="fab fa-whatsapp"></i><span class="cwhatsapp">&nbsp; Chat with us </span></button>
+  </form>
+</div> -->

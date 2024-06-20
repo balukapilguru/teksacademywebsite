@@ -1,0 +1,184 @@
+
+// banner
+.bnrscholarship{
+    border: 3px solid #F3F3F3;margin: 10px auto;
+            padding: 10px 10px 10px 10px; border-radius: 20px; width: 90%;
+}
+
+.bnrscholarship p{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.getstart{
+    border: 3px solid #F3F3F3;margin: 10px auto;
+    width: 58%; font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 4px;
+    background-color: #1565d8;
+    cursor: pointer;
+}
+.getstart:hover{
+    border: 3px solid rgb(241 99 38);
+    background-color: rgb(241 99 38);
+}
+
+.image-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bnnrheading2 h2{
+    color: #F3F3F3;
+    font-weight: 600;
+    margin: 35px auto;
+    color: #FFFFFF;
+    font-family: 'Roboto Condensed', Sans-serif;
+    text-transform: uppercase;
+}
+
+// courses
+.scholarshipcourses{
+    cursor: pointer;
+}
+
+.courseName h5{
+    color: #FFFFFF;
+    font-family: 'Roboto', Sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+// scroll
+.custom-container {
+    max-height: 70vh;
+    overflow: hidden; /* Hide the scrollbar */
+    scroll-snap-type: y mandatory;
+  
+    /* Enable scrolling */
+    -ms-overflow-style: none; /* Internet Explorer */
+    scrollbar-width: none; /* Firefox */
+  
+    /* Apply styles to create space for the scrollbar */
+    &::-webkit-scrollbar {
+      width: 0.5rem; /* Adjust as needed */
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent; /* Hide the scrollbar thumb */
+    }
+  
+    /* Allow scrolling with scroll-snap */
+    overflow-y: scroll;
+  }
+  
+  .panel1 {
+    scroll-snap-align: start;
+    height: 100vh;
+    background-color: #0f0695;
+    
+  }
+  .panel {
+    scroll-snap-align: start;
+    height: 100vh;
+    background-color: #6c4417;
+    
+  }
+  
+  .red {
+    background-color: #cf3535;
+    background-image: none;
+    
+  }
+  
+  .panel-heading {
+    font-size: 36px; /* Apply styles to the heading */
+    color: #333;   /* Text color for the heading */
+  }
+  
+  .panel-text {
+    font-size: 36px; /* Apply styles to the text */
+    color: #555;    /* Text color for the text */
+  }
+  
+  .yoyo {
+    /* Add styles for the yoyo class */
+    background-color: #ffc107; /* Background color for the yoyo section */
+             /* Add padding to the yoyo section */
+  }
+
+// form popup
+#popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 9999;
+    width: 40%;
+    border-radius: 3%;
+    }
+    #popup-form #dsformclose{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+        font-weight: 800;
+        color: red;
+        cursor: pointer;
+    }
+    #popup-form #dshead{
+        text-align: center;
+        margin: auto;
+        font-weight: 800;
+        font-size: 15px;
+
+    }
+    #popup-form label {
+    display: block;
+    margin-bottom: 5px;
+    }
+
+    #popup-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    }
+
+    #popup-form button {
+    display: block;
+    margin-top: 10px;
+    background-color: #1565d8;
+    color: white;
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    }
+
+    @media screen and (max-width: 787px) {
+        #popup-form {
+            width: 90%;
+            }
+    }
+
+
+
+    @media screen and (max-width: 787px){
+        .getstart{
+            width: 100%;
+        }
+    }

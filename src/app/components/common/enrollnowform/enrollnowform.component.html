@@ -1,0 +1,38 @@
+<form (ngSubmit)="eformData()">
+  <div class="form-group">
+    <label for="en-name">Name:</label>
+    <input type="text" id="efname" class="input form-control p-2" name="efname" placeholder="Enter Your Name" required
+      [(ngModel)]="efname" />
+  </div>
+  <div class="form-group">
+    <label for="en-email">Email address:</label>
+    <input type="email" class="input form-control p-2" id="en-email" name="efemail" aria-describedby="emailHelp"
+      placeholder="Enter your email" [(ngModel)]="efemail" />
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="en-phone">Phone Number: </label>
+    <input type="number" class="input form-control p-2" name="efphone" id="en-phone" placeholder="Enter Phone number"
+      [(ngModel)]="efphone" />
+  </div>
+  <div class="form-group">
+    <label for="en-course-name">Course Name: </label>
+    <input type="text" class="input form-control p-2" name="efcourse" id="en-course-name"
+      placeholder="Enter course name" [(ngModel)]="efcourse" />
+  </div>
+  <div class="form-group">
+    <label for="en-city">City: </label>
+    <input type="text" class="input form-control p-2" id="en-city" placeholder="Enter your city" name="efcity"
+      [(ngModel)]="efcity" />
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+      Close
+    </button>
+    <input type="submit" class="btn btn-primary" value="Enroll Now ⚡" style="background-color: #2a619d !important">
+
+
+
+  </div>
+  <!-- <input type="submit" value="Submit" /> -->
+</form>

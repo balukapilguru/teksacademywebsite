@@ -1,0 +1,51 @@
+<div id="popup-form">
+  <span id="dsformclose">X</span>
+  <span id="dshead">Please Fill The Form and Download</span>
+  <form id="dsForm" (ngSubmit)="dssubmitForm()">
+    <input
+      type="text"
+      id="name"
+      name="dname"
+      placeholder="Enter Your Full Name"
+      required
+      [(ngModel)]="dname"
+    />
+
+    <input
+      type="email"
+      id="email"
+      name="demail"
+      placeholder="Enter Your Email"
+      required
+      [(ngModel)]="demail"
+    />
+
+    <input
+      type="tel"
+      id="phone"
+      name="dphone"
+      placeholder="Enter Your Phone Number"
+      required
+      [(ngModel)]="dphone"
+      pattern="[0-9]*" maxlength="10"
+    />
+
+    <input
+      type="text"
+      id="city"
+      name="dcity"
+      placeholder="Enter Your City"
+      required
+      [(ngModel)]="dcity"
+    />
+    <!-- <ngx-recaptcha2
+            [siteKey]="siteKey"
+            [(ngModel)]="recaptchaValue"
+            name="recaptchaValue"
+            required
+        >
+        
+        </ngx-recaptcha2> -->
+    <button type="submit">Donwload Syllabus</button>
+  </form>
+</div>

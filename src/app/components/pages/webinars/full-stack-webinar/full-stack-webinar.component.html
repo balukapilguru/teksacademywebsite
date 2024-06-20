@@ -1,0 +1,244 @@
+<div class="courses-details-area pb-30">
+    <div class="courses-details-image" style="position: relative; cursor: pointer;" (click)="scrollToSection('regform')">
+        <img src="../../../../../assets/img/webinars/Full Stack.png" alt="digital marketing" >
+        <!-- <div style="position: absolute; top: 15%; bottom: 50%; transform: translate(20%, 10%); z-index: 50;">
+            <h2 class="text-white" style="font-size: 30px;"><small>Best </small> <b>DIGITAL MARKETING <br> Training  </b> <small>in </small>  <b>HYDERABAD</b></h2>
+            <p class="text-white">Offline-learning | Online-learning | e-learning</p>
+            <span class="rating" >
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+            
+                <span class="rating-count">
+                    <p class="text-white">4.5 Rating | 6243+ Enrollments | 100% Placement Assistance</p>
+                </span>
+        
+            </span>
+            <div style="margin-top: 10px;">
+                <a class="scdownloadSyllabus" id="open-form" style="background-color: #eb6329;">Enroll Today</a>&nbsp;
+                <a class="scdownloadSyllabus" id="open-form" style="background-color: #eb6329;">Download Syllabus</a>
+            </div>
+        </div> -->
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12" id="mbform">
+                <div class="courses-details-info" style="position: sticky; top: 80px; z-index: 100;">
+                    <!-- <div class="image">
+                        <img src="assets/img/courses/img1.jpg" alt="image">
+                        <a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="link-btn popup-youtube"></a>
+                        <div class="content">
+                            <i class="flaticon-play"></i>
+                            <span>Course Preview</span>
+                        </div>
+                    </div> -->
+                    <div id="csformmain" style="position: sticky; top: 80px;" >
+                        <form id="csform" class="csvalidationform" (ngSubmit)="scFormSubmit()" >
+                            <h2 id="fheading">Register Here</h2><br>
+                            <input type="text" id="name" class="cname" name="scname" placeholder="Enter Your Name" [(ngModel)]="scname"><br>
+                            <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber" placeholder="Enter Phone Number" [(ngModel)]="sccontactnumber"><br>
+                            <input type="email" id="email" class="cemail" name="scemail" placeholder="Enter Email Id" [(ngModel)]="scemail"><br>
+                            <input type="text" id="course" class="ccourse" name="sccourse" placeholder="Enter Course Name" [(ngModel)]="sccourse" readonly><br>
+                            <input type="text" id="course" class="ccourse" name="screferedby" placeholder="Refered By" [(ngModel)]="screferedby" ><br>
+                            <input type="submit" name="submit" class="csubmit" value="Register Now" style="background-color: #1565d8; width: 10 0%; height: 40px; border-radius: 5px; color: white;"><br>
+                            <p id="pwp" style="display: none;">Please wait, Your details are submiting</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="courses-details-desc">
+                    <div class="courses-overview" >
+                        <h3 id="cdesc">Join Our 2-Hour Workshop - Your Gateway to Full Stack Development Mastery!</h3>
+                        <p>Are you aspiring to become a Full Stack Developer but not sure where to start? Dive into our immersive 2-hour Workshop designed for beginners eager to grasp the essentials of Full Stack Development and build a foundation for a rewarding career.</p>
+                        <h3>What You'll Discover:</h3>
+                        <ul class="keyfeatures" style="list-style: none;">
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Full Stack Fundamentals:  &nbsp;</b>A comprehensive overview of both front-end and back-end development.</li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Hands-On Learning:  &nbsp;</b>Engage in live coding sessions and practical exercises to reinforce your skills.</li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Career Insights:  &nbsp;</b>Understand the key concepts and technologies sought after in the Full Stack Development field.</li>
+                        </ul>
+                        
+                        <h3 id="keyfeatures">Why Attend?</h3>
+                        <ul class="keyfeatures" style="list-style: none;">
+                            <li><i class="fas fa-check"></i>&nbsp; <b> Perfect for Beginners:</b> Perfect for Beginners:</li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Practical Insights:  </b> Gain skills applicable to real-world development scenarios.</li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Career Ready:</b> Start your journey towards becoming a versatile Full Stack Developer.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Agenda:</h3>
+                        <ul class="keyfeatures" style="list-style: none;">
+                            <li><i class="fas fa-check"></i>&nbsp; <b> Introduction to Full Stack Development:</b> Understanding the roles and responsibilities of a Full Stack Developer
+                                Overview of the technologies involved in Full Stack Development
+                                </li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Front-End Development: </b> Building interactive user interfaces with HTML, CSS, and JavaScript
+                                Introduction to popular front-end frameworks
+                                </li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Back-End Development:</b> Creating server-side applications using Node.js and Express.js
+                                Introduction to databases and back-end frameworks
+                                </li>
+                    </ul>
+                    <div class="courses-overview">
+                        <h3>Interactive Session and Q&A</h3>
+                        <ul class="keyfeatures" style="list-style: none;">
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Live Coding Session: </b> Engage in coding activities to apply what you've learned.</li>
+                            <li><i class="fas fa-check"></i>&nbsp; <b>Ask the Experts:  </b> Pose your questions to our experienced panel during the live Q&A.</li>
+                        </ul>
+                    </div>
+                    <span style="display: block; font-size: 21px; color: rgb(235 99 41);"><q><b>Secure Your Spot to Unlock Your Full Stack Potential!</b></q></span>
+                    <span><i class="fas fa-star" style="font-size: 10px;"></i>&nbsp; Limited seats available! Reserve your spot now and embark on a journey towards mastering Full Stack Development.</span><p></p>
+                    <p>Don't miss this opportunity to dive into the world of Full Stack Development. Secure your spot now and take the first step towards becoming a proficient Full Stack Developer!</p><p></p>
+                    <h3>Have Questions?</h3>
+                    <p>Reach out to our team at <a href="mailto:support@teksacademy.com"><b>support@teksacademy.com</b></a></p>
+                </div><p></p>
+                <hr>
+                <div>
+                    <h3>About Teks Academy</h3>
+                    <p>Teks Academy is an online and offline training hub for the students worldwide who want to excel, learn new courses and get certified to build their dream career. As a part of Kapil Knowledge Hub Pvt Ltd.</p>
+                    <p>Teks Academy provides technology based learning platform that brings real-time experience in learning for the students. A network of skilled trainers help students to get prepared for the most competitive job market in the industry. </p>
+                    <h3>What skills does Teks Academy provide?</h3>
+                    <p>A certified skill helps students increase their chances of employability, get excellent career advancement, increase their earning potential, and experience personal growth.</p>
+                    <p>Our TEKS Academy provides in-demand skills like Salesforce, AWS + DevOps, Digital Marketing, Revit, Full stack Development, Data Science, and many certified courses that increase confidence among the students to get excellent job opportunities and move ahead in their career ladder.</p>
+                    <p>TEKS academy has so far trained 9000+ students in learning certified and on-demand courses. </p>
+                    <p>We have branches in Kukatpally, Ameerpet, Dilsukhnagar, Secunderabad and Hitec City.</p>
+                    <h3>We have branches in Kukatpally, Ameerpet, Dilsukhnagar, Secunderabad and Hitec City.</h3>
+                    <ul class="keyfeatures" style="list-style: none;">
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Get Career Guidance &nbsp;</b>Interacting with our counsellor will help you to clarify your career path</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Well Planned Curriculum: &nbsp;</b>Curriculum is created based on the latest industry trends and on learning objectives that keeps you updated.</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Learn from Industry Experts:  &nbsp;</b>Learn from top-level industry experts to gain real time knowledge that helps to get better job opportunities.</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Assessments:  &nbsp;</b>Students are evaluated to understand their progress through test & assignments.</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Real Time IT Industry Exposure:  &nbsp;</b>Real Time IT Industry exposure is provided to our students to understand & experience real work environment.</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Internship: &nbsp;</b>Get internship opportunities. We provide you with industry experience through our internship program.</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Valid International Certification:   &nbsp;</b>Get international valid certificate which adds value to your CV and helps to get the right job.</li>
+                        <li><i class="fas fa-check"></i>&nbsp; <b>Placement Assistance:  &nbsp;</b>Get placed at reputed organizations. We help you develop all the skills that every industry expects from a candidate.</li>
+                    </ul>
+                    <p>For more details connect with us at  <a href="mailto:support@teksacademy.com"><b>support@teksacademy.com</b></a></p>
+                </div>
+            </div>
+            <!-- form -->
+            <div class="col-lg-4 col-md-12" >
+                <div class="courses-details-info" id="regform" style="position: sticky; top: 80px; z-index: 100;">
+                    <!-- <div class="image">
+                        <img src="assets/img/courses/img1.jpg" alt="image">
+                        <a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="link-btn popup-youtube"></a>
+                        <div class="content">
+                            <i class="flaticon-play"></i>
+                            <span>Course Preview</span>
+                        </div>
+                    </div> -->
+                    <div id="csformmain" style="position: sticky; top: 80px;" >
+                        <form id="csform" class="csvalidationform" (ngSubmit)="scFormSubmit()" >
+                            <h2 id="fheading">Register Here</h2><br>
+                            <input type="text" id="name" class="cname" name="scname" placeholder="Enter Your Name" [(ngModel)]="scname"><br>
+                            <input type="number" id="phonenumber" class="cphonenumber" name="sccontactnumber" placeholder="Enter Phone Number" [(ngModel)]="sccontactnumber"><br>
+                            <input type="email" id="email" class="cemail" name="scemail" placeholder="Enter Email Id" [(ngModel)]="scemail"><br>
+                            <input type="text" id="course" class="ccourse" name="sccourse" placeholder="Enter Course Name" [(ngModel)]="sccourse" readonly><br>
+                            <input type="text" id="course" class="ccourse" name="screferedby" placeholder="Refered By" [(ngModel)]="screferedby" ><br>
+                            <input type="submit" name="submit" class="csubmit" value="Register Now" style="background-color: #1565d8; width: 10 0%; height: 40px; border-radius: 5px; color: white;"><br>
+                            <p id="pwp" style="display: none;">Please wait, Your details are submiting</p>
+                        </form>
+                    </div>
+                    <div class="courses-share">
+                        <div class="share-info">
+                            <span>Share This Course <i class="flaticon-share"></i></span>
+                            <ul class="social-link">
+                                <li><a href="#" class="d-block" target="_blank" ><i class='bx bxl-facebook'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <!-- form -->
+        </div>
+        <hr>
+        <br>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="text-center"><b>Awards And Recognitions</b></h3>
+                </div>
+                <div class="col-lg-3">
+                    <img src="../../../../../assets/img/webinars/Certificate-Corporate Vision.jpg" alt="" 
+                    style="width: 278px; height: 362px;">
+                </div>
+                <div class="col-lg-3">
+                    <img src="../../../../../assets/img/webinars/Hybiz.jpg" alt=""
+                    style="width: 278px; height: 362px;">
+                </div>
+                <div class="col-lg-3">
+                    <img src="../../../../../assets/img/webinars/Pride of India.jpg" alt=""
+                    style="width: 278px; height: 362px;">
+                </div>
+                <div class="col-lg-3">
+                    <img src="../../../../../assets/img/webinars/Silicon India.jpg" alt=""
+                    style="width: 278px; height: 362px;">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="text-center"><b>Sample Certificate</b></h3>
+                </div>
+                <div class="col-lg-6" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="text-align: justify;">We are delighted to present this certificate on behalf of Teks Academy to all the participants who actively engaged in our Free Workshop. This certificate is not just a recognition of your attendance; it holds immense significance as a testament to your commitment to continuous learning. By receiving this certificate, you are not only acknowledging your dedication but also enhancing the value of your CV. Feel proud to showcase this accomplishment in your professional profile, as it symbolizes your pursuit of knowledge and professional development with Teks Academy. </p>
+                    <a class="scdownloadSyllabus" (click)="scrollToSection('regform')" >Register Now</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="../../../../../assets/img/webinars/WEBINAR-CERTIFICATE.jpg" alt="" 
+                    >
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row align-items-center">
+            <h3 class="text-center"><b>Our Associations</b></h3>
+            <div class="col-lg-2 col-6 col-sm-3 col-md-3">
+                <div class="single-partner-item">
+                    <img src="assets/img/partner/nsc.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 col-sm-3 col-md-3">
+                <div class="single-partner-item">
+                    <img src="assets/img/partner/si.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 col-sm-3 col-md-3">
+                <div class="single-partner-item">
+                    <img src="assets/img/partner/nasscom.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 col-sm-3 col-md-3">
+                <div class="single-partner-item">
+                    <img src="assets/img/partner/ic.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 col-sm-3 col-md-3">
+                <div class="single-partner-item">
+                    <img src="assets/img/partner/sa.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 col-sm-3 col-md-3">
+                <div class="single-partner-item">
+                    <img src="assets/img/partner/dg.png" alt="image">
+                </div>
+            </div><p></p>
+            <div class="col-lg-12 text-center m-30">
+                <a class="scdownloadSyllabus" (click)="scrollToSection('regform')" >Register Now</a>
+                <br><br>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>

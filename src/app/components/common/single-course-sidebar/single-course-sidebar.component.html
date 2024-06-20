@@ -1,0 +1,55 @@
+<div id="csformmain">
+  <form id="csform" class="csvalidationform" (ngSubmit)="scFormSubmit()">
+    <h2 id="fheading">Contact Us</h2>
+    <br />
+    <input
+      type="text"
+      id="name"
+      class="cname"
+      name="scname"
+      placeholder="Enter Your Name"
+      [(ngModel)]="scname"
+    /><br />
+    <input
+      type="number"
+      id="phonenumber"
+      class="cphonenumber"
+      name="sccontactnumber"
+      placeholder="Enter Phone Number"
+      [(ngModel)]="sccontactnumber"
+    /><br />
+    <input
+      type="email"
+      id="email"
+      class="cemail"
+      name="scemail"
+      placeholder="Enter Email Id"
+      [(ngModel)]="scemail"
+    /><br />
+    <input
+      type="text"
+      id="course"
+      class="ccourse"
+      name="sccourse"
+      placeholder="Enter Course Name"
+      [(ngModel)]="sccourse"
+    /><br />
+
+    <input
+      type="submit"
+      name="submit"
+      class="csubmit"
+      value="Submit"
+      style="
+        background-color: #1565d8;
+        width: 50%;
+        height: 100%;
+        border-radius: 5px;
+        color: white;
+      "
+    /><br />
+    <p id="pwp" style="display: none">
+      Please wait, Your details are submiting
+    </p>
+  </form>
+</div>
