@@ -107,7 +107,7 @@ export class TestingtoolsComponent {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Get the Best Testing Tools Course in Hyderabad 2024'
+      'Best software testing & automation course'
     );
 
     // set meta description
