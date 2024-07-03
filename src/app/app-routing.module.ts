@@ -1,4 +1,6 @@
 import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; 
 import { Routes, RouterModule } from '@angular/router';
 // import { ElearningSchoolComponent } from './components/pages/elearning-school/elearning-school.component';
 import { VendorCertificationEtrainingComponent } from './components/pages/vendor-certification-etraining/vendor-certification-etraining.component';
@@ -141,6 +143,9 @@ import { MultimediaComponent } from './components/pages/single-course/multimedia
 import { MedicalcodingComponent } from './components/pages/single-course/medicalcoding/medicalcoding.component';
 import { MedicalcodingWebinarComponent } from './components/pages/webinars/medicalcoding-webinar/medicalcoding-webinar.component';
 import { ThankMedicalCodingComponent } from './components/pages/webinars/thank-you-pages/thank-medical-coding/thank-medical-coding.component';
+import { CompanyComponent } from './components/pages/company/company.component';
+import { JobdescriptionpageComponent } from './components/pages/jobdescriptionpage/jobdescriptionpage.component';
+import { StudentverifypageComponent } from './components/pages/studentverifypage/studentverifypage.component';
 
 const routes: Routes = [
   // {path: '', component: ElearningSchoolComponent},
@@ -399,6 +404,7 @@ const routes: Routes = [
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
+  { path: 'company', component: CompanyComponent },
 
   // {path: '', component: ElearningSchoolComponent},
 
@@ -664,7 +670,8 @@ const routes: Routes = [
   { path: 'course-category/foundation', component: EssentialCoursesComponent },
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
-
+  {path:'jobdescription', component:JobdescriptionpageComponent},
+  {path:'verifyCertificate/:id', component:StudentverifypageComponent},
   {
     path: '',
     loadChildren: () =>
@@ -1092,7 +1099,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {})],
+  imports: [
+    RouterModule.forRoot(routes, {}),
+    BrowserModule,
+    HttpClientModule
+
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -281,6 +281,9 @@ import { BookafreedemoformComponent } from './components/common/bookafreedemofor
 import { EnrollnowformComponent } from './components/common/enrollnowform/enrollnowform.component';
 import { MedicalcodingWebinarComponent } from './components/pages/webinars/medicalcoding-webinar/medicalcoding-webinar.component';
 import { ThankMedicalCodingComponent } from './components/pages/webinars/thank-you-pages/thank-medical-coding/thank-medical-coding.component';
+import { CompanyComponent } from './components/pages/company/company.component';
+import { JobdescriptionpageComponent } from './components/pages/jobdescriptionpage/jobdescriptionpage.component';
+import { StudentverifypageComponent } from './components/pages/studentverifypage/studentverifypage.component';
 
 @NgModule({
   declarations: [
@@ -541,6 +544,10 @@ import { ThankMedicalCodingComponent } from './components/pages/webinars/thank-y
     MedicalcodingComponent,
     MedicalcodingWebinarComponent,
     ThankMedicalCodingComponent,
+    CompanyComponent,
+    JobdescriptionpageComponent,
+    StudentverifypageComponent,
+   
   ],
 
   imports: [

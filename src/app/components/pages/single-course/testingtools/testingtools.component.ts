@@ -284,6 +284,8 @@ export class TestingtoolsComponent {
 
 "url": " https://teksacademy.com/courses/best-testingtools-course-training-institute ",
 
+"priceCurrency": "INR",
+
 "price": "30000",
 
 "priceValidUntil": "2024-11-10",
