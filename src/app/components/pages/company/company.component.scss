@@ -1,0 +1,57 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.box_shadow {
+    box-shadow: 0 14px 40px rgba(30, 10, 58, .1);
+    background-color: #fff;
+    padding: 24px 24px 20px;
+    border-radius: 20px;
+}
+
+.course_name {
+    font-size: 16px;
+    font-weight: 700;
+    // line-height: 22px;
+    max-height: 100%;
+    display: block;
+    color: #121224;
+}
+.company_name{
+    
+    color: #474d6a;
+    width: auto;
+    max-width: 250px;
+    display: inline-block;
+    padding: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+.img_size{
+    height: 50px;
+    width: 50px;
+    border-radius: 14px;
+    border: 1px solid #e7e7f1;
+}
+.line{
+    color: grey;
+}
+.date{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #717b9e;
+}
+.view_details{
+    font-size: 14px;
+}
+.text_bold{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+    .space_mb{
+     margin-bottom: 10px;
+    }
+   }
