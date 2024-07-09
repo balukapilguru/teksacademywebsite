@@ -284,6 +284,11 @@ import { ThankMedicalCodingComponent } from './components/pages/webinars/thank-y
 import { CompanyComponent } from './components/pages/company/company.component';
 import { JobdescriptionpageComponent } from './components/pages/jobdescriptionpage/jobdescriptionpage.component';
 import { StudentverifypageComponent } from './components/pages/studentverifypage/studentverifypage.component';
+import { JobApplicationComponent } from './components/pages/job-application/job-application.component';
+import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -547,6 +552,9 @@ import { StudentverifypageComponent } from './components/pages/studentverifypage
     CompanyComponent,
     JobdescriptionpageComponent,
     StudentverifypageComponent,
+    JobApplicationComponent,
+    ThankyoupageComponent,
+   
    
   ],
 
@@ -571,6 +579,8 @@ import { StudentverifypageComponent } from './components/pages/studentverifypage
     MatStepperModule,
     MatInputModule,
     MatFormFieldModule,
+   
+   
   ],
 
   providers: [],
