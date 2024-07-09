@@ -146,6 +146,9 @@ import { ThankMedicalCodingComponent } from './components/pages/webinars/thank-y
 import { CompanyComponent } from './components/pages/company/company.component';
 import { JobdescriptionpageComponent } from './components/pages/jobdescriptionpage/jobdescriptionpage.component';
 import { StudentverifypageComponent } from './components/pages/studentverifypage/studentverifypage.component';
+import { JobApplicationComponent } from './components/pages/job-application/job-application.component';
+import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
+
 
 const routes: Routes = [
   // {path: '', component: ElearningSchoolComponent},
@@ -405,6 +408,7 @@ const routes: Routes = [
   { path: 'post-graduate-program', component: PgpComponent },
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'company', component: CompanyComponent },
+  {path:'thankyoupage', component:ThankyoupageComponent},
 
   // {path: '', component: ElearningSchoolComponent},
 
@@ -670,7 +674,7 @@ const routes: Routes = [
   { path: 'course-category/foundation', component: EssentialCoursesComponent },
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
-  {path:'jobdescription', component:JobdescriptionpageComponent},
+  {path:'jobdescription/:id', component:JobdescriptionpageComponent},
   {path:'verifyCertificate/:id', component:StudentverifypageComponent},
   {
     path: '',
@@ -1089,6 +1093,7 @@ const routes: Routes = [
   { path: 'thankyou-data-science', component: ThankDataScienceComponent },
   { path: 'thankyou-awsplusdevops', component: ThankAwsDevopsComponent },
   { path: 'thankyou-medicalcoding', component: ThankMedicalCodingComponent },
+  { path: 'job-application', component: JobApplicationComponent },
 
   { path: 'testing', component: TestingComponent },
 

@@ -7820,3 +7820,9 @@ i.flaticon-tag {
 .text-capitalize{
   color: #ededed;
 }
+.modal-backdrop.show{
+  opacity: 0 !important;
+}
+.modal-backdrop.fade{
+  opacity: 0 !important;
+}

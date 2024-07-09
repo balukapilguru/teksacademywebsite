@@ -1,0 +1,39 @@
+<form [formGroup]="jobApplicationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="job_posting_id">Job Posting ID</label>
+      <input id="job_posting_id" formControlName="job_posting_id" type="number" readonly>
+    </div>
+    
+    <div>
+      <label for="applicant_name">Name</label>
+      <input id="applicant_name" formControlName="applicant_name" type="text" required>
+    </div>
+    
+    <div>
+      <label for="applicant_email">Email</label>
+      <input id="applicant_email" formControlName="applicant_email" type="email" required>
+    </div>
+    
+    <div>
+      <label for="applicant_phone">Phone</label>
+      <input id="applicant_phone" formControlName="applicant_phone" type="text" required>
+    </div>
+    
+    <div>
+      <label for="applicant_location">Location</label>
+      <input id="applicant_location" formControlName="applicant_location" type="text" required>
+    </div>
+    
+    <div>
+      <label for="applicant_teksenrollmentid">TEK Enrollment ID</label>
+      <input id="applicant_teksenrollmentid" formControlName="applicant_teksenrollmentid" type="text" required>
+    </div>
+    
+    <div>
+      <label for="resume">Resume (PDF or CSV)</label>
+      <input id="resume" type="file" (change)="onFileChange($event)" required>
+    </div>
+    
+    <button type="submit" [disabled]="jobApplicationForm.invalid">Submit</button>
+  </form>
+  
