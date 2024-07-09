@@ -10,6 +10,6 @@
 
 export const environment = {
   production: true,
-  apiUrl: 'https://teksacademy.infozit.com',
-  // apiUrl: 'https://apiadmin.infozit.com',
+  // apiUrl: 'https://teksacademy.infozit.com',
+  apiUrl: 'https://apiadmin.infozit.com',
 };
