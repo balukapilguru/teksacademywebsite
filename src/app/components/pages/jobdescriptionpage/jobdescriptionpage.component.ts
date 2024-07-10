@@ -78,13 +78,13 @@ export class JobdescriptionpageComponent implements OnInit {
 
     if (file) {
       const fileExtension = file.name.split('.').pop()?.toLowerCase();
-      if (['pdf', 'csv'].includes(fileExtension)) {
+      if (['pdf', 'doc', 'docx'].includes(fileExtension)) {
         this.form.patchValue({ file });
         this.form.get('file')?.setErrors(null);
       } else {
         this.form.patchValue({ file: null });
         this.form.get('file')?.setErrors({ fileType: true });
-        this.fileErrorMessage = 'Please provide PDF and CSV files only';
+        this.fileErrorMessage = 'Please provide PDF and DOC files only';
       }
     }
   }
