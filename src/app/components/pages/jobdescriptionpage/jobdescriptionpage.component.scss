@@ -89,3 +89,14 @@ body {
 .modal-backdrop.fade{
     opacity: 0 !important;
 }
+
+@media screen and (max-width: 480px) {
+    .form_height{
+        height: 80px;
+        margin-bottom: 4px;
+        margin-top: 12px;
+    }
+}
+.btn{
+    cursor: pointer;
+}
