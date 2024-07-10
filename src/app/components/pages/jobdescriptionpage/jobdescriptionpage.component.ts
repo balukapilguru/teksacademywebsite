@@ -54,6 +54,7 @@ export class JobdescriptionpageComponent implements OnInit {
     }
   }
 
+
   fetchJobDetails(id: string) {
     this.http.get<any>(`${this.apiUrl}/jobs/job-posting/${id}`).subscribe(
       (response) => {
@@ -72,6 +73,14 @@ export class JobdescriptionpageComponent implements OnInit {
     );
   }
 
+  updateUrl() {
+    if (this.jobDetails) {
+      const companyName = this.jobDetails.company_name.replace(/\s+/g, '-').toLowerCase();
+      const jobTitle = this.jobDetails.title.replace(/\s+/g, '-').toLowerCase();
+      this.router.navigateByUrl(`/jd/${this.jobId}/${companyName}-${jobTitle}`);
+    }
+  }
+
   onFileChange(event: any) {
     const file = event.target.files?.[0];
     this.fileErrorMessage = null;
@@ -84,7 +93,7 @@ export class JobdescriptionpageComponent implements OnInit {
       } else {
         this.form.patchValue({ file: null });
         this.form.get('file')?.setErrors({ fileType: true });
-        this.fileErrorMessage = 'Please provide PDF and DOC files only';
+        this.fileErrorMessage = 'Please provide PDF and Doc files only';
       }
     }
   }

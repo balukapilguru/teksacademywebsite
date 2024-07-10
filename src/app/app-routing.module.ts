@@ -407,7 +407,7 @@ const routes: Routes = [
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
-  { path: 'company', component: CompanyComponent },
+  { path: 'jobs', component: CompanyComponent },
   {path:'thankyoupage', component:ThankyoupageComponent},
 
   // {path: '', component: ElearningSchoolComponent},
@@ -674,8 +674,8 @@ const routes: Routes = [
   { path: 'course-category/foundation', component: EssentialCoursesComponent },
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
-  {path:'jobdescription/:id', component:JobdescriptionpageComponent},
-  {path:'verifyCertificate/:id', component:StudentverifypageComponent},
+  {path:'jd/:id/:companyName-:jobTitle', component:JobdescriptionpageComponent},
+  {path:'verifyCertificate/:registrationnumber', component:StudentverifypageComponent},
   {
     path: '',
     loadChildren: () =>

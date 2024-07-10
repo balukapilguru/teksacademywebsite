@@ -40,4 +40,7 @@ export class JobApplicationService {
   getJob(): Observable<any> {
     return this.http.get<{ applications: JobApplication[] }>(this.apiUrl+'/jobs/job-postings');
   }
+  // getJobListings(): Observable<any> {
+  //   return this.http.get<any>(this.apiUrl+'/jobs/job-postings');
+  // }
 }

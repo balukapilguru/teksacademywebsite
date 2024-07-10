@@ -55,9 +55,9 @@ body {
      margin-bottom: 10px;
     }
    }
-   .grid_height{
-    height: 100%;
-   }
+//    .grid_height{
+//     height: 100%;
+//    }
    .custom-input-height {
     height: 40px !important;
   }
@@ -67,6 +67,14 @@ body {
     background-color: #2a619d !important;
     border-color: #2a619d !important;
 }
+
 .cursor_pointer{
     cursor: pointer;
+}
+
+.full_container{
+    height: 80vh !important;
+}
+.half_container{
+    height: 50vh !important;
 }

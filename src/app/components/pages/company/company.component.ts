@@ -154,7 +154,13 @@ export class CompanyComponent implements OnInit, OnDestroy {
     this.fetchJobPostings(this.currentPage); // Reload data with new page size
   }
 
-  viewDetails(itemId: number) {
-    this.router.navigate(['/jobdescription', itemId]);
+  // viewDetails(itemId: number) {
+  //   this.router.navigate(['/jobdescription', itemId]);
+  // }
+  viewDetails(jobId: string, companyName: string, jobTitle: string) {
+    const formattedCompanyName = companyName.replace(/\s+/g, '-').toLowerCase();
+    const formattedJobTitle = jobTitle.replace(/\s+/g, '-').toLowerCase();
+    this.router.navigate(['/jd', jobId, `${formattedCompanyName}-${formattedJobTitle}`]);
   }
+  
 }
