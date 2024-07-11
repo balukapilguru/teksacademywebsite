@@ -15,8 +15,8 @@
 
 export const environment = {
   production: false,
-  // apiUrl: 'https://apierp.infozit.com',   //localhost
-  apiUrl: 'https://apiadmin.infozit.com'  //live
+  apiUrl: 'https://apierp.infozit.com',   //localhost
+  // apiUrl: 'https://apiadmin.infozit.com'  //live
 };
 
 /*

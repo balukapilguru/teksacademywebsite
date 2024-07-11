@@ -1,56 +1,57 @@
 <div class="container my-2">
-    <div class="row d-flex justify-content-center">
-      <div class="col-lg-8">
-        <!-- Student Data Display -->
-        <div class="box_shadow" *ngIf="!isLoading && studentData && !notFound">
-          <table class="table table-hover border border-1">
-            <tbody>
-              <tr>
-                <th class="heading_one">Name</th>
-                <td class="heading_two">: {{ studentData.fullname }}</td>
-              </tr>
-              <tr>
-                <th class="heading_one">Enrollment ID</th>
-                <td class="heading_two">: {{ studentData.registrationnumber }}</td>
-              </tr>
-              <tr>
-                <th class="heading_one">Course</th>
-                <td class="heading_two">: {{ studentData.course }}</td>
-              </tr>
-              <tr>
-                <th class="heading_one">Branch</th>
-                <td class="heading_two">: {{ studentData.branch }}</td>
-              </tr>
-              <tr>
-                <th class="heading_one">Start Date</th>
-                <td class="heading_two">: {{ studentData.courseStartDate }}</td>
-              </tr>
-              <tr>
-                <th class="heading_one">End Date</th>
-                <td class="heading_two">: {{ studentData.courseEndDate }}</td>
-              </tr>
-            </tbody>
-          </table>
-  
-          <!-- Verified Section -->
-          <div class="d-flex justify-content-center flex-row">
-            <img src="../../../../assets/img/Tick.png" class="img-fluid" width="50px" height="50px" alt="Tick Image" />
-            <span class="mt-2 pt-1 ms-1">
-              <h5 class="fw-normal">Certificate Issued</h5>
-            </span>
-          </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-8">
+      <!-- Student Data Display -->
+      <div class="box_shadow" *ngIf="!isLoading && studentData && !notFound && !notVerified">
+        <table class="table table-hover border border-1">
+          <tbody>
+            <tr>
+              <th class="heading_one">Name</th>
+              <td class="heading_two">: {{ studentData.fullname }}</td>
+            </tr>
+            <tr>
+              <th class="heading_one">Enrollment ID</th>
+              <td class="heading_two">: {{ studentData.registrationnumber }}</td>
+            </tr>
+            <tr>
+              <th class="heading_one">Course</th>
+              <td class="heading_two">: {{ studentData.course }}</td>
+            </tr>
+            <tr>
+              <th class="heading_one">Branch</th>
+              <td class="heading_two">: {{ studentData.branch }}</td>
+            </tr>
+            <tr>
+              <th class="heading_one">Start Date</th>
+              <td class="heading_two">: {{ studentData.courseStartDate }}</td>
+            </tr>
+            <tr>
+              <th class="heading_one">End Date</th>
+              <td class="heading_two">: {{ studentData.courseEndDate }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Verified Section -->
+        <div class="d-flex justify-content-center flex-row">
+          <img src="../../../../assets/img/Tick.png" class="img-fluid" width="50px" height="50px" alt="Tick Image" />
+          <span class="mt-2 pt-1 ms-1">
+            <h5 class="fw-normal">Certificate Issued</h5>
+          </span>
         </div>
-  
-        <!-- Student Not Found Display -->
-        <div class="box_shadow d-flex justify-content-center align-items-center" *ngIf="!isLoading && notFound">
-          <h3>Student Not Found</h3>
-        </div>
-  
-        <!-- Loading Display -->
-        <div class="text-center" *ngIf="isLoading">
-          <p>Loading...</p>
-        </div>
+      </div>
+     <!-- Student Not Verified Display -->
+     <div class="box_shadow d-flex justify-content-center align-items-center" *ngIf="!isLoading && notVerified && !notFound">
+      <h3>Certificate Not Verified</h3>
+    </div>
+      <div class="box_shadow d-flex justify-content-center align-items-center" *ngIf="!isLoading && notFound && !notVerified">
+        <h3>Student Not Found</h3>
+      </div>
+      <!-- Loading Display -->
+      <div class="text-center" *ngIf="isLoading">
+        <p>Loading...</p>
       </div>
     </div>
   </div>
-  
+  <div clasas="" style="height: 50vh;"></div>
+</div>
