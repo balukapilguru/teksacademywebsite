@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { JobPosting } from 'src/app/Model/jobposting';
 import { JobApplicationService } from 'src/app/service/job-application.service';
 
 @Component({
@@ -7,62 +8,78 @@ import { JobApplicationService } from 'src/app/service/job-application.service';
   templateUrl: './job-application.component.html',
   styleUrls: ['./job-application.component.scss']
 })
-export class JobApplicationComponent {
-  jobApplicationForm!: FormGroup;
+export class JobApplicationComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private jobApplicationService: JobApplicationService) { }
+  jobPostings: JobPosting[] = [];
+  itemsPerPageOptions = [10, 20, 50, 100];
+  selectedItemsPerPage = 10;
+  currentPage = 1;
+  searchTerm = '';
+  isLoading = true;
+  imagePath: string = 'https://teksacademy.s3.ap-south-1.amazonaws.com/HRM/jobposting_companylogos/';
+  constructor(private jobService: JobApplicationService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.jobApplicationForm = this.fb.group({
-      job_posting_id: [8, Validators.required],
-      applicant_name: ['', Validators.required],
-      applicant_email: ['', [Validators.required, Validators.email]],
-      applicant_phone: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
-      applicant_location: ['', Validators.required],
-      applicant_teksenrollmentid: ['', Validators.required],
-      resume: [null, Validators.required] // Ensure resume is initialized correctly
+  ngOnInit() {
+    this.jobService.getJobListings().subscribe(data => {
+      this.jobPostings = data.reversedjobs;
+      this.isLoading = false;
     });
   }
 
-  onFileChange(event: Event) {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      const file = input.files[0];
-      if (file.type === 'application/pdf' || file.type === 'text/csv') {
-        this.jobApplicationForm.patchValue({
-          resume: file
-        });
-      } else {
-        alert('Please upload a PDF or CSV file.');
-      }
+  get totalItems(): number {
+    return this.filteredJobPostings.length;
+  }
+
+  get totalPages(): number {
+    return Math.ceil(this.totalItems / this.selectedItemsPerPage);
+  }
+
+  get filteredJobPostings(): JobPosting[] {
+    if (!this.searchTerm) {
+      return this.jobPostings;
+    }
+    return this.jobPostings.filter(job =>
+      Object.values(job).some(val =>
+        (typeof val === 'string' && val.toLowerCase().includes(this.searchTerm.toLowerCase())) ||
+        (Array.isArray(val) && val.some(skill => skill.name.toLowerCase().includes(this.searchTerm.toLowerCase())))
+      )
+    );
+  }
+
+  get paginatedJobPostings(): JobPosting[] {
+    const start = (this.currentPage - 1) * this.selectedItemsPerPage;
+    const end = start + this.selectedItemsPerPage;
+    const filtered = this.filteredJobPostings;
+    if (Array.isArray(filtered)) {
+      return filtered.slice(start, end);
+    } else {
+      return [];
     }
   }
 
-  onSubmit() {
-    if (this.jobApplicationForm.valid) {
-      const formData = new FormData();
-      const formValue = this.jobApplicationForm.value;
-  
-      Object.keys(formValue).forEach(key => {
-        formData.append(key, formValue[key]);
-      });
-  
-      // Debugging: Log form data just before submission
-      console.log('Form Data:', formData);
-  
-      this.jobApplicationService.submitApplication(formData).subscribe(
-        (response: any) => {
-          console.log(response);
-          alert('Application submitted successfully!');
-        },
-        (error: any) => {
-          console.error(error);
-          alert('There was an error submitting your application. Please try again.');
-        }
-      );
-    } else {
-      alert('Please fill all the required fields.');
+  onItemsPerPageChange(event: Event) {
+    const value = (event.target as HTMLSelectElement).value;
+    this.selectedItemsPerPage = +value;
+    this.currentPage = 1;
+  }
+
+  onPageChange(newPage: number) {
+    if (newPage > 0 && newPage <= this.totalPages) {
+      this.currentPage = newPage;
     }
   }
+
+  onSearchTermChange(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.searchTerm = value;
+    this.currentPage = 1;
+  }
+
+  viewDetails(jobId: string, companyName: string, jobTitle: string) {
+    const formattedCompanyName = companyName.replace(/\s+/g, '-').toLowerCase();
+    const formattedJobTitle = jobTitle.replace(/\s+/g, '-').toLowerCase();
+    this.router.navigate(['/', jobId, formattedCompanyName, formattedJobTitle]);
+  }
+  
   
 }

@@ -407,7 +407,7 @@ const routes: Routes = [
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
-  { path: 'jobs', component: CompanyComponent },
+  { path: 'job', component: CompanyComponent },
   {path:'thankyoupage', component:ThankyoupageComponent},
 
   // {path: '', component: ElearningSchoolComponent},
@@ -674,8 +674,8 @@ const routes: Routes = [
   { path: 'course-category/foundation', component: EssentialCoursesComponent },
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
-  {path:'jd/:id/:companyName-:jobTitle', component:JobdescriptionpageComponent},
-  {path:'verifyCertificate/:registrationnumber', component:StudentverifypageComponent},
+  {path:':id/:companyName/:jobTitle', component:JobdescriptionpageComponent},
+  {path:'certificate/:registrationnumber', component:StudentverifypageComponent},
   {
     path: '',
     loadChildren: () =>
@@ -1093,7 +1093,7 @@ const routes: Routes = [
   { path: 'thankyou-data-science', component: ThankDataScienceComponent },
   { path: 'thankyou-awsplusdevops', component: ThankAwsDevopsComponent },
   { path: 'thankyou-medicalcoding', component: ThankMedicalCodingComponent },
-  { path: 'job-application', component: JobApplicationComponent },
+  { path: 'jobs', component: JobApplicationComponent },
 
   { path: 'testing', component: TestingComponent },
 

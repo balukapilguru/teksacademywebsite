@@ -77,7 +77,7 @@ export class JobdescriptionpageComponent implements OnInit {
     if (this.jobDetails) {
       const companyName = this.jobDetails.company_name.replace(/\s+/g, '-').toLowerCase();
       const jobTitle = this.jobDetails.title.replace(/\s+/g, '-').toLowerCase();
-      this.router.navigateByUrl(`/jd/${this.jobId}/${companyName}-${jobTitle}`);
+      this.router.navigateByUrl(`/${this.jobId}/${companyName}/${jobTitle}`);
     }
   }
 
@@ -124,7 +124,13 @@ export class JobdescriptionpageComponent implements OnInit {
         (response) => {
           console.log('Form submitted successfully', response);
           this.router.navigate(['/thankyoupage']);
-          this.resetForm();
+      
+          setTimeout(() => {
+            this.router.navigate(['/jobs']).then(() => {
+              window.location.reload(); // Refresh the page after navigation
+            });
+          }, 2000); // Navigate back to job application page after 3 seconds  
+        
         },
         (error: HttpErrorResponse) => {
           console.error('Error submitting form', error);

@@ -37,10 +37,10 @@ export class JobApplicationService {
     return this.http.get<{ applications: JobApplication[] }>(this.apiUrl+'/jobs/applications');
   }
 
-  getJob(): Observable<any> {
-    return this.http.get<{ applications: JobApplication[] }>(this.apiUrl+'/jobs/job-postings');
-  }
-  // getJobListings(): Observable<any> {
-  //   return this.http.get<any>(this.apiUrl+'/jobs/job-postings');
+  // getJob(): Observable<any> {
+  //   return this.http.get<{ applications: JobApplication[] }>(this.apiUrl+'/jobs/job-postings');
   // }
+  getJobListings(): Observable<any> {
+    return this.http.get<any>(this.apiUrl+'/jobs/job-postings');
+  }
 }

@@ -160,7 +160,7 @@ export class CompanyComponent implements OnInit, OnDestroy {
   viewDetails(jobId: string, companyName: string, jobTitle: string) {
     const formattedCompanyName = companyName.replace(/\s+/g, '-').toLowerCase();
     const formattedJobTitle = jobTitle.replace(/\s+/g, '-').toLowerCase();
-    this.router.navigate(['/jd', jobId, `${formattedCompanyName}-${formattedJobTitle}`]);
+    this.router.navigate([`/${formattedCompanyName}/${formattedJobTitle}`]);
   }
   
 }
