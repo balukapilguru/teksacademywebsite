@@ -78,8 +78,6 @@ export class JobApplicationComponent implements OnInit {
   viewDetails(jobId: string, companyName: string, jobTitle: string) {
     const formattedCompanyName = companyName.replace(/\s+/g, '-').toLowerCase();
     const formattedJobTitle = jobTitle.replace(/\s+/g, '-').toLowerCase();
-    this.router.navigate(['/', jobId, formattedCompanyName, formattedJobTitle]);
+    this.router.navigate([ jobId, `${formattedCompanyName}/${formattedJobTitle}`]);
   }
-  
-  
 }

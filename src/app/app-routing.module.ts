@@ -148,6 +148,7 @@ import { JobdescriptionpageComponent } from './components/pages/jobdescriptionpa
 import { StudentverifypageComponent } from './components/pages/studentverifypage/studentverifypage.component';
 import { JobApplicationComponent } from './components/pages/job-application/job-application.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
+import { NaukriComponent } from './components/pages/naukri/naukri.component';
 
 
 const routes: Routes = [
@@ -1093,8 +1094,8 @@ const routes: Routes = [
   { path: 'thankyou-data-science', component: ThankDataScienceComponent },
   { path: 'thankyou-awsplusdevops', component: ThankAwsDevopsComponent },
   { path: 'thankyou-medicalcoding', component: ThankMedicalCodingComponent },
-  { path: 'jobs', component: JobApplicationComponent },
-
+  { path: 'jobapplication', component: JobApplicationComponent },
+   {path:'jobs', component:NaukriComponent},
   { path: 'testing', component: TestingComponent },
 
   // Here add new pages component

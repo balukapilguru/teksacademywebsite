@@ -12,5 +12,8 @@ export interface JobPosting {
     location: string;
     closing_date: string;
     createdBy: number;
+    experience:number;
+    created_at:string;
+    posted_date:string;
   }
   
