@@ -286,6 +286,7 @@ import { JobdescriptionpageComponent } from './components/pages/jobdescriptionpa
 import { StudentverifypageComponent } from './components/pages/studentverifypage/studentverifypage.component';
 import { JobApplicationComponent } from './components/pages/job-application/job-application.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
+import { NaukriComponent } from './components/pages/naukri/naukri.component';
 
 
 
@@ -554,6 +555,7 @@ import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoup
     StudentverifypageComponent,
     JobApplicationComponent,
     ThankyoupageComponent,
+    NaukriComponent,
    
    
   ],

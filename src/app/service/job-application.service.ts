@@ -22,6 +22,9 @@ interface JobApplication {
   providedIn: 'root'
 })
 export class JobApplicationService {
+  getJobPostings(params: { page: number; pageSize: number; search: string; 'filter[job_type]': string; 'filter[workplace_type]': string; 'filter[experience]': string; }) {
+    throw new Error('Method not implemented.');
+  }
 
   private apiUrl = environment.apiUrl
 

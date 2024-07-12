@@ -53,13 +53,37 @@ export class JobdescriptionpageComponent implements OnInit {
       console.error('Job ID is null or undefined');
     }
   }
+  // ngOnInit(): void {
+  //   this.jobId = this.route.snapshot.paramMap.get('id');
+  //   if (this.jobId) {
+  //     this.fetchJobDetails(this.jobId);
+  //   } else {
+  //     this.isLoading = false;
+  //     console.error('Job ID is null or undefined');
+  //   }
+  // }
 
-
+  // fetchJobDetails(id: string) {
+  //   this.http.get<any>(`${this.apiUrl}/jobs/job-posting/${id}`).subscribe(
+  //     (response) => {
+  //       this.jobDetails = response.jobPosting; 
+  //       console.log('Fetched job details:', this.jobDetails);
+  //       this.isLoading = false;
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       this.isLoading = false;
+  //       if (error.status === 404) {
+  //         console.error('Job not found:', error);
+  //       } else {
+  //         console.error('Error fetching job details:', error);
+  //       }
+  //     }
+  //   );
+  // }
   fetchJobDetails(id: string) {
     this.http.get<any>(`${this.apiUrl}/jobs/job-posting/${id}`).subscribe(
       (response) => {
         this.jobDetails = response.jobPosting; 
-        console.log('Fetched job details:', this.jobDetails);
         this.isLoading = false;
       },
       (error: HttpErrorResponse) => {
@@ -72,7 +96,6 @@ export class JobdescriptionpageComponent implements OnInit {
       }
     );
   }
-
   updateUrl() {
     if (this.jobDetails) {
       const companyName = this.jobDetails.company_name.replace(/\s+/g, '-').toLowerCase();
