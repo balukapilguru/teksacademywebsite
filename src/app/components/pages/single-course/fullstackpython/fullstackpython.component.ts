@@ -289,7 +289,7 @@ export class FullstackpythonComponent {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
-      //   script.id = this.jsonLdScriptId;
+        // script.id = this.jsonLdScriptId;
       script.text=`
 
       {
@@ -302,7 +302,7 @@ export class FullstackpythonComponent {
       
       "image": " https://teksacademy.com/assets/img/allcourses/fullstackpython.png ",
       
-      "description": " Learn full stack Python course at teks academy, With Industry relevant curriculum, top faculty, network with domain experts, and hands-on learning. ",
+      "description": " Enroll in our Best Full Stack Python Developer course at Teks Academy Hyderabad. Get real-time training in IT Company. Join now to become a Full Stack Developer",
       
       "mpn": "001",
       

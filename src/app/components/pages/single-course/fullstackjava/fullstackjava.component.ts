@@ -252,7 +252,7 @@ export class FullstackjavaComponent {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
-      //   script.id = this.jsonLdScriptId;
+        // script.id = this.jsonLdScriptId;
       script.text = `
 
 { "@context": "https://schema.org/",
@@ -263,7 +263,7 @@ export class FullstackjavaComponent {
 
 "image": " https://teksacademy.com/assets/img/allcourses/fullstackjava.png ",
 
-"description": " Learn full-stack Java. We provide a wide range of skills such as HTML, CSS, SQL, and JAVASCRIPT. Gain expertise in both front-end and back-end development. ",
+"description": " TEKS Academy is providing the best Java programming course online and offline in Hyderabad, to Skill up, & kick-start your career as a successful Java Developer",
 
 "mpn": "001",
 
