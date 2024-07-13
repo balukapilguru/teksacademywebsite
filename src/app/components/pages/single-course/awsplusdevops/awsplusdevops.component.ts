@@ -105,6 +105,7 @@ export class AwsplusdevopsComponent {
     ],
   };
   ngOnInit(): void {
+    this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
       'AWS and DevOps Training Institute in Hyderabad'
