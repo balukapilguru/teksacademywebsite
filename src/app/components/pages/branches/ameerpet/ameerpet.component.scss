@@ -1,3 +1,4 @@
+
 .main_heading{
     font-weight: bold;
     font-size: 48px;
@@ -23,6 +24,7 @@ section:nth-child(2n-1) {
     font-weight: bold;
     font-size: 18px;
     margin-right: 5px;
+    cursor: pointer;
 }
 .arrow {
     display: inline-block;
@@ -43,7 +45,7 @@ section:nth-child(2n-1) {
     background-color: #fafafa;
     border: 2px solid #fafafa;
     border-radius: 4px;
-    padding: 2rem;
+    padding: 2rem 2rem 0rem 2rem;
     height: 22rem;
 }
 .course_box:hover{
@@ -51,7 +53,7 @@ section:nth-child(2n-1) {
     border: 2px solid #ffebe2;
     // border:2px solid #eb6329;
     border-radius: 4px;
-    padding: 2rem;
+    padding: 2rem 2rem 0rem 2rem;
     height: 22rem;
 }
 .card{
@@ -65,12 +67,11 @@ section:nth-child(2n-1) {
     color: #000;
 }
 .course_description{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
     word-break: break-word;
     word-wrap: break-word;
     font-weight: 400;
-    color: #000;
 }
 .testimonials_text{
     padding: 2rem;
@@ -85,4 +86,20 @@ section:nth-child(2n-1) {
 }
 .carousel_slider{
     height: 16rem;
+}
+.btn_color{
+    background-color: #2a619d !important;
+    border:1px solid #2a619d !important;
+    cursor: pointer !important;
+    color: #fff !important;
+}
+
+.cursor_pointer{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #eb6329;
+    position: absolute;
+    left: 40%;
+    bottom: 4%;
 }
