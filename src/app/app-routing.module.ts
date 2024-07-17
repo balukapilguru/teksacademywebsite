@@ -149,6 +149,11 @@ import { StudentverifypageComponent } from './components/pages/studentverifypage
 import { JobApplicationComponent } from './components/pages/job-application/job-application.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
 import { NaukriComponent } from './components/pages/naukri/naukri.component';
+import { AmeerpetComponent } from './components/pages/branches/ameerpet/ameerpet.component';
+import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/dilsukhnagar.component';
+import { HitechComponent } from './components/pages/branches/hitech/hitech.component';
+import { KukatpallyComponent } from './components/pages/branches/kukatpally/kukatpally.component';
+import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
 
 
 const routes: Routes = [
@@ -410,6 +415,11 @@ const routes: Routes = [
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'job', component: CompanyComponent },
   {path:'thankyoupage', component:ThankyoupageComponent},
+  {path:'branch/ameerpet', component:AmeerpetComponent},
+  {path:'branch/dilsukhnagar', component:DilsukhnagarComponent},
+  {path:'branch/hitech', component:HitechComponent},
+  {path:'branch/kukatpally', component:KukatpallyComponent},
+  {path:'branch/secunderabad', component:SecunderabadComponent},
 
   // {path: '', component: ElearningSchoolComponent},
 

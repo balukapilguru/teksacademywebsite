@@ -1,0 +1,88 @@
+.main_heading{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    color: #2a619d;
+}
+.banner_img{
+background-image: url(../../../../../assets/img/branch_images/New_Banners.jpg);
+background-repeat: no-repeat;
+width: 100%;
+height: 100%;
+}
+section:nth-child(2n-1) {
+    background: gray;
+  }
+.paragraph_text{
+    font-size: 18px;
+  }
+.learn_more {
+    display: flex;
+    align-items: center;
+    color: #eb6329;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.arrow {
+    display: inline-block;
+    animation: moveArrow 3s infinite;
+}
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.course_box{
+    background-color: #fafafa;
+    border: 2px solid #fafafa;
+    border-radius: 4px;
+    padding: 2rem;
+    height: 22rem;
+}
+.course_box:hover{
+    background-color: #fafafa;
+    border: 2px solid #ffebe2;
+    // border:2px solid #eb6329;
+    border-radius: 4px;
+    padding: 2rem;
+    height: 22rem;
+}
+.card{
+     background-color: transparent;
+     border: none;
+}
+.course_name{
+    font-size:22px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #000;
+}
+.course_description{
+    font-size: 18px;
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-weight: 400;
+    color: #000;
+}
+.testimonials_text{
+    padding: 2rem;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    // border: 1px solid gray;
+}
+.testimonials_bg{
+    background-color: #ffebe2;
+}
+.carousel_slider{
+    height: 16rem;
+}
