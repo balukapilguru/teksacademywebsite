@@ -6,7 +6,7 @@
                     <p class="main_heading mt-3">
                         Best Software Training Institute In Ameerpet!
                     </p>
-                    <p class="learn_more paragraph_text">
+                    <p class="learn_more paragraph_text" routerLink="/course">
                         Learn IT Courses<span class="mt-1 ms-2 arrow">
                             <i class="fa-solid fa-arrow-right"></i>
                         </span>
@@ -23,6 +23,9 @@
                         to the area to learn not just programming languages but also other
                         IT technologies and trending software courses.
                     </p>
+                    <button routerLink="/enquiry-form" class="btn btn-primary btn_color fw-bold">
+                        Enquiry Now <i class="fa fa-angle-double-right"></i>
+                    </button>
                 </div>
                 <div class="col-lg-1"></div>
                 <!-- <div class="col-lg-5 mt-4">
@@ -59,118 +62,156 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/python.png" class="img-fluid"
-                                    width="25%" height="25%" alt="sap" />
-                                <p class="course_name">Full stack Python</p>
-                                <p class="course_description"></p>
+                        <a routerLink="/courses/best-full-stack-python-development-course-training-institute" class="">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/python.png" class="img-fluid"
+                                        width="20%" height="20%" alt="sap" />
+                                    <p class="course_name mt-3">Full stack Python</p>
+                                    <p class="course_description">This course covers front-end and back-end development,
+                                        focusing on Python, Django, Flask, HTML, CSS, and JavaScript. Gain practical
+                                        skills through hands-on projects, preparing you for a successful career in web
+                                        development.</p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/java.png" class="img-fluid"
-                                    width="25%" height="25%" />
-                                <p class="course_name">Full Stack Java</p>
-                                <p class="course_description">
-                                    This intensive program covers both front-end and back-end
-                                    development, equipping you with skills in Java, Spring,
-                                    Hibernate, Angular, React, and more
-                                </p>
+                        <a routerLink="/courses/best-full-stack-java-development-course-training-institute"
+                            class="d-block image">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/java.png" class="img-fluid"
+                                        width="25%" height="25%" />
+                                    <p class="course_name">Full Stack Java</p>
+                                    <p class="course_description">
+                                        This intensive program covers both front-end and back-end
+                                        development, equipping you with skills in Java, Spring,
+                                        Hibernate, Angular, React, and more
+                                    </p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/data_science.png" class="img-fluid"
-                                    width="25%" height="25%" />
-                                <p class="course_name">Data Science</p>
-                                <p class="course_description">
-                                    Designed to equip you with essential skills in data analysis,
-                                    machine learning, and statistical modeling, this course offers
-                                    hands-on experience with real-world datasets.
-                                </p>
+                        <a routerLink="/courses/best-data-science-course-training-institute" class="">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/data_science.png"
+                                        class="img-fluid" width="20%" height="20%" />
+                                    <p class="course_name mt-3">Data Science</p>
+                                    <p class="course_description">
+                                        Designed to equip you with essential skills in data analysis,
+                                        machine learning, and statistical modeling, this course offers
+                                        hands-on experience with real-world datasets.
+                                    </p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/dataanalist.png" class="img-fluid"
-                                    width="25%" height="25%" alt="sap" />
-                                <p class="course_name">Data Analytics</p>
-                                <p class="course_description">
-                                    It covers data visualization, statistical analysis, and data
-                                    mining techniques using industry-leading tools and software
-                                </p>
+                        <a routerLink="/courses/best-data-analytics-course-training-institute" class="">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/dataanalist.png" class="img-fluid"
+                                        width="20%" height="20%" alt="sap" />
+                                    <p class="course_name mt-3">Data Analytics</p>
+                                    <p class="course_description">
+                                        It covers data visualization, statistical analysis, and data
+                                        mining techniques using industry-leading tools and software
+                                    </p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/bim.png" class="img-fluid" width="25%"
-                                    height="25%" alt="sap" />
-                                <p class="course_name">B.I.M</p>
-                                <p class="course_description"></p>
+                        <a routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
+                            class="">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/bim.png" class="img-fluid"
+                                        width="20%" height="20%" alt="sap" />
+                                    <p class="course_name mt-3">B.I.M</p>
+                                    <p class="course_description">The BIM course is designed to revolutionize your approach to architecture, engineering, and construction by empowering you to create efficient and innovative building designs.</p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/revit.png" class="img-fluid"
-                                    width="25%" height="25%" alt="sap" />
-                                <p class="course_name">Revit MEP</p>
-                                <p class="course_description"></p>
+                        <a routerLink="/courses/best-revit-mep-course-training-institute" class="">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/revit.png" class="img-fluid"
+                                        width="20%" height="20%" alt="sap" />
+                                    <p class="course_name mt-3">Revit MEP</p>
+                                    <p class="course_description">This ultramodern Course that covers everything from basic concepts to advanced functionalities, ensuring you are well-equipped to handle real-world architectural and construction projects.</p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="mt-3 row">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/autocad.png" class="img-fluid"
-                                    width="25%" height="25%" alt="sap" />
-                                <p class="course_name">Auto cad</p>
-                                <p class="course_description"></p>
+                        <a routerLink="/courses/best-autocad-course-training-institute" class="">
+                            <div class="card text-center">
+                                <div class="course_box">
+                                    <img src="../../../../../assets/img/branch_images/autocad.png" class="img-fluid"
+                                        width="20%" height="20%" alt="sap" />
+                                    <p class="course_name mt-3">Auto cad</p>
+                                    <p class="course_description">The course is meticulously crafted to provide you with a comprehensive understanding of computer-aided design. It also guides you through the intricacies of 2D and 3D drafting, modeling, and rendering.</p>
+                                    <p class="cursor_pointer">Read more...</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
+                        <a routerLink="/courses/best-awsplusdevops-course-training-institute">
                         <div class="card text-center">
                             <div class="course_box">
                                 <img src="../../../../../assets/img/branch_images/aws.png" class="img-fluid" width="25%"
                                     height="25%" alt="java" />
                                 <p class="course_name">AWS DevOps</p>
                                 <p class="course_description">
-                                    This program equips you with the skills to deploy, manage, and
-                                    scale applications on the AWS platform. Opportunity of
-                                    experiential Learn from industry experts and CI/CD pipelines
-                                    and infrastructure.
+                                    Master AWS and DevOps essentials. Learn to deploy applications on AWS and streamline
+                                    software delivery with DevOps practices. Gain hands-on skills in cloud computing and
+                                    automation for career advancement.
                                 </p>
+                                <p class="cursor_pointer">Read more...</p>
                             </div>
                         </div>
+                    </a>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
+                        <a routerLink="/courses/best-3ds-max-course-training-institute">
                         <div class="card text-center">
                             <div class="course_box">
-                                <img src="../../../../../assets/img/branch_images/3ds.png" class="img-fluid" width="25%"
-                                    height="25%" alt="sap" />
-                                <p class="course_name">3DS Max</p>
-                                <p class="course_description"></p>
+                                <img src="../../../../../assets/img/branch_images/3ds.png" class="img-fluid" width="20%"
+                                    height="20%" alt="sap" />
+                                <p class="course_name mt-3">3DS Max</p>
+                                <p class="course_description">3D Max course: Master 3DS Max for 3D modeling, animation,
+                                    and rendering. Gain skills essential for careers in animation, architecture, and
+                                    game development.</p>
+                                <p class="cursor_pointer">Read more...</p>
                             </div>
                         </div>
+                       </a>
                     </div>
                 </div>
             </div>
-
+            <div class="mt-5">
+                <div class="text-center">
+                    <p class="main_heading mb-4">Why Teks</p>
+                </div>
+                <app-whytekssample></app-whytekssample>
+            </div>
             <div class="mt-5">
                 <div class="text-center">
                     <p class="main_heading mb-4">Testimonials</p>
@@ -183,6 +224,14 @@
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                            aria-label="Slide 7"></button>
                     </div>
                     <div class="carousel-inner pb-5 testimonials_bg">
                         <div class="carousel-item active">
@@ -241,6 +290,90 @@
                                         </p>
                                         <p class="paragraph_text fw-bold mt-3 text-dark">
                                             - Sai Ram
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-8 carousel_slider">
+                                    <div class="paragraph_text testimonials_text mt-2">
+                                        <div class="text-center">
+                                            <img src="https://t3.ftcdn.net/jpg/07/89/76/58/360_F_789765844_CEcz9Jav84DyYJl19BSgxF13d2PWVowx.jpg"
+                                                width="14%" height="14%" class="img-fluid rounded-circle" alt="" />
+                                        </div>
+                                        <p class="mt-3">
+                                            I recently completed data analytics course from teks academy.
+                                            The course was good and the instructors were knowledgeable and friendly. But
+                                            the placement assistance is limited. It would have been great if they could
+                                            improve this.
+                                        </p>
+                                        <p class="paragraph_text fw-bold mt-3 text-dark">
+                                            - Likitha Doddamoni
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-8 carousel_slider">
+                                    <div class="paragraph_text testimonials_text mt-2">
+                                        <div class="text-center">
+                                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXuCQxegD-qOSIRtFae5Qr3lS_AdSZbrDDHjVDE_qwkw8FSnl2g=w45-h45-p-rp-mo-br100"
+                                                width="14%" height="14%" class="img-fluid rounded-circle" alt="" />
+                                        </div>
+                                        <p class="mt-3">
+                                            Very Good Academy Special thanks to our Trainer "Kajal Mam"(Salesforce
+                                            Trainer). Thanks for being so Supportive and Helping us in Each and Every
+                                            Aspect. I am So Happy for Being trained under you and gaining Knowledge.
+                                            Thanks for Every time you Take Class To us
+                                        </p>
+                                        <p class="paragraph_text fw-bold mt-3 text-dark">
+                                            - Raj mohan reddy
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-8 carousel_slider">
+                                    <div class="paragraph_text testimonials_text mt-2">
+                                        <div class="text-center">
+                                            <img src="https://t3.ftcdn.net/jpg/07/89/76/58/360_F_789765844_CEcz9Jav84DyYJl19BSgxF13d2PWVowx.jpg"
+                                                width="14%" height="14%" class="img-fluid rounded-circle" alt="" />
+                                        </div>
+                                        <p class="mt-3">
+                                            At Teks Academy Ameerpet, AWS and DevOps training was game-changing.
+                                            Instructors were exceptional, making complicated ideas simple to understand.
+                                            Hands-on practice was essential in preparing me for real-world situations.
+                                            The positive spirit and engaging setting made learning enjoyable. "Highly
+                                            recommended!
+                                        </p>
+                                        <p class="paragraph_text fw-bold mt-3 text-dark">
+                                            -Krishnaprasad Chintapalli
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-8 carousel_slider">
+                                    <div class="paragraph_text testimonials_text mt-2">
+                                        <div class="text-center">
+                                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjW3xt1Rq-1UIgpsvU9Vw_VvVdFb9u-80ZMMuLnu_6GHFrqIbXCR=w45-h45-p-rp-mo-br100"
+                                                width="14%" height="14%" class="img-fluid rounded-circle" alt="" />
+                                        </div>
+                                        <p class="mt-3">
+                                            I have learn lot of things during this time which was I don't know really I'
+                                            I'm happy with teks academy and STAFF and also especialy with Prem sir sir
+                                            class was very nice and I ll enjoy the class
+                                        </p>
+                                        <p class="paragraph_text fw-bold mt-3 text-dark">
+                                            - Danny Danny
                                         </p>
                                     </div>
                                 </div>

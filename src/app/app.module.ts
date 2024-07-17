@@ -292,6 +292,7 @@ import { KukatpallyComponent } from './components/pages/branches/kukatpally/kuka
 import { HitechComponent } from './components/pages/branches/hitech/hitech.component';
 import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
 import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/dilsukhnagar.component';
+import { WhytekssampleComponent } from './components/pages/branches/whytekssample/whytekssample.component';
 
 
 
@@ -566,6 +567,7 @@ import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/
     HitechComponent,
     SecunderabadComponent,
     DilsukhnagarComponent,
+    WhytekssampleComponent,
    
    
   ],
