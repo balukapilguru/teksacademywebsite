@@ -287,6 +287,11 @@ import { StudentverifypageComponent } from './components/pages/studentverifypage
 import { JobApplicationComponent } from './components/pages/job-application/job-application.component';
 import { ThankyoupageComponent } from './components/pages/thankyoupage/thankyoupage.component';
 import { NaukriComponent } from './components/pages/naukri/naukri.component';
+import { AmeerpetComponent } from './components/pages/branches/ameerpet/ameerpet.component';
+import { KukatpallyComponent } from './components/pages/branches/kukatpally/kukatpally.component';
+import { HitechComponent } from './components/pages/branches/hitech/hitech.component';
+import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
+import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/dilsukhnagar.component';
 
 
 
@@ -556,6 +561,11 @@ import { NaukriComponent } from './components/pages/naukri/naukri.component';
     JobApplicationComponent,
     ThankyoupageComponent,
     NaukriComponent,
+    AmeerpetComponent,
+    KukatpallyComponent,
+    HitechComponent,
+    SecunderabadComponent,
+    DilsukhnagarComponent,
    
    
   ],

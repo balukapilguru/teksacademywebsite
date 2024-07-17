@@ -7832,10 +7832,15 @@ i.flaticon-tag {
   background-color: #fff;
     border-radius: 30px;
     padding: 8px 8px 8px 8px;
+    font-weight: bold;
     margin: 8px 8px;
 }
 .most_searched span:hover{
   background-color: #3c6ea5;
   border: 1px solid #3c6ea5;
+  font-weight: bold;
   color: #fff;
+}
+@media only screen and (max-width: 470px) {
+  
 }
