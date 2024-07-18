@@ -1,0 +1,11 @@
+
+.banner_img {
+    background-image: url(../../../../../assets/img/branch_images/new_banner_hitech.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+section:nth-child(2n-1) {
+    background: gray;
+}
