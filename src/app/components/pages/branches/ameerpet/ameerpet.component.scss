@@ -15,7 +15,7 @@ section:nth-child(2n-1) {
     background: gray;
   }
 .paragraph_text{
-    font-size: 18px;
+    font-size: 16px;
   }
 .learn_more {
     display: flex;
@@ -29,6 +29,7 @@ section:nth-child(2n-1) {
 .arrow {
     display: inline-block;
     animation: moveArrow 3s infinite;
+    color: #eb6329;
 }
 @keyframes moveArrow {
     0% {
@@ -85,7 +86,7 @@ section:nth-child(2n-1) {
     background-color: #ffebe2;
 }
 .carousel_slider{
-    height: 16rem;
+    height: 18rem;
 }
 .btn_color{
     background-color: #2a619d !important;
@@ -97,9 +98,12 @@ section:nth-child(2n-1) {
 .cursor_pointer{
     cursor: pointer;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     color: #eb6329;
     position: absolute;
     left: 40%;
-    bottom: 4%;
+    bottom: 5%;
+}
+.read_more i{
+    font-size: 12px;
 }
