@@ -69,6 +69,50 @@
                   >About Teks</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  routerLink="/media"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Branches</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a
+                      routerLink="/branch/ameerpet"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Ameerpet</a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      routerLink="/branch/kukatpally"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Kukatpally</a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      routerLink="/branch/secunderabad"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Secunderabad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      routerLink="/branch/hitech"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Hitech City</a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      routerLink="/branch/dilsukhnagar"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Dilsukhnagar</a>
+                  </li>
+                  </ul>
+              </li>
               <!-- <li class="nav-item"><a routerLink="/students-placements" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Placements</a></li> -->
               <!-- <li class="nav-item"><a routerLink="/testimonals" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Testimonials</a></li> -->
               <li class="nav-item">
@@ -89,6 +133,7 @@
                   >Media</a
                 >
               </li>
+             
             </ul>
           </li>
           <!-- <ul class="dropdown-menu">
@@ -502,6 +547,31 @@
                                 </ul>
                             </li>
                         </ul> -->
+          </li>
+          <li class="nav-item">
+            <a routerLink="/branch/ameerpet" class="nav-link" (click)="toggleClass()"
+              >Ameerpet
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/branch/dilsukhnagar" class="nav-link" (click)="toggleClass()"
+              >Dilsukhnagar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/branch/hitech" class="nav-link" (click)="toggleClass()"
+              >Hitech City
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/branch/kukatpally" class="nav-link" (click)="toggleClass()"
+              >Kukatpally
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/branch/secunderabad" class="nav-link" (click)="toggleClass()"
+              >Secunderabad
+            </a>
           </li>
           <li class="nav-item">
             <a routerLink="/contact" class="nav-link" (click)="toggleClass()"
