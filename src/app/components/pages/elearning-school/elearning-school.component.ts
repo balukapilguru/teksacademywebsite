@@ -119,14 +119,14 @@ export class ElearningSchoolComponent implements OnInit {
     },
   ];
 
-  
+
 
   // adding script tag in header
   ngOnInit(): void {
-     // script tag
-     this.addJsonLdScript();
+    // script tag
+    this.addJsonLdScript();
   }
-  
+
   ngOnDestroy() {
     this.removeJsonLdScript();
   }
@@ -135,20 +135,28 @@ export class ElearningSchoolComponent implements OnInit {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
-    //   script.id = this.jsonLdScriptId;
+      //   script.id = this.jsonLdScriptId;
       script.text = `
-      { 
-        "@context" : "http://schema.org", 
-        "@type" : "Organization", 
-        "name" : "Tekscademy", 
-        "url" : " https://teksacademy.com/", 
-        "sameAs" : [ 
-        " https://www.facebook.com/teksacademy",  
-        " https://www.instagram.com/teks_academy/",
-        " https://twitter.com/TeksAcademy",
-        " https://www.linkedin.com/company/teks-academy/",
-        " https://www.youtube.com/@teksacademy"]
-        }
+     {
+  "@context": "https://schema.org",
+  "@type": "CollegeOrUniversity",
+  "name": "Teks academy",
+  "url": "https://teksacademy.com/",
+  "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "1800-120-4748",
+    "contactType": "sales",
+    "contactOption": "HearingImpairedSupported",
+    "areaServed": "IN",
+    "availableLanguage": ["en","Telugu"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/teksacademy/",
+    "https://www.instagram.com/teks_academy/",
+    "https://youtube.com/@teksacademy"
+  ]
+}
       `;
 
       this.renderer.appendChild(this.document.head, script);

@@ -7818,7 +7818,7 @@ i.flaticon-tag {
 }
 
 .text-capitalize{
-  color: #ededed;
+  color: #000 !important;
 }
 .modal-backdrop.show{
   opacity: 0 !important;
@@ -7848,6 +7848,7 @@ i.flaticon-tag {
 
 
 // branches start
+
 .heading_space {
   padding: 7% 0% 10% 0%;
 }
@@ -7899,7 +7900,7 @@ i.flaticon-tag {
   border: 2px solid #fafafa;
   border-radius: 4px;
   padding: 2rem 2rem 0rem 2rem;
-  height: 22rem;
+  height: 24rem;
 }
 
 .course_box:hover {
@@ -7908,7 +7909,7 @@ i.flaticon-tag {
   // border:2px solid #eb6329;
   border-radius: 4px;
   padding: 2rem 2rem 0rem 2rem;
-  height: 22rem;
+  height: 24rem;
 }
 
 .card {
@@ -7968,6 +7969,11 @@ i.flaticon-tag {
 .read_more i {
   font-size: 12px;
 }
+@media screen and (min-width:1000px) and (max-width:1250px) {
+  .carousel_slider {
+    height: 25rem;
+}
+}
 
 @media screen and (max-width: 480px) {
 
@@ -8026,3 +8032,4 @@ i.flaticon-tag {
 }
 
 // branches end
+

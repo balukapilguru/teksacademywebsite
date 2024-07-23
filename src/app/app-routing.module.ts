@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 // import { ElearningSchoolComponent } from './components/pages/elearning-school/elearning-school.component';
 import { VendorCertificationEtrainingComponent } from './components/pages/vendor-certification-etraining/vendor-certification-etraining.component';
@@ -414,12 +414,12 @@ const routes: Routes = [
   { path: 'post-graduate-program', component: PgpComponent },
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'job', component: CompanyComponent },
-  {path:'thankyoupage', component:ThankyoupageComponent},
-  {path:'branch/ameerpet', component:AmeerpetComponent},
-  {path:'branch/dilsukhnagar', component:DilsukhnagarComponent},
-  {path:'branch/hitech', component:HitechComponent},
-  {path:'branch/kukatpally', component:KukatpallyComponent},
-  {path:'branch/secunderabad', component:SecunderabadComponent},
+  { path: 'thankyoupage', component: ThankyoupageComponent },
+  { path: 'branch/ameerpet-best-training-institute-full-stack-java-auto-cad', component: AmeerpetComponent },
+  { path: 'branch/dilsukhnagar-digitial-marketing-full-stack-java-training', component: DilsukhnagarComponent },
+  { path: 'branch/hitech-best-python-data-science-training-institute', component: HitechComponent },
+  { path: 'branch/kukatpally-best-data-science-aws-course-training', component: KukatpallyComponent },
+  { path: 'branch/secunderabad-sales-force-medical-coding-course-training', component: SecunderabadComponent },
 
   // {path: '', component: ElearningSchoolComponent},
 
@@ -665,7 +665,7 @@ const routes: Routes = [
   {
     path: 'courses/post-graduate-diploma-in-computer-application-pgdca-self-learning-program',
     component: SlpPgdcaComponent,
-  },  
+  },
   {
     path: 'courses/digital-marketing-self-learning-program',
     component: SlpDigitalMarketingComponent,
@@ -685,8 +685,8 @@ const routes: Routes = [
   { path: 'course-category/foundation', component: EssentialCoursesComponent },
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
-  {path:':id/:companyName/:jobTitle', component:JobdescriptionpageComponent},
-  {path:'certificate/:registrationnumber', component:StudentverifypageComponent},
+  { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
+  { path: 'certificate/:registrationnumber', component: StudentverifypageComponent },
   {
     path: '',
     loadChildren: () =>
@@ -1105,7 +1105,7 @@ const routes: Routes = [
   { path: 'thankyou-awsplusdevops', component: ThankAwsDevopsComponent },
   { path: 'thankyou-medicalcoding', component: ThankMedicalCodingComponent },
   { path: 'jobapplication', component: JobApplicationComponent },
-   {path:'jobs', component:NaukriComponent},
+  { path: 'jobs', component: NaukriComponent },
   { path: 'testing', component: TestingComponent },
 
   // Here add new pages component
@@ -1123,4 +1123,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

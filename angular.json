@@ -22,7 +22,11 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/teksfav.png", "src/assets","src/sitemap.xml"],
+            "assets": [
+              "src/teksfav.png",
+              "src/assets",
+              "src/sitemap.xml"
+            ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
@@ -34,7 +38,9 @@
               "src/assets/css/flaticon.css",
               "src/styles.scss"
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.min.js"],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ],
             "vendorChunk": true,
             "extractLicenses": false,
             "buildOptimizer": false,
@@ -96,8 +102,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         },

@@ -114,7 +114,7 @@ export class AboutStyleOneComponent implements OnInit, OnDestroy {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
-      script.id = this.jsonLdScriptId;
+      // script.id = this.jsonLdScriptId;
       script.text = `
       {
 
