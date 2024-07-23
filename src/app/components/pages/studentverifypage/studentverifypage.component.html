@@ -40,12 +40,20 @@
           </span>
         </div>
       </div>
-     <!-- Student Not Verified Display -->
-     <div class="box_shadow d-flex justify-content-center align-items-center" *ngIf="!isLoading && notVerified && !notFound">
-      <h3>Certificate Not Verified</h3>
-    </div>
-      <div class="box_shadow d-flex justify-content-center align-items-center" *ngIf="!isLoading && notFound && !notVerified">
+      <!-- Student Not Verified Display -->
+      <!-- <div class="box_shadow d-flex justify-content-center align-items-center">
+        <h3>Certificate Not Verified</h3>
+      </div> -->
+      <div class="d-flex justify-content-center" *ngIf="!isLoading && notVerified && !notFound">
+        <img src="../../../../assets/img/branch_images/certificate_not_issued.png" class="img-fluid" width="50%" height="50%" alt="" />
+      </div>
+
+      <!-- <div class="box_shadow d-flex justify-content-center align-items-center"
+        *ngIf="!isLoading && notFound && !notVerified">
         <h3>Student Not Found</h3>
+      </div> -->
+      <div class="d-flex justify-content-center" *ngIf="!isLoading && notFound && !notVerified">
+<img src="../../../../assets/img/branch_images/student_not_found.png" class="img-fluid" width="50%" height="50%" alt="" />
       </div>
       <!-- Loading Display -->
       <div class="text-center" *ngIf="isLoading">
@@ -53,5 +61,5 @@
       </div>
     </div>
   </div>
-  <div clasas="" style="height: 50vh;"></div>
+  <div clasas="" style="height: 30vh;"></div>
 </div>
