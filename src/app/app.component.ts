@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Renderer2} from '@angular/core';
 import {
   Router,
   NavigationCancel,
@@ -12,7 +12,7 @@ import {
 } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-
+import { Subscription } from 'rxjs';
 declare let $: any;
 
 @Component({
@@ -28,11 +28,14 @@ declare let $: any;
   ],
 })
 export class AppComponent {
+
+
+ 
   showPreloader = true;
   // title = 'teksacademy';
   // recaptchaValue!:string;
   // siteKey = '6LdG5wEnAAAAAGRXFCnxnjxVDCLmvTLfS0pASUEF';
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private renderer: Renderer2) {}
 
   // wname: string = '';
   // wemail: string = '';
@@ -68,10 +71,13 @@ export class AppComponent {
   // }
 
   location: any;
-  routerSubscription: any;
+  routerSubscription?: Subscription;
 
   ngOnInit() {
     this.recallJsFuntions();
+    this.addStructuredData();
+      this.addBreadcrumbSchema();
+
 
     //         const dsformclose = document.getElementById("dsformclose");
     //         const popupForm = document.getElementById("popup-form");
@@ -120,7 +126,9 @@ export class AppComponent {
     //               }
     //             });
   }
-
+  ngOnDestroy() {
+    this.routerSubscription?.unsubscribe();
+  }
   recallJsFuntions() {
     this.routerSubscription = this.router.events
       .pipe(
@@ -136,5 +144,79 @@ export class AppComponent {
         }
         window.scrollTo(0, 0);
       });
+  }
+
+  private addStructuredData() {
+    // JSON-LD script for WebSite
+    const scriptWebsite = this.renderer.createElement('script');
+    scriptWebsite.type = 'application/ld+json';
+    scriptWebsite.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Teks Academy",
+      "url": "https://teksacademy.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://teksacademy.com/course{search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    });
+    this.renderer.appendChild(document.head, scriptWebsite);
+
+    // JSON-LD script for CollegeOrUniversity
+    const scriptUniversity = this.renderer.createElement('script');
+    scriptUniversity.type = 'application/ld+json';
+    scriptUniversity.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollegeOrUniversity",
+      "name": "Teks academy",
+      "url": "https://teksacademy.com/",
+      "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "1800-120-4748",
+        "contactType": "sales",
+        "contactOption": "HearingImpairedSupported",
+        "areaServed": "IN",
+        "availableLanguage": ["en", "Telugu"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/teksacademy/",
+        "https://www.instagram.com/teks_academy/",
+        "https://youtube.com/@teksacademy"
+      ]
+    });
+    this.renderer.appendChild(document.head, scriptUniversity);
+  }
+
+  addBreadcrumbSchema() {
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home page",
+        "item": "https://teksacademy.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://teksacademy.com/about-us"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Courses",
+        "item": "https://teksacademy.com/course"
+      },{
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Blog",
+        "item": "https://blog.teksacademy.com/"
+      }]
+    });
+    this.renderer.appendChild(document.head, script);
   }
 }
