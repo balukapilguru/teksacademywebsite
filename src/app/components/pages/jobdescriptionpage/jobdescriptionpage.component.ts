@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import * as bootstrap from 'bootstrap';
 import { environment } from 'src/environments/environment';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { JobPosting } from 'src/app/Model/jobposting';
 @Component({
   selector: 'app-jobdescriptionpage',
   templateUrl: './jobdescriptionpage.component.html',
@@ -13,7 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class JobdescriptionpageComponent implements OnInit {
   @ViewChild('fileInput') fileInput: ElementRef<HTMLInputElement> | undefined;
-
+  job: any;
   form: FormGroup;
   formSubmitted: boolean = false;
   modal: bootstrap.Modal | null = null;
@@ -23,10 +23,13 @@ export class JobdescriptionpageComponent implements OnInit {
   jobDetails: any;
   isLoading = true;
   fileErrorMessage: string | null = null;
- 
+  copied: boolean = false;
   imagePath: string = 'https://teksacademy.s3.ap-south-1.amazonaws.com/HRM/jobposting_companylogos/';
-  
+  encodedShareUrl: string | undefined;
+  shareUrl: string | undefined;
+
   constructor(
+
     private fb: FormBuilder,
     private http: HttpClient,
     private router: Router,
@@ -44,6 +47,7 @@ export class JobdescriptionpageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.shareUrl = window.location.href;
     this.jobId = this.route.snapshot.paramMap.get('id');
     console.log('Job ID:', this.jobId); // Log the job ID for debugging
     if (this.jobId) {
@@ -177,4 +181,52 @@ export class JobdescriptionpageComponent implements OnInit {
       this.fileInput.nativeElement.value = '';
     }
   }
+  setShareUrl(job: any): void {
+    const formattedCompanyName = job.company_name.replace(/\s+/g, '-').toLowerCase();
+    const formattedJobTitle = job.title.replace(/\s+/g, '-').toLowerCase();
+    this.shareUrl = `${window.location.origin}/${job.id}/${formattedCompanyName}/${formattedJobTitle}`;
+    this.encodedShareUrl = encodeURIComponent(this.shareUrl);
+  }
+
+
+copyLink() {
+  // Ensure textToCopy is always a string
+  const textToCopy = this.shareUrl || '';
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      this.copied = true;
+      setTimeout(() => this.copied = false, 5000); // Hide the message after 5 seconds
+    }).catch(err => {
+      console.error('Error copying link:', err);
+      alert('Failed to copy link. Please try manually.');
+    });
+  } else {
+    // Fallback for older browsers
+    const tempInput = document.createElement('input');
+    tempInput.style.position = 'absolute';
+    tempInput.style.left = '-9999px';
+    tempInput.value = textToCopy; // textToCopy is guaranteed to be a string
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        this.copied = true;
+        setTimeout(() => this.copied = false, 5000); // Hide the message after 5 seconds
+      } else {
+        alert('Failed to copy link. Please try manually.');
+      }
+    } catch (err) {
+      console.error('Error copying link:', err);
+      alert('Failed to copy link. Please try manually.');
+    } finally {
+      document.body.removeChild(tempInput);
+    }
+  }
 }
+
+  
+  
+  }
+

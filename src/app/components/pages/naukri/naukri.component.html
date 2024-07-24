@@ -1,15 +1,15 @@
 <!-- Your existing HTML structure -->
 
 <div class="container mt-3">
-  <div class="d-flex justify-content-between align-items-center">
+  <div class="search_filter">
     <div class="d-flex align-items-center">
       <!-- Search Bar -->
       <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" class="form-control py-2"
-        placeholder="Search jobs..." style="width: 300px" />
+        placeholder="Search jobs..." />
     </div>
 
     <!-- Button to trigger Offcanvas -->
-    <button class="btn btn-primary btn_color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+    <button class="btn btn-primary btn_color ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
       aria-controls="offcanvasRight">
       <i class="fa fa-filter me-1" aria-hidden="true"></i> Filters
     </button>
@@ -78,7 +78,7 @@
   <div class="row mt-3" *ngIf="jobPostings.length > 0">
     <div class="col-lg-6 col-12 space_mb mt-3" *ngFor="let job of jobPostings">
       <div class="box_shadow">
-        <a (click)="viewDetails(job.id.toString(), job.company_name, job.title)">
+        <a (click)="viewDetails(job.id.toString(), job.company_name, job.title)" class="cursor_pointer">
           <div class="d-flex justify-content-between">
             <div>
               <div class="course_name">{{ job.title }}</div>
@@ -110,7 +110,7 @@
               ">
               View Details
             </a>
-            <i class="fas fa-share-square ms-3" data-bs-toggle="modal" data-bs-target="#shareModal"
+            <i class="fa fa-share-alt ms-3"  data-bs-toggle="modal" data-bs-target="#shareModal"
               (click)="setShareUrl(job)"></i>
           </div>
         </div>
@@ -135,7 +135,7 @@
     </button>
   </div>
 
-  <!-- Share Modal -->
+  
   <!-- Share Modal -->
   <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog">
