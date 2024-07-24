@@ -22,6 +22,7 @@ export class NaukriComponent implements OnInit {
   };
   isLoading = true;
   imagePath: string = 'https://teksacademy.s3.ap-south-1.amazonaws.com/HRM/jobposting_companylogos/';
+  shareUrl: string = '';
 
   constructor(private jobService: JobssService, private router: Router) {}
 
@@ -96,5 +97,21 @@ export class NaukriComponent implements OnInit {
     const formattedCompanyName = companyName.replace(/\s+/g, '-').toLowerCase();
     const formattedJobTitle = jobTitle.replace(/\s+/g, '-').toLowerCase();
     this.router.navigate([jobId, formattedCompanyName, formattedJobTitle]);
+  }
+
+  setShareUrl(job: JobPosting) {
+    const formattedCompanyName = job.company_name.replace(/\s+/g, '-').toLowerCase();
+    const formattedJobTitle = job.title.replace(/\s+/g, '-').toLowerCase();
+    this.shareUrl = `${window.location.origin}/${job.id}/${formattedCompanyName}/${formattedJobTitle}`;
+  }
+
+  copyLink() {
+    const tempInput = document.createElement('input');
+    tempInput.value = this.shareUrl;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    alert('Link copied to clipboard!');
   }
 }

@@ -1,122 +1,159 @@
+<!-- Your existing HTML structure -->
+
 <div class="container mt-3">
-    <div class="d-flex justify-content-between align-items-center">
-      <!-- <h4>Job Postings</h4> -->
-      
-      <div class="d-flex align-items-center">
-        <!-- Search Bar -->
-        <input 
-          type="text" 
-          [(ngModel)]="searchTerm" 
-          (ngModelChange)="onSearchChange()" 
-          class="form-control py-2"
-          placeholder="Search jobs..."
-          style="width: 300px;"
-        />
-      </div>
-  
-      <!-- Button to trigger Offcanvas -->
-      <button class="btn btn-primary btn_color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-        <i class="fa fa-filter me-1" aria-hidden="true"></i> Filters
-      </button>
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <!-- Search Bar -->
+      <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" class="form-control py-2"
+        placeholder="Search jobs..." style="width: 300px;" />
     </div>
-  
-    <!-- Offcanvas Component -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 id="offcanvasRightLabel">Filter Jobs</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <form (ngSubmit)="applyFilters()" #filterForm="ngForm">
-          <!-- Filter Fields -->
-          <div class="mb-3">
-            <label for="jobType" class="form-label">Job Type</label>
-            <select [(ngModel)]="filters.job_type" name="jobType" class="form-select" id="jobType">
-              <option value="">All</option>
-              <option value="full-time">Full-Time</option>
-              <option value="part-time">Part-Time</option>
-              <option value="internship">Internship</option>
-            </select>
-          </div>
-  
-          <div class="mb-3">
-            <label for="workplaceType" class="form-label">Workplace Type</label>
-            <select [(ngModel)]="filters.workplace_type" name="workplaceType" class="form-select" id="workplaceType">
-              <option value="">All</option>
-              <option value="on-site">On-Site</option>
-              <option value="remote">Remote</option>
-              <option value="hybrid">Hybrid</option>
-            </select>
-          </div>
-  
-          <div class="mb-3">
-            <label for="experience" class="form-label">Experience</label>
-            <select [(ngModel)]="filters.experience" name="experience" class="form-select" id="experience">
-              <option value="">All</option>
-              <option value="0-2">0-2 Years</option>
-              <option value="2-5">2-5 Years</option>
-              <option value="5+">5+ Years</option>
-            </select>
-          </div>
-  
-        
-         <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-secondary btn_color ms-2" (click)="clearFilters()">Clear Filters</button>
-            <button type="submit" class="btn btn-primary btn_color">Apply Filters</button>
-        </div>
-        </form>
-      </div>
-    </div>
-  
-    <!-- Job Postings -->
-    <div *ngIf="isLoading" class="text-center mt-3">
-      <p>Loading data...</p>
-    </div>
-  
-    <div *ngIf="!isLoading && jobPostings.length === 0" class="text-center mt-3">
-      <p>No results found</p>
-    </div>
-  
-    <div class="row mt-3" *ngIf="jobPostings.length > 0">
-      <div class="col-lg-6 col-12 space_mb mt-3" *ngFor="let job of jobPostings">
-        <a (click)="viewDetails(job.id.toString(), job.company_name, job.title)">
-          <div class="box_shadow cursor_pointer">
-            <div class="d-flex justify-content-between">
-              <div>
-                <div class="course_name">{{ job.title }}</div>
-                <div class="company_name">{{ job.company_name }}</div>
-              </div>
-              <div>
-                <img alt="Job Image" [src]="imagePath+job.company_logo" class="img_size img-thumbnail" style="max-width: 200px;">
-              </div>
-            </div>
-            <div class="mt-2">
-              <p>
-                <i class='fas fa-box me-1'></i>{{job.experience}}
-                <i class="fas fa-map-marker-alt ms-1"></i> {{ job.location }}
-              </p>
-            </div>
-            <hr class="line" />
-            <div class="d-flex justify-content-between">
-              <div class="date">Posted On: <span class="text_bold">{{ job.created_at | date:'shortDate' }}</span></div>
-              <div class="view_details cursor_pointer">View Details</div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  
-    <!-- Pagination -->
-    <div class="d-flex flex-row mt-5 justify-content-center align-items-center mt-3">
-        <select [(ngModel)]="selectedItemsPerPage" (change)="onPageSizeChange()" class="form-select me-4" style="width: 120px;">
-            <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }} </option>
-          </select>
-      <button class="btn btn-outline-primary btn_color" (click)="onPreviousPage()" [disabled]="currentPage === 1">&lt; Previous</button>
-      <span class="mt-2 mx-2">Page {{ currentPage }} of {{ totalPages }}</span>
-      <button class="btn btn-outline-primary btn_color" (click)="onNextPage()" [disabled]="currentPage === totalPages">Next &gt;</button>
-     
-    </div>
-   
-    <div style="height: 15vh;"></div>
+
+    <!-- Button to trigger Offcanvas -->
+    <button class="btn btn-primary btn_color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight">
+      <i class="fa fa-filter me-1" aria-hidden="true"></i> Filters
+    </button>
   </div>
-  
+
+  <!-- Offcanvas Component -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Filter Jobs</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <form (ngSubmit)="applyFilters()" #filterForm="ngForm">
+        <!-- Filter Fields -->
+        <div class="mb-3">
+          <label for="jobType" class="form-label">Job Type</label>
+          <select [(ngModel)]="filters.job_type" name="jobType" class="form-select" id="jobType">
+            <option value="">All</option>
+            <option value="full-time">Full-Time</option>
+            <option value="part-time">Part-Time</option>
+            <option value="internship">Internship</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="workplaceType" class="form-label">Workplace Type</label>
+          <select [(ngModel)]="filters.workplace_type" name="workplaceType" class="form-select" id="workplaceType">
+            <option value="">All</option>
+            <option value="on-site">On-Site</option>
+            <option value="remote">Remote</option>
+            <option value="hybrid">Hybrid</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="experience" class="form-label">Experience</label>
+          <select [(ngModel)]="filters.experience" name="experience" class="form-select" id="experience">
+            <option value="">All</option>
+            <option value="0-2">0-2 Years</option>
+            <option value="2-5">2-5 Years</option>
+            <option value="5+">5+ Years</option>
+          </select>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary btn_color ms-2" (click)="clearFilters()">Clear Filters</button>
+          <button type="submit" class="btn btn-primary btn_color">Apply Filters</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Job Postings -->
+  <div *ngIf="isLoading" class="text-center mt-3">
+    <p>Loading data...</p>
+  </div>
+
+  <div *ngIf="!isLoading && jobPostings.length === 0" class="text-center mt-3">
+    <p>No results found</p>
+  </div>
+
+  <div class="row mt-3" *ngIf="jobPostings.length > 0">
+    <div class="col-lg-6 col-12 space_mb mt-3" *ngFor="let job of jobPostings">
+      <div class="box_shadow">
+        <div class="d-flex justify-content-between">
+          <div>
+            <div class="course_name">{{ job.title }}</div>
+            <div class="company_name">{{ job.company_name }}</div>
+          </div>
+          <div>
+            <img alt="Job Image" [src]="imagePath+job.company_logo" class="img_size img-thumbnail"
+              style="max-width: 200px;">
+          </div>
+        </div>
+        <div class="mt-2">
+          <p>
+            <i class='fas fa-box me-1'></i>{{job.experience}}
+            <i class="fas fa-map-marker-alt ms-1"></i> {{ job.location }}
+          </p>
+        </div>
+        <hr class="line" />
+        <div class="d-flex justify-content-between">
+          <div class="date">Posted On: <span class="text_bold">{{ job.created_at | date:'shortDate' }}</span></div>
+          <div class="view_details cursor_pointer">
+            <a (click)="viewDetails(job.id.toString(), job.company_name, job.title)">
+              View Details
+            </a>
+            <i class='fas fa-share-square ms-3' data-bs-toggle="modal" data-bs-target="#shareModal"
+              (click)="setShareUrl(job)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="d-flex flex-row mt-5 justify-content-center align-items-center mt-3">
+    <select [(ngModel)]="selectedItemsPerPage" (change)="onPageSizeChange()" class="form-select me-4"
+      style="width: 120px;">
+      <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }} </option>
+    </select>
+    <button class="btn btn-outline-primary btn_color" (click)="onPreviousPage()" [disabled]="currentPage === 1">&lt;
+      Previous</button>
+    <span class="mt-2 mx-2">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-outline-primary btn_color" (click)="onNextPage()"
+      [disabled]="currentPage === totalPages">Next &gt;</button>
+  </div>
+
+  <!-- Share Modal -->
+ <!-- Share Modal -->
+<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="shareModalLabel">Share this job</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-around">
+          <!-- WhatsApp Icon -->
+          <a href="https://api.whatsapp.com/send?text={{ shareUrl }}" target="_blank" class="d-inline-block">
+            <img src="../../../../assets/img/branch_images/whatsapp.svg" alt="WhatsApp" style="width: 28px; height: 28px;">
+          </a>
+          <!-- Facebook Icon -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ shareUrl }}" target="_blank" class="d-inline-block">
+            <img src="../../../../assets/img/branch_images/facebook.svg" alt="Facebook" style="width: 28px; height: 28px;">
+          </a>
+          <!-- Instagram Icon -->
+          <a href="https://www.instagram.com/?url={{ shareUrl }}" target="_blank" class="d-inline-block">
+            <img src="../../../../assets/img/branch_images/instagram.svg" alt="Instagram" style="width: 28px; height: 28px;">
+          </a>
+          <!-- Copy Link Button -->
+          <button (click)="copyLink()" class="btn btn-secondary">
+            Copy Link
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div style="height: 15vh;"></div>
