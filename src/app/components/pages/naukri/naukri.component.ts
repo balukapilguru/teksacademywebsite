@@ -23,6 +23,7 @@ export class NaukriComponent implements OnInit {
   isLoading = true;
   imagePath: string = 'https://teksacademy.s3.ap-south-1.amazonaws.com/HRM/jobposting_companylogos/';
   shareUrl: string = '';
+  copied: boolean = false;
 
   constructor(private jobService: JobssService, private router: Router) {}
 
@@ -105,13 +106,44 @@ export class NaukriComponent implements OnInit {
     this.shareUrl = `${window.location.origin}/${job.id}/${formattedCompanyName}/${formattedJobTitle}`;
   }
 
+
   copyLink() {
-    const tempInput = document.createElement('input');
-    tempInput.value = this.shareUrl;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    alert('Link copied to clipboard!');
+    console.log('Copy function called');
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(this.shareUrl).then(() => {
+        console.log('Copy command successful');
+        this.copied = true;
+        setTimeout(() => {
+          this.copied = false;
+        }, 5000); // Clear the copied confirmation after 5 seconds
+      }).catch(err => {
+        console.error('Error copying link:', err);
+        alert('Failed to copy link. Please try manually.');
+      });
+    } else {
+      try {
+        const tempInput = document.createElement('input');
+        tempInput.style.position = 'absolute';
+        tempInput.style.left = '-9999px';
+        tempInput.value = this.shareUrl;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        const successful = document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        console.log('Copy command successful:', successful);
+        if (successful) {
+          this.copied = true;
+          setTimeout(() => {
+            this.copied = false;
+          }, 5000); // Clear the copied confirmation after 5 seconds
+        } else {
+          alert('Failed to copy link. Please try manually.');
+        }
+      } catch (err) {
+        console.error('Error copying link:', err);
+        alert('Failed to copy link. Please try manually.');
+      }
+    }
   }
+  
 }
