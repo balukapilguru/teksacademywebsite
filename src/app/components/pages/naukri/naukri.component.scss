@@ -96,8 +96,11 @@ body {
 
 .search_filter{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: end;
+}
+.search_filter input{
+    width: 300px;
 }
 
 @media screen and (max-width: 480px) {
@@ -108,6 +111,10 @@ body {
     .mobile_padding{
         margin-top: 7px;
     }
+    .search_filter input{
+        width: 190px;
+    }
+
 }
 .share-icon {
     font-size: 2rem;

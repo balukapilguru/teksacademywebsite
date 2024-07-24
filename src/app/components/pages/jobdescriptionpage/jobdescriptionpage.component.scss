@@ -89,8 +89,16 @@ body {
 .modal-backdrop.fade{
     opacity: 0 !important;
 }
+.apply_share{
+    display: flex;
+    justify-content: space-between;
+}
 
 @media screen and (max-width: 480px) {
+    .apply_share{
+        display: flex;
+        flex-wrap: wrap;
+    }
     .form_height{
         height: 80px;
         margin-bottom: 4px;
