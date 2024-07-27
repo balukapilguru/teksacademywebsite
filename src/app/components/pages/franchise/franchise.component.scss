@@ -2,9 +2,7 @@
 body{
   background-color: #6495ed0a;
 }
-.modal-open {
-  overflow: auto;
-}
+
 .franchise_welcome{
     color: #eb6329;
     font-weight: 700;
@@ -35,6 +33,8 @@ body{
 }
 .card_column{
  background-color: #fff;
+ box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+ height: 34em;
 }
 
 
@@ -45,9 +45,10 @@ body{
     color: #373737;
     margin: 0;
     text-align: start;
+    padding: 10px 10px 0px 10px;
 }
 .card_column p{
-    padding: 0em 0em 0em 0em;
+   padding: 0px 0px 10px 10px;
     color: #5F5F5F;
     font-size: 16px;
     margin-top: 8px;
@@ -56,7 +57,12 @@ body{
     text-align: start;
 }
 .card_column img{
-    
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  text-align: center;
 }
 .column_height{
     height: 25rem;
@@ -147,7 +153,9 @@ body{
     background-image: url(../../../../assets/img//branch_images/bonus_2.png);
     background-repeat: no-repeat;
 }
-
+.big_card div{
+  padding: 3rem;
+}
   .big_card h6{
     font-weight: 700;
     font-size: 24px;
@@ -181,3 +189,14 @@ body{
   padding:2em;
 }
 // ---------------
+@media screen and (max-width: 480px) {
+.big_card div{
+  padding: 0.6rem;
+}
+.mini_card_one{
+  margin-top: 22px;
+}
+.big_card_two{
+  margin-top: 22px;
+}
+}
