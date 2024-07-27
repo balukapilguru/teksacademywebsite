@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe] // Add DatePipe to providers
 })
 export class StudentverifypageComponent implements OnInit {
-  apiUrl: string = 'https://apierp.infozit.com';
+  apiUrl: string = 'https://apiadmin.infozit.com';
   registrationNumber: string | null = null;
   studentData: any = null;
   isLoading: boolean = true;
