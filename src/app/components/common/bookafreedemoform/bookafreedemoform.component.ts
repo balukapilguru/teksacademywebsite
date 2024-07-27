@@ -151,7 +151,7 @@ export class BookafreedemoformComponent {
 
     // 'https://demo.teksacademy.com:3000/enquiry-form-data'
     this.http
-      .post(environment.apiUrl + '/bookademo', bookfreedemoformdata, {
+      .post(environment.apiUrl + '/websiteleads/bookademo', bookfreedemoformdata, {
         responseType: 'text',
       })
       .subscribe(

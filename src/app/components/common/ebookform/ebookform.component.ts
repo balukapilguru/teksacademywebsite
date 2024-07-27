@@ -139,7 +139,7 @@ export class EbookformComponent {
     // }
     const path = this.route.snapshot.url.map(segment => segment.path).join('/');
 
-    this.http.post(environment.apiUrl + '/ebook', ebsubmitForm, { responseType: 'text' }).subscribe(
+    this.http.post(environment.apiUrl + '/websiteleads/ebook', ebsubmitForm, { responseType: 'text' }).subscribe(
       response => {
         
         console.log('form data submitted successfully', response);
