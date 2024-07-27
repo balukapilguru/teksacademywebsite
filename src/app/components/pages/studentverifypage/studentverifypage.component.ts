@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-studentverifypage',
@@ -10,7 +11,8 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe] // Add DatePipe to providers
 })
 export class StudentverifypageComponent implements OnInit {
-  apiUrl: string = 'https://apiadmin.infozit.com';
+  // apiUrl: string = 'https://apiadmin.infozit.com';
+  apiUrl = environment.apiUrl;
   registrationNumber: string | null = null;
   studentData: any = null;
   isLoading: boolean = true;

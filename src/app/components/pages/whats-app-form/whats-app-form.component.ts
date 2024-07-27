@@ -39,7 +39,7 @@ export class WhatsAppFormComponent {
     
     const number = '916305475057';
     this.http
-      .post(environment.apiUrl + '/whatsapp-formData', whatsappformData, { responseType: 'text', }).subscribe(
+      .post(environment.apiUrl + '/websiteleads/whatsapp-formData', whatsappformData, { responseType: 'text', }).subscribe(
         (response) => {
           this.resetForm();
           window.location.href = `https://api.whatsapp.com/send?phone=${number}&text=I%20want%20to%20chat%20with%20you`
