@@ -154,6 +154,7 @@ import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/
 import { HitechComponent } from './components/pages/branches/hitech/hitech.component';
 import { KukatpallyComponent } from './components/pages/branches/kukatpally/kukatpally.component';
 import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
+import { FranchiseComponent } from './components/pages/franchise/franchise.component';
 
 
 const routes: Routes = [
@@ -686,7 +687,8 @@ const routes: Routes = [
   { path: 'whatsappform', component: WhatsAppFormComponent },
   { path: 'post-graduate-program', component: PgpComponent },
   { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
-  { path: 'certificate/:registrationnumber', component: StudentverifypageComponent },
+  { path: 'verifyCertificate/:registrationnumber', component: StudentverifypageComponent },
+  {path:'franchise', component:FranchiseComponent},
   {
     path: '',
     loadChildren: () =>

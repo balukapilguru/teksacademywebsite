@@ -293,6 +293,7 @@ import { HitechComponent } from './components/pages/branches/hitech/hitech.compo
 import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
 import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/dilsukhnagar.component';
 import { WhytekssampleComponent } from './components/pages/branches/whytekssample/whytekssample.component';
+import { FranchiseComponent } from './components/pages/franchise/franchise.component';
 
 
 
@@ -567,7 +568,8 @@ import { WhytekssampleComponent } from './components/pages/branches/whytekssampl
     HitechComponent,
     SecunderabadComponent,
     DilsukhnagarComponent,
-    WhytekssampleComponent
+    WhytekssampleComponent,
+    FranchiseComponent
    
    
   ],
