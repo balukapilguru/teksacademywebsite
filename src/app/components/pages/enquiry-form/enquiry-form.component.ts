@@ -103,7 +103,7 @@ export class EnquiryFormComponent {
 
     
     this.http
-      .post(environment.apiUrl + '/enquiry-form-data', enquiryFormData, {
+      .post(environment.apiUrl + '/websiteleads/enquiry-form-data', enquiryFormData, {
         responseType: 'text',
       })
       .subscribe(

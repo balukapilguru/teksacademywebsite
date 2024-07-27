@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-single-course-sidebar',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./single-course-sidebar.component.scss']
 })
 export class SingleCourseSidebarComponent {
-  
+  apiUrl = environment.apiUrl;
   recaptchaValue!: string;
   siteKey = '6LdG5wEnAAAAAGRXFCnxnjxVDCLmvTLfS0pASUEF';
   currentUrl: string = window.location.pathname;
@@ -130,8 +131,8 @@ export class SingleCourseSidebarComponent {
     //   alert('Please complete the reCAPTCHA.');
     //   return;
     // }
-
-    this.http.post("https://demo.teksacademy.com:3000/scform-data", scformdata, { responseType: "text"}).subscribe(
+  
+    this.http.post(environment.apiUrl + '/websiteleads/scform-data', scformdata, { responseType: "text"}).subscribe(
       response => {
         console.log("form submited successfully", response);
         this.router.navigate(['/thank-you']);

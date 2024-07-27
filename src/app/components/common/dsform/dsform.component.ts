@@ -88,7 +88,7 @@ export class DsformComponent {
 
     const path = this.route.snapshot.url.map(segment => segment.path).join('/');
 
-    this.http.post(environment.apiUrl + '/form-data', formData, { responseType: 'text' }).subscribe(
+    this.http.post(environment.apiUrl + '/websiteleads/form-data', formData, { responseType: 'text' }).subscribe(
       response => {
 
         console.log('form data submitted successfully', response);

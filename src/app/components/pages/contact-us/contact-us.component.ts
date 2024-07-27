@@ -61,7 +61,7 @@ export class ContactUsComponent implements OnInit {
     // }
 
     this.http
-      .post(environment.apiUrl + '/contactpage-form-data', cformData, {
+      .post(environment.apiUrl + '/websiteleads/contactpage-form-data', cformData, {
         responseType: 'text',
       })
       .subscribe(
