@@ -54,11 +54,12 @@
           <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a> -->
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link cursor__pointer"
               routerLinkActive="active"
               [routerLinkActiveOptions]="{ exact: true }"
               >About Us</a
             >
+
             <ul class="dropdown-menu">
               <li class="nav-item">
                 <a
@@ -71,8 +72,7 @@
               </li>
               <li class="nav-item">
                 <a
-                 
-                  class="nav-link"
+                  class="nav-link cursor__pointer"
                   routerLinkActive="active"
              >Branches</a>
                 <ul class="dropdown-menu">
@@ -202,6 +202,16 @@
                             <li class="nav-item"><a routerLink="/terms-of-service" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Terms of Service</a></li>
                         </ul> -->
           <!-- </li> -->
+          <!-- <li class="nav-item megamenu">
+            <a
+              routerLink="/franchise"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              (click)="toggleClass()"
+              class="nav-link"
+              >Franchise</a
+            >
+          </li> -->
           <li class="nav-item megamenu">
             <a
               routerLink="/course"

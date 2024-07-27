@@ -1,0 +1,183 @@
+// @import './../enquiry-form/enquiry-form.component.scss';
+body{
+  background-color: #6495ed0a;
+}
+.modal-open {
+  overflow: auto;
+}
+.franchise_welcome{
+    color: #eb6329;
+    font-weight: 700;
+    font-size: 18px;
+}
+.fw_900{
+    font-weight: 900;
+}
+.franchise_banner{
+   
+}
+.franchise_space{
+    padding: 4em 0em 0em 0em;
+}
+.franchise_heading{
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.3em;
+    color: #373737;
+    margin: 0;
+}
+
+.franchise_sub_heading{
+    color: #5F5F5F;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6em;
+}
+.card_column{
+ background-color: #fff;
+}
+
+
+.card_column h6{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2em;
+    color: #373737;
+    margin: 0;
+    text-align: start;
+}
+.card_column p{
+    padding: 0em 0em 0em 0em;
+    color: #5F5F5F;
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 1.6em;
+    text-align: start;
+}
+.card_column img{
+    
+}
+.column_height{
+    height: 25rem;
+   text-align: left;
+   border: 1px solid #5F5F5F;
+   border-radius: 8px;
+   padding: 2em;
+}
+.main_button{
+    box-shadow: 0px 1px 15px -1px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #eb6329;
+    border-radius: 100px 100px 100px 0px;
+    padding: 10
+    px 40px 12px 40px;
+}
+
+// form css
+.dsform {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px #fff !important;
+    max-width: 500px;
+    margin: 10px auto;
+  }
+.dsform label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 30px;
+  }
+  .dsform label span {
+    color: red;
+  }
+  .dsformi {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  
+    box-sizing: border-box;
+  }
+  .dsform input[type="submit"] {
+    width: 100%;
+    background-color: #fe4a55;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .dsform input[type="submit"]:hover {
+    background-color: #fe4a55;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+
+    .big_card_one{
+      text-align: start;
+      border: 1px solid gray;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      align-items: start;
+      display: flex;
+      justify-content: center;
+      background-image: url(../../../../assets/img//branch_images/bonus_1.png);
+      background-repeat: no-repeat;
+  }
+  .big_card_two{
+    text-align: start;
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    display: flex;
+    justify-content: center;
+    background-image: url(../../../../assets/img//branch_images/bonus_2.png);
+    background-repeat: no-repeat;
+}
+
+  .big_card h6{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2em;
+    color: #ffff;     
+    margin: 0;
+}
+.big_card p{
+    color: #fff;
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 500;
+    line-height: 1.6em;
+}
+.mini_card_one{
+  text-align: start;
+  border: 1px solid gray;
+  background-image: url(../../../../assets/img//branch_images/bonus_3.png);
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  height: 14em;
+  padding:2em;
+}
+.mini_card_two{
+  text-align: start;
+  border: 1px solid gray;
+  background-image: url(../../../../assets/img//branch_images/bonus_4.png);
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  height: 14em;
+  padding:2em;
+}
+// ---------------
