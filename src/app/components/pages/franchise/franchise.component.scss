@@ -11,11 +11,21 @@ body{
 .fw_900{
     font-weight: 900;
 }
-.franchise_banner{
-   
+.franchise_banner {
+  background-image: url('../../../../assets/img/branch_images/frnachise_banner.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover; 
+  position: relative;
 }
+
+.franchise_div {
+  position: absolute;
+}
+
 .franchise_space{
-    padding: 4em 0em 0em 0em;
+    padding:4em 0em 2em 0em;
 }
 .franchise_heading{
     font-weight: 700;
@@ -31,46 +41,95 @@ body{
     font-weight: 500;
     line-height: 1.6em;
 }
-.card_column{
- background-color: #fff;
- box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
- height: 34em;
+// .card_column{
+//  background-color: #fff;
+//  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+//  height: 34em;
+//  border: 2px solid #fff;
+//  border-radius: 8px;
+//  margin-top: 23px;
+//  padding: 1em;
+// }
+// .card_column:hover{
+//   border: 2px solid #eb6329;
+// }
+.card_column {
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  height: 34em;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin-top: 23px;
+  padding: 1em;
+  position: relative; /* For absolute positioning of pseudo-elements */
+  overflow: hidden; /* To hide overflow during animation */
+}
+
+.card_column:hover {
+  border: 2px solid #eb6329;
+}
+
+.card_column::before, .card_column::after {
+  content: "";
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  background: #eb6329;
 }
 
 
-.card_column h6{
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.2em;
-    color: #373737;
-    margin: 0;
-    text-align: start;
-    padding: 10px 10px 0px 10px;
+.card_column::before {
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
 }
-.card_column p{
-   padding: 0px 0px 10px 10px;
-    color: #5F5F5F;
-    font-size: 16px;
-    margin-top: 8px;
-    font-weight: 500;
-    line-height: 1.6em;
-    text-align: start;
+
+.card_column::after {
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
 }
-.card_column img{
+
+.card_column:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.card_column:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.card_column h6 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #373737;
+  margin: 0;
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+}
+
+.card_column p {
+  padding: 0px 0px 10px 10px;
+  color: #5F5F5F;
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.card_column img {
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   text-align: center;
 }
-.column_height{
-    height: 25rem;
-   text-align: left;
-   border: 1px solid #5F5F5F;
-   border-radius: 8px;
-   padding: 2em;
-}
+
 .main_button{
     box-shadow: 0px 1px 15px -1px rgba(0, 0, 0, 0.2);
     font-size: 16px;
@@ -127,8 +186,6 @@ body{
     -webkit-appearance: none;
     margin: 0;
   }
-  
-
     .big_card_one{
       text-align: start;
       border: 1px solid gray;
@@ -189,7 +246,26 @@ body{
   padding:2em;
 }
 // ---------------
+@media screen and (max-width: 1024px) {
+  .card_column{
+    height: 44em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mini_card_one{
+    height: 16em;
+  }
+  .mini_card_two{
+    height: 16em;
+  }
+  .card_column{
+    height: 53em;
+  }
+}
 @media screen and (max-width: 480px) {
+  .card_column{
+    height: 43em;
+  }
 .big_card div{
   padding: 0.6rem;
 }
@@ -199,4 +275,8 @@ body{
 .big_card_two{
   margin-top: 22px;
 }
+.main_button{
+  margin-bottom: 20px;
+}
+
 }
