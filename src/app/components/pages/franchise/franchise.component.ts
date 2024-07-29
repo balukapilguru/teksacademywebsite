@@ -11,17 +11,21 @@ import { environment } from '../../../../environments/environment';
 export class FranchiseComponent implements OnInit {
   siteKey = '6LdG5wEnAAAAAGRXFCnxnjxVDCLmvTLfS0pASUEF';
   apiUrl = environment.apiUrl;
-  recaptchaValue!: string;
-  efname: string = '';
-  efemail: string = '';
-  efphone: string = '';
-
   constructor(private http: HttpClient, private router: Router) {}
 
+  recaptchaValue!: string;
+  name: string = '';
+  email: string = '';
+  phone: string = '';
+  location:string='';
+
+
+
   resetForm() {
-    this.efname = '';
-    this.efemail = '';
-    this.efphone = '';
+    this.name = '';
+    this.email = '';
+    this.phone = '';
+    this.location = '';
   }
 
   ngOnInit() {
@@ -40,41 +44,53 @@ export class FranchiseComponent implements OnInit {
 
   eformData() {
     const enquiryFormData = {
-      efname: this.efname,
-      efemail: this.efemail,
-      efphone: this.efphone,
+      name: this.name,
+      email: this.email,
+      phone: this.phone,
+      location:this.location,
     };
 
-    if (!this.efname) {
+    if (!this.name) {
       console.error('Name is Required');
       alert('Name is Required');
       return;
-    } else if (!/^[a-zA-Z\s]+$/.test(this.efname)) {
+    } else if (!/^[a-zA-Z\s]+$/.test(this.name)) {
       console.error('Invalid Name Format');
       alert('Invalid Name Format');
       return;
-    } else if (!this.efemail) {
+    } else if (!this.email) {
       console.error('Email is Required');
       alert('Email is Required');
       return;
-    } else if (!/\S+@\S+\.\S+/.test(this.efemail)) {
+    } else if (!/\S+@\S+\.\S+/.test(this.email)) {
       console.error('Invalid Email Format');
       alert('Invalid Email Format');
       return;
-    } else if (!this.efphone) {
+    } else if (!this.phone) {
       console.error('Phone Number is Required');
       alert('Phone Number is Required');
       return;
-    } else if (!/^\d{10}$/.test(this.efphone)) {
+    } else if (!/^\d{10}$/.test(this.phone)) {
       console.error('Invalid Phone Number Format');
       alert('Invalid Phone Number Format');
+      return;
+    }else if (!this.location) {
+      console.error('Location is Required');
+      alert('Location is Required');
+      return;
+    } else if (!/^[a-zA-Z\s]+$/.test(this.location)) {
+      console.error('Location is text Format');
+      alert('Location is text Format');
       return;
     }
 
     this.http
-      .post(this.apiUrl + '/enquiry-form-data', enquiryFormData, {
+      .post(this.apiUrl + '/websiteleads/franchiseform', enquiryFormData, {
+        headers: { 'Content-Type': 'application/json' },
         responseType: 'text',
+        
       })
+      
       .subscribe(
         (response) => {
           console.log('Form submitted successfully', response);
@@ -85,6 +101,7 @@ export class FranchiseComponent implements OnInit {
           console.error('Error submitting form', error);
         }
       );
+      console.log('ddd:', enquiryFormData);
   }
 
 
