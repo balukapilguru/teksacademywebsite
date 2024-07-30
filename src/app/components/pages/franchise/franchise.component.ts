@@ -88,7 +88,7 @@ export class FranchiseComponent implements OnInit {
       .post(this.apiUrl + '/websiteleads/franchiseform', enquiryFormData, {
         headers: { 'Content-Type': 'application/json' },
         responseType: 'text',
-        
+
       })
       
       .subscribe(
