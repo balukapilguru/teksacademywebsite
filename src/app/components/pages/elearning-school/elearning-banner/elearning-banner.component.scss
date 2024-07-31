@@ -243,6 +243,28 @@
 
 /* home page banner cards style */
 
+.header-styling {
+  position: relative;
+  transition: all 0.3s ease-in;
+  &::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 4px;
+    background-color: #2a619d;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+    border-radius: 50%;
+
+    @media screen and (max-width: 768px) {
+      width: 15%;
+    }
+  }
+}
 .main-banner {
   position: relative;
   z-index: 1;
