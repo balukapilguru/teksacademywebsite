@@ -76,7 +76,7 @@ export class AppComponent {
   ngOnInit() {
     this.recallJsFuntions();
     this.addStructuredData();
-      this.addBreadcrumbSchema();
+      // this.addBreadcrumbSchema(); 
 
 
     //         const dsformclose = document.getElementById("dsformclose");
@@ -189,34 +189,34 @@ export class AppComponent {
     this.renderer.appendChild(document.head, scriptUniversity);
   }
 
-  addBreadcrumbSchema() {
-    const script = this.renderer.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home page",
-        "item": "https://teksacademy.com/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Us",
-        "item": "https://teksacademy.com/about-us"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Courses",
-        "item": "https://teksacademy.com/course"
-      },{
-        "@type": "ListItem",
-        "position": 4,
-        "name": "Blog",
-        "item": "https://blog.teksacademy.com/"
-      }]
-    });
-    this.renderer.appendChild(document.head, script);
-  }
+  // addBreadcrumbSchema() {
+  //   const script = this.renderer.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.text = JSON.stringify({
+  //     "@context": "https://schema.org/",
+  //     "@type": "BreadcrumbList",
+  //     "itemListElement": [{
+  //       "@type": "ListItem",
+  //       "position": 1,
+  //       "name": "Home page",
+  //       "item": "https://teksacademy.com/"
+  //     },{
+  //       "@type": "ListItem",
+  //       "position": 2,
+  //       "name": "About Us",
+  //       "item": "https://teksacademy.com/about-us"
+  //     },{
+  //       "@type": "ListItem",
+  //       "position": 3,
+  //       "name": "Courses",
+  //       "item": "https://teksacademy.com/course"
+  //     },{
+  //       "@type": "ListItem",
+  //       "position": 4,
+  //       "name": "Blog",
+  //       "item": "https://blog.teksacademy.com/"
+  //     }]
+  //   });
+  //   this.renderer.appendChild(document.head, script);
+  // }
 }
