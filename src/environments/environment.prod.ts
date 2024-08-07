@@ -10,6 +10,6 @@
 
 export const environment = {
   production: true,
-  // apiUrl: 'https://apierp.infozit.com',   //localhost
-  apiUrl: 'https://apiadmin.infozit.com', //live
+  apiUrl: 'https://apierp.infozit.com',   //localhost
+  // apiUrl: 'https://apiadmin.infozit.com', //live
 };

@@ -1,0 +1,24 @@
+// https://teksacademy.com/assets/img/Teks_Website/Teks_Website/Banners/Compressed/Digital_marketing_1920x680-min.png
+.banner_text {
+    background-image: url(../../../../assets/img/Teks_Website/Teks_Website/Banners/Compressed/Digital_marketing_1920x680-min.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .fa-star{
+    color: gold;
+}
+.banner_text ul {
+    padding-left: 0rem !important;
+}
+
+.banner_text ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.top_space{
+    margin-top: 2rem;
+}

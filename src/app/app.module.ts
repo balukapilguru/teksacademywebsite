@@ -294,6 +294,7 @@ import { SecunderabadComponent } from './components/pages/branches/secunderabad/
 import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/dilsukhnagar.component';
 import { WhytekssampleComponent } from './components/pages/branches/whytekssample/whytekssample.component';
 import { FranchiseComponent } from './components/pages/franchise/franchise.component';
+import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 
 
 
@@ -569,7 +570,8 @@ import { FranchiseComponent } from './components/pages/franchise/franchise.compo
     SecunderabadComponent,
     DilsukhnagarComponent,
     WhytekssampleComponent,
-    FranchiseComponent
+    FranchiseComponent,
+    NewdigitalmarketingComponent
    
    
   ],
