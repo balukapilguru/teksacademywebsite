@@ -155,6 +155,7 @@ import { HitechComponent } from './components/pages/branches/hitech/hitech.compo
 import { KukatpallyComponent } from './components/pages/branches/kukatpally/kukatpally.component';
 import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
 import { FranchiseComponent } from './components/pages/franchise/franchise.component';
+import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 
 
 const routes: Routes = [
@@ -1109,6 +1110,7 @@ const routes: Routes = [
   { path: 'jobapplication', component: JobApplicationComponent },
   { path: 'jobs', component: NaukriComponent },
   { path: 'testing', component: TestingComponent },
+  {path:'newdigitalmarketing', component:NewdigitalmarketingComponent},
 
   // Here add new pages component
   { path: 'dummy-page', component: DummycourseComponent },
