@@ -156,6 +156,7 @@ import { KukatpallyComponent } from './components/pages/branches/kukatpally/kuka
 import { SecunderabadComponent } from './components/pages/branches/secunderabad/secunderabad.component';
 import { FranchiseComponent } from './components/pages/franchise/franchise.component';
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
+import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 
 
 const routes: Routes = [
@@ -422,6 +423,7 @@ const routes: Routes = [
   { path: 'branch/hitech-best-python-data-science-training-institute', component: HitechComponent },
   { path: 'branch/kukatpally-best-data-science-aws-course-training', component: KukatpallyComponent },
   { path: 'branch/secunderabad-sales-force-medical-coding-course-training', component: SecunderabadComponent },
+  {path:'branch/visakhapatnam-best-software-training-institute', component:VizagComponent},
 
   // {path: '', component: ElearningSchoolComponent},
 
