@@ -295,6 +295,7 @@ import { DilsukhnagarComponent } from './components/pages/branches/dilsukhnagar/
 import { WhytekssampleComponent } from './components/pages/branches/whytekssample/whytekssample.component';
 import { FranchiseComponent } from './components/pages/franchise/franchise.component';
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
+import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 
 
 
@@ -571,7 +572,8 @@ import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarke
     DilsukhnagarComponent,
     WhytekssampleComponent,
     FranchiseComponent,
-    NewdigitalmarketingComponent
+    NewdigitalmarketingComponent,
+    VizagComponent
    
    
   ],
