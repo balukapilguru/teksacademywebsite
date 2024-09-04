@@ -573,8 +573,7 @@ import { VizagComponent } from './components/pages/branches/vizag/vizag.componen
     WhytekssampleComponent,
     FranchiseComponent,
     NewdigitalmarketingComponent,
-    VizagComponent
-   
+    VizagComponent,
    
   ],
 

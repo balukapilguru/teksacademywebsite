@@ -157,6 +157,7 @@ import { SecunderabadComponent } from './components/pages/branches/secunderabad/
 import { FranchiseComponent } from './components/pages/franchise/franchise.component';
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
+import { EbookformComponent } from './components/common/ebookform/ebookform.component';
 
 
 const routes: Routes = [
@@ -424,6 +425,7 @@ const routes: Routes = [
   { path: 'branch/kukatpally-best-data-science-aws-course-training', component: KukatpallyComponent },
   { path: 'branch/secunderabad-sales-force-medical-coding-course-training', component: SecunderabadComponent },
   {path:'branch/visakhapatnam-best-software-training-institute', component:VizagComponent},
+  {path:'ebook', component:EbookformComponent},
 
   // {path: '', component: ElearningSchoolComponent},
 
@@ -1113,6 +1115,8 @@ const routes: Routes = [
   { path: 'jobs', component: NaukriComponent },
   { path: 'testing', component: TestingComponent },
   {path:'newdigitalmarketing', component:NewdigitalmarketingComponent},
+
+  
 
   // Here add new pages component
   { path: 'dummy-page', component: DummycourseComponent },
