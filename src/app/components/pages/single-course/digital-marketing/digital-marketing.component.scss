@@ -17,9 +17,7 @@
   background-position: center;
   background-origin: content-box, padding-box;
 }
-.space_padding{
-  padding:2% 0% 8% 7%;
-}
+
 .teks_orange{
   color: #000 !important;
   font-weight: bold;
@@ -181,6 +179,9 @@
 @media screen and (max-width: 480px) {
   .custom-h3 {
     font-size: 20px !important;
+  }
+  .mt_15{
+    margin-top: 1%;
   }
 }
 

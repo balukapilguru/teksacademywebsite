@@ -1,8 +1,21 @@
 .footer-area {
     background-color: #100f1f;
     position: relative;
-    padding-top: 100px;
+    padding-top: 60px;
     z-index: 1;
+}
+
+.widget-title:after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    background-color: #eb6329;
+}
+.fs_14{
+    font-size: 14px;
 }
 .call li:hover{
     color: blue;
@@ -26,7 +39,7 @@ a:hover{
         color: var(--whiteColor);
         font: {
             size: 24px;
-            weight: 800;
+            weight: 600;
         };
     }
     p {
@@ -44,7 +57,7 @@ a:hover{
             a {
                 color: #ededed;
                 display: inline-block;
-                
+                font-size: 14px;
                 &:hover {
                     color: var(--mainColor);
                 }
@@ -131,10 +144,10 @@ a:hover{
 }
 .footer-bottom-area {
     margin-top: 10px;
-    border-top: 2px solid #181726;
+    border-top: 1px solid #fff;
     padding: {
-        top: 25px;
-        bottom: 10px;
+        top: 15px;
+        bottom: 15px;
     };
     p {
         color: #ededed;

@@ -6,6 +6,16 @@
 // Custom Form
 .navbar-nav > .nav-item > .nav-link:active {
 }
+.sapmm_banner{
+  // ../../../../../assets/img/Teks_Website/Teks_Website/Banners/Compressed/SAP.png
+  background-image: url(../../../../../assets/img/Teks_Website/Teks_Website/Banners/Compressed/SAP.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box, padding-box;
+}
 
 .navActive {
   position: relative;
