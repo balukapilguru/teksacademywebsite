@@ -1,10 +1,10 @@
 // @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 100vw;
-  max-height: auto;
+  // margin: 0;
+  // padding: 0;
+  // box-sizing: border-box;
+  // max-width: 100vw;
+  // max-height: auto;
 }
 .ourbranchescont {
   padding-top: 30px;
@@ -145,4 +145,99 @@ background-repeat: no-repeat;
 background-size: cover;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
   rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+// lakshmi code
+.elementor-widget-hitech{
+  background-color: #F9F9F9;
+  border-radius: 20px 20px 20px 20px;
+  padding: 30px 30px 30px 30px;
+  margin: 0px 10px 0px 0px;
+}
+.elementor-widget-hitech:hover{
+  background-color: #ECF0F9;
+}
+.elementor-widget-ammerpet{
+  background-color: #F9F9F9;
+  border-radius: 20px 20px 20px 20px;
+  padding: 30px 30px 30px 30px;
+  margin: 0px 10px 0px 0px;
+}
+.elementor-widget-ammerpet:hover{
+  background-color: #ffe8de;
+}
+.elementor-widget-dilsukhnagar{
+  background-color: #F9F9F9;
+  border-radius: 20px 20px 20px 20px;
+  padding: 30px 30px 30px 30px;
+  margin: 0px 10px 0px 0px;
+}
+.elementor-widget-dilsukhnagar:hover{
+  background-color: #ABF0FC7A;
+}
+.elementor-widget-kukatpally{
+  background-color: #F9F9F9;
+  border-radius: 20px 20px 20px 20px;
+  padding: 30px 30px 30px 30px;
+  margin: 0px 10px 0px 0px;
+}
+.elementor-widget-kukatpally:hover{
+  background-color: #C2F5D273;
+}
+
+.know_more{
+  color: #eb6329;
+  font-size: 14px;
+  font-weight: 600;
+}
+.know_more:hover{
+  border-bottom: 1px solid #eb6329;
+  cursor: pointer;
+}
+.address_style{
+  font-size: 14px;
+  color: #6F6F6F;
+  font-weight: 400;
+}
+.icon_bg_hitech{
+  width: 60px;
+  height:60px;
+  background-color: #dfd9ff; /* Tomato color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%; /* Makes it circular */
+}
+.icon_bg_ammerpet{
+  width: 60px;
+  height:60px;
+  background-color: #ffdccd; /* Tomato color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%; /* Makes it circular */
+}
+
+.icon_bg_dilsukhnagar{
+  width: 60px;
+  height:60px;
+  background-color: #abf0fc; /* Tomato color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%; /* Makes it circular */
+}
+.icon_bg_kukatpally{
+  width: 60px;
+  height:60px;
+  background-color: #c2f5d2; /* Tomato color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%; /* Makes it circular */
+}
+
+.icon_bg img {
+ width: 50%;
+ height: 50%;
 }

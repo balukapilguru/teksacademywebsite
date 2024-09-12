@@ -7865,6 +7865,15 @@ i.flaticon-tag {
   font-size: 16px;
 }
 
+.know_more_branches{
+  display: flex;
+  align-items: center;
+  color: #eb6329;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 5px;
+  cursor: pointer;
+}
 .learn_more {
   display: flex;
   align-items: center;
@@ -8039,6 +8048,10 @@ i.flaticon-tag {
 }
 
 // lakshmi css
+
+.space_padding{
+  padding:4% 0% 8% 7%;
+}
 .btn_bg{
   color: #fff;
     background-color: #2a619d;
