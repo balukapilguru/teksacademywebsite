@@ -7848,6 +7848,9 @@ i.flaticon-tag {
 
 
 // branches start
+.padding_card{
+  padding: 3rem;
+}
 
 .heading_space {
   padding: 4% 0% 10% 0%;
@@ -7992,6 +7995,13 @@ i.flaticon-tag {
 }
 
 @media screen and (max-width: 480px) {
+  .padding_card{
+    padding: 1rem;
+  }
+  .hheading {
+    font-weight: 600;
+    font-size: 24px !important;
+}
 
   .heading_space {
       margin-top: 0% !important;
