@@ -177,9 +177,7 @@ export class DataScienceComponent {
     this.turnRight();
   }
 
-  ngOnDestroy() {
-    this.removeJsonLdScript();
-  }
+
 
   private addJsonLdScript() {
     if (!document.getElementById(this.jsonLdScriptId)) {
@@ -235,14 +233,17 @@ export class DataScienceComponent {
       this.renderer.appendChild(this.document.head, script);
     }
   }
-
+  ngOnDestroy() {
+    this.removeJsonLdScript();
+  }
   private removeJsonLdScript() {
     const script = this.document.getElementById(this.jsonLdScriptId);
     if (script) {
       this.renderer.removeChild(this.document.head, script);
     }
   }
-
+ 
+ 
   private sttmot(i: number): void {
     setTimeout(() => {
       if (this.right[i] && this.right[i].style) {

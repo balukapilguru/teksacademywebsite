@@ -166,7 +166,16 @@ export class SapmaterialmanagementComponent {
     // Assuming you want to turn right on component initialization
     this.turnRight();
   }
-
+  ngOnDestroy() {
+    this.removeJsonLdScript();
+  }
+  private removeJsonLdScript() {
+    const script = this.document.getElementById(this.jsonLdScriptId);
+    if (script) {
+      this.renderer.removeChild(this.document.head, script);
+    }
+  }
+ 
   private sttmot(i: number): void {
     setTimeout(() => {
       if (this.right[i] && this.right[i].style) {
