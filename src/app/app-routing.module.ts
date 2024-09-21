@@ -158,6 +158,7 @@ import { FranchiseComponent } from './components/pages/franchise/franchise.compo
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 import { EbookformComponent } from './components/common/ebookform/ebookform.component';
+import { FeaturedComponent } from './components/common/featured/featured.component';
 
 
 const routes: Routes = [
@@ -426,6 +427,7 @@ const routes: Routes = [
   { path: 'branch/secunderabad-sales-force-medical-coding-course-training', component: SecunderabadComponent },
   {path:'branch/visakhapatnam-best-software-training-institute', component:VizagComponent},
   {path:'ebook', component:EbookformComponent},
+  {path:'featuredin', component:FeaturedComponent},
 
   // {path: '', component: ElearningSchoolComponent},
 

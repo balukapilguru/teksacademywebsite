@@ -194,8 +194,8 @@ a {
       right: auto;
     }
     font: {
-      size: 36px;
-      weight: 500;
+      size: 44px;
+      weight: 700;
     }
   }
   p {
@@ -6316,8 +6316,8 @@ Responsive CSS
 }
 // home page request call back button start
 .hheading {
-  font-weight: 600;
-  font-size: 30px !important;
+  font-weight: 700 !important;
+  font-size: 44px !important;
 }
 html {
   scroll-behavior: smooth !important;
@@ -7995,6 +7995,13 @@ i.flaticon-tag {
 }
 
 @media screen and (max-width: 480px) {
+  
+  .banner_fs{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  
   .padding_card{
     padding: 1rem;
   }
@@ -8076,4 +8083,78 @@ i.flaticon-tag {
 
 .text_justify p{
   text-align: justify;
+}
+.banner_fs{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+// -------------------know more
+.know_more{
+    position: absolute;
+    bottom: 0px;
+    margin: 0px 0px 10px 0px;
+}
+.header h2 {
+  color: #334155;
+  letter-spacing: -0.5px;
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header h2 {
+  color: #334155;
+  letter-spacing: -0.5px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+}
+}
+// position: absolute;
+// bottom: 0;
+// left:0;
+// width: 100%;
+
+
+.read_more_text{
+    font-size: 16px;
+    // position: absolute;
+    // transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: #eb6329;
+}
+.read_more_text a{
+    font-size: 16px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: #eb6329;
+}
+.read_more_text i{
+    font-size: 12px;
+    transition: all .5s;
+    color: #eb6329;
+}
+.read_more_text a:hover ~ i{
+    transform: translateX(10px);
+}
+.bg_text{
+    position: absolute;
+    // bottom: 3px;
+    // left: -4px;
+    border-radius: 50px;
+    width: 10px;
+    height: 2px;
+    z-index: -1;
+    background-color: #eb6329;
+    // background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+    transition: all .5s;
+}
+.read_more_text a:hover ~ .bg_text{
+    width: 75px;
 }

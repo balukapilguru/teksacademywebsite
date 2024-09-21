@@ -296,6 +296,7 @@ import { WhytekssampleComponent } from './components/pages/branches/whytekssampl
 import { FranchiseComponent } from './components/pages/franchise/franchise.component';
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
+import { FeaturedinComponent } from './components/pages/featuredin/featuredin.component';
 
 
 
@@ -574,6 +575,7 @@ import { VizagComponent } from './components/pages/branches/vizag/vizag.componen
     FranchiseComponent,
     NewdigitalmarketingComponent,
     VizagComponent,
+    FeaturedinComponent,
    
   ],
 
