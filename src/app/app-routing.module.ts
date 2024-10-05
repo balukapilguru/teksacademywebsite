@@ -84,6 +84,7 @@ import { IeltsComponent } from './components/pages/single-course/ielts/ielts.com
 import { AdvanceExcelComponent } from './components/pages/single-course/advance-excel/advance-excel.component';
 import { SalesforceComponent } from './components/pages/single-course/salesforce/salesforce.component';
 import { DigitalMarketingComponent } from './components/pages/single-course/digital-marketing/digital-marketing.component';
+import { VlsiComponent } from './components/pages/single-course/vlsi/vlsi.component';
 import { AwsComponent } from './components/pages/single-course/aws/aws.component';
 import { DataAnalyticsComponent } from './components/pages/single-course/data-analytics/data-analytics.component';
 import { DataScienceComponent } from './components/pages/single-course/data-science/data-science.component';
@@ -402,6 +403,7 @@ const routes: Routes = [
     path: 'courses/digital-marketing-self-learning-program',
     component: SlpDigitalMarketingComponent,
   },
+{ path:'courses/best-vlsi-course-training-institute-hyderabad', component:VlsiComponent},
   { path: 'slp-overview-form', component: SlpOverviewFormComponent },
   { path: 'placements', component: PlacementsComponent },
   { path: 'our-gallery', component: OurGalleryComponent },

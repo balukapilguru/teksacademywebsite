@@ -204,6 +204,7 @@ import { IeltsComponent } from './components/pages/single-course/ielts/ielts.com
 import { AdvanceExcelComponent } from './components/pages/single-course/advance-excel/advance-excel.component';
 import { SalesforceComponent } from './components/pages/single-course/salesforce/salesforce.component';
 import { DigitalMarketingComponent } from './components/pages/single-course/digital-marketing/digital-marketing.component';
+import { VlsiComponent } from './components/pages/single-course/vlsi/vlsi.component';
 import { AwsComponent } from './components/pages/single-course/aws/aws.component';
 import { DataAnalyticsComponent } from './components/pages/single-course/data-analytics/data-analytics.component';
 import { DataScienceComponent } from './components/pages/single-course/data-science/data-science.component';
@@ -297,6 +298,7 @@ import { FranchiseComponent } from './components/pages/franchise/franchise.compo
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 import { FeaturedinComponent } from './components/pages/featuredin/featuredin.component';
+
 
 
 
@@ -576,6 +578,7 @@ import { FeaturedinComponent } from './components/pages/featuredin/featuredin.co
     NewdigitalmarketingComponent,
     VizagComponent,
     FeaturedinComponent,
+    VlsiComponent,
    
   ],
 
