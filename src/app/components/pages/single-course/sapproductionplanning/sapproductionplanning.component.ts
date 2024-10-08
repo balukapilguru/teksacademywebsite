@@ -112,6 +112,12 @@ export class SapproductionplanningComponent implements OnInit {
       content: 'Teks Academy is the finest place to learn SAP PP. The course leads you through various solutions to common programming challenges.',
     });
 
+ // Add meta keywords
+ this.metaService.updateTag({
+  name: 'keywords',
+  content: 'sap production planning course, sap pp training',
+});
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

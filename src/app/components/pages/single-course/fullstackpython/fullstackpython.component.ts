@@ -117,6 +117,14 @@ export class FullstackpythonComponent {
       content:
         'Enroll in our Best Full Stack Python Developer course at Teks Academy Hyderabad. Get real-time training in IT Company. Join now to become a Full Stack Developer',
     });
+
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Full stack Developer Course, full stack python course, python course training in hyderabad python online course, python classes near me, python coding for beginners, best python course python training, python full stack developer course in hyderabad',
+    });
+
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

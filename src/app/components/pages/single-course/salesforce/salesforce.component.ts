@@ -1,8 +1,8 @@
-import { Component, ElementRef, OnInit,  Inject, Renderer2,} from '@angular/core';
+import { Component, ElementRef, OnInit, Inject, Renderer2, } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
-import { DOCUMENT } from '@angular/common'; 
+import { DOCUMENT } from '@angular/common';
 declare var $: any;
 declare var jQuery: any;
 @Component({
@@ -115,7 +115,14 @@ export class SalesforceComponent {
       name: 'description',
       content:
         'Join the best sales force CRM course in Hyderabad, a training program designed with an industry-relevant curriculum and conducted classes by qualified trainers.',
-       });
+    });
+
+    // Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'salesforce course, salesforce training, salesforce training in hyderabad, salesforce developer course salesforce developer training, salesforce training in hyderabad',
+    });
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 
@@ -251,7 +258,7 @@ export class SalesforceComponent {
     //
   }
 
-  
+
   private addJsonLdScript() {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');

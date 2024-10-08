@@ -117,6 +117,13 @@ export class BimComponent {
       content:
         'Teks Academy provides certified Building Information Modeling (BIM) courses in Hyderabad with 100% job assistance. Start your BIM career today.',
     });
+
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Bim Course, Bim training institute in hyderabad, Bim online classes',
+    });
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

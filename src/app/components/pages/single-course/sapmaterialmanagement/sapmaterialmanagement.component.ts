@@ -117,6 +117,12 @@ export class SapmaterialmanagementComponent {
         'Discover the best SAP MM module training at Teks Academy. Master materials management and propel your career forward with our expert-led courses. Enroll now!',
     });
 
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'sap material management course, sap mm training in hyderabad, sap mm course',
+    });
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

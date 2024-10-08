@@ -123,8 +123,12 @@ export class DataScienceComponent {
     // set meta description
     this.metaService.updateTag({
       name: 'description',
-      content:
-        'Join the Data Science Certification Course and upskill yourself with fast-track. Join today to get the Best Data Science course in Hyderabad at Teks Academy',
+      content:'Join the Data Science Certification Course and upskill yourself with fast-track. Join today to get the Best Data Science course in Hyderabad at Teks Academy',
+    });
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Data science course in hyderabad, Best data science course, Data science online course, Data science course with placement',
     });
 
     const openBtn = document.getElementById('open-form')!;

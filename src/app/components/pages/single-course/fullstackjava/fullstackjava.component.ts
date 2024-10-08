@@ -117,6 +117,14 @@ export class FullstackjavaComponent {
       content:
         'TEKS Academy is providing the best Java programming course online and offline in Hyderabad, to Skill up, & kick-start your career as a successful Java Developer',
     });
+
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Full stack java developer training, java course online, java course in hyderabad, Java full stack course, Java programming course online, Java programming certification course, Java training in hyderabad',
+    });
+
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 
