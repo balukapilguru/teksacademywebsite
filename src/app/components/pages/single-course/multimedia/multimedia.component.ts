@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit , Inject, Renderer2,} from '@angular/core';
+import { Component, ElementRef, OnInit, Inject, Renderer2, } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
@@ -115,6 +115,12 @@ export class MultimediaComponent {
       name: 'description',
       content:
         'Discover the exciting world of multimedia animation course with topics ranging from 2D to 3D animation, character design, motion graphics, and more.',
+    });
+
+    // Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: '3d animation course, animation and multimedia, animation course, multimedia and mass communication, multimedia course',
     });
 
     const openBtn = document.getElementById('open-form')!;

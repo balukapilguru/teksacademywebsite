@@ -118,6 +118,13 @@ export class SapficoComponent {
       content:
         'Unlock the best SAP FICO course at Teks Academy. Dive into financial accounting and controlling to advance your career. Enroll now for expert-led training',
     });
+
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'sap fico training , sap fico training in hyderabad, sap finance course, sap fico course in hyderabad',
+    });
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

@@ -118,6 +118,13 @@ export class SapsalesdistributionComponent {
         'Best SAP SD Expert Training in Hyderabad for Beginners: Advanced Techniques, Real-Time Practical, Live Projects, Certification, and Free Demo.',
     });
 
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'sap sd course, sap sd course in hyderabad, sap sd training online, sap sales and distribution course',
+    });
+
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

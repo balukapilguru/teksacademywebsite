@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit,  Inject, Renderer2, } from '@angular/core';
+import { Component, ElementRef, OnInit, Inject, Renderer2, } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
@@ -113,8 +113,12 @@ export class DigitalMarketingComponent implements OnInit {
     // set meta description
     this.metaService.updateTag({
       name: 'description',
-      content:
-        'Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!',
+      content: 'Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!',
+    });
+    // Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'Digital marketing Course In Hyderabad, Digital Marketing Course Training in Hyderabad, Digital Marketing Course Online digital marketing training institute, best digital marketing course, digital marketing training, google adwords training Digital marketing traning, digital marketing online course, Best online digital marketing training Performance marketing course',
     });
 
     const openBtn = document.getElementById('open-form')!;

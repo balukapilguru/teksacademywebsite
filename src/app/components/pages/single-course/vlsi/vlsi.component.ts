@@ -107,14 +107,14 @@ export class VlsiComponent {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Best Digital Marketing Course | Hyderabad |online & offline'
+      'Best VLSI Training Institute in Hyderabad | VLSI Course & Design Projects'
     );
 
     // set meta description
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!',
+        'Join the best VLSI training institute in Hyderabad to learn VLSI design, verification, and essential skills like Verilog, System Verilog, and UVM.',
     });
 
     const openBtn = document.getElementById('open-form')!;

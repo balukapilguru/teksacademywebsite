@@ -118,6 +118,12 @@ export class AwsplusdevopsComponent {
         'Join the AWS and DevOps comprehensive course. Teks Academy is the best training institute to learn AWS DevOps Certification course with 100% job assistance.',
     });
 
+     // Add meta keywords
+     this.metaService.updateTag({
+      name: 'keywords',
+      content: 'aws course training, aws training and certification, aws devops training, devops course in hyderabad',
+    });
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 

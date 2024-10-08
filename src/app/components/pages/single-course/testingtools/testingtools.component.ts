@@ -117,6 +117,12 @@ export class TestingtoolsComponent {
         'Learn the Best Testing Tools Course in Hyderabad from Teks Academy and become an expert, with the benefits of Placement assistance, and 100% job support',
     });
 
+    // Add meta keywords
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: ' Testing software course, Software tester online course, Manual software testing course, Software testing course in hyderabad',
+    });
+
     const openBtn = document.getElementById('open-form')!;
     const popupForm = document.getElementById('popup-form')!;
 
