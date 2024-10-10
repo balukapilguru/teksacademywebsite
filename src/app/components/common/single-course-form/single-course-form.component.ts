@@ -151,7 +151,7 @@ export class SingleCourseFormComponent {
       };
 
 
-      this.http.post(environment.apiUrl + '/scform-data', scformdata, {
+      this.http.post(environment.apiUrl + '/websiteleads/scform-data', scformdata, {
         responseType: 'text',
       })
       .subscribe(
