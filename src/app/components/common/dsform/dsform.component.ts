@@ -95,142 +95,142 @@ export class DsformComponent {
         this.resetForm();
         if (path.includes('full-stack-python')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Full+Stack+Python+Syllabus..pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Full+Stack+Python+Syllabus..pdf'
         } else if (path.includes('full-stack-java')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Full+Stack+Java+Syllubus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Full+Stack+Java+Syllubus.pdf'
         } else if (path.includes('digital-marketing')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Digital+Marketing.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Digital+Marketing.pdf'
         } else if (path.includes('data-science')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Data+Science+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Data+Science+Syllabus.pdf'
         } else if (path.includes('sap-fico')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/SAP+FICO+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SAP+FICO+Syllabus.pdf'
         } else if (path.includes('sap-mm')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/SAP+MM.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SAP+MM.pdf'
         } else if (path.includes('sap-pp')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/SAP+PP.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SAP+PP.pdf'
         } else if (path.includes('sap-sd')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/SAP+SD.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SAP+SD.pdf'
         } else if (path.includes('awsplusdevops')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/AWS+%2B+DevOps+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/AWS+%2B+DevOps+.pdf'
         } else if (path.includes('testingtools')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Testing+Tools+1.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Testing+Tools+1.pdf'
         } else if (path.includes('bim-building-information-modeling')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/BIM+(REVIT+CIVIL%2C+REVIT+MEP+%26+NAVIS+WORKS).pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/BIM+(REVIT+CIVIL%2C+REVIT+MEP+%26+NAVIS+WORKS).pdf'
         } else if (path.includes('salesforce')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Salesforce.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Salesforce.pdf'
         } else if (path.includes('ai-and-ml')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/ARTIFICIAL+INTELLIGENCE+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/ARTIFICIAL+INTELLIGENCE+.pdf'
         } else if (path.includes('manual-testing')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Manual+Testing.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Manual+Testing.pdf'
         } else if (path.includes('nodejs-course')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Node.js.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Node.js.pdf'
         }
 
         // new
         else if (path.includes('hvac-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/HVAC.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/HVAC.pdf'
         } else if (path.includes('best-3ds-max-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/3DS+MAX.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/3DS+MAX.pdf'
         } else if (path.includes('best-ms-office-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/MS+Office+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/MS+Office+Syllabus.pdf'
         } else if (path.includes('best-staad-pro-civil-engineering-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/STAAD.PRO+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/STAAD.PRO+.pdf'
         } else if (path.includes('best-primavera-p6-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/primavera.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/primavera.pdf'
         } else if (path.includes('best-angular-javascript-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Angular.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Angular.pdf'
         } else if (path.includes('best-pte-academic-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/PTE.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/PTE.pdf'
         } else if (path.includes('best-html-css-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/HTML+%26+CSS+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/HTML+%26+CSS+Syllabus.pdf'
         } else if (path.includes('best-artificial-intelligence-best-ai-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/ARTIFICIAL+INTELLIGENCE+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/ARTIFICIAL+INTELLIGENCE+.pdf'
         } else if (path.includes('best-automation-testing-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/AUTOMATION+TESTING.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/AUTOMATION+TESTING.pdf'
         } else if (path.includes('best-sketching-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/SKETCHUP++.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SKETCHUP++.pdf'
         } else if (path.includes('best-devops-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/DevOps+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/DevOps+.pdf'
         } else if (path.includes('best-revit-mep-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/REVIT+MEP+(MECHANICAL+%26+ELECTRICAL).pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/REVIT+MEP+(MECHANICAL+%26+ELECTRICAL).pdf'
         } else if (path.includes('best-c-language-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/C+language.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/C+language.pdf'
         } else if (path.includes('best-python-developer-programming-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/PYTHON.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/PYTHON.pdf'
         } else if (path.includes('best-autocad-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/AUTOCAD.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/AUTOCAD.pdf'
         } else if (path.includes('best-revit-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/REVIT+ARCHITECTURE.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/REVIT+ARCHITECTURE.pdf'
         } else if (path.includes('best-sql-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/SQL+Syllabus+(4).pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SQL+Syllabus+(4).pdf'
         } else if (path.includes('best-power-bi-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Powerbi+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Powerbi+Syllabus.pdf'
         } else if (path.includes('best-tableau-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Tableau.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Tableau.pdf'
         } else if (path.includes('best-business-analytics-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Business+Analyst.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Business+Analyst.pdf'
         } else if (path.includes('best-microsoft-azure-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/AZURE.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/AZURE.pdf'
         } else if (path.includes('best-ielts-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/IELTS+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/IELTS+.pdf'
         } else if (path.includes('best-advance-excel-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Advanced+Excel.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Advanced+Excel.pdf'
         } else if (path.includes('best-pgdca-post-graduate-diploma-in-computer-application-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/PGDCA+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/PGDCA+Syllabus.pdf'
         } else if (path.includes('best-aws-amazon-web-services-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/AMAZON+WEB+SERVICES.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/AMAZON+WEB+SERVICES.pdf'
         } else if (path.includes('best-data-analytics-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/Data+Analytics+Syllabus+(1).pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Data+Analytics+Syllabus+(1).pdf'
         } else if (path.includes('best-revit-structure-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/REVIT+STRUCTURE.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/REVIT+STRUCTURE.pdf'
         } else if (path.includes('best-c-2-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/C%2B%2B+Syllabus.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/C%2B%2B+Syllabus.pdf'
         } else if (path.includes('best-vbamacros-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/download-syllabus/VBAMACROS.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/VBAMACROS.pdf'
         }
 
 
