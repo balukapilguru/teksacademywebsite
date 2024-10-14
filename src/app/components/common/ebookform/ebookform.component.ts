@@ -146,19 +146,19 @@ export class EbookformComponent {
         this.resetForm();
         if (path.includes('full-stack-python')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/ebooks/EBook+-+Full+Stack+Python+2.docx'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/ebooks/EBook+-+Full+Stack+Python+2.docx'
         }else if (path.includes('digital-marketing')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/ebooks/EBook+-+Digital+Marketing+1.docx'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/ebooks/EBook+-+Digital+Marketing+1.docx'
         }else if (path.includes('data-science')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/ebooks/EBook+-+Data+Science+4.docx'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/ebooks/EBook+-+Data+Science+4.docx'
         }else if (path.includes('awsplusdevops')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/ebooks/EBook+-+AWS+%2B+DevOps+2.docx'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/ebooks/EBook+-+AWS+%2B+DevOps+2.docx'
         }else if (path.includes('salesforce')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksaacademy-intro.s3.ap-south-1.amazonaws.com/ebooks/EBook+-+Salesforce+2.docx'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/ebooks/EBook+-+Salesforce+2.docx'
         }
       },
       error => {
