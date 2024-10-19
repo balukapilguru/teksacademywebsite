@@ -27,7 +27,7 @@ export class FullstackpythonComponent {
   constructor(
     private _lightbox: Lightbox,
     private titleService: Title,
-    private metaTagService: Meta,
+    private metaService: Meta,
     private el: ElementRef,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
@@ -112,14 +112,14 @@ export class FullstackpythonComponent {
     );
 
     // set meta description
-    this.metaTagService.updateTag({
+    this.metaService.updateTag({
       name: 'description',
       content:
         'Enroll in our Best Full Stack Python Developer course at Teks Academy Hyderabad. Get real-time training in IT Company. Join now to become a Full Stack Developer',
     });
 
      // Add meta keywords
-     this.metaTagService.addTag({
+     this.metaService.updateTag({
       name: 'keywords',
       content: 'Full stack Developer Course, full stack python course, python course training in hyderabad python online course, python classes near me, python coding for beginners, best python course python training, python full stack developer course in hyderabad',
     });

@@ -26,7 +26,7 @@ export class DigitalMarketingComponent implements OnInit {
   constructor(
     private _lightbox: Lightbox,
     private titleService: Title,
-    private metaTagService: Meta,
+    private metaService: Meta,
     private renderer: Renderer2,
     private el: ElementRef,
     @Inject(DOCUMENT) private document: Document
@@ -111,11 +111,11 @@ export class DigitalMarketingComponent implements OnInit {
     );
 
     // set meta description
-    this.metaTagService.updateTag({
+    this.metaService.updateTag({
       name: 'description', content: 'Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!',
     });
     // Add meta keywords
-    this.metaTagService.addTag({
+    this.metaService.updateTag({
       name: 'keywords', content: 'Digital marketing Course In Hyderabad, Digital Marketing Course Training in Hyderabad, Digital Marketing Course Online digital marketing training institute, best digital marketing course, digital marketing training, google adwords training Digital marketing traning, digital marketing online course, Best online digital marketing training Performance marketing course',
     });
 
