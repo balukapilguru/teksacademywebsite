@@ -19,7 +19,7 @@ export class JobdescriptionpageComponent implements OnInit {
   modal: bootstrap.Modal | null = null;
   thankYouModal: bootstrap.Modal | null = null;
   apiUrl = environment.apiUrl;
-  jobId: string | null = null;
+  jobId: string | null = null; 
   jobDetails: any;
   isLoading = true;
   fileErrorMessage: string | null = null;

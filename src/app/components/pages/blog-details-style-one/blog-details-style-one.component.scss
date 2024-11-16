@@ -1,3 +1,19 @@
+
+.blog-posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; // Adjust spacing as needed
+  }
+  
+  .article-image {
+    flex: 1 1 calc(33% - 20px); // Adjust based on how many images per row you want
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+
 .blog-details-desc {
     .article-image {
         img {

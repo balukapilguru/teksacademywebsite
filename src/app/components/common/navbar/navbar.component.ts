@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit {
     return !hidePatterns.some(pattern => currentUrl.includes(pattern));
         
       }
+
+   
+      
     ngOnInit(): void {
     //     var currentUrl = window.location.href;
 
@@ -29,7 +32,18 @@ export class NavbarComponent implements OnInit {
     //     document.querySelector('.option-item').style.display = 'none';
     // }
     }
-
+    reloadPage() {
+      if (this.router.url === '/') {
+        // Force a reload when already on the home page
+        window.location.reload();
+      } else {
+        // Navigate to the home page and reload after navigation completes
+        this.router.navigate(['/']).then(() => {
+          window.location.reload();
+        });
+      }
+    }
+    
     classApplied = false;
     toggleClass() {
         this.classApplied = !this.classApplied;

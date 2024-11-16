@@ -72,24 +72,59 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center">
-            <p class="main_heading">Explore Teks Academy!</p>
-            <p class="paragraph_text">
-                Teks Academy- The best software training institute in secundarabad has a
-                decade of experience in teaching advanced software courses. We are
-                strongly committed to TEKS-Philosophy- Transfer the Experts knowledge To
-                Students. Our training academy has Introduced job-oriented IT courses in
-                secundarabad, Hyderabad with the best training faculty in India,
-                world-class technological infrastructure, and ultramodern teaching
-                methods. Our courses and their curriculum are well-researched and
-                prepared according to current industry standards and requirements.
-            </p>
-            <p class="paragraph_text">
-                Teks Academy, the best software training academy in secundarabad is a
-                hub of tech enthusiasts and a top-notch technical team. Join us now and
-                dive into your passion with the visionary guidance of our highly
-                experienced trainers. Embrace your future with the best in the industry!
-            </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="main_heading">Explore Teks Academy!</p>
+                <p class="paragraph_text">
+                    Teks Academy- The best software training institute in secundarabad has a
+                    decade of experience in teaching advanced software courses. We are
+                    strongly committed to TEKS-Philosophy- Transfer the Experts knowledge To
+                    Students. Our training academy has Introduced job-oriented IT courses in
+                    secundarabad, Hyderabad with the best training faculty in India,
+                    world-class technological infrastructure, and ultramodern teaching
+                    methods. Our courses and their curriculum are well-researched and
+                    prepared according to current industry standards and requirements.
+                </p>
+                <p class="paragraph_text">
+                    Teks Academy, the best software training academy in secundarabad is a
+                    hub of tech enthusiasts and a top-notch technical team. Join us now and
+                    dive into your passion with the visionary guidance of our highly
+                    experienced trainers. Embrace your future with the best in the industry!
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="dsform">
+                    <form (ngSubmit)="eformData()">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" class="dsformi" name="efname" placeholder="Enter Your Name"
+                            required [(ngModel)]="efname" />
+
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" class="dsformi" name="efemail" placeholder="Email" required
+                            [(ngModel)]="efemail" />
+
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <input type="number" id="mnumber" class="dsformi user_number" name="efphone"
+                            placeholder="Mobile Number" required [(ngModel)]="efphone" pattern="[0-9]*"
+                            maxlength="10" />
+
+                        <label for="course">Course<span>*</span></label>
+                        <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required
+                            [(ngModel)]="efcourse" />
+
+                        <label for="branch">Branch<span>*</span></label>
+                        <input type="text" id="branch" class="dsformi branch_disable_css" name="efbranch"
+                            placeholder="Branch" [(ngModel)]="efbranch" readonly />
+
+                        <label for="city">City<span>*</span></label>
+                        <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required
+                            [(ngModel)]="efcity" />
+
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="">
             <div class="text-center">
@@ -103,7 +138,10 @@
                                 width="20%" height="20%" />
                             <p class="course_name">Data Science</p>
                             <p class="course_description">
-                                The best data science course in Secunderabad is designed to equip you with essential skills in data analysis, machine learning, and statistical modeling. This course offers hands-on experience with real-world datasets. We can strongly believe that “Teks Academy is the best institute for data science course”.
+                                The best data science course in Secunderabad is designed to equip you with essential
+                                skills in data analysis, machine learning, and statistical modeling. This course offers
+                                hands-on experience with real-world datasets. We can strongly believe that “Teks Academy
+                                is the best institute for data science course”.
                             </p>
                             <a routerLink="/courses/best-data-science-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -120,7 +158,10 @@
                                 width="20%" height="20%" />
                             <p class="course_name">Digital Marketing</p>
                             <p class="course_description">
-                                Teks Academy-The best digital marketing training institute in Secunderabad providing a comprehensive program that covers SEO, social media, content marketing, email campaigns, and more. This is the best digital Marketing course in Secunderabad, where you can learn advanced digital marketing skills required for 2024.
+                                Teks Academy-The best digital marketing training institute in Secunderabad providing a
+                                comprehensive program that covers SEO, social media, content marketing, email campaigns,
+                                and more. This is the best digital Marketing course in Secunderabad, where you can learn
+                                advanced digital marketing skills required for 2024.
                             </p>
                             <a routerLink="/courses/best-digital-marketing-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -137,7 +178,9 @@
                                 height="20%" alt="java" />
                             <p class="course_name">AWS DevOps</p>
                             <p class="course_description">
-                                This program equips you with the skills to deploy, manage, and scale applications on the AWS platform. The best AWS and DevOps course in Secunderabad provides the Opportunity of experiential Learn from industry experts and CI/CD pipelines and infrastructure.
+                                This program equips you with the skills to deploy, manage, and scale applications on the
+                                AWS platform. The best AWS and DevOps course in Secunderabad provides the Opportunity of
+                                experiential Learn from industry experts and CI/CD pipelines and infrastructure.
                             </p>
                             <a routerLink="/courses/best-awsplusdevops-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -154,7 +197,9 @@
                                 height="20%" />
                             <p class="course_name">Full Stack Java</p>
                             <p class="course_description">
-                                The best full-stack Java course in Secunderabad is an intensive program that covers both front-end and back-end development, equipping you with skills in Java, Spring, Hibernate, Angular, React, and more.
+                                The best full-stack Java course in Secunderabad is an intensive program that covers both
+                                front-end and back-end development, equipping you with skills in Java, Spring,
+                                Hibernate, Angular, React, and more.
                             </p>
                             <a routerLink="/courses/best-full-stack-java-development-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -171,7 +216,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name">SAP MM</p>
                             <p class="course_description">
-                                This is the best sap mm course in Secunderabad designed for Students to gain specialized skills in SAP Material Management, covering key modules like Procurement, Inventory Management, Invoice Verification, and Material Requirement Planning.
+                                This is the best sap mm course in Secunderabad designed for Students to gain specialized
+                                skills in SAP Material Management, covering key modules like Procurement, Inventory
+                                Management, Invoice Verification, and Material Requirement Planning.
                             </p>
                             <a routerLink="/courses/best-sap-mm-meterial-management-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -188,7 +235,10 @@
                                 height="20%" alt="sap" />
                             <p class="course_name">Full stack Python</p>
                             <p class="course_description">
-                                This course is tailored to help you master the art of 3D modeling, rendering, and animation. 3ds max training institute in Ameerpet, Hyderabad offers an in-depth understanding of the tools and techniques needed to create stunning visual effects and professional-grade animations.
+                                This course is tailored to help you master the art of 3D modeling, rendering, and
+                                animation. 3ds max training institute in Ameerpet, Hyderabad offers an in-depth
+                                understanding of the tools and techniques needed to create stunning visual effects and
+                                professional-grade animations.
                             </p>
                             <a routerLink="/courses/best-full-stack-python-development-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -205,7 +255,9 @@
                                 height="20%" />
                             <p class="course_name">Medical Coding</p>
                             <p class="course_description">
-                                This course provides industry-ready skills and enhanced career prospects in healthcare, backed by comprehensive training. With the help of the best medical coding course in Secunderabad, we assist students with their transition into professional roles.
+                                This course provides industry-ready skills and enhanced career prospects in healthcare,
+                                backed by comprehensive training. With the help of the best medical coding course in
+                                Secunderabad, we assist students with their transition into professional roles.
                             </p>
                             <a routerLink="/courses/best-medical-coding-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -222,7 +274,10 @@
                                 height="20%" />
                             <p class="course_name">Testing tools</p>
                             <p class="course_description">
-                                Our best testing tool course in Secunderabad provides you with in-depth knowledge of various testing methodologies and tools. Trainers will guide you through the essentials of manual and automated testing. Are you searching for Selenium testing course near me? Then Teks Academy is the right choice! You are welcome!
+                                Our best testing tool course in Secunderabad provides you with in-depth knowledge of
+                                various testing methodologies and tools. Trainers will guide you through the essentials
+                                of manual and automated testing. Are you searching for Selenium testing course near me?
+                                Then Teks Academy is the right choice! You are welcome!
                             </p>
                             <a routerLink="/courses/best-testingtools-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -239,7 +294,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name">Data Analytics</p>
                             <p class="course_description">
-                                The best data analytics course in secunderabad covers data visualization, statistical analysis, and data mining techniques using industry-leading tools and software. Our robust placement assistance ensures top job opportunities.
+                                The best data analytics course in secunderabad covers data visualization, statistical
+                                analysis, and data mining techniques using industry-leading tools and software. Our
+                                robust placement assistance ensures top job opportunities.
                             </p>
                             <a routerLink="/courses/best-business-analytics-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -256,7 +313,9 @@
                                 width="20%" height="20%" />
                             <p class="course_name">Salesforce</p>
                             <p class="course_description">
-                                This Program developed to offer you the skills required to become an expert Salesforce professional. The best salesforce course in secunderabad covers the fundamentals of Salesforce administration, development, and cloud computing principles.
+                                This Program developed to offer you the skills required to become an expert Salesforce
+                                professional. The best salesforce course in secunderabad covers the fundamentals of
+                                Salesforce administration, development, and cloud computing principles.
                             </p>
                             <a routerLink="/courses/best-salesforce-admin-development-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -273,7 +332,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name">SAP FICO</p>
                             <p class="course_description">
-                                Teks Academy’s best sap fico course in secunderabad offers specialized skills in financial accounting and controlling, covering modules like General Ledger, Accounts Payable, Accounts Receivable, Asset Accounting, and Cost Center Accounting.
+                                Teks Academy’s best sap fico course in secunderabad offers specialized skills in
+                                financial accounting and controlling, covering modules like General Ledger, Accounts
+                                Payable, Accounts Receivable, Asset Accounting, and Cost Center Accounting.
                             </p>
                             <a routerLink="/courses/best-sap-fico-finance-and-controlling-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">

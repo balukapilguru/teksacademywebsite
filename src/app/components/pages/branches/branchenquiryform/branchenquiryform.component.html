@@ -1,0 +1,25 @@
+<div class="dsform">
+    <form (ngSubmit)="eformData()">
+      <label for="name">Name<span>*</span></label>
+      <input type="text" id="name" class="dsformi" name="efname" placeholder="Enter Your Name" required [(ngModel)]="efname" />
+  
+      <label for="email">Email<span>*</span></label>
+      <input type="email" id="email" class="dsformi" name="efemail" placeholder="Email" required [(ngModel)]="efemail" />
+  
+      <label for="phone">Phone Number<span>*</span></label>
+      <input type="number" id="mnumber" class="dsformi user_number" name="efphone" placeholder="Mobile Number" required [(ngModel)]="efphone" pattern="[0-9]*" maxlength="10" />
+  
+      <label for="course">Course<span>*</span></label>
+      <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required [(ngModel)]="efcourse" />
+  
+      <label for="branch">Branch<span>*</span></label>
+      <input type="text" id="branch" class="dsformi branch_disable_css" name="efbranch" placeholder="Branch" [(ngModel)]="efbranch" readonly />
+  
+      <label for="city">City<span>*</span></label>
+      <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required [(ngModel)]="efcity" />
+      
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  

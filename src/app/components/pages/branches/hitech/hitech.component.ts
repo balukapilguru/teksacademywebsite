@@ -3,7 +3,9 @@ import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
 import { DOCUMENT } from '@angular/common';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 declare var $: any;
 declare var jQuery: any;
 
@@ -17,6 +19,22 @@ export class HitechComponent implements OnInit {
   private right!: HTMLCollectionOf<HTMLElement>;
   private si!: number;
   private z!: number;
+  efname = '';
+  efemail = '';
+  efphone = '';
+  efcourse = '';
+  efbranch = '';
+  efcity = '';
+  apiUrl = environment.apiUrl;
+
+  branches: { [key: string]: string } = {
+    dilsukhnagar: 'Dilsukhnagar',
+    ameerpet: 'Ameerpet',
+    hiteccity: 'Hiteccity',
+    kukatpally: 'Kukatpally',
+    secunderabad: 'Secunderabad',
+    visakhapatnam: 'Visakhapatnam'
+  };
 
   public _album: {
     src: string;
@@ -31,7 +49,9 @@ export class HitechComponent implements OnInit {
     private metaService: Meta,
     private el: ElementRef,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private route: ActivatedRoute, private http: HttpClient, private router: Router
+
   ) {
     const captions = [''];
     const conts = [''];
@@ -99,12 +119,21 @@ export class HitechComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
+
+    if (currentPath && this.branches[currentPath]) {
+      this.efbranch = this.branches[currentPath];
+    } else {
+      this.efbranch = ''; // Fallback if no branch is found
+    }
+
+
     this.addJsonLdScript();
-    this.titleService.setTitle('Leading Python & Data Science Institute in Hitech City - Teks Academy');
+    this.titleService.setTitle('Leading Python & Data Science Institute in Hitec City - Teks Academy');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Join Teks Academy Hitech City for cutting-edge Python and Data Science courses. Expert instructors and practical learning experience.',
+      content: 'Join Teks Academy Hitec City for cutting-edge Python and Data Science courses. Expert instructors and practical learning experience.',
     });
 
     const openBtn = document.getElementById('open-form')!;
@@ -144,6 +173,38 @@ export class HitechComponent implements OnInit {
     this.z = 1;
     this.turnRight();
   }
+
+
+  resetForm() {
+    this.efname = '';
+    this.efemail = '';
+    this.efphone = '';
+    this.efcourse = '';
+    this.efbranch = '';
+    this.efcity = '';
+  }
+
+  eformData() {
+    const enquiryFormData = {
+      efname: this.efname,
+      efemail: this.efemail,
+      efphone: this.efphone,
+      efcourse: this.efcourse,
+      efbranch: this.efbranch,
+      efcity: this.efcity
+    };
+
+    this.http.post(this.apiUrl + '/websiteleads/enquiry-form-data', enquiryFormData, {
+      responseType: 'text'
+    }).subscribe(
+      () => {
+        this.router.navigate(['/thank-you']);
+        this.resetForm();
+      },
+      error => console.error('Error submitting form', error)
+    );
+  }
+
 
   private sttmot(i: number): void {
     setTimeout(() => {

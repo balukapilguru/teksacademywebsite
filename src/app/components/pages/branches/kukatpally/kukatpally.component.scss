@@ -6,3 +6,82 @@
 }
 
 
+// form---
+.branch_disable_css{
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  
+  }
+  
+  .dsform {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      margin: 20px auto;
+      border: 1px solid #e0e0e0;
+    }
+    .dsform label {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      color: #333;
+      line-height: 18px;
+    }
+    .dsform label span {
+      color: #ff5757;
+    }
+    .dsformi {
+      padding: 8px;  /* Reduced padding */
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      width: 100%;
+      color: #000;
+      box-sizing: border-box;
+      margin-bottom: 10px;  /* Reduced margin */
+      transition: border 0.3s ease;
+      font-size: 14px;  /* Adjusted font size */
+      height: 36px;  /* Set a specific height */
+    }
+    .dsformi:focus {
+      border-color: 1px solid #f9f9f9;
+      outline: none;
+    }
+    .dsform input[type="submit"] {
+      line-height: 1px;
+      height: 36px;
+      border-radius: 8px;
+      width: 100%;
+      background-color: #2a619d;
+      color: #fff;
+      border: none;
+      padding: 12px;  /* Reduced padding */
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+   
+    select.dsformi:before {
+      appearance: none;
+      content: "\f0d7";
+      color: #333;
+      background-color: #fff;
+      padding: 8px;  /* Reduced padding */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    
