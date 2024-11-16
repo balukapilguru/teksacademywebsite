@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <h1 class="main_heading">
-                            Best Software Training Institute In Hitech City
+                            Best Software Training Institute In Hitec City
                         </h1>
                         <p class="learn_more paragraph_text" routerLink="/course">
                             Learn IT Courses<span class="mt-1 ms-2 arrow">
@@ -15,13 +15,13 @@
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12">
                         <p class="paragraph_text">
-                            Hitech City - “The Cyber Hub of Hyderabad, Telangana” - is now home to Teks Academy, the
-                            best software training institute in Hitech City. Hitech City, known for its advanced
+                            Hitec City - “The Cyber Hub of Hyderabad, Telangana” - is now home to Teks Academy, the
+                            best software training institute in Hitec City. Hitec City, known for its advanced
                             infrastructure and bustling IT industry, has earned its reputation as Information Technology
                             Hub. The location is of great interest due to its easy access to major IT companies and
-                            business parks. With the IT expansion, Hitech City has become a magnet for tech enthusiasts
+                            business parks. With the IT expansion, Hitec City has become a magnet for tech enthusiasts
                             and professionals looking for advanced technical Courses and cutting-edge skills required in
-                            the modern IT Industry. Teks Academy's presence in Hitech City ensures that students have
+                            the modern IT Industry. Teks Academy's presence in Hitec City ensures that students have
                             access to top-notch training and can stay ahead in the competitive tech world.
                         </p>
                         <div class="my-2">
@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <h1 class="main_heading">
-                        Best Software Training Institute In Hitech City
+                        Best Software Training Institute In Hitec City
                     </h1>
                     <p class="learn_more paragraph_text" routerLink="/course">
                         Learn IT Courses<span class="mt-1 ms-2 arrow">
@@ -50,13 +50,13 @@
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <p class="paragraph_text">
-                        Hitech City - “The Cyber Hub of Hyderabad, Telangana” - is now home to Teks Academy, the best
-                        software training institute in Hitech City. Hitech City, known for its advanced infrastructure
+                        Hitec City - “The Cyber Hub of Hyderabad, Telangana” - is now home to Teks Academy, the best
+                        software training institute in Hitec City. Hitec City, known for its advanced infrastructure
                         and bustling IT industry, has earned its reputation as Information Technology Hub. The location
                         is of great interest due to its easy access to major IT companies and business parks. With the
-                        IT expansion, Hitech City has become a magnet for tech enthusiasts and professionals looking for
+                        IT expansion, Hitec City has become a magnet for tech enthusiasts and professionals looking for
                         advanced technical Courses and cutting-edge skills required in the modern IT Industry. Teks
-                        Academy's presence in Hitech City ensures that students have access to top-notch training and
+                        Academy's presence in Hitec City ensures that students have access to top-notch training and
                         can stay ahead in the competitive tech world.
                     </p>
                     <button routerLink="/enquiry-form" class="btn btn-primary btn_color fw-bold">
@@ -72,21 +72,62 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center">
-            <p class="main_heading">Explore Teks Academy!</p>
-            <p class="paragraph_text">
-                Teks Academy- The best software training institute in Hitech City has a decade of experience in teaching
-                advanced software courses. We are strongly committed to TEKS-Philosophy- Transfer the Experts knowledge
-                To Students. Our training academy has Introduced job-oriented IT courses in Hitech City, Hyderabad with
-                the best training faculty in India, world-class technological infrastructure, and ultramodern teaching
-                methods. Our courses and their curriculum are well-researched and prepared according to current industry
-                standards and requirements.
-            </p>
-            <p class="paragraph_text">
-                Teks Academy, the best software training academy in Hitech City, Hyderabad, is a hub of tech enthusiasts
-                and a top-notch technical team. Join us now and dive into your passion with the visionary guidance of
-                our highly experienced trainers. Embrace your future with the best in the industry!
-            </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="main_heading">Explore Teks Academy!</p>
+                <p class="paragraph_text">
+                    Teks Academy- The best software training institute in Hitec City has a decade of experience in
+                    teaching
+                    advanced software courses. We are strongly committed to TEKS-Philosophy- Transfer the Experts
+                    knowledge
+                    To Students. Our training academy has Introduced job-oriented IT courses in Hitec City, Hyderabad
+                    with
+                    the best training faculty in India, world-class technological infrastructure, and ultramodern
+                    teaching
+                    methods. Our courses and their curriculum are well-researched and prepared according to current
+                    industry
+                    standards and requirements.
+                </p>
+                <p class="paragraph_text">
+                    Teks Academy, the best software training academy in Hitec City, Hyderabad, is a hub of tech
+                    enthusiasts
+                    and a top-notch technical team. Join us now and dive into your passion with the visionary guidance
+                    of
+                    our highly experienced trainers. Embrace your future with the best in the industry!
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="dsform">
+                    <form (ngSubmit)="eformData()">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" class="dsformi" name="efname" placeholder="Enter Your Name"
+                            required [(ngModel)]="efname" />
+
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" class="dsformi" name="efemail" placeholder="Email" required
+                            [(ngModel)]="efemail" />
+
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <input type="number" id="mnumber" class="dsformi user_number" name="efphone"
+                            placeholder="Mobile Number" required [(ngModel)]="efphone" pattern="[0-9]*"
+                            maxlength="10" />
+
+                        <label for="course">Course<span>*</span></label>
+                        <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required
+                            [(ngModel)]="efcourse" />
+
+                        <label for="branch">Branch<span>*</span></label>
+                        <input type="text" id="branch" class="dsformi branch_disable_css" name="efbranch"
+                            placeholder="Branch" [(ngModel)]="efbranch" readonly />
+
+                        <label for="city">City<span>*</span></label>
+                        <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required
+                            [(ngModel)]="efcity" />
+
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
         </div>
 
         <div class="">
@@ -101,7 +142,9 @@
                                 width="20%" height="20%" alt="sap" />
                             <p class="course_name mt-3">Data Analytics</p>
                             <p class="course_description">
-                                Step into the best business analytics course in Hitech City, a world of data-driven decision-making with our Business Analytics Course in Hitech City. It is customized to offer the knowledge and tools needed to excel in business analytics.
+                                Step into the best business analytics course in Hitec City, a world of data-driven
+                                decision-making with our Business Analytics Course in Hitec City. It is customized to
+                                offer the knowledge and tools needed to excel in business analytics.
                             </p>
                             <a routerLink="/courses/best-data-analytics-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -118,7 +161,10 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">B.I.M</p>
                             <p class="course_description">
-                                The BIM course in Hitech City is designed to revolutionize your approach to architecture, engineering, and construction by empowering you to create efficient and innovative building designs. Teks Academy -The best BIM training institute in Hitech city also assists in training and placement along with training.
+                                The BIM course in Hitec City is designed to revolutionize your approach to
+                                architecture, engineering, and construction by empowering you to create efficient and
+                                innovative building designs. Teks Academy -The best BIM training institute in Hitec
+                                city also assists in training and placement along with training.
                             </p>
                             <a routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
                                 class="">
@@ -136,7 +182,10 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Revit MEP</p>
                             <p class="course_description">
-                                This ultramodern course covers everything from basic concepts to advanced functionalities, ensuring you are well-equipped to handle real-world architectural and construction projects. If you ask Revit MEP classes near me? The ultimate answer will be Teks Academy!
+                                This ultramodern course covers everything from basic concepts to advanced
+                                functionalities, ensuring you are well-equipped to handle real-world architectural and
+                                construction projects. If you ask Revit MEP classes near me? The ultimate answer will be
+                                Teks Academy!
                             </p>
                             <a routerLink="/courses/best-revit-mep-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -155,7 +204,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Auto cad</p>
                             <p class="course_description">
-                                The AutoCAD course in Hitech city is meticulously crafted to provide you with a comprehensive understanding of computer-aided design. It also guides you through the intricacies of 2D and 3D drafting, modeling, and rendering.
+                                The AutoCAD course in Hitec city is meticulously crafted to provide you with a
+                                comprehensive understanding of computer-aided design. It also guides you through the
+                                intricacies of 2D and 3D drafting, modeling, and rendering.
                             </p>
                             <a routerLink="/courses/best-autocad-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -327,13 +378,13 @@
                         </div>
                         <div class="d-flex flex-wrap most_searched">
                             <span>Bim manager course</span>
-                            <span>Best bim training institute in Hitech city</span>
-                            <span>Bim course in hitech city</span>
+                            <span>Best bim training institute in Hitec city</span>
+                            <span>Bim course in hitec city</span>
                             <span>Revit course</span>
                             <span>Revit classes near me</span>
                             <span>Business analytics course in hyderabad</span>
                             <span>Business analyst course near me</span>
-                            <span>Best business analytics course in hitech city</span>
+                            <span>Best business analytics course in hitec city</span>
                         </div>
                     </div>
                 </div>

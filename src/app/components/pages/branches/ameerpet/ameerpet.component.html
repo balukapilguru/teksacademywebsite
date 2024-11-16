@@ -80,21 +80,56 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center">
-            <p class="main_heading">Explore Teks Academy!</p>
-            <p class="paragraph_text">
-                Teks Academy, the best software training institute in Ameerpet, has a
-                decade of experience in teaching advanced software courses. Committed to
-                TEKS-Philosophy (Transfer the Experts Knowledge To Students), we offer
-                job-oriented IT courses with India's best faculty, world-class
-                infrastructure, and modern teaching methods. Our well-researched
-                curriculum meets current industry standards.
-            </p>
-            <p class="paragraph_text">
-                Join Teks Academy in Ameerpet, Hyderabad, the hub for software course
-                training with a top-notch technical team. Dive into your passion with
-                our visionary trainers and embrace your future with the industry's best!
-            </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="main_heading">Explore Teks Academy!</p>
+                <p class="paragraph_text">
+                    Teks Academy, the best software training institute in Ameerpet, has a
+                    decade of experience in teaching advanced software courses. Committed to
+                    TEKS-Philosophy (Transfer the Experts Knowledge To Students), we offer
+                    job-oriented IT courses with India's best faculty, world-class
+                    infrastructure, and modern teaching methods. Our well-researched
+                    curriculum meets current industry standards.
+                </p>
+                <p class="paragraph_text">
+                    Join Teks Academy in Ameerpet, Hyderabad, the hub for software course
+                    training with a top-notch technical team. Dive into your passion with
+                    our visionary trainers and embrace your future with the industry's best!
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="dsform">
+                    <form (ngSubmit)="eformData()">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" class="dsformi" name="efname" placeholder="Enter Your Name"
+                            required [(ngModel)]="efname" />
+
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" class="dsformi" name="efemail" placeholder="Email" required
+                            [(ngModel)]="efemail" />
+
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <input type="number" id="mnumber" class="dsformi user_number" name="efphone"
+                            placeholder="Mobile Number" required [(ngModel)]="efphone" pattern="[0-9]*"
+                            maxlength="10" />
+
+                        <label for="course">Course<span>*</span></label>
+                        <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required
+                            [(ngModel)]="efcourse" />
+
+                        <label for="branch">Branch<span>*</span></label>
+                        <input type="text" id="branch" class="dsformi branch_disable_css" name="efbranch"
+                            placeholder="Branch" [(ngModel)]="efbranch" readonly />
+
+                        <label for="city">City<span>*</span></label>
+                        <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required
+                            [(ngModel)]="efcity" />
+
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
         <!-- <img src="../../../../../assets/img/branch_images/New_Banners_2.jpg" class="mt-5 mb-5" alt="" /> -->
 
@@ -111,7 +146,10 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Full stack Python</p>
                             <p class="course_description">
-                                This advanced Python full stack developer course in Ameerpet will take you through the fundamentals of Python, web frameworks like Django and Flask, database management, and client-side technologies. Python course in Ameerpet is one of the most advanced IT courses chosen in 2024.
+                                This advanced Python full stack developer course in Ameerpet will take you through the
+                                fundamentals of Python, web frameworks like Django and Flask, database management, and
+                                client-side technologies. Python course in Ameerpet is one of the most advanced IT
+                                courses chosen in 2024.
                             </p>
                             <a routerLink="/courses/best-full-stack-python-development-course-training-institute"
                                 class="">
@@ -129,7 +167,10 @@
                                 height="20%" />
                             <p class="course_name">Full Stack Java</p>
                             <p class="course_description">
-                                This intensive Java full stack developer course in Ameerpet program covers both front-end and back-end development, equipping you with skills in Java, Spring, Hibernate, Angular, React, and more. Our best Trainers are always at the forefront to provide Java classes in Ameerpet.
+                                This intensive Java full stack developer course in Ameerpet program covers both
+                                front-end and back-end development, equipping you with skills in Java, Spring,
+                                Hibernate, Angular, React, and more. Our best Trainers are always at the forefront to
+                                provide Java classes in Ameerpet.
                             </p>
                             <a routerLink="/courses/best-full-stack-java-development-course-training-institute"
                                 class="">
@@ -147,7 +188,9 @@
                                 width="20%" height="20%" />
                             <p class="course_name mt-3">Data Science</p>
                             <p class="course_description">
-                                Data science course in Ameerpet, designed to equip you with essential skills in data analysis, machine learning, and statistical modeling, this course offers hands-on experience with real-world datasets.
+                                Data science course in Ameerpet, designed to equip you with essential skills in data
+                                analysis, machine learning, and statistical modeling, this course offers hands-on
+                                experience with real-world datasets.
                             </p>
                             <a routerLink="/courses/best-data-science-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -185,7 +228,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">B.I.M</p>
                             <p class="course_description">
-                                The Best BIM training institute in Hyderabad, Ameerpet is designed to revolutionize your approach to architecture, engineering, and construction by empowering you to create efficient and innovative building designs.
+                                The Best BIM training institute in Hyderabad, Ameerpet is designed to revolutionize your
+                                approach to architecture, engineering, and construction by empowering you to create
+                                efficient and innovative building designs.
                             </p>
                             <a routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
                                 class="">
@@ -203,7 +248,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Revit MEP</p>
                             <p class="course_description">
-                                This ultramodern course covers everything from basic concepts to advanced functionalities, ensuring you are well-equipped to handle real-world architectural and construction projects.
+                                This ultramodern course covers everything from basic concepts to advanced
+                                functionalities, ensuring you are well-equipped to handle real-world architectural and
+                                construction projects.
                             </p>
                             <a routerLink="/courses/best-revit-mep-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -222,7 +269,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Auto cad</p>
                             <p class="course_description">
-                                The AutoCAD training in Ameerpet is meticulously crafted to provide you with a comprehensive understanding of computer-aided design. This AutoCAD course in Ameerpet also guides you through the intricacies of 2D and 3D drafting, modeling, and rendering.
+                                The AutoCAD training in Ameerpet is meticulously crafted to provide you with a
+                                comprehensive understanding of computer-aided design. This AutoCAD course in Ameerpet
+                                also guides you through the intricacies of 2D and 3D drafting, modeling, and rendering.
                             </p>
                             <a routerLink="/courses/best-autocad-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -239,7 +288,9 @@
                                 height="25%" alt="java" />
                             <p class="course_name">AWS DevOps</p>
                             <p class="course_description">
-                                This program equips you with the skills to deploy, manage and scale applications on the AWS platform. The AWS training in Ameerpet provides an opportunity for experiential learning from industry experts and CI/CD pipelines and infrastructure.
+                                This program equips you with the skills to deploy, manage and scale applications on the
+                                AWS platform. The AWS training in Ameerpet provides an opportunity for experiential
+                                learning from industry experts and CI/CD pipelines and infrastructure.
                             </p>
                             <a routerLink="/courses/best-awsplusdevops-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -256,7 +307,10 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">3DS Max</p>
                             <p class="course_description">
-                                This course is tailored to help you master the art of 3D modeling, rendering, and animation. 3ds max training institute in Ameerpet, Hyderabad offers an in-depth understanding of the tools and techniques needed to create stunning visual effects and professional-grade animations.
+                                This course is tailored to help you master the art of 3D modeling, rendering, and
+                                animation. 3ds max training institute in Ameerpet, Hyderabad offers an in-depth
+                                understanding of the tools and techniques needed to create stunning visual effects and
+                                professional-grade animations.
                             </p>
                             <a routerLink="/courses/best-3ds-max-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">

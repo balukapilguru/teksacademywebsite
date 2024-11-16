@@ -160,6 +160,7 @@ import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarke
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 import { EbookformComponent } from './components/common/ebookform/ebookform.component';
 import { FeaturedComponent } from './components/common/featured/featured.component';
+import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
 
 
 const routes: Routes = [
@@ -346,7 +347,7 @@ const routes: Routes = [
   { path: 'blog-3', component: BlogStyleThreeComponent },
   { path: 'blog-4', component: BlogStyleFourComponent },
   { path: 'blog-5', component: BlogStyleFiveComponent },
-  { path: 'single-blog-1', component: BlogDetailsStyleOneComponent },
+  { path: 'single-blog-1/:id', component: BlogDetailsStyleOneComponent },
   { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
   { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
   // {path: 'contact', component: ContactUsComponent},
@@ -422,12 +423,13 @@ const routes: Routes = [
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'job', component: CompanyComponent },
   { path: 'thankyoupage', component: ThankyoupageComponent },
-  { path: 'branch/ameerpet-best-training-institute-full-stack-java-auto-cad', component: AmeerpetComponent },
-  { path: 'branch/dilsukhnagar-digitial-marketing-full-stack-java-training', component: DilsukhnagarComponent },
-  { path: 'branch/hitech-best-python-data-science-training-institute', component: HitechComponent },
-  { path: 'branch/kukatpally-best-data-science-aws-course-training', component: KukatpallyComponent },
-  { path: 'branch/secunderabad-sales-force-medical-coding-course-training', component: SecunderabadComponent },
-  {path:'branch/visakhapatnam-best-software-training-institute', component:VizagComponent},
+  { path: 'branch/best-training-institute-in-ameerpet', component: AmeerpetComponent },
+  { path: 'branch/dilsukhnagar', component: DilsukhnagarComponent },
+  { path: 'branch/hiteccity', component: HitechComponent },
+  { path: 'branch/kukatpally', component: KukatpallyComponent },
+  { path: 'branch/secunderabad', component: SecunderabadComponent },
+  {path:'branch/visakhapatnam', component:VizagComponent},
+  {path:'branchenquiryform', component:BranchenquiryformComponent},
   {path:'ebook', component:EbookformComponent},
   {path:'featuredin', component:FeaturedComponent},
 

@@ -67,20 +67,58 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center">
-            <p class="main_heading">Explore Teks Academy!</p>
-            <p class="paragraph_text">
-                Teks Academy, No.1 software training institute in Dilsukhnagar, boasts a decade of experience in
-                delivering cutting-edge software courses. Our commitment to the TEKS-Philosophy – Transfer the Expert's
-                Knowledge to Students – ensures that you receive top–tier software training. We provide job-oriented IT
-                courses with the finest training faculty, state-of-the-art technological infrastructure, and modern
-                teaching methodologies. Our well-researched and industry-standard curriculum prepares you to excel in
-                the ever-evolving IT landscape.
-            </p>
-            <p class="paragraph_text">
-                Join Teks Academy in Dilsukhnagar, the nucleus of tech enthusiasts, and benefit from the visionary
-                guidance of our experienced trainers. Step into your future with the best in the industry!
-            </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="main_heading">Explore Teks Academy!</p>
+                <p class="paragraph_text">
+                    Teks Academy, No.1 software training institute in Dilsukhnagar, boasts a decade of experience in
+                    delivering cutting-edge software courses. Our commitment to the TEKS-Philosophy – Transfer the
+                    Expert's
+                    Knowledge to Students – ensures that you receive top–tier software training. We provide job-oriented
+                    IT
+                    courses with the finest training faculty, state-of-the-art technological infrastructure, and modern
+                    teaching methodologies. Our well-researched and industry-standard curriculum prepares you to excel
+                    in
+                    the ever-evolving IT landscape.
+                </p>
+                <p class="paragraph_text">
+                    Join Teks Academy in Dilsukhnagar, the nucleus of tech enthusiasts, and benefit from the visionary
+                    guidance of our experienced trainers. Step into your future with the best in the industry!
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="dsform">
+                    <form (ngSubmit)="eformData()">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" class="dsformi" name="efname" placeholder="Enter Your Name"
+                            required [(ngModel)]="efname" />
+
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" class="dsformi" name="efemail" placeholder="Email" required
+                            [(ngModel)]="efemail" />
+
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <input type="number" id="mnumber" class="dsformi user_number" name="efphone"
+                            placeholder="Mobile Number" required [(ngModel)]="efphone" pattern="[0-9]*"
+                            maxlength="10" />
+
+                        <label for="course">Course<span>*</span></label>
+                        <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required
+                            [(ngModel)]="efcourse" />
+
+                        <label for="branch">Branch<span>*</span></label>
+                        <input type="text" id="branch" class="dsformi branch_disable_css" name="efbranch"
+                            placeholder="Branch" [(ngModel)]="efbranch" readonly />
+
+                        <label for="city">City<span>*</span></label>
+                        <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required
+                            [(ngModel)]="efcity" />
+
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="">
             <div class="text-center">
@@ -94,7 +132,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Full stack Python</p>
                             <p class="course_description">
-                                This advanced course from Teks Academy- the best python institute in Dilsukhnagar will take you through the fundamentals of Python, web frameworks like Django and Flask, database management, and client-side technologies.
+                                This advanced course from Teks Academy- the best python institute in Dilsukhnagar will
+                                take you through the fundamentals of Python, web frameworks like Django and Flask,
+                                database management, and client-side technologies.
                             </p>
                             <a routerLink="/courses/best-full-stack-python-development-course-training-institute"
                                 class="">
@@ -112,7 +152,10 @@
                                 height="20%" />
                             <p class="course_name">Full Stack Java</p>
                             <p class="course_description">
-                                This intensive Java training in Dilsukhnagar covers both front-end and back-end development, equipping you with skills in Java, Spring, Hibernate, Angular, React, and more. Teks Academy is one of the best Java coaching centers in Dilsukhnagar with 100% placement support.
+                                This intensive Java training in Dilsukhnagar covers both front-end and back-end
+                                development, equipping you with skills in Java, Spring, Hibernate, Angular, React, and
+                                more. Teks Academy is one of the best Java coaching centers in Dilsukhnagar with 100%
+                                placement support.
                             </p>
                             <a routerLink="/courses/best-full-stack-java-development-course-training-institute"
                                 class="">
@@ -130,7 +173,9 @@
                                 width="20%" height="20%" />
                             <p class="course_name mt-3">Data Science</p>
                             <p class="course_description">
-                                Teks Academy’s data science training in Dilsukhnagar is designed to equip you with essential skills in data analysis, machine learning, and statistical modeling. This course offers hands-on experience with real-world datasets.
+                                Teks Academy’s data science training in Dilsukhnagar is designed to equip you with
+                                essential skills in data analysis, machine learning, and statistical modeling. This
+                                course offers hands-on experience with real-world datasets.
                             </p>
                             <a routerLink="/courses/best-data-science-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -149,7 +194,9 @@
                                 width="20%" height="20%" alt="sap" />
                             <p class="course_name mt-3">Data Analytics</p>
                             <p class="course_description">
-                                This advanced course will cover data visualization, statistical analysis, and data mining techniques using industry-leading tools and software. Teks provides the best data analytics course in Disukhnagar with experienced trainers and advanced LMS.
+                                This advanced course will cover data visualization, statistical analysis, and data
+                                mining techniques using industry-leading tools and software. Teks provides the best data
+                                analytics course in Disukhnagar with experienced trainers and advanced LMS.
                             </p>
                             <a routerLink="/courses/best-data-analytics-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -166,7 +213,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">B.I.M</p>
                             <p class="course_description">
-                                The BIM course in Dilsukhnagar is designed to revolutionize your approach to architecture, engineering, and construction by empowering you to create efficient and innovative building designs.
+                                The BIM course in Dilsukhnagar is designed to revolutionize your approach to
+                                architecture, engineering, and construction by empowering you to create efficient and
+                                innovative building designs.
                             </p>
                             <a routerLink="/courses/best-bim-building-information-modeling-course-training-institute"
                                 class="">
@@ -184,7 +233,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Revit MEP</p>
                             <p class="course_description">
-                                This ultramodern course covers everything from basic concepts to advanced functionalities, ensuring you are well-equipped to handle real-world architectural and construction projects.
+                                This ultramodern course covers everything from basic concepts to advanced
+                                functionalities, ensuring you are well-equipped to handle real-world architectural and
+                                construction projects.
                             </p>
                             <a routerLink="/courses/best-revit-mep-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -203,7 +254,9 @@
                                 height="20%" alt="sap" />
                             <p class="course_name mt-3">Auto cad</p>
                             <p class="course_description">
-                                The course is meticulously crafted to provide you with a comprehensive understanding of computer-aided design. The best AutoCAD course in Disukhnagar also guides you through the intricacies of 2D and 3D drafting, modeling, and rendering.
+                                The course is meticulously crafted to provide you with a comprehensive understanding of
+                                computer-aided design. The best AutoCAD course in Disukhnagar also guides you through
+                                the intricacies of 2D and 3D drafting, modeling, and rendering.
                             </p>
                             <a routerLink="/courses/best-autocad-course-training-institute" class="">
                                 <p class="read_more cursor_pointer_branch">
@@ -220,7 +273,9 @@
                                 height="25%" alt="java" />
                             <p class="course_name">AWS DevOps</p>
                             <p class="course_description">
-                                This program equips you with the skills to deploy, manage and scale applications on the AWS platform. This best AWS DevOps Course in Dilsukhnagar creates the opportunity of experiential Learn from industry experts and CI/CD pipelines and infrastructure.
+                                This program equips you with the skills to deploy, manage and scale applications on the
+                                AWS platform. This best AWS DevOps Course in Dilsukhnagar creates the opportunity of
+                                experiential Learn from industry experts and CI/CD pipelines and infrastructure.
                             </p>
                             <a routerLink="/courses/best-awsplusdevops-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">

@@ -1,10 +1,6 @@
 <div class="page-title-area">
   <div class="container">
     <div class="page-title-content">
-      <!-- <ul>
-                <li><a routerLink="/">Home</a></li>
-                <li>Enquiry Form</li>
-            </ul> -->
       <h2>Enquiry Form</h2>
     </div>
   </div>
@@ -32,16 +28,21 @@
           <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required
             [(ngModel)]="efcourse" />
 
+          <!-- Dropdown for Branches -->
+          <label for="branch">Branch<span>*</span></label>
+          <select id="branch" class="dsformi" name="efbranch" required [(ngModel)]="efbranch">
+            <option value="" disabled selected>Select Branch</option>
+            <option value="Ameerpet">Ameerpet</option>
+            <option value="Dilsukhnagar">Dilsukhnagar</option>
+            <option value="Hitech">Hitech</option>
+            <option value="Kukatpally">Kukatpally</option>
+            <option value="Secunderabad">Secunderabad</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+          </select>
+
           <label for="city">City<span>*</span></label>
           <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required [(ngModel)]="efcity" />
-          <br /><br />
-          <!-- <ngx-recaptcha2
-                    [(ngModel)]="recaptchaValue"
-                    name="recaptchaValue"
-                    [siteKey]="siteKey"
-                    >
-                    </ngx-recaptcha2><br> -->
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" class="mt-2" />
         </form>
       </div>
     </div>

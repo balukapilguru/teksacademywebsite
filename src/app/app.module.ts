@@ -298,6 +298,7 @@ import { FranchiseComponent } from './components/pages/franchise/franchise.compo
 import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarketing/newdigitalmarketing.component';
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 import { FeaturedinComponent } from './components/pages/featuredin/featuredin.component';
+import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
 
 
 
@@ -579,6 +580,7 @@ import { FeaturedinComponent } from './components/pages/featuredin/featuredin.co
     VizagComponent,
     FeaturedinComponent,
     VlsiComponent,
+    BranchenquiryformComponent,
    
   ],
 

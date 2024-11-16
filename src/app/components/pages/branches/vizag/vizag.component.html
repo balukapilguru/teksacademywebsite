@@ -83,18 +83,56 @@
         </div>
     </div>
     <div class="container">
-        <div class="text-center">
-            <p class="main_heading">Offering 30+ Industry-Driving Programming Courses</p>
-            <p class="paragraph_text">
-                At our Visakhapatnam branch, we are glad to propose more than 30 programming courses that take care of
-                different
-                profession ways in the tech business. Whether you're keen on Information Science, Computerized
-                Showcasing, Salesforce, Python, Full Stack Java, AWS & DevOps, Data Science, Testing and Digital Marketing, we have a course customized
-                for you. Each program is carefully intended to guarantee that you gain down to earth abilities and
-                inside and out information, setting you up for certifiable difficulties. Our different course
-                contributions imply that whether you're a novice or an accomplished proficient, you'll track down the
-                ideal course to hoist your vocation.
-            </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="main_heading">Offering 30+ Industry-Driving Programming Courses</p>
+                <p class="paragraph_text">
+                    At our Visakhapatnam branch, we are glad to propose more than 30 programming courses that take care
+                    of
+                    different
+                    profession ways in the tech business. Whether you're keen on Information Science, Computerized
+                    Showcasing, Salesforce, Python, Full Stack Java, AWS & DevOps, Data Science, Testing and Digital
+                    Marketing, we have a course customized
+                    for you. Each program is carefully intended to guarantee that you gain down to earth abilities and
+                    inside and out information, setting you up for certifiable difficulties. Our different course
+                    contributions imply that whether you're a novice or an accomplished proficient, you'll track down
+                    the
+                    ideal course to hoist your vocation.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="dsform">
+                    <form (ngSubmit)="eformData()">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" class="dsformi" name="efname" placeholder="Enter Your Name"
+                            required [(ngModel)]="efname" />
+
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" class="dsformi" name="efemail" placeholder="Email" required
+                            [(ngModel)]="efemail" />
+
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <input type="number" id="mnumber" class="dsformi user_number" name="efphone"
+                            placeholder="Mobile Number" required [(ngModel)]="efphone" pattern="[0-9]*"
+                            maxlength="10" />
+
+                        <label for="course">Course<span>*</span></label>
+                        <input type="text" id="course" class="dsformi" name="efcourse" placeholder="Course" required
+                            [(ngModel)]="efcourse" />
+
+                        <label for="branch">Branch<span>*</span></label>
+                        <input type="text" id="branch" class="dsformi branch_disable_css" name="efbranch"
+                            placeholder="Branch" [(ngModel)]="efbranch" readonly />
+
+                        <label for="city">City<span>*</span></label>
+                        <input type="text" id="city" class="dsformi" placeholder="City" name="efcity" required
+                            [(ngModel)]="efcity" />
+
+                        <br /><br />
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
         <!-- corses -->
         <div class="">
@@ -129,7 +167,9 @@
                                 height="20%" />
                             <p class="course_name">Full Stack Java</p>
                             <p class="course_description">
-                                This intensive Java training in Visakhapatnam covers both front-end and back-end development, equipping you with skills in Java, Spring, Hibernate, Angular, React, and more. Our program is designed for both graduates and working professionals.
+                                This intensive Java training in Visakhapatnam covers both front-end and back-end
+                                development, equipping you with skills in Java, Spring, Hibernate, Angular, React, and
+                                more. Our program is designed for both graduates and working professionals.
                             </p>
                             <a routerLink="/courses/best-full-stack-java-development-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -146,7 +186,9 @@
                                 width="20%" height="20%" />
                             <p class="course_name">Digital Marketing</p>
                             <p class="course_description">
-                                The comprehensive digital marketing course in Visakhapatnam program covers SEO, social media, content marketing, email campaigns, and more. The best digital marketing course in Vishakhapatnam at Teks Academy also helps with real-time ad campaigns.
+                                The comprehensive digital marketing course in Visakhapatnam program covers SEO, social
+                                media, content marketing, email campaigns, and more. The best digital marketing course
+                                in Vishakhapatnam at Teks Academy also helps with real-time ad campaigns.
                             </p>
                             <a routerLink="/courses/best-digital-marketing-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -163,7 +205,9 @@
                                 width="20%" height="20%" />
                             <p class="course_name">Data Science</p>
                             <p class="course_description">
-                                Data science course in Visakhapatnam, designed to equip you with essential skills in data analysis, machine learning, and statistical modeling, this course offers hands-on experience with real-world datasets.
+                                Data science course in Visakhapatnam, designed to equip you with essential skills in
+                                data analysis, machine learning, and statistical modeling, this course offers hands-on
+                                experience with real-world datasets.
                             </p>
                             <a routerLink="/courses/best-data-science-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -180,7 +224,9 @@
                                 height="20%" alt="java" />
                             <p class="course_name">AWS DevOps</p>
                             <p class="course_description">
-                                This program equips you with the skills to deploy, manage, and scale applications on the AWS platform. The best AWS DevOps Course in Visakhapatnam provides the opportunity for experiential learning from industry experts and CI/CD pipelines and infrastructure.
+                                This program equips you with the skills to deploy, manage, and scale applications on the
+                                AWS platform. The best AWS DevOps Course in Visakhapatnam provides the opportunity for
+                                experiential learning from industry experts and CI/CD pipelines and infrastructure.
                             </p>
                             <a routerLink="/courses/best-awsplusdevops-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -191,7 +237,7 @@
                     </div>
                 </div>
 
-               
+
                 <div class="col-12 col-md-6 col-lg-4 mt-3">
                     <div class="card text-center">
                         <div class="course_box">
@@ -199,7 +245,9 @@
                                 width="20%" height="20%" />
                             <p class="course_name">Salesforce</p>
                             <p class="course_description">
-                                The advanced Salesforce Course in Visakhapatnam was developed to offer you the skills required to become an expert Salesforce professional. It covers the fundamentals of Salesforce administration, development, and cloud computing principles.
+                                The advanced Salesforce Course in Visakhapatnam was developed to offer you the skills
+                                required to become an expert Salesforce professional. It covers the fundamentals of
+                                Salesforce administration, development, and cloud computing principles.
                             </p>
                             <a routerLink="/courses/best-salesforce-admin-development-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -216,7 +264,9 @@
                                 height="20%" />
                             <p class="course_name">Testing tools</p>
                             <p class="course_description">
-                                Teks Academy’s best testing tools training in Visakhapatnam provides you with in-depth knowledge of various testing methodologies and tools. Trainers will guide you through the essentials of manual and automated testing.
+                                Teks Academy’s best testing tools training in Visakhapatnam provides you with in-depth
+                                knowledge of various testing methodologies and tools. Trainers will guide you through
+                                the essentials of manual and automated testing.
                             </p>
                             <a routerLink="/courses/best-testingtools-course-training-institute">
                                 <p class="read_more cursor_pointer_branch">
@@ -226,13 +276,13 @@
                         </div>
                     </div>
                 </div>
-              
 
 
 
 
-               
-<!--               
+
+
+                <!--               
                 <div class="col-12 col-md-6 col-lg-4 mt-3">
                     <div class="card text-center">
                         <div class="course_box">

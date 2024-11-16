@@ -19,12 +19,15 @@ export class EnquiryFormComponent {
   efphone: string = '';
   efcourse: string = '';
   efcity: string = '';
+  efbranch: string = ''; // New field for the selected branch
+
   resetForm() {
     this.efname = '';
     this.efemail = '';
     this.efphone = '';
     this.efcourse = '';
     this.efcity = '';
+    this.efbranch = ''; // Reset branch
   }
 
   ngOnInit() {
@@ -43,77 +46,50 @@ export class EnquiryFormComponent {
       efphone: this.efphone,
       efcourse: this.efcourse,
       efcity: this.efcity,
+      efbranch: this.efbranch, // Include branch in form data
     };
 
-    // if (
-    //   !this.efname ||
-    //   !this.efemail ||
-    //   !this.efphone ||
-    //   !this.efcourse ||
-    //   !this.efcity
-    // ) {
-    //   alert('please fill all required fields');
-    //   console.error('please fill all fields');
-    //   return;
-    // }
-    // validations
-    
-
-    // if(!this.recaptchaValue){
-    //   alert('Please complete the reCAPTCHA.');
-    //   return;
-    // }
     if (!this.efname) {
-      console.error('Name is Required');
       alert('Name is Required');
       return;
     } else if (!/^[a-zA-Z\s]+$/.test(this.efname)) {
-      console.error('Invalid Name Format');
       alert('Invalid Name Format');
       return;
     } else if (!this.efemail) {
-      console.error('Email is Required');
       alert('Email is Required');
       return;
     } else if (!/\S+@\S+\.\S+/.test(this.efemail)) {
-      console.error('Invalid Email Format');
       alert('Invalid Email Format');
       return;
     } else if (!this.efphone) {
-      console.error('Phone Number is Required');
       alert('Phone Number is Required');
       return;
     } else if (!/^\d{10}$/.test(this.efphone)) {
-      console.error('Invalid Phone Number Format');
       alert('Invalid Phone Number Format');
       return;
-    } else if (!/^[a-zA-Z\s]+$/.test(this.efcourse)) {
-      console.error('Invalid City Format');
-      alert('Invalid City Format');
-      return;
-    }else if (!this.efcity) {
-      console.error('City is Required');
+    } else if (!this.efcity) {
       alert('City is Required');
       return;
     } else if (!/^[a-zA-Z\s]+$/.test(this.efcity)) {
-      console.error('Invalid City Format');
       alert('Invalid City Format');
       return;
-    };
+    } else if (!this.efbranch) {
+      alert('Branch is Required');
+      return;
+    }
 
-    
     this.http
       .post(environment.apiUrl + '/websiteleads/enquiry-form-data', enquiryFormData, {
         responseType: 'text',
       })
       .subscribe(
         (response) => {
-          console.log('form submited sucssesfull', response);
+          console.log('Form submitted successfully', response);
           this.router.navigate(['/thank-you']);
           this.resetForm();
         },
         (error) => {
-          console.error('error form submite', error);
+          console.error('Error submitting form', error);
         }
       );
 

@@ -18,7 +18,7 @@ declare var jQuery: any;
   templateUrl: './data-science.component.html',
   styleUrls: ['./data-science.component.scss'],
 })
-export class DataScienceComponent {
+export class DataScienceComponent implements OnInit{
   private jsonLdScriptId = 'json-ld-about';
   // constructor(private titleService: Title, private metaService: Meta) {}
   private right!: HTMLCollectionOf<HTMLElement>;

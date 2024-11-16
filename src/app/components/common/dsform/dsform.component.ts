@@ -5,7 +5,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { environment } from '../../../../environments/environment';
 
-
 @Component({
   selector: 'app-dsform',
   templateUrl: './dsform.component.html',
@@ -19,8 +18,6 @@ export class DsformComponent {
   apiUrl = environment.apiUrl;
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
-
-
   dname: string = '';
   demail: string = '';
   dphone: string = '';
@@ -32,8 +29,6 @@ export class DsformComponent {
     this.dphone = '';
     this.dcity = '';
   }
-
-
 
   dssubmitForm() {
     const formData = {
@@ -48,7 +43,6 @@ export class DsformComponent {
     //   alert('please fill in all required fields')
     //   return;
     // };
-
 
     // validations
     if (!this.dname) {
@@ -119,7 +113,7 @@ export class DsformComponent {
           window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/SAP+SD.pdf'
         } else if (path.includes('awsplusdevops')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/AWS+%2B+DevOps+.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Teks+AWS+%26+DevOps+Syllabus+-+QR+(1).pdf'
         } else if (path.includes('testingtools')) {
           // Set the course name to the ebcourse property
           window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Testing+Tools+1.pdf'

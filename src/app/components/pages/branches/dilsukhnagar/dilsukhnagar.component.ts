@@ -3,7 +3,9 @@ import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
 import { DOCUMENT } from '@angular/common';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 declare var $: any;
 declare var jQuery: any;
 
@@ -18,6 +20,23 @@ export class DilsukhnagarComponent implements OnInit {
   private si!: number;
   private z!: number;
 
+  efname = '';
+  efemail = '';
+  efphone = '';
+  efcourse = '';
+  efbranch = '';
+  efcity = '';
+  apiUrl = environment.apiUrl;
+
+  branches: { [key: string]: string } = {
+    dilsukhnagar: 'Dilsukhnagar',
+    ameerpet: 'Ameerpet',
+    hiteccity: 'Hiteccity',
+    kukatpally: 'Kukatpally',
+    secunderabad: 'Secunderabad',
+    visakhapatnam: 'Visakhapatnam'
+  };
+  
   public _album: {
     src: string;
     caption: string;
@@ -31,7 +50,9 @@ export class DilsukhnagarComponent implements OnInit {
     private metaService: Meta,
     private el: ElementRef,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private route: ActivatedRoute, private http: HttpClient, private router: Router
+
   ) {
     const captions = [''];
     const conts = [''];
@@ -99,6 +120,14 @@ export class DilsukhnagarComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
+
+    if (currentPath && this.branches[currentPath]) {
+      this.efbranch = this.branches[currentPath];
+    } else {
+      this.efbranch = ''; // Fallback if no branch is found
+    }
+
     this.addJsonLdScript();
     this.titleService.setTitle('Top Digital Marketing & Full Stack Java Training in Dilsukhnagar - Teks Academy');
 
@@ -143,6 +172,36 @@ export class DilsukhnagarComponent implements OnInit {
     this.si = this.right.length;
     this.z = 1;
     this.turnRight();
+  }
+
+  resetForm() {
+    this.efname = '';
+    this.efemail = '';
+    this.efphone = '';
+    this.efcourse = '';
+    this.efbranch = '';
+    this.efcity = '';
+  }
+
+  eformData() {
+    const enquiryFormData = {
+      efname: this.efname,
+      efemail: this.efemail,
+      efphone: this.efphone,
+      efcourse: this.efcourse,
+      efbranch: this.efbranch,
+      efcity: this.efcity
+    };
+
+    this.http.post(this.apiUrl + '/websiteleads/enquiry-form-data', enquiryFormData, {
+      responseType: 'text'
+    }).subscribe(
+      () => {
+        this.router.navigate(['/thank-you']);
+        this.resetForm();
+      },
+      error => console.error('Error submitting form', error)
+    );
   }
 
   private sttmot(i: number): void {

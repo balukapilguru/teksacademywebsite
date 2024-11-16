@@ -20,7 +20,7 @@ export class ExpertTrainerComponent implements OnInit {
         dots: false,
         autoplay: true,
         autoplayHoverPause: true,
-        navText: [
+        navText: [     
             "<i class='flaticon-chevron'></i>",
             "<i class='flaticon-right-arrow'></i>"
         ],
