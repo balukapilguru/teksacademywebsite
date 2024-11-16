@@ -269,7 +269,7 @@ export class BimComponent {
 
 "name": "Teks Academy",
 
-"image": " https://teksacademy.com/assets/img/allcourses/bim.webp ",
+"image": " https://teksacademy.com/assets/img/allcourses/bim.png ",
 
 "description": " Build your career in BIM Modeling with the best BIM course training institute in Hyderabad with 100% job assistance. join now! ",
 
