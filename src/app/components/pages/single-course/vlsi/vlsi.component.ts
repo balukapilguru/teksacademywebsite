@@ -260,7 +260,7 @@ export class VlsiComponent {
 
 "name": "Teks Academy",
 
-"image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.jpg ",
+"image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.webp ",
 
 "description": " Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!",
 

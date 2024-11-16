@@ -31,7 +31,7 @@ export class BlogStyleOneComponent implements OnInit {
   uniqueCategories: string[] = []; // Array to hold unique categories for filtering
   searchQuery: string = ''; // For search functionality
   totalBlogs: number = 10; // Total number of blogs to display (based on API data)
-  pageSize: number = 9; // Number of blogs per page
+  pageSize: number = 4; // Number of blogs per page
   currentPage: number = 1; // Current page number
   startBlogs: number = 0; // Start index for displaying blogs
   endBlogs: number = 0; // End index for displaying blogs

@@ -16,35 +16,35 @@ export class ElearningSchoolComponent implements OnInit {
       name: 'Vanga Ravi Teja',
       content:
         'Teks Academy provides a well-structured curriculum that covers all aspects of Full Stack Python development. From front-end to back-end, I learned everything I needed to become a skilled developer.',
-      image: '../../../../assets/img/home_testimonials/Vanga Ravi Teja.png',
+      image: '../../../../assets/img/home_testimonials/Vanga Ravi Teja.webp',
       course: 'Full Stack Python',
     },
     {
       name: 'Sai Pavan Goud',
       content:
         'The institute counselors played a pivotal role in guiding me into this course, offering invaluable assistance along the way. I completed a data science course.',
-      image: '../../../../assets/img/home_testimonials/Sai Pavan Goud.png',
+      image: '../../../../assets/img/home_testimonials/Sai Pavan Goud.webp',
       course: 'Data Science',
     },
     {
       name: 'Samala Suhas',
       content:
         'I finished my data analytics course at this academy after I looked up reviews and ratings online before choosing to join this academy. I picked the Ameerpet branch.',
-      image: '../../../../assets/img/home_testimonials/Samala Suhas.png',
+      image: '../../../../assets/img/home_testimonials/Samala Suhas.webp',
       course: 'Data Analytics',
     },
     {
       name: 'KNV Ram',
       content:
         'At the academy where he completed courses, the trainers were incredibly friendly, and the quality of teaching was top-notch. They delved deeply into every topic, ensuring comprehensive coverage.',
-      image: '../../../../assets/img/home_testimonials/KNV Ram.png',
+      image: '../../../../assets/img/home_testimonials/KNV Ram.webp',
       course: 'AutoCAD, BIM (Revit), 3DS Max & Sketchup',
     },
     {
       name: 'Yashoda Ram',
       content:
         'The curriculum is comprehensive and up-to-date, covering everything from Java fundamentals to building full stack applications.',
-      image: '../../../../assets/img/home_testimonials/Yashoda Ram.png',
+      image: '../../../../assets/img/home_testimonials/Yashoda Ram.webp',
       course: 'Full Stack Java ',
     },
   ];
@@ -53,68 +53,68 @@ export class ElearningSchoolComponent implements OnInit {
       name: 'Vanga Ravi Teja',
       content:
         'Teks Academy provides a well-structured curriculum that covers all aspects of Full Stack Python development. From front-end to back-end, I learned everything I needed to become a skilled developer.',
-      image: '../../../../assets/img/home_testimonials/Vanga Ravi Teja.png',
+      image: '../../../../assets/img/home_testimonials/Vanga Ravi Teja.webp',
       course: 'Full Stack Python',
     },
     {
       name: 'Sai Pavan Goud',
       content:
         'The institute counselors played a pivotal role in guiding me into this course, offering invaluable assistance along the way. I completed a data science course.',
-      image: '../../../../assets/img/home_testimonials/Sai Pavan Goud.png',
+      image: '../../../../assets/img/home_testimonials/Sai Pavan Goud.webp',
       course: 'Data Science',
     },
     {
       name: 'Samala Suhas',
       content:
         'I finished my data analytics course at this academy after I looked up reviews and ratings online before choosing to join this academy. I picked the Ameerpet branch.',
-      image: '../../../../assets/img/home_testimonials/Samala Suhas.png',
+      image: '../../../../assets/img/home_testimonials/Samala Suhas.webp',
       course: 'Data Analytics',
     },
     {
       name: 'KNV Ram',
       content:
         'At the academy where he completed courses, the trainers were incredibly friendly, and the quality of teaching was top-notch. They delved deeply into every topic, ensuring comprehensive coverage.',
-      image: '../../../../assets/img/home_testimonials/KNV Ram.png',
+      image: '../../../../assets/img/home_testimonials/KNV Ram.webp',
       course: 'AutoCAD, BIM (Revit), 3DS Max & Sketchup',
     },
     {
       name: 'Yashoda Ram',
       content:
         'The curriculum is comprehensive and up-to-date, covering everything from Java fundamentals to building full stack applications.',
-      image: '../../../../assets/img/home_testimonials/Yashoda Ram.png',
+      image: '../../../../assets/img/home_testimonials/Yashoda Ram.webp',
       course: 'Full Stack Java ',
     },
     {
       name: 'Rajitha',
       content:
         'From learning the basics to diving into more advanced topics, the instructors were so knowledgeable and patient.',
-      image: '../../../../assets/img/home_testimonials/Rajitha.png',
+      image: '../../../../assets/img/home_testimonials/Rajitha.webp',
       course: 'Full Stack Java ',
     },
     {
       name: 'Harshita',
       content:
         'Industry-relevant curriculum that prepares you for the job market',
-      image: '../../../../assets/img/home_testimonials/Harshita.png',
+      image: '../../../../assets/img/home_testimonials/Harshita.webp',
       course: 'Full Stack Development ',
     },
     {
       name: 'Nithish Kumar',
       content:
         'I learned everything from front-end to back-end development and even got to work on real-world projects.',
-      image: '../../../../assets/img/home_testimonials/Nithish Kumar.png',
+      image: '../../../../assets/img/home_testimonials/Nithish Kumar.webp',
       course: 'Full Stack Development',
     },
     {
       name: 'Ganesh',
       content: 'The hands-on projects really helped solidify my skills',
-      image: '../../../../assets/img/home_testimonials/Ganesh.png',
+      image: '../../../../assets/img/home_testimonials/Ganesh.webp',
       course: 'Full Stack Java ',
     },
     {
       name: 'Uday Kumar',
       content: 'Internship opportunities to gain practical experience',
-      image: '../../../../assets/img/home_testimonials/Uday Kumar.png',
+      image: '../../../../assets/img/home_testimonials/Uday Kumar.webp',
       course: 'Data Science',
     },
   ];
