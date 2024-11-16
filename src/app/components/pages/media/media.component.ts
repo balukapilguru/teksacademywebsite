@@ -9,7 +9,7 @@ import { Lightbox } from 'ngx-lightbox';
 export class MediaComponent {
     
   videos = [
-    { thumbnail: 'assets/img/media/news media/teksacademymedia8.webp', url: 'https://youtu.be/gEI9_5P5DBw' },
+    { thumbnail: 'assets/img/media/news media/teksacademymedia8.png', url: 'https://youtu.be/gEI9_5P5DBw' },
     // Add more video data
   ];
 

@@ -312,7 +312,7 @@ export class SapficoComponent {
 
 "name": "Teks Academy",
 
-"image": " https://teksacademy.com/assets/img/allcourses/Sapfico.webp ",
+"image": " https://teksacademy.com/assets/img/allcourses/Sapfico.png ",
 
 "description": " Unlock the best SAP FICO course at Teks Academy. Dive into financial accounting and controlling to advance your career. Enroll now for expert-led training ",
 

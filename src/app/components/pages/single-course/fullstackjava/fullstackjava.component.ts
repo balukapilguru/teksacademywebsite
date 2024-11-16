@@ -277,7 +277,7 @@ export class FullstackjavaComponent {
 
 "name": "Teks Academy",
 
-"image": " https://teksacademy.com/assets/img/allcourses/fullstackjava.webp ",
+"image": " https://teksacademy.com/assets/img/allcourses/fullstackjava.png ",
 
 "description": " TEKS Academy is providing the best Java programming course online and offline in Hyderabad, to Skill up, & kick-start your career as a successful Java Developer",
 
