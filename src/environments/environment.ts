@@ -16,9 +16,9 @@
 export const environment = {
   production: false,
   // apiUrl: 'https://apierp.infozit.com',   //localhost
-  // apiUrl: 'https://apiadmin.infozit.com'  //live
+  apiUrl: 'https://apiadmin.infozit.com'  //live
     // apiUrl:'http://192.168.1.250:3030'
-    apiUrl:'https://mainbackup.teksacademy.com',
+    // apiUrl:'https://mainbackup.teksacademy.com',
 };
 
 /*
