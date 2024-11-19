@@ -13,7 +13,7 @@ export class VizagComponent {
   efemail = '';
   efphone = '';
   efcourse = '';
-  efbranch = '';
+  efbranch = 'visakhapatnam';
   efcity = '';
   apiUrl = environment.apiUrl;
 
@@ -31,13 +31,13 @@ export class VizagComponent {
     private route: ActivatedRoute, private http: HttpClient, private router: Router
   ){}
   ngOnInit(): void {
-    const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
+    // const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
 
-    if (currentPath && this.branches[currentPath]) {
-      this.efbranch = this.branches[currentPath];
-    } else {
-      this.efbranch = ''; // Fallback if no branch is found
-    }
+    // if (currentPath && this.branches[currentPath]) {
+    //   this.efbranch = this.branches[currentPath];
+    // } else {
+    //   this.efbranch = ''; // Fallback if no branch is found
+    // }
   }
 
   
