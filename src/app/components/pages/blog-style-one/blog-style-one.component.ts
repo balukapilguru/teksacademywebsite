@@ -32,7 +32,7 @@ export class BlogStyleOneComponent implements OnInit {
   uniqueCategories: string[] = []; // Array to hold unique categories for filtering
   searchQuery: string = ''; // For search functionality
   totalBlogs: number = 0; // Total number of blogs fetched
-  pageSize: number = 5; // Number of blogs per page
+  pageSize: number = 9; // Number of blogs per page
   currentPage: number = 1; // Current page number
   startBlogs: number = 0; // Start index for displaying blogs
   endBlogs: number = 0; // End index for displaying blogs
@@ -60,28 +60,13 @@ export class BlogStyleOneComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchBlogsData(); // Fetch blogs data when the component is initialized
+    this.originalBlogsData = [
+      /* Add your test blogs data */
+    ];
+    this.blogsData = [...this.originalBlogsData];
+    this.updateBlogRange();
   }
 
-  // Function to fetch blogs data from the API
-  // fetchBlogsData(): void {
-  //   this.http.get<{ blogsdata: Array<BlogData> }>(`${this.apiUrl}/blogs/getblogs`).subscribe(
-  //     (response) => {
-  //       this.blogsData = response.blogsdata; // Assign fetched data to blogsData
-  //       this.originalBlogsData = [...response.blogsdata]; // Backup original data
-  //       this.totalBlogs = response.blogsdata.length; // Set total number of blogs based on the fetched data
-  //       this.updateBlogRange(); // Update the range of blogs being displayed based on pagination
-
-  //       // Extract unique categories from the blogsData
-  //       this.uniqueCategories = [
-  //         ...new Set(response.blogsdata.filter(blog => blog.category).map(blog => blog.category)),
-  //       ];
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       alert('Failed to fetch blogs. Please try again later.'); // User feedback
-  //       console.error('Error fetching blog posts:', error.message);
-  //     }
-  //   );
-  // }
   fetchBlogsData(): void {
     this.http.get<{ blogsdata: Array<BlogData> }>(`${this.apiUrl}/blogs/getblogs`).subscribe(
       (response) => {
@@ -148,25 +133,38 @@ export class BlogStyleOneComponent implements OnInit {
   
   
 
-  // Function to update the range of blogs displayed based on pagination
-  updateBlogRange(): void {
-    // Recalculate the start and end blogs based on current page and filtered data
-    this.startBlogs = (this.currentPage - 1) * this.pageSize;
-    this.endBlogs = Math.min(this.currentPage * this.pageSize, this.blogsData.length);
-  }
+// Add a new property to store the paginated blogs
+paginatedBlogs: BlogData[] = [];
 
-  // Get total number of pages based on the number of blogs and page size
-  get totalPages(): number {
-    return Math.ceil(this.totalBlogs / this.pageSize);
+// Update the range of blogs to display
+updateBlogRange(): void {
+  if (this.currentPage === 1) {
+    // First page shows 9 blogs
+    this.startBlogs = 0;
+    this.endBlogs = Math.min(9, this.blogsData.length);
+  } else {
+    // Subsequent pages show 9 blogs per page
+    this.startBlogs = 9 + (this.currentPage - 2) * this.pageSize;
+    this.endBlogs = Math.min(this.startBlogs + this.pageSize, this.blogsData.length);
   }
+}
 
-  // Function to go to a specific page based on the page number
-  goToPage(page: number): void {
-    if (page >= 1 && page <= this.totalPages) {
-      this.currentPage = page; // Set current page
-      this.updateBlogRange(); // Update the range of blogs being displayed
-    }
+// Get total pages
+get totalPages(): number {
+  if (this.blogsData.length <= 9) {
+    return 1; // All blogs fit on the first page
   }
+  return Math.ceil((this.blogsData.length - 9) / this.pageSize) + 1; // First page + subsequent pages
+}
+
+// Go to a specific page
+goToPage(page: number): void {
+  if (page >= 1 && page <= this.totalPages) {
+    this.currentPage = page;
+    this.updateBlogRange();
+  }
+}
+
 
   // Function to construct the full URL for images
   getImageUrl(imageUrl: string): string {
@@ -175,9 +173,8 @@ export class BlogStyleOneComponent implements OnInit {
     }
     return 'assets/images/default-image.jpg'; // Fallback image URL if imageUrl is not provided
   }
-
   // Generate the page numbers for pagination
   paginationArray(): number[] {
-    return Array.from({ length: this.totalPages }, (_, index) => index + 1); // Create an array of page numbers
+    return Array.from({ length: this.totalPages }, (_, index) => index + 1);
   }
 }
