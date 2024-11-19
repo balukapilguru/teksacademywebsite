@@ -161,7 +161,7 @@ import { VizagComponent } from './components/pages/branches/vizag/vizag.componen
 import { EbookformComponent } from './components/common/ebookform/ebookform.component';
 import { FeaturedComponent } from './components/common/featured/featured.component';
 import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
-
+import { BlogcategoriesComponent } from './components/pages/blogcategories/blogcategories.component';
 
 const routes: Routes = [
   // {path: '', component: ElearningSchoolComponent},
@@ -423,13 +423,14 @@ const routes: Routes = [
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'job', component: CompanyComponent },
   { path: 'thankyoupage', component: ThankyoupageComponent },
-  { path: 'branch/ameerpet', component: AmeerpetComponent },
-  { path: 'branch/dilsukhnagar', component: DilsukhnagarComponent },
-  { path: 'branch/hiteccity', component: HitechComponent },
-  { path: 'branch/kukatpally', component: KukatpallyComponent },
-  { path: 'branch/secunderabad', component: SecunderabadComponent },
-  {path:'branch/visakhapatnam', component:VizagComponent},
+  { path: 'branch/best-software-training-institute-ameerpet', component: AmeerpetComponent },
+  { path: 'branch/best-software-training-institute-dilsukhnagar', component: DilsukhnagarComponent },
+  { path: 'branch/best-software-training-institute-hiteccity', component: HitechComponent },
+  { path: 'branch/best-software-training-institute-kukatpally', component: KukatpallyComponent },
+  { path: 'branch/best-software-training-institute-secunderabad', component: SecunderabadComponent },
+  {path:'branch/best-software-training-institute-visakhapatnam', component:VizagComponent},
   {path:'branchenquiryform', component:BranchenquiryformComponent},
+  {path:'blogcategory/:category', component:BlogcategoriesComponent},
   {path:'ebook', component:EbookformComponent},
   {path:'featuredin', component:FeaturedComponent},
 
@@ -624,7 +625,7 @@ const routes: Routes = [
   { path: 'blog-3', component: BlogStyleThreeComponent },
   { path: 'blog-4', component: BlogStyleFourComponent },
   { path: 'blog-5', component: BlogStyleFiveComponent },
-  { path: 'single-blog-1', component: BlogDetailsStyleOneComponent },
+  { path: 'single-blog-1/:id', component: BlogDetailsStyleOneComponent },
   { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
   { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
   // {path: 'contact', component: ContactUsComponent},
@@ -700,6 +701,7 @@ const routes: Routes = [
   { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
   { path: 'verifyCertificate/:registrationnumber', component: StudentverifypageComponent },
   {path:'franchise', component:FranchiseComponent},
+
   {
     path: '',
     loadChildren: () =>

@@ -28,13 +28,19 @@ export class BlogsDataService {
 
   constructor(private http: HttpClient) { }
 
- // Method to fetch a specific blog by ID
- getBlogById(id: number): Observable<BlogData> {
-  return this.http.get<BlogData>(`${this.apiUrl}/blogs/getblogbyid/${id}`);
-}
+  // Method to fetch a specific blog by ID
+  getBlogById(id: number): Observable<BlogData> {
+    return this.http.get<BlogData>(`${this.apiUrl}/blogs/getblogbyid/${id}`);
+  }
 
-// Existing method to get all blog listings
-getBlogs(): Observable<{ blogs: BlogData[] }> {
-  return this.http.get<{ blogs: BlogData[] }>(`${this.apiUrl}/blogs/getblogs`);
-}
+  // Existing method to get all blog listings
+  getBlogs(): Observable<{ blogs: BlogData[] }> {
+    return this.http.get<{ blogs: BlogData[] }>(`${this.apiUrl}/blogs/getblogs`);
+  }
+
+  // New method to search blogs by query
+  searchBlogs(searchQuery: string): Observable<{ blogs: BlogData[] }> {
+    const params = { searchQuery: searchQuery };  // Creating the search parameter
+    return this.http.get<{ blogs: BlogData[] }>(`${this.apiUrl}/blogs/getblogs`, { params });
+  }
 }

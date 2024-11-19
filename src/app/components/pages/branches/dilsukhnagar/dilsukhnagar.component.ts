@@ -24,18 +24,18 @@ export class DilsukhnagarComponent implements OnInit {
   efemail = '';
   efphone = '';
   efcourse = '';
-  efbranch = '';
+  efbranch = 'dilsukhnagar';
   efcity = '';
   apiUrl = environment.apiUrl;
 
-  branches: { [key: string]: string } = {
-    dilsukhnagar: 'Dilsukhnagar',
-    ameerpet: 'Ameerpet',
-    hiteccity: 'Hiteccity',
-    kukatpally: 'Kukatpally',
-    secunderabad: 'Secunderabad',
-    visakhapatnam: 'Visakhapatnam'
-  };
+  // branches: { [key: string]: string } = {
+  //   dilsukhnagar: 'Dilsukhnagar',
+  //   ameerpet: 'Ameerpet',
+  //   hiteccity: 'Hiteccity',
+  //   kukatpally: 'Kukatpally',
+  //   secunderabad: 'Secunderabad',
+  //   visakhapatnam: 'Visakhapatnam'
+  // };
   
   public _album: {
     src: string;
@@ -120,13 +120,13 @@ export class DilsukhnagarComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
+    // const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
 
-    if (currentPath && this.branches[currentPath]) {
-      this.efbranch = this.branches[currentPath];
-    } else {
-      this.efbranch = ''; // Fallback if no branch is found
-    }
+    // if (currentPath && this.branches[currentPath]) {
+    //   this.efbranch = this.branches[currentPath];
+    // } else {
+    //   this.efbranch = ''; // Fallback if no branch is found
+    // }
 
     this.addJsonLdScript();
     this.titleService.setTitle('Top Digital Marketing & Full Stack Java Training in Dilsukhnagar - Teks Academy');
