@@ -22,6 +22,9 @@ export class BlogcategoriesComponent implements OnInit {
   blogs: BlogPost[] = [];
   filteredBlogs: BlogPost[] = []; // Filtered blogs by category
   category: string = ''; // Holds the currently selected category
+  currentPage: number = 1; // The current page number
+  blogsPerPage: number = 9; // Number of blogs per page
+  totalPages: number = 1; // Total number of pages
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
 
@@ -36,39 +39,49 @@ export class BlogcategoriesComponent implements OnInit {
     });
   }
 
+  // Fetch all blogs and categories
   fetchBlogData(): void {
     this.http.get<{ blogsdata: BlogPost[] }>(this.apiUrl).subscribe((response) => {
       this.blogs = response.blogsdata;
-  
-      // Debug unique categories
+      
+      // Extract unique categories
       this.categories = [
         ...new Set(
-          this.blogs.map((blog) =>
-            blog.category ? blog.category.trim() : 'Uncategorized'
-          )
+          this.blogs.map((blog) => blog.category ? blog.category.trim() : 'Uncategorized')
         ),
       ];
+      
       console.log('Fetched Blogs:', this.blogs);
       console.log('Unique Categories:', this.categories);
-  
+
+      // Apply the category filter and paginate blogs
       this.applyCategoryFilter();
+      this.paginateBlogs();
     });
   }
-  
+
+  // Apply category filter if any category is selected
   applyCategoryFilter(): void {
     if (this.category) {
-      this.filteredBlogs = this.blogs
-        .filter((blog) => blog.category === this.category)
-        .sort((a, b) => new Date(b.postdate).getTime() - new Date(a.postdate).getTime());
+      this.filteredBlogs = this.blogs.filter((blog) => blog.category === this.category);
     } else {
       this.filteredBlogs = this.blogs;
     }
+    this.paginateBlogs(); // Re-paginate after applying the filter
   }
 
+  // Function to paginate blogs (show 9 blogs per page)
+  paginateBlogs(): void {
+    const startIndex = (this.currentPage - 1) * this.blogsPerPage;
+    const endIndex = startIndex + this.blogsPerPage;
+    this.filteredBlogs = this.filteredBlogs.slice(startIndex, endIndex);
+    
+    // Calculate the total number of pages
+    this.totalPages = Math.ceil(this.filteredBlogs.length / this.blogsPerPage);
+  }
 
-  
+  // Function to navigate to a specific category page
   filterByCategory(category: string): void {
-    // Navigate to the selected category
     this.router.navigate(['/blogcategory', category]);
   }
 
@@ -79,5 +92,28 @@ export class BlogcategoriesComponent implements OnInit {
     }
     return 'assets/default-image.jpg'; // Fallback image URL
   }
-}
 
+  // Navigate to the previous page
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.paginateBlogs();
+    }
+  }
+
+  // Navigate to the next page
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.paginateBlogs();
+    }
+  }
+
+  // Navigate to a specific page
+  goToPage(page: number): void {
+    if (page > 0 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.paginateBlogs();
+    }
+  }
+}

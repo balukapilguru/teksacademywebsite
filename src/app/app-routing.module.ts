@@ -620,7 +620,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'single-products', component: ProductsDetailsComponent },
   // {path: 'gallery', component: GalleryComponent},
-  { path: 'blog-1', component: BlogStyleOneComponent },
+  { path: 'blogs', component: BlogStyleOneComponent },
   { path: 'blog-2', component: BlogStyleTwoComponent },
   { path: 'blog-3', component: BlogStyleThreeComponent },
   { path: 'blog-4', component: BlogStyleFourComponent },
