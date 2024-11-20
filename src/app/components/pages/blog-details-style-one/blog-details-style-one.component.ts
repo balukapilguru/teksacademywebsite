@@ -11,19 +11,18 @@ import { environment } from 'src/environments/environment';
 })
 export class BlogDetailsStyleOneComponent implements OnInit {
   blog: any; // This will hold the blog data fetched from the API
-  comments: any[] = []; // Initialize comments
+  comments: any[] = []; // Ensure comments is always an array
   relatedPosts: any[] = []; // Initialize related posts
   commentForm: FormGroup; // FormGroup to handle comment submission
   apiUrl = environment.apiUrl; // The base API URL from the environment
-  successMessage: string | null = null;
+  successMessage: string | null = null; // Message to display after form submission
 
-  
   constructor(
-    private http: HttpClient, // Injecting HttpClient to make HTTP requests
-    private route: ActivatedRoute, // Injecting ActivatedRoute to access the route parameters
-    private fb: FormBuilder // Injecting FormBuilder for reactive forms
+    private http: HttpClient,
+    private route: ActivatedRoute,
+    private fb: FormBuilder
   ) {
-    // Initialize the comment form with required fields
+    // Initialize the comment form with validation rules
     this.commentForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -32,46 +31,61 @@ export class BlogDetailsStyleOneComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const blogId = this.route.snapshot.paramMap.get('id'); // Getting the blog ID from the route parameter
-    this.fetchBlogDetails(blogId); // Call the method to fetch blog details
-    this.fetchComments(blogId); // Fetch comments related to the blog
-    this.fetchBlogPosts(); // Fetch blog posts to get related posts
-  }
-
-  fetchBlogDetails(blogId: string | null): void {
+    const blogId = this.route.snapshot.paramMap.get('id');
     if (blogId) {
-      this.http.get(`${this.apiUrl}/blogs/getblogbyid/${blogId}`).subscribe(
-        (response: any) => {
-          this.blog = response.data;
-        },
-        (error) => {
-          console.error('Error fetching blog details:', error);
-        }
-      );
+      this.fetchBlogDetails(blogId);  // Fetch blog details when the component loads
+      this.fetchComments(blogId);     // Fetch comments based on the blog ID
     }
   }
 
-  // Fetch comments for the current blog post
-  fetchComments(blogId: string | null): void {
-    if (blogId) {
-      this.http.get<any[]>(`${this.apiUrl}/comments/getcomments?blogId=${blogId}`).subscribe(
-        (response) => {
-          this.comments = response; // Store comments in the component
-        },
-        (error) => {
-          console.error('Error fetching comments:', error);
-        }
-      );
-    }
+  // Fetch blog details based on blog ID
+  fetchBlogDetails(blogId: string): void {
+    this.http.get<any>(`${this.apiUrl}/blogs/getblogbyid/${blogId}`).subscribe(
+      (response) => {
+        this.blog = response.data;
+        this.fetchBlogPosts(); // Fetch related posts after blog details are loaded
+      },
+      (error) => {
+        console.error('Error fetching blog details:', error);
+      }
+    );
   }
 
-  // Fetch blog posts to show related posts
+  fetchComments(blogId: string): void {
+    // Ensure that we fetch comments specific to the blog ID
+    this.http.get<any>(`${this.apiUrl}/comments/comments/${blogId}`).subscribe(
+      (response) => {
+        console.log('Fetched Comments Response:', response); // Log the response to check
+        if (Array.isArray(response)) {
+          this.comments = response; // Assign response directly if it's an array
+        } else {
+          console.error('Unexpected response structure:', response);
+          this.comments = []; // Fallback to an empty array
+        }
+      },
+      (error) => {
+        console.error('Error fetching comments:', error);
+        this.comments = []; // Ensure comments is an empty array in case of error
+      }
+    );
+  }
+  
+
+  // Fetch related blog posts based on category
   fetchBlogPosts(): void {
     this.http.get<any[]>(`${this.apiUrl}/blogs/getblogs`).subscribe(
       (response) => {
-        this.relatedPosts = response.filter(
-          (post) => post.category === this.blog?.category && post.id !== this.blog?.id
-        ).slice(0, 3); // Limit to 3 related posts
+        if (Array.isArray(response)) {
+          if (this.blog) {
+            this.relatedPosts = response
+              .filter((post) => post.category === this.blog.category && post.id !== this.blog.id)
+              .slice(0, 3);
+          } else {
+            this.relatedPosts = response.slice(0, 3); // Fallback to any 3 posts if blog details are unavailable
+          }
+        } else {
+          console.error('API response is not an array:', response);
+        }
       },
       (error) => {
         console.error('Error fetching blog posts:', error);
@@ -79,36 +93,56 @@ export class BlogDetailsStyleOneComponent implements OnInit {
     );
   }
 
-  // Method to submit the comment form
+  // Reset comment form
+  resetForm(): void {
+    this.commentForm.reset();
+    this.commentForm.markAsPristine();
+    this.commentForm.markAsUntouched();
+    this.commentForm.updateValueAndValidity();
+  }
+
+  // Submit the comment form
   onSubmit(): void {
     if (this.commentForm.valid) {
       const formData = this.commentForm.value;
       const blogId = this.route.snapshot.paramMap.get('id');
-      
+
       if (blogId) {
-        // Send POST request to submit the comment
+        // Post the new comment to the server
         this.http.post(`${this.apiUrl}/comments/createcomment`, { ...formData, blogId }).subscribe(
           (response: any) => {
-            // If successful, push the new comment to the list (to display immediately)
-            this.comments.unshift({
-              name: formData.name,
-              email: formData.email,
-              comments: formData.comments,
-              date: new Date().toLocaleString(),
-            });
-            this.commentForm.reset(); // Reset the form after submission
+            // If the comment is posted successfully, add it to the top of the comments list
+            if (Array.isArray(this.comments)) {
+              this.comments.unshift({
+                name: formData.name,
+                email: formData.email,
+                comments: formData.comments,
+                date: new Date().toLocaleString(),
+              });
+            }
+
+            // Reset the form and display a success message
+            this.resetForm();
+            this.successMessage = 'Your comment has been posted successfully!';
+            setTimeout(() => (this.successMessage = null), 3000); // Clear success message after 3 seconds
+
+            // Refetch the comments after posting to ensure fresh data
+            this.fetchComments(blogId);
           },
           (error) => {
-            console.error('Error:', error);
-            alert('Failed to post comment.');
+            console.error('Error posting comment:', error);
+            alert('Failed to post comment. Please try again.');
           }
         );
+      } else {
+        alert('Blog ID not found.');
       }
     } else {
       alert('Please fill in all required fields.');
     }
   }
 
+  // Get image URL with a fallback image if it's not available
   getImageUrl(imageUrl: string): string {
     if (imageUrl && imageUrl.trim()) {
       return `https://teksacademy.s3.ap-south-1.amazonaws.com/website/blogs/${imageUrl}`;
