@@ -34,13 +34,16 @@ export class BlogsDataService {
   }
 
   // Existing method to get all blog listings
-  getBlogs(): Observable<{ blogs: BlogData[] }> {
-    return this.http.get<{ blogs: BlogData[] }>(`${this.apiUrl}/blogs/getblogs`);
-  }
+  // getBlogs(): Observable<{ blogs: BlogData[] }> {
+  //   return this.http.get<{ blogs: BlogData[] }>(`${this.apiUrl}/blogs/getblogs`);
+  // }
 
   // New method to search blogs by query
   searchBlogs(searchQuery: string): Observable<{ blogs: BlogData[] }> {
     const params = { searchQuery: searchQuery };  // Creating the search parameter
     return this.http.get<{ blogs: BlogData[] }>(`${this.apiUrl}/blogs/getblogs`, { params });
+  }
+  getBlogs(page: number, pageSize: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}?page=${page}&pageSize=${pageSize}`);
   }
 }

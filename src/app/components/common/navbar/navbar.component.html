@@ -1,20 +1,8 @@
-<div
-  class="navbar-area"
-  ngStickyNav
-  stickyClass="sticky-box-shadow"
-  ngStickyNav
->
+<div class="navbar-area" ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
   <div class="container-fluid">
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light "
-      [class.active]="classApplied"
-    >
-    <a class="navbar-brand" (click)="reloadPage()" routerLink="/">
-        <img
-          src="assets/img/logo/mainlogo.svg"
-          alt="logo"
-          style="width: 200px; height: 80px"
-      /></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " [class.active]="classApplied">
+      <a class="navbar-brand" (click)="reloadPage()" routerLink="/">
+        <img src="assets/img/logo/mainlogo.svg" alt="logo" style="width: 200px; height: 80px" /></a>
       <button class="navbar-toggler" type="button" (click)="toggleClass()">
         <span class="burger-menu">
           <span class="top-bar"></span>
@@ -30,13 +18,8 @@
         <ul class="navbar-nav">
           <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Home <i class='bx bx-chevron-down'></i></a> -->
           <li class="nav-item">
-            <a
-              routerLink="/"
-              class="nav-link"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Home</a
-            >
+            <a routerLink="/" class="nav-link" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Home</a>
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">eLearning School</a></li>
                             <li class="nav-item"><a routerLink="/vendor-certification-etraining" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Vendor Certification eTraining</a></li>
@@ -53,104 +36,59 @@
           </li>
           <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a> -->
           <li class="nav-item">
-            <a
-              class="nav-link cursor__pointer"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >About Us&nbsp;&nbsp;<i class="fa fa-angle-down" style="font-size:16px"></i></a
-            >
+            <a class="nav-link cursor__pointer" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">About Us&nbsp;&nbsp;<i class="fa fa-angle-down"
+                style="font-size:16px"></i></a>
 
             <ul class="dropdown-menu">
               <li class="nav-item">
-                <a
-                  routerLink="/about-us"
-                  class="nav-link"
-                  routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }"
-                  >About Teks</a
-                >
+                <a routerLink="/about-us" class="nav-link" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">About Teks</a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/franchise"
-                  routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }"
-                  (click)="toggleClass()"
-                  class="nav-link"
-                  >Franchise</a
-                >
+                <a routerLink="/franchise" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                  (click)="toggleClass()" class="nav-link">Franchise</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link cursor__pointer"
-                  routerLinkActive="active"
-             >Branches</a>
+                <a class="nav-link cursor__pointer" routerLinkActive="active">Branches</a>
                 <ul class="dropdown-menu">
                   <li class="nav-item">
-                    <a
-                      routerLink="/branch/best-software-training-institute-ameerpet"
-                      class="nav-link"
-                      routerLinkActive="active"
-                      [routerLinkActiveOptions]="{ exact: true }">Ameerpet</a>
+                    <a routerLink="/branch/best-software-training-institute-ameerpet" class="nav-link"
+                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Ameerpet</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      routerLink="/branch/best-software-training-institute-kukatpally"
-                      class="nav-link"
-                      routerLinkActive="active"
-                      [routerLinkActiveOptions]="{ exact: true }">Kukatpally</a>
+                    <a routerLink="/branch/best-software-training-institute-kukatpally" class="nav-link"
+                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Kukatpally</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      routerLink="/branch/best-software-training-institute-secunderabad"
-                      class="nav-link"
-                      routerLinkActive="active"
-                      [routerLinkActiveOptions]="{ exact: true }">Secunderabad</a>
+                    <a routerLink="/branch/best-software-training-institute-secunderabad" class="nav-link"
+                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Secunderabad</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      routerLink="/branch/best-software-training-institute-hiteccity"
-                      class="nav-link"
-                      routerLinkActive="active"
-                      [routerLinkActiveOptions]="{ exact: true }">Hitec City</a>
+                    <a routerLink="/branch/best-software-training-institute-hiteccity" class="nav-link"
+                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Hitec City</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      routerLink="/branch/best-software-training-institute-dilsukhnagar"
-                      class="nav-link"
-                      routerLinkActive="active"
-                      [routerLinkActiveOptions]="{ exact: true }">Dilsukhnagar</a>
+                    <a routerLink="/branch/best-software-training-institute-dilsukhnagar" class="nav-link"
+                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dilsukhnagar</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      routerLink="/branch/best-software-training-institute-visakhapatnam"
-                      class="nav-link"
-                      routerLinkActive="active"
-                      [routerLinkActiveOptions]="{ exact: true }">Visakhapatnam</a>
+                    <a routerLink="/branch/best-software-training-institute-visakhapatnam" class="nav-link"
+                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Visakhapatnam</a>
                   </li>
-                  </ul>
+                </ul>
               </li>
               <!-- <li class="nav-item"><a routerLink="/students-placements" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Placements</a></li> -->
               <!-- <li class="nav-item"><a routerLink="/testimonals" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Testimonials</a></li> -->
               <li class="nav-item">
-                <a
-                  routerLink="/gallery"
-                  class="nav-link"
-                  routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }"
-                  >Gallery</a
-                >
+                <a routerLink="/gallery" class="nav-link" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Gallery</a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/media"
-                  class="nav-link"
-                  routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }"
-                  >Media</a
-                >
+                <a routerLink="/media" class="nav-link" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Media</a>
               </li>
-             
+
             </ul>
           </li>
           <!-- <li class="nav-item">
@@ -219,16 +157,10 @@
                             <li class="nav-item"><a routerLink="/terms-of-service" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Terms of Service</a></li>
                         </ul> -->
           <!-- </li> -->
-        
+
           <li class="nav-item megamenu">
-            <a
-              routerLink="/course"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              (click)="toggleClass()"
-              class="nav-link"
-              >Courses</a
-            >
+            <a routerLink="/course" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+              (click)="toggleClass()" class="nav-link">Courses</a>
           </li>
 
           <!-- <li class="nav-item megamenu"><a href="javascript:void(0)" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
@@ -348,13 +280,8 @@
                         </ul>
                     </li> -->
           <li class="nav-item">
-            <a
-              routerLink="/testimonals"
-              class="nav-link"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Testimonials</a
-            >
+            <a routerLink="/testimonals" class="nav-link" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Testimonials</a>
           </li>
           <!-- <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li> -->
           <li class="nav-item">
@@ -366,22 +293,12 @@
               (click)="toggleClass()"
               >Blog</a
             > -->
-            <a
-              routerLink="/blogs"
-              class="nav-link"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Blogs</a
-            >
+            <a routerLink="/blogs" class="nav-link" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Blogs</a>
           </li>
           <li class="nav-item">
-            <a
-              routerLink="/contact"
-              class="nav-link"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Contact Us</a
-            >
+            <a routerLink="/contact" class="nav-link" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Contact Us</a>
           </li>
 
           <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Events <i class='bx bx-chevron-down'></i></a>
@@ -436,8 +353,7 @@
                         </ul> -->
           </li>
           <li class="nav-item">
-            <a routerLink="/about-us" class="nav-link" (click)="toggleClass()"
-              >About Us
+            <a routerLink="/about-us" class="nav-link" (click)="toggleClass()">About Us
             </a>
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item"><a href="javascript:void(0)" class="nav-link">About Us <i class='bx bx-chevron-right'></i></a>
@@ -462,18 +378,11 @@
                         </ul> -->
           </li>
           <li class="nav-item megamenu">
-            <a
-              routerLink="/franchise"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              (click)="toggleClass()"
-              class="nav-link"
-              >Franchise</a
-            >
+            <a routerLink="/franchise" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+              (click)="toggleClass()" class="nav-link">Franchise</a>
           </li>
           <li class="nav-item megamenu">
-            <a routerLink="/course" class="nav-link" (click)="toggleClass()"
-              >Courses
+            <a routerLink="/course" class="nav-link" (click)="toggleClass()">Courses
             </a>
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item">
@@ -592,8 +501,7 @@
           </li>
 
           <li class="nav-item">
-            <a routerLink="/gallery" class="nav-link" (click)="toggleClass()"
-              >Gallery
+            <a routerLink="/gallery" class="nav-link" (click)="toggleClass()">Gallery
             </a>
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item"><a routerLink="/events" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Events</a></li>
@@ -610,9 +518,11 @@
                         </ul>
                     </li> -->
           <li class="nav-item">
-            <a href="https://blog.teksacademy.com" class="nav-link" (click)="toggleClass()"
+            <!-- <a href="https://blog.teksacademy.com" class="nav-link" (click)="toggleClass()"
               >Blog
-            </a>
+            </a> -->
+            <a routerLink="/blogs" class="nav-link" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Blogs</a>
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item"><a routerLink="/blog-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Grid (2 in Row)</a></li>
                             <li class="nav-item"><a routerLink="/blog-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Grid (3 in Row)</a></li>
@@ -629,38 +539,37 @@
                         </ul> -->
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-ameerpet" class="nav-link" (click)="toggleClass()"
-              >Ameerpet Branch
+            <a routerLink="/branch/best-software-training-institute-ameerpet" class="nav-link"
+              (click)="toggleClass()">Ameerpet Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-dilsukhnagar" class="nav-link" (click)="toggleClass()"
-              >Dilsukhnagar Branch
+            <a routerLink="/branch/best-software-training-institute-dilsukhnagar" class="nav-link"
+              (click)="toggleClass()">Dilsukhnagar Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-hiteccity" class="nav-link" (click)="toggleClass()"
-              >Hitec City Branch
+            <a routerLink="/branch/best-software-training-institute-hiteccity" class="nav-link"
+              (click)="toggleClass()">Hitec City Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-kukatpally" class="nav-link" (click)="toggleClass()"
-              >Kukatpally Branch
+            <a routerLink="/branch/best-software-training-institute-kukatpally" class="nav-link"
+              (click)="toggleClass()">Kukatpally Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-secunderabad" class="nav-link" (click)="toggleClass()"
-              >Secunderabad Branch
+            <a routerLink="/branch/best-software-training-institute-secunderabad" class="nav-link"
+              (click)="toggleClass()">Secunderabad Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-visakhapatnam" class="nav-link" (click)="toggleClass()"
-              >Visakhapatnam Branch
+            <a routerLink="/branch/best-software-training-institute-visakhapatnam" class="nav-link"
+              (click)="toggleClass()">Visakhapatnam Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" class="nav-link" (click)="toggleClass()"
-              >Contact
+            <a routerLink="/contact" class="nav-link" (click)="toggleClass()">Contact
             </a>
           </li>
         </ul>
@@ -672,19 +581,11 @@
                     </div>
                 </div> -->
         <div class="option-item" *ngIf="shouldDisplayOptionItem()">
-          <a
-            href="tel:18001204748"
-            class="default-btn"
-            style="background-color: #2a619d"
-            ><i
-              class="fa fa-phone mt-1"
-              style="background-color: transparent"
-            ></i
-            >&nbsp;&nbsp;&nbsp; 1800-120-4748</a
-          >
+          <a href="tel:18001204748" class="default-btn" style="background-color: #2a619d"><i class="fa fa-phone mt-1"
+              style="background-color: transparent"></i>&nbsp;&nbsp;&nbsp; 1800-120-4748</a>
         </div>
 
-<!--         
+        <!--         
         <div class="option-item">
           <a
             href="https://teksacademylms.graphy.com/"
@@ -697,19 +598,12 @@
             >&nbsp;&nbsp;&nbsp;&nbsp; Login</a
           >
         </div> -->
-         
+
         <div class="option-item">
-          <a 
-            href="https://teksacademylms.graphy.com/" routerLink="/jobs"
-            class="default-btn" 
-            style="background-color: #2a619d"
-            >
-            <i
-              class="fas fa-bullhorn mt-1"
-              style="background-color: transparent"
-            ></i
-            >&nbsp;&nbsp;&nbsp;&nbsp; Job Portal</a
-          >
+          <a href="https://teksacademylms.graphy.com/" routerLink="/jobs" class="default-btn"
+            style="background-color: #2a619d">
+            <i class="fas fa-bullhorn mt-1" style="background-color: transparent"></i>&nbsp;&nbsp;&nbsp;&nbsp; Job
+            Portal</a>
         </div>
         <!-- <div class="option-item">
           <a routerLink="/company"
