@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 interface BlogData {
   id: number;
@@ -27,109 +27,17 @@ interface BlogData {
 export class BlogStyleOneComponent implements OnInit {
   apiUrl = environment.apiUrl; // API URL from environment
 
-  blogsData: BlogData[] = []; // Array to hold the fetched blogs data
-  uniqueCategories: string[] = []; // Array to hold unique categories for filtering
-  searchQuery: string = ''; // For search functionality
-  totalBlogs: number = 10; // Total number of blogs to display (based on API data)
-  pageSize: number = 4; // Number of blogs per page
+  originalBlogsData: BlogData[] = [];
+  blogsData: BlogData[] = []; // Array of blogs
+  totalBlogs: number = 0; // Total number of blogs
+  pageSize: number = 9; // Number of blogs per page
   currentPage: number = 1; // Current page number
-  startBlogs: number = 0; // Start index for displaying blogs
-  endBlogs: number = 0; // End index for displaying blogs
-
-  constructor(
-    private http: HttpClient,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
-
-  ngOnInit(): void {
-    this.fetchBlogsData(); // Fetch blogs data when the component is initialized
-  }
-
-  // Function to fetch blogs data from the API
-  // fetchBlogsData(): void {
-  //   this.http.get<{blogsdata:Array<BlogData>}>(`${this.apiUrl}/blogs/getblogs`).subscribe(
-  //     (response) => {
-  //       this.blogsData = response.blogsdata; 
-  //       this.totalBlogs = response.blogsdata.length; 
-  //       this.updateBlogRange(); 
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       console.error('Error fetching blog posts:', error.message);
-  //     }
-  //   );
-  // }
-fetchBlogsData(): void {
-  this.http.get<{ blogsdata: Array<BlogData> }>(`${this.apiUrl}/blogs/getblogs`).subscribe(
-    (response) => {
-      this.blogsData = response.blogsdata; // Assign fetched data to blogsData
-      this.totalBlogs = response.blogsdata.length; // Set total number of blogs based on the fetched data
-      this.updateBlogRange(); // Update the range of blogs being displayed based on pagination
-
-      // Extract unique categories from the blogsData
-      this.uniqueCategories = [
-        ...new Set(response.blogsdata.filter(blog => blog.category).map(blog => blog.category)),
-      ];
-    },
-    (error: HttpErrorResponse) => {
-      console.error('Error fetching blog posts:', error.message); // Log errors if API call fails
-    }
-  );
-}
-
-  // Search functionality to filter blogs based on the title
-  onSearch(): void {
-    const filteredPosts = this.blogsData.filter((post) =>
-      post.title.toLowerCase().includes(this.searchQuery.toLowerCase())
-    );
-    this.totalBlogs = filteredPosts.length; // Update total blogs after filtering
-    this.blogsData = filteredPosts; // Set filtered blogs data
-    this.updateBlogRange(); // Update the range based on pagination
-  }
-
-  // Filter blogs by category
-  filterByCategory(category: string): void {
-    const filteredPosts = this.blogsData.filter((post) => post.category === category);
-    this.totalBlogs = filteredPosts.length; // Update total blogs after filtering
-    this.blogsData = filteredPosts; // Set filtered blogs data
-    this.updateBlogRange(); // Update the range based on pagination
-  }
-
-  // Update the range of blogs being displayed on the current page
-  updateBlogRange(): void {
-    this.startBlogs = (this.currentPage - 1) * this.pageSize + 1;
-    this.endBlogs = Math.min(this.currentPage * this.pageSize, this.totalBlogs);
-  }
-
-  // Get total number of pages based on the number of blogs and page size
-  get totalPages(): number {
-    return Math.ceil(this.totalBlogs / this.pageSize);
-  }
-
-  // Function to go to a specific page based on the page number
-  goToPage(page: number): void {
-    if (page >= 1 && page <= this.totalPages) {
-      this.currentPage = page; // Set current page
-      this.updateBlogRange(); // Update the range of blogs being displayed
-    }
-  }
-
-  // Function to construct the full URL for images
-  getImageUrl(imageUrl: string): string {
-    if (imageUrl) {
-      return `https://teksacademy.s3.ap-south-1.amazonaws.com/website/blogs/${imageUrl}`; // Assuming image is stored in this S3 path
-    }
-    return 'path/to/default/image.jpg'; // Fallback image URL if imageUrl is not provided
-  }
-
-  // Generate the page numbers for pagination
-  paginationArray(): number[] {
-    return Array(Math.ceil(this.totalBlogs / this.pageSize))
-      .fill(0)
-      .map((_, index) => index + 1); // Create an array of page numbers
-  }
-
-  // Carousel settings for displaying featured blogs
+  startBlogs: number = 0; // Starting index for the current page
+  endBlogs: number = this.pageSize; // Ending index for the current page
+  uniqueCategories: string[] = []; // Categories for filtering
+  searchQuery: string = '';
+  
+  displayedBlogs: BlogData[] = [];
   trainerSlides = {
     items: 1,
     loop: true,
@@ -144,4 +52,118 @@ fetchBlogsData(): void {
       1000: { items: 3 },
     },
   };
+
+  constructor(private http: HttpClient, private router: Router) {}
+
+  ngOnInit(): void {
+    this.fetchBlogsData(); // Fetch blogs on component initialization
+  }
+
+  fetchBlogsData(): void {
+    const params = {
+      currentPage: this.currentPage.toString(),
+      pageSize: this.pageSize.toString(),
+    };
+
+    console.log('Fetching Blogs with params:', params);
+
+    this.http
+      .get<{ blogsdata: BlogData[]; totalBlogs: number }>(`${this.apiUrl}/blogs/getblogs`, { params })
+      .subscribe(
+        (response) => {
+          console.log('API Response:', response);
+
+          this.blogsData = response.blogsdata || [];
+          this.totalBlogs = response.totalBlogs || 0;
+
+          console.log('Total Blogs:', this.totalBlogs);
+          console.log('Blogs Data:', this.blogsData);
+
+          this.updateBlogRange();
+        },
+        (error: HttpErrorResponse) => {
+          console.error('Error fetching blogs:', error.message);
+          alert('Failed to fetch blogs. Please try again.');
+        }
+      );
+  }
+
+  goToPage(currentPage: number): void {
+    this.currentPage = currentPage;
+    console.log('Navigating to page:', currentPage);
+
+    this.fetchBlogsData();
+  }
+
+  filterByCategory(category: string): void {
+    this.router.navigate(['/blogcategory', category]);
+  }
+
+  onSearch(event: Event): void {
+    event.preventDefault();
+    const trimmedQuery = this.searchQuery.trim();
+
+    if (trimmedQuery) {
+      const params = {
+        searchQuery: trimmedQuery,
+        currentPage: this.currentPage.toString(),
+        pageSize: this.pageSize.toString(),
+      };
+
+      console.log('Searching with params:', params);
+
+      this.http
+        .get<{ blogsdata: BlogData[]; totalBlogs: number }>(`${this.apiUrl}/blogs/getblogs`, { params })
+        .subscribe(
+          (response) => {
+            console.log('Search API Response:', response);
+
+            this.blogsData = response.blogsdata || [];
+            this.totalBlogs = response.totalBlogs || 0;
+
+            this.updateBlogRange();
+          },
+          (error: HttpErrorResponse) => {
+            console.error('Error fetching search results:', error.message);
+            alert('Error fetching search results. Please try again.');
+          }
+        );
+    } else {
+      this.resetBlogs(); // Refetch all blogs if no search query
+    }
+  }
+
+  resetBlogs(): void {
+    console.log('Resetting blogs to original data...');
+    this.currentPage = 1;
+    this.fetchBlogsData();
+  }
+
+  updateBlogRange(): void {
+    console.log('Updating blog range...');
+    console.log('Current Page:', this.currentPage, 'Page Size:', this.pageSize);
+
+    const startBlogs = (this.currentPage - 1) * this.pageSize;
+    const endBlogs = Math.min(startBlogs + this.pageSize, this.blogsData.length);
+
+    console.log('Start Index:', startBlogs, 'End Index:', endBlogs);
+
+    this.displayedBlogs = this.blogsData.slice(startBlogs, endBlogs);
+    console.log('Displayed Blogs:', this.displayedBlogs);
+  }
+
+  get totalPages(): number {
+    return Math.ceil(this.totalBlogs / this.pageSize);
+  }
+
+  paginationArray(): number[] {
+    return Array.from({ length: this.totalPages }, (_, index) => index + 1);
+  }
+
+  getImageUrl(imageUrl: string): string {
+    if (imageUrl && imageUrl.trim()) {
+      return `https://teksacademy.s3.ap-south-1.amazonaws.com/website/blogs/${imageUrl}`;
+    }
+    return 'assets/images/default-image.jpg';
+  }
 }

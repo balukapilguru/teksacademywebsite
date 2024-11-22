@@ -21,19 +21,19 @@ export class AmeerpetComponent implements OnInit {
   efemail = '';
   efphone = '';
   efcourse = '';
-  efbranch = '';
+  efbranch = 'Ameerpet';
   efcity = '';
   apiUrl = environment.apiUrl;
 
 
- branches: { [key: string]: string } = {
-    dilsukhnagar: 'Dilsukhnagar',
-    ameerpet: 'Ameerpet',
-    hiteccity: 'Hiteccity',
-    kukatpally: 'Kukatpally',
-    secunderabad: 'Secunderabad',
-    visakhapatnam: 'Visakhapatnam'
-  };
+//  branches: { [key: string]: string } = {
+//     dilsukhnagar: 'Dilsukhnagar',
+//     ameerpet: 'Ameerpet',
+//     hiteccity: 'Hiteccity',
+//     kukatpally: 'Kukatpally',
+//     secunderabad: 'Secunderabad',
+//     visakhapatnam: 'Visakhapatnam'
+//   };
   
 
   private jsonLdScriptId = 'json-ld-about';
@@ -125,15 +125,15 @@ export class AmeerpetComponent implements OnInit {
   ngOnInit(): void {
 
     
-    const currentPath = this.router.url.split('/').pop() as string;
+    // const currentPath = this.router.url.split('/').pop() as string;
 
-    // Set the branch based on the URL path
-    if (currentPath.includes('ameerpet')) {
-      this.efbranch = 'Ameerpet';
+    // // Set the branch based on the URL path
+    // if (currentPath.includes('ameerpet')) {
+    //   this.efbranch = 'Ameerpet';
   
-    } else {
-      this.efbranch = ''; // Fallback if no match is found
-    }
+    // } else {
+    //   this.efbranch = ''; // Fallback if no match is found
+    // }
 
     this.addJsonLdScript();
     this.titleService.setTitle('Best AutoCAD & Full Stack Python Courses in Ameerpet - Teks Academy');
