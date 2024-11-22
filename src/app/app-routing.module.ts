@@ -116,7 +116,6 @@ import { WhatsAppFormComponent } from './components/pages/whats-app-form/whats-a
 import { PgpComponent } from './components/pages/pgp/pgp.component';
 import { PreloaderComponent } from './components/common/preloader/preloader.component';
 import { ScholarshipProgramComponent } from './components/pages/scholarship-program/scholarship-program.component';
-import { DigitalMarketingWebinarComponent } from './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.component';
 import { SalesforceWebinarComponent } from './components/pages/webinars/salesforce-webinar/salesforce-webinar.component';
 import { AwsAndDevopsComponent } from './components/pages/webinars/aws-and-devops/aws-and-devops.component';
 import { BimWebinarComponent } from './components/pages/webinars/bim-webinar/bim-webinar.component';
@@ -244,20 +243,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  {
-    path: 'workshop/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
-  {
-    path: 'courses/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
+ 
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -514,20 +500,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  {
-    path: 'workshop/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
-  {
-    path: 'courses/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
+  
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -780,13 +753,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  {
-    path: 'workshop/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
+  
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
