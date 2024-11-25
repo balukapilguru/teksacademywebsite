@@ -1,0 +1,26 @@
+<div class="container-fluid bg_back_color">
+  <div class="container">
+    <div class="row d-flex justify-content-center ">
+      <div *ngFor="let post of filteredBlogs" class="col-lg-9 col-md-10 col-sm-12 space_middle bg-white rounded-2">
+        <div class="">
+          <h2>{{ category || 'All Blogs' }}</h2>
+          <div class="single-blog-post">
+            <div class="post-image">
+              <a [routerLink]="['/single-blog-1', post.id]">
+                <img class="rounded-4" [src]="getImageUrl(post.image_url)" alt="Blog Image" />
+              </a>
+            </div>
+            <div class="post-content">
+              <h3>
+                <a [routerLink]="['/single-blog-1', post.id]">{{ post.title }}</a>
+              </h3>
+              <div [innerHTML]="post.description | sanitizeHtml"></div>
+
+              <p><small>Posted on: {{ post.postdate | date: 'd MMM, y' }}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

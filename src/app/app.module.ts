@@ -299,6 +299,8 @@ import { NewdigitalmarketingComponent } from './components/pages/newdigitalmarke
 import { VizagComponent } from './components/pages/branches/vizag/vizag.component';
 import { FeaturedinComponent } from './components/pages/featuredin/featuredin.component';
 import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
+import { BlogcategoriesComponent } from './components/pages/blogcategories/blogcategories.component';
+import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
 
 
 
@@ -581,6 +583,8 @@ import { BranchenquiryformComponent } from './components/pages/branches/branchen
     FeaturedinComponent,
     VlsiComponent,
     BranchenquiryformComponent,
+    BlogcategoriesComponent,
+    SanitizeHtmlPipe,
    
   ],
 
@@ -608,7 +612,7 @@ import { BranchenquiryformComponent } from './components/pages/branches/branchen
    
    
   ],
-
+  // exports: [SanitizeHtmlPipe],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

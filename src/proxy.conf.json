@@ -1,0 +1,9 @@
+{
+    "/apiUrl": {
+      "target": "https://mainbackup.teksacademy.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

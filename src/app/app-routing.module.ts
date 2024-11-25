@@ -116,7 +116,6 @@ import { WhatsAppFormComponent } from './components/pages/whats-app-form/whats-a
 import { PgpComponent } from './components/pages/pgp/pgp.component';
 import { PreloaderComponent } from './components/common/preloader/preloader.component';
 import { ScholarshipProgramComponent } from './components/pages/scholarship-program/scholarship-program.component';
-import { DigitalMarketingWebinarComponent } from './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.component';
 import { SalesforceWebinarComponent } from './components/pages/webinars/salesforce-webinar/salesforce-webinar.component';
 import { AwsAndDevopsComponent } from './components/pages/webinars/aws-and-devops/aws-and-devops.component';
 import { BimWebinarComponent } from './components/pages/webinars/bim-webinar/bim-webinar.component';
@@ -161,7 +160,7 @@ import { VizagComponent } from './components/pages/branches/vizag/vizag.componen
 import { EbookformComponent } from './components/common/ebookform/ebookform.component';
 import { FeaturedComponent } from './components/common/featured/featured.component';
 import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
-
+import { BlogcategoriesComponent } from './components/pages/blogcategories/blogcategories.component';
 
 const routes: Routes = [
   // {path: '', component: ElearningSchoolComponent},
@@ -244,20 +243,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  {
-    path: 'workshop/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
-  {
-    path: 'courses/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
+ 
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -423,13 +409,14 @@ const routes: Routes = [
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'job', component: CompanyComponent },
   { path: 'thankyoupage', component: ThankyoupageComponent },
-  { path: 'branch/best-training-institute-in-ameerpet', component: AmeerpetComponent },
-  { path: 'branch/best-training-institute-in-dilsukhnagar', component: DilsukhnagarComponent },
-  { path: 'branch/best-training-institute-in-hiteccity', component: HitechComponent },
-  { path: 'branch/best-training-institute-in-kukatpally', component: KukatpallyComponent },
-  { path: 'branch/best-training-institute-in-secunderabad', component: SecunderabadComponent },
-  {path:'branch/best-training-institute-in-visakhapatnam', component:VizagComponent},
+  { path: 'branch/best-software-training-institute-ameerpet', component: AmeerpetComponent },
+  { path: 'branch/best-software-training-institute-dilsukhnagar', component: DilsukhnagarComponent },
+  { path: 'branch/best-software-training-institute-hiteccity', component: HitechComponent },
+  { path: 'branch/best-software-training-institute-kukatpally', component: KukatpallyComponent },
+  { path: 'branch/best-software-training-institute-secunderabad', component: SecunderabadComponent },
+  {path:'branch/best-software-training-institute-visakhapatnam', component:VizagComponent},
   {path:'branchenquiryform', component:BranchenquiryformComponent},
+  {path:'blogcategory/:category', component:BlogcategoriesComponent},
   {path:'ebook', component:EbookformComponent},
   {path:'featuredin', component:FeaturedComponent},
 
@@ -513,20 +500,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  {
-    path: 'workshop/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
-  {
-    path: 'courses/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
+  
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -619,12 +593,12 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'single-products', component: ProductsDetailsComponent },
   // {path: 'gallery', component: GalleryComponent},
-  { path: 'blog-1', component: BlogStyleOneComponent },
+  { path: 'blogs', component: BlogStyleOneComponent },
   { path: 'blog-2', component: BlogStyleTwoComponent },
   { path: 'blog-3', component: BlogStyleThreeComponent },
   { path: 'blog-4', component: BlogStyleFourComponent },
   { path: 'blog-5', component: BlogStyleFiveComponent },
-  { path: 'single-blog-1', component: BlogDetailsStyleOneComponent },
+  { path: 'single-blog-1/:id', component: BlogDetailsStyleOneComponent },
   { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
   { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
   // {path: 'contact', component: ContactUsComponent},
@@ -700,6 +674,7 @@ const routes: Routes = [
   { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
   { path: 'verifyCertificate/:registrationnumber', component: StudentverifypageComponent },
   {path:'franchise', component:FranchiseComponent},
+
   {
     path: '',
     loadChildren: () =>
@@ -778,13 +753,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  {
-    path: 'workshop/digital-marketing',
-    loadChildren: () =>
-      import(
-        './components/pages/webinars/digital-marketing-webinar/digital-marketing-webinar.module'
-      ).then((m) => m.DigitalMarketingWebinarModule),
-  },
+  
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
