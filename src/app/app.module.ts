@@ -531,7 +531,6 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     PgpComponent,
     PreloaderComponent,
     ScholarshipProgramComponent,
-    DigitalMarketingWebinarComponent,
     SalesforceWebinarComponent,
     DigitalMarketingWebinarComponent,
     AwsAndDevopsComponent,
