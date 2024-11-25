@@ -65,7 +65,6 @@ export class BlogStyleOneComponent implements OnInit {
       pageSize: this.pageSize.toString(),
     };
 
-    console.log('Fetching Blogs with params:', params);
 
     this.http
       .get<{ blogsdata: BlogData[]; totalBlogs: number }>(`${this.apiUrl}/blogs/getblogs`, { params })
@@ -93,6 +92,8 @@ export class BlogStyleOneComponent implements OnInit {
     console.log('Navigating to page:', currentPage);
 
     this.fetchBlogsData();
+    this.updateBlogRange();
+
   }
 
   filterByCategory(category: string): void {
@@ -140,16 +141,18 @@ export class BlogStyleOneComponent implements OnInit {
   }
 
   updateBlogRange(): void {
-    console.log('Updating blog range...');
-    console.log('Current Page:', this.currentPage, 'Page Size:', this.pageSize);
+
+    // console.log('Updating blog range...');
+    // console.log('Current Page:', this.currentPage, 'Page Size:', this.pageSize);
 
     const startBlogs = (this.currentPage - 1) * this.pageSize;
-    const endBlogs = Math.min(startBlogs + this.pageSize, this.blogsData.length);
+    const endBlogs = Math.min(startBlogs + this.pageSize, this.totalBlogs);
 
-    console.log('Start Index:', startBlogs, 'End Index:', endBlogs);
-
+    // console.log('Start Index:', startBlogs, 'End Index:', endBlogs);
+  
     this.displayedBlogs = this.blogsData.slice(startBlogs, endBlogs);
-    console.log('Displayed Blogs:', this.displayedBlogs);
+    // console.log('Displayed Blogs:', this.displayedBlogs);
+
   }
 
   get totalPages(): number {
