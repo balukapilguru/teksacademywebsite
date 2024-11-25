@@ -65,7 +65,6 @@ export class BlogStyleOneComponent implements OnInit {
       pageSize: this.pageSize.toString(),
     };
 
- 
 
     this.http
       .get<{ blogsdata: BlogData[]; totalBlogs: number }>(`${this.apiUrl}/blogs/getblogs`, { params })
@@ -94,6 +93,7 @@ export class BlogStyleOneComponent implements OnInit {
 
     this.fetchBlogsData();
     this.updateBlogRange();
+
   }
 
   filterByCategory(category: string): void {
@@ -141,6 +141,7 @@ export class BlogStyleOneComponent implements OnInit {
   }
 
   updateBlogRange(): void {
+
     // console.log('Updating blog range...');
     // console.log('Current Page:', this.currentPage, 'Page Size:', this.pageSize);
 
@@ -151,6 +152,7 @@ export class BlogStyleOneComponent implements OnInit {
   
     this.displayedBlogs = this.blogsData.slice(startBlogs, endBlogs);
     // console.log('Displayed Blogs:', this.displayedBlogs);
+
   }
 
   get totalPages(): number {

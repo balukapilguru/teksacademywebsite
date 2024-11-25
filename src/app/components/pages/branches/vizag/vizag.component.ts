@@ -137,11 +137,11 @@ export class VizagComponent implements OnInit {
 
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Premier Salesforce & Digital Marketing Training in Secunderabad - Teks Academy');
+    this.titleService.setTitle('Learn Data Science & Digital Marketing in Vizag - Teks Academy');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Discover Teks Academy Secunderabad for advanced Salesforce and Digital Marketing courses. Learn from industry experts and enhance your skills.',
+      content: 'Join Teks Academy, the top institute for Data Science and Digital Marketing courses in Vizag. Expert trainers, hands-on learning, and 100% job assistance await you!.',
     });
 
     // Popup form handling
