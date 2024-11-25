@@ -533,6 +533,7 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     ScholarshipProgramComponent,
     DigitalMarketingWebinarComponent,
     SalesforceWebinarComponent,
+    DigitalMarketingWebinarComponent,
     AwsAndDevopsComponent,
     BimWebinarComponent,
     FullStackWebinarComponent,
