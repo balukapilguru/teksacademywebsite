@@ -254,83 +254,41 @@ export class VlsiComponent {
       script.type = 'application/ld+json';
       //   script.id = this.jsonLdScriptId;
       script.text = `
-     { "@context": "https://schema.org/",
-
-"@type": "Product",
-
-"name": "Teks Academy",
-
-"image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.png ",
-
-"description": " Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!",
-
-"mpn": "001",
-
-"sku": "1800-120-4748",
-
-"brand": {
-
-"@type": "brand",
-
-"name": "Teks Academy"
-
-},
-
-"offers": {
-
-"@type": "Offer",
-
-"url": " https://teksacademy.com/courses/best-digital-marketing-course-training-institute ",
-
-"priceCurrency": "INR",
-
-"price": "30000",
-
-"priceValidUntil": "2024-11-10", "availability": "https://schema.org/InStock"
-
-},
-
-"aggregateRating": {
-
-"@type": "AggregateRating",
-
-"ratingValue": "5",
-
-"bestRating": "5",
-
-"worstRating": "1",
-
-"ratingCount": "1283",
-
-"reviewCount": "1283"
-
-},
-
-"review": {
-
-"@type": "Review", "name": "bajjuri phanindragupta",
-
-"reviewBody": " I joined for the digital marketing, the way trainer explains in a practical way and even they provide me a project for hands-on experience, thank you TEKS ACADEMY.",
-
-"reviewRating": {
-
-"@type": "Rating",
-
-"ratingValue": "5",
-
-"bestRating": "5",
-
-"worstRating": "1"
-
-},
-
-"datePublished": "2024-02-11",
-
-"author": {"@type": "Person", "name": "Teks Academy"}
-
+    {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute Ameerpet",
+  "image": "",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-ameerpet",
+  "telephone": "6305459989",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "501, 5th Floor, Green House Building, next to Passport Office, Ameerpet",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500016",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4369137,
+    "longitude": 78.44686449999999
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "06:30"
+  } 
 }
 
-}
       `;
 
       this.renderer.appendChild(this.document.head, script);

@@ -141,14 +141,10 @@ export class SingleCourseFormComponent {
         alert('Invalid Phone Number Format');
         return;
       } else if (!this.sccourse) {
-        console.error('City is Required');
-        alert('City is Required');
+        console.error('Course is Required');
+        alert('Course is Required');
         return;
-      } else if (!/^[a-zA-Z\s]+$/.test(this.sccourse)) {
-        console.error('Invalid City Format');
-        alert('Invalid City Format');
-        return;
-      };
+      } ;
 
 
       this.http.post(environment.apiUrl + '/websiteleads/scform-data', scformdata, {
