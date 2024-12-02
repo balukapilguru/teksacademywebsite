@@ -116,7 +116,7 @@ export class DsformComponent {
           window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Teks+AWS+%26+DevOps+Syllabus+-+QR+(1).pdf'
         } else if (path.includes('testingtools')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Testing+Tools+1.pdf'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/TESTING+Tools.pdf'
         } else if (path.includes('bim-building-information-modeling')) {
           // Set the course name to the ebcourse property
           window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/BIM+(REVIT+CIVIL%2C+REVIT+MEP+%26+NAVIS+WORKS).pdf'
@@ -226,6 +226,19 @@ export class DsformComponent {
           // Set the course name to the ebcourse property
           window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/VBAMACROS.pdf'
         }
+         else if (path.includes('https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Medical+Coding+(1).pdf')) {
+          // Set the course name to the ebcourse property
+          window.location.href = 'best-medical-coding-course-training-institute'
+        }
+        else if (path.includes('https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Multimedia.pdf')) {
+          // Set the course name to the ebcourse property
+          window.location.href = 'best-multimedia-course-training-institute'
+        }
+        else if (path.includes('https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/VLSI+Design+Verification+IE+P+1.pdf')) {
+          // Set the course name to the ebcourse property
+          window.location.href = 'best-vlsi-course-training-institute-hyderabad'
+        }
+      
 
 
 

@@ -36,15 +36,15 @@ export class KukatpallyComponent implements OnInit {
   apiUrl = environment.apiUrl;
 
 
-//  branches: { [key: string]: string } = {
-//     dilsukhnagar: 'Dilsukhnagar',
-//     ameerpet: 'Ameerpet',
-//     hiteccity: 'Hiteccity',
-//     kukatpally: 'Kukatpally',
-//     secunderabad: 'Secunderabad',
-//     visakhapatnam: 'Visakhapatnam'
-//   };
-  
+  //  branches: { [key: string]: string } = {
+  //     dilsukhnagar: 'Dilsukhnagar',
+  //     ameerpet: 'Ameerpet',
+  //     hiteccity: 'Hiteccity',
+  //     kukatpally: 'Kukatpally',
+  //     secunderabad: 'Secunderabad',
+  //     visakhapatnam: 'Visakhapatnam'
+  //   };
+
 
   constructor(
     private _lightbox: Lightbox,
@@ -121,7 +121,7 @@ export class KukatpallyComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    
+
     // const currentPath = this.router.url.split('/').pop() as keyof typeof this.branches; // Type assertion
 
     // if (currentPath && this.branches[currentPath]) {
@@ -268,33 +268,41 @@ export class KukatpallyComponent implements OnInit {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
       script.text = `
-    {
-
-"@context": "http://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy",
-
-"telephone": "1800-120-4748",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "2-22-293, Maruti Complex, Plot No 1, near KPHB Metro, Bhagya Nagar Colony, Kukatpally",
-
-"addressLocality": "Hyderabad",
-
-"addressRegion": "Telangana",
-
-"postalCode": "500085",
-
-"addressCountry": "IN"
-
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute hiteccity",
+  "image": "",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-hiteccity",
+  "telephone": "6281159905",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini Layout Rd, Madhapur",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500018",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4510735,
+    "longitude": 78.38199449999999
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "06:30"
+  } 
 }
 
-}
       `;
       this.renderer.appendChild(this.document.head, script);
     }

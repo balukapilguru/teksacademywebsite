@@ -41,15 +41,15 @@ export class VizagComponent implements OnInit {
   apiUrl = environment.apiUrl;
 
 
-//  branches: { [key: string]: string } = {
-//     dilsukhnagar: 'Dilsukhnagar',
-//     ameerpet: 'Ameerpet',
-//     hiteccity: 'Hiteccity',
-//     kukatpally: 'Kukatpally',
-//     secunderabad: 'Secunderabad',
-//     visakhapatnam: 'Visakhapatnam'
-//   };
-  
+  //  branches: { [key: string]: string } = {
+  //     dilsukhnagar: 'Dilsukhnagar',
+  //     ameerpet: 'Ameerpet',
+  //     hiteccity: 'Hiteccity',
+  //     kukatpally: 'Kukatpally',
+  //     secunderabad: 'Secunderabad',
+  //     visakhapatnam: 'Visakhapatnam'
+  //   };
+
 
   constructor(
     private _lightbox: Lightbox,
@@ -271,32 +271,40 @@ export class VizagComponent implements OnInit {
       script.type = 'application/ld+json';
       script.text = `
 {
-
-"@context": "http://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy",
-
-"telephone": "1800-120-4748",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "H.no: 9-1-127/4, Flat No: 501 & 502, 5th Floor, Amsri Faust Building, S.D. Road",
-
-"addressLocality": "Secunderabad",
-
-"addressRegion": "Telangana",
-
-"postalCode": "500025",
-
-"addressCountry": "IN"
-
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute Ameerpet",
+  "image": "",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-ameerpet",
+  "telephone": "6305459989",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "501, 5th Floor, Green House Building, next to Passport Office, Ameerpet",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500016",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4369137,
+    "longitude": 78.44686449999999
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "06:30"
+  } 
 }
 
-}
       `;
       this.renderer.appendChild(this.document.head, script);
     }

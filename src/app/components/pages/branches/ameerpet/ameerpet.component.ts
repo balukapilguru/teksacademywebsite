@@ -269,33 +269,42 @@ export class AmeerpetComponent implements OnInit {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
       script.text = `
-     {
-
-"@context": "http://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy",
-
-"telephone": "1800-120-4748",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "501, 5th Floor, Green House Building, next to Passport Office",
-
-"addressLocality": "Ameerpet, Hyderabad",
-
-"addressRegion": "Telangana",
-
-"postalCode": "500016",
-
-"addressCountry": "IN"
-
+  {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute Ameerpet",
+  "image": "",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-ameerpet",
+  "telephone": "6305459989",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "501, 5th Floor, Green House Building, next to Passport Office, Ameerpet",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500016",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4369137,
+    "longitude": 78.44686449999999
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "06:30"
+  } 
 }
 
-}
+
       `;
       this.renderer.appendChild(this.document.head, script);
     }

@@ -36,7 +36,7 @@ export class DilsukhnagarComponent implements OnInit {
   //   secunderabad: 'Secunderabad',
   //   visakhapatnam: 'Visakhapatnam'
   // };
-  
+
   public _album: {
     src: string;
     caption: string;
@@ -261,15 +261,21 @@ export class DilsukhnagarComponent implements OnInit {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
       script.text = `
-    {
+{
 
-"@context": "http://schema.org",
+"@context": "https://schema.org",
 
 "@type": "LocalBusiness",
 
-"name": "Teks Academy",
+"name": "Teks Academy - Best Software Training Institute dilsukhnagar",
 
-"telephone": "1800-120-4748",
+"image": "",
+
+"@id": "",
+
+"url": "https://teksacademy.com/branch/best-software-training-institute-dilsukhnagar",
+
+"telephone": "6305481131",
 
 "address": {
 
@@ -279,15 +285,51 @@ export class DilsukhnagarComponent implements OnInit {
 
 "addressLocality": "Hyderabad",
 
-"addressRegion": "Telangana",
-
 "postalCode": "500060",
 
 "addressCountry": "IN"
 
+},
+
+"geo": {
+
+"@type": "GeoCoordinates",
+
+"latitude": 17.3671482,
+
+"longitude": 78.5407772
+
+},
+
+"openingHoursSpecification": {
+
+"@type": "OpeningHoursSpecification",
+
+"dayOfWeek": [
+
+"Monday",
+
+"Tuesday",
+
+"Wednesday",
+
+"Thursday",
+
+"Friday",
+
+"Saturday"
+
+],
+
+"opens": "09:30",
+
+"closes": "06:30"
+
 }
 
 }
+             
+
       `;
       this.renderer.appendChild(this.document.head, script);
     }

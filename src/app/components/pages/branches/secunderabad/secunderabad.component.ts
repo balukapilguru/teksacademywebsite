@@ -267,32 +267,40 @@ export class SecunderabadComponent implements OnInit {
       script.type = 'application/ld+json';
       script.text = `
 {
-
-"@context": "http://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy",
-
-"telephone": "1800-120-4748",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "H.no: 9-1-127/4, Flat No: 501 & 502, 5th Floor, Amsri Faust Building, S.D. Road",
-
-"addressLocality": "Secunderabad",
-
-"addressRegion": "Telangana",
-
-"postalCode": "500025",
-
-"addressCountry": "IN"
-
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute hiteccity",
+  "image": "",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-hiteccity",
+  "telephone": "6281159905",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini Layout Rd, Madhapur",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500018",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4510735,
+    "longitude": 78.38199449999999
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:30",
+    "closes": "06:30"
+  } 
 }
 
-}
       `;
       this.renderer.appendChild(this.document.head, script);
     }
