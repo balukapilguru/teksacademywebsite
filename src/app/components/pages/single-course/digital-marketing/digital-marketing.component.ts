@@ -302,9 +302,9 @@ export class DigitalMarketingComponent implements OnInit {
 
 "worstRating": "1",
 
-"ratingCount": "1525",
+"ratingCount": "1753",
 
-"reviewCount": "1525"
+"reviewCount": "1753"
 
 },
 

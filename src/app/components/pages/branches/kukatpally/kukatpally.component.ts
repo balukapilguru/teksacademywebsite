@@ -269,38 +269,71 @@ export class KukatpallyComponent implements OnInit {
       script.type = 'application/ld+json';
       script.text = `
 {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Teks Academy - Best Software Training Institute hiteccity",
-  "image": "",
-  "@id": "",
-  "url": "https://teksacademy.com/branch/best-software-training-institute-hiteccity",
-  "telephone": "6281159905",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini Layout Rd, Madhapur",
-    "addressLocality": "Hyderabad",
-    "postalCode": "500018",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 17.4510735,
-    "longitude": 78.38199449999999
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:30",
-    "closes": "06:30"
-  } 
+
+"@context": "https://schema.org",
+
+"@type": "LocalBusiness",
+
+"name": "Teks Academy - Best Software Training Institute kukatpally",
+
+"image": "",
+
+"@id": "",
+
+"url": "https://teksacademy.com/branch/best-software-training-institute-kukatpally",
+
+"telephone": "9182278093",
+
+"address": {
+
+"@type": "PostalAddress",
+
+"streetAddress": "2-22-293, Maruti Complex, Plot No 1, near KPHB Metro, Bhagya Nagar Colony, Kukatpally",
+
+"addressLocality": "Hyderabad",
+
+"postalCode": "500085",
+
+"addressCountry": "IN"
+
+},
+
+"geo": {
+
+"@type": "GeoCoordinates",
+
+"latitude": 17.4937761,
+
+"longitude": 78.4017033
+
+},
+
+"openingHoursSpecification": {
+
+"@type": "OpeningHoursSpecification",
+
+"dayOfWeek": [
+
+"Monday",
+
+"Tuesday",
+
+"Wednesday",
+
+"Thursday",
+
+"Friday",
+
+"Saturday"
+
+],
+
+"opens": "09:30",
+
+"closes": "06:30"
+
+}
+
 }
 
       `;

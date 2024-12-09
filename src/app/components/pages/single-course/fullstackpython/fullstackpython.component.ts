@@ -358,9 +358,9 @@ export class FullstackpythonComponent {
       
       "worstRating": "1",
       
-      "ratingCount": "1525",
+      "ratingCount": "1902",
       
-      "reviewCount": "1525"
+      "reviewCount": "1902"
       
       },
       

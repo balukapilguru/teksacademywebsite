@@ -317,9 +317,9 @@ export class FullstackjavaComponent {
 
 "worstRating": "1",
 
-"ratingCount": "1525",
+"ratingCount": "1844",
 
-"reviewCount": "1525"
+"reviewCount": "1844"
 
 },
 
