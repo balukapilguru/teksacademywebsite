@@ -270,41 +270,74 @@ export class VizagComponent implements OnInit {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
       script.text = `
+
 {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Teks Academy - Best Software Training Institute Ameerpet",
-  "image": "",
-  "@id": "",
-  "url": "https://teksacademy.com/branch/best-software-training-institute-ameerpet",
-  "telephone": "6305459989",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "501, 5th Floor, Green House Building, next to Passport Office, Ameerpet",
-    "addressLocality": "Hyderabad",
-    "postalCode": "500016",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 17.4369137,
-    "longitude": 78.44686449999999
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:30",
-    "closes": "06:30"
-  } 
+
+"@context": "https://schema.org",
+
+"@type": "LocalBusiness",
+
+"name": "Teks Academy - Best Software Training Institute Visakhapatnam",
+
+"image": "",
+
+"@id": "",
+
+"url": "https://teksacademy.com/branch/best-software-training-institute-visakhapatnam",
+
+"telephone": "9133308352",
+
+"address": {
+
+"@type": "PostalAddress",
+
+"streetAddress": "3rd Floor, Pavan Towers, Dwaraka Nagar 1st Lane, Opp Budhil Park",
+
+"addressLocality": "Visakhapatnam",
+
+"postalCode": "530016",
+
+"addressCountry": "IN"
+
+},
+
+"geo": {
+
+"@type": "GeoCoordinates",
+
+"latitude": 17.7258656,
+
+"longitude": 83.30648769999999
+
+},
+
+"openingHoursSpecification": {
+
+"@type": "OpeningHoursSpecification",
+
+"dayOfWeek": [
+
+"Monday",
+
+"Tuesday",
+
+"Wednesday",
+
+"Thursday",
+
+"Friday",
+
+"Saturday"
+
+],
+
+"opens": "09:30",
+
+"closes": "06:30"
+
 }
 
+}
       `;
       this.renderer.appendChild(this.document.head, script);
     }

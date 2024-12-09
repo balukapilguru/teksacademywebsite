@@ -254,40 +254,36 @@ export class VlsiComponent {
       script.type = 'application/ld+json';
       //   script.id = this.jsonLdScriptId;
       script.text = `
-    {
+  
+  {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Teks Academy - Best Software Training Institute Ameerpet",
-  "image": "",
-  "@id": "",
-  "url": "https://teksacademy.com/branch/best-software-training-institute-ameerpet",
-  "telephone": "6305459989",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "501, 5th Floor, Green House Building, next to Passport Office, Ameerpet",
-    "addressLocality": "Hyderabad",
-    "postalCode": "500016",
-    "addressCountry": "IN"
+  "@type": "Course",
+  "name": "Best VLSI Training Institute in Hyderabad",
+  "description": " Teks Academy is a top VLSI training institute in Hyderabad, offering expert-led courses in VLSI design, digital circuit design, and verification. Our curriculum is tailored for engineering students and professionals, providing hands-on training with industry-standard tools. Students benefit from real-world projects, experienced trainers, and strong placement support to help them succeed in the semiconductor field. ",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Teksacademy",
+    "url": "https://teksacademy.com/"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 17.4369137,
-    "longitude": 78.44686449999999
+  "courseMode": "Online or In-Person",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "Students or Professionals"
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:30",
-    "closes": "06:30"
-  } 
+  "educationalLevel": "Beginner, Intermediate, or Advanced",
+     "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": " H.no: 9- 1-127/4, Flat No: 501 & 502 5th Floor, Amsri Faust Building, S.D. Road, Secunderabad ",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "India"
+      }
+    }
+  }
 }
+
 
       `;
 

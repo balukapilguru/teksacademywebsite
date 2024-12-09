@@ -214,8 +214,8 @@ export class DataScienceComponent implements OnInit{
           "ratingValue": "5",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "1525",
-          "reviewCount": "1525"
+          "ratingCount": "1630",
+          "reviewCount": "1630"
         },
         
         "review": {
