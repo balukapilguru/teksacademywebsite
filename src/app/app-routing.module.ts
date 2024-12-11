@@ -11,8 +11,8 @@ import { ModernSchoolingComponent } from './components/pages/modern-schooling/mo
 import { YogaTrainingComponent } from './components/pages/yoga-training/yoga-training.component';
 import { HealthCoachingComponent } from './components/pages/health-coaching/health-coaching.component';
 import { KindergartenComponent } from './components/pages/kindergarten/kindergarten.component';
-// import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
-// import { GalleryComponent } from './components/pages/gallery/gallery.component';
+// import { ContactUsComponent }from './components/pages/contact-us/contact-us.component';
+// import { GalleryComponent }  from './components/pages/gallery/gallery.component';
 // import { AboutStyleOneComponent } from './components/pages/about-style-one/about-style-one.component';
 import { AboutStyleTwoComponent } from './components/pages/about-style-two/about-style-two.component';
 import { AboutStyleThreeComponent } from './components/pages/about-style-three/about-style-three.component';
@@ -221,20 +221,20 @@ const routes: Routes = [
         (m) => m.EnquiryFormModule
       ),
   },
-  {
-    path: 'slp-enquiry-form',
-    loadChildren: () =>
-      import('./components/pages/slp-enuiry-form/slp-enuiry-form.module').then(
-        (m) => m.SlpEnuiryFormModule
-      ),
-  },
-  {
-    path: 'scholarship-program',
-    loadChildren: () =>
-      import(
-        './components/pages/scholarship-program/scholarship-program.module'
-      ).then((m) => m.ScholarshipProgramModule),
-  },
+  // {
+  //   path: 'slp-enquiry-form',
+  //   loadChildren: () =>
+  //     import('./components/pages/slp-enuiry-form/slp-enuiry-form.module').then(
+  //       (m) => m.SlpEnuiryFormModule
+  //     ),
+  // },
+  // {
+  //   path: 'scholarship-program',
+  //   loadChildren: () =>
+  //     import(
+  //       './components/pages/scholarship-program/scholarship-program.module'
+  //     ).then((m) => m.ScholarshipProgramModule),
+  // },
   // webinar landing
   {
     path: 'workshops',
@@ -279,133 +279,130 @@ const routes: Routes = [
         './components/pages/webinars/data-science-webinar/data-science-webinar.module'
       ).then((m) => m.DataScienceWebinarModule),
   },
-
-  { path: 'course-page', component: CoursePageComponent },
-  { path: 'preload', component: PreloaderComponent },
-  {
-    path: 'vendor-certification-etraining',
-    component: VendorCertificationEtrainingComponent,
-  },
-  { path: 'online-training-school', component: OnlineTrainingSchoolComponent },
-  { path: 'distance-learning', component: DistanceLearningComponent },
-  { path: 'language-school', component: LanguageSchoolComponent },
-  { path: 'modern-schooling', component: ModernSchoolingComponent },
-  { path: 'yoga-training', component: YogaTrainingComponent },
-  { path: 'health-coaching', component: HealthCoachingComponent },
-  { path: 'kindergarten', component: KindergartenComponent },
-  { path: 'gym-coaching', component: GymCoachingComponent },
-  { path: 'learning-management', component: LearningManagementComponent },
-  // {path: 'about-us', component: AboutStyleOneComponent},
-  { path: 'about-2', component: AboutStyleTwoComponent },
-  { path: 'about-3', component: AboutStyleThreeComponent },
-  { path: 'about-4', component: AboutStyleFourComponent },
-  { path: 'success-story', component: SuccessStoryComponent },
-  { path: 'teacher', component: TeacherComponent },
-  { path: 'profile-authentication', component: ProfileAuthenticationComponent },
-  { path: 'faq', component: FaqComponent },
-  { path: 'coming-soon', component: ComingSoonComponent },
-  { path: 'purchase-guide', component: PurchaseGuideComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'terms-of-service', component: TermsOfServiceComponent },
-  { path: 'courses-2', component: CoursesStyleTwoComponent },
-  { path: 'courses-3', component: CoursesStyleThreeComponent },
-  { path: 'courses-4', component: CoursesStyleFourComponent },
-  { path: 'courses-5', component: CoursesStyleFiveComponent },
-  { path: 'courses-6', component: CoursesStyleSixComponent },
-  { path: 'courses-7', component: CoursesStyleSevenComponent },
-  { path: 'single-courses-1', component: CoursesDetailsStyleOneComponent },
-  { path: 'single-courses-2', component: CoursesDetailsStyleTwoComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'profile-quiz', component: ProfileQuizComponent },
-  { path: 'membership-levels', component: MembershipLevelsComponent },
-  { path: 'become-a-teacher', component: BecomeATeacherComponent },
-  { path: 'old-categories', component: CategoriesComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'single-events', component: EventsDetailsComponent },
-  { path: 'products-list-1', component: ProductsListStyleOneComponent },
-  { path: 'products-list-2', component: ProductsListStyleTwoComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent },
-  { path: 'single-products', component: ProductsDetailsComponent },
+  // { path: 'course-page', component: CoursePageComponent },
+  // { path: 'preload', component: PreloaderComponent },
+  // {
+  //   path: 'vendor-certification-etraining',
+  //   component: VendorCertificationEtrainingComponent,
+  // },
+  // { path: 'online-training-school', component: OnlineTrainingSchoolComponent },
+  // { path: 'distance-learning', component: DistanceLearningComponent },
+  // { path: 'language-school', component: LanguageSchoolComponent },
+  // { path: 'modern-schooling', component: ModernSchoolingComponent },
+  // { path: 'yoga-training', component: YogaTrainingComponent },
+  // { path: 'health-coaching', component: HealthCoachingComponent },
+  // { path: 'kindergarten', component: KindergartenComponent },
+  // { path: 'gym-coaching', component: GymCoachingComponent },
+  // { path: 'learning-management', component: LearningManagementComponent },
+  // {path: 'about-us', component: AboutStyleOneComponent},
+  // { path: 'about-2', component: AboutStyleTwoComponent },
+  // { path: 'about-3', component: AboutStyleThreeComponent },
+  // { path: 'about-4', component: AboutStyleFourComponent },
+  // { path: 'success-story', component: SuccessStoryComponent },
+  // { path: 'teacher', component: TeacherComponent },
+  // { path: 'profile-authentication', component: ProfileAuthenticationComponent },
+  // { path: 'faq', component: FaqComponent },
+  // { path: 'coming-soon', component: ComingSoonComponent },
+  // { path: 'purchase-guide', component: PurchaseGuideComponent },
+
+  // { path: 'courses-2', component: CoursesStyleTwoComponent },
+  // { path: 'courses-3', component: CoursesStyleThreeComponent },
+  // { path: 'courses-4', component: CoursesStyleFourComponent },
+  // { path: 'courses-5', component: CoursesStyleFiveComponent },
+  // { path: 'courses-6', component: CoursesStyleSixComponent },
+  // { path: 'courses-7', component: CoursesStyleSevenComponent },
+  // { path: 'single-courses-1', component: CoursesDetailsStyleOneComponent },
+  // { path: 'single-courses-2', component: CoursesDetailsStyleTwoComponent },
+  // { path: 'profile', component: ProfileComponent },
+  // { path: 'profile-quiz', component: ProfileQuizComponent },
+  // { path: 'membership-levels', component: MembershipLevelsComponent },
+  // { path: 'become-a-teacher', component: BecomeATeacherComponent },
+  // { path: 'old-categories', component: CategoriesComponent },
+  // { path: 'events', component: EventsComponent },
+  // { path: 'single-events', component: EventsDetailsComponent },
+  // { path: 'products-list-1', component: ProductsListStyleOneComponent },
+  // { path: 'products-list-2', component: ProductsListStyleTwoComponent },
+  // { path: 'cart', component: CartComponent },
+  // { path: 'checkout', component: CheckoutComponent },
+  // { path: 'single-products', component: ProductsDetailsComponent },
   // {path: 'gallery', component: GalleryComponent},
   { path: 'blog-1', component: BlogStyleOneComponent },
-  { path: 'blog-2', component: BlogStyleTwoComponent },
-  { path: 'blog-3', component: BlogStyleThreeComponent },
-  { path: 'blog-4', component: BlogStyleFourComponent },
-  { path: 'blog-5', component: BlogStyleFiveComponent },
+  // { path: 'blog-2', component: BlogStyleTwoComponent },
+  // { path: 'blog-3', component: BlogStyleThreeComponent },
+  // { path: 'blog-4', component: BlogStyleFourComponent },
+  // { path: 'blog-5', component: BlogStyleFiveComponent },
   { path: 'single-blog-1/:id', component: BlogDetailsStyleOneComponent },
-  { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
-  { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
+  // { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
+  // { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
   // {path: 'contact', component: ContactUsComponent},
-  { path: 'courses/react-js', component: ReactjsComponent },
-  { path: 'courses/hvac', component: HvacComponent },
-  { path: 'courses/3ds-max-2', component: ThreedsmaxComponent },
-  { path: 'courses/full-stack-python', component: FullstackpythonComponent },
-  { path: 'courses/staad-pro', component: StaadproComponent },
-  { path: 'courses/primavera', component: PrimaveraComponent },
-  { path: 'courses/full-stack-java', component: FullstackjavaComponent },
-  { path: 'courses/revit-structure', component: RevitstructureComponent },
-  { path: 'courses/manual-testing', component: ManualtestingComponent },
-  {
-    path: 'courses/artificial-intelligence',
-    component: ArtificialIntelligenceComponent,
-  },
-  { path: 'courses/bim-course', component: BimComponent },
-  { path: 'courses/sketching', component: SketchingComponent },
-  { path: 'courses/devops', component: DevopsComponent },
-  { path: 'courses/revit-mep', component: RevitMepComponent },
-  { path: 'courses/c', component: CplusplusComponent },
-  { path: 'courses/c-language', component: CLanguageComponent },
-  { path: 'courses/python-developer', component: PythonComponent },
-  { path: 'courses/autocad', component: AutoCADComponent },
-  { path: 'courses/revit', component: RevitComponent },
-  { path: 'courses/sql', component: SqlComponent },
-  { path: 'courses/power-bi', component: PowerBIComponent },
-  { path: 'courses/tableau', component: TableauComponent },
-  { path: 'courses/business-analytics', component: BusinessAnalyticsComponent },
-  { path: 'courses/ielts', component: IeltsComponent },
-  { path: 'courses/advance-excel', component: AdvanceExcelComponent },
-  { path: 'courses/salesforce-course', component: SalesforceComponent },
-  // {path: 'courses/digital-marketing', component: DigitalMarketingComponent},
-  { path: 'courses/aws', component: AwsComponent },
-  { path: 'courses/data-analytics', component: DataAnalyticsComponent },
-  { path: 'courses/data-science', component: DataScienceComponent },
-  { path: 'sidebar', component: SingleCourseSidebarComponent },
-  { path: 'student-journey', component: StudentJourneyComponent },
-  {
-    path: 'student-video-testimonals',
-    component: StudentsVideoTestimonalsComponent,
-  },
-  { path: 'categories', component: TopCourseCategoriesComponent },
-  { path: 'updates', component: UpdatesComponent },
-  { path: 'popular-courses', component: PopularcoursesComponent },
-  { path: 'dsform', component: DsformComponent },
+  // { path: 'courses/react-js', component: ReactjsComponent },
+  // { path: 'courses/hvac', component: HvacComponent },
+  // { path: 'courses/3ds-max-2', component: ThreedsmaxComponent },
+  // { path: 'courses/full-stack-python', component: FullstackpythonComponent },
+  // { path: 'courses/staad-pro', component: StaadproComponent },
+  // { path: 'courses/primavera', component: PrimaveraComponent },
+  // { path: 'courses/full-stack-java', component: FullstackjavaComponent },
+  // { path: 'courses/revit-structure', component: RevitstructureComponent },
+  // { path: 'courses/manual-testing', component: ManualtestingComponent },
+  // {
+  //   path: 'courses/artificial-intelligence',
+  //   component: ArtificialIntelligenceComponent,
+  // },
+  // { path: 'courses/bim-course', component: BimComponent },
+  // { path: 'courses/sketching', component: SketchingComponent },
+  // { path: 'courses/devops', component: DevopsComponent },
+  // { path: 'courses/revit-mep', component: RevitMepComponent },
+  // { path: 'courses/c', component: CplusplusComponent },
+  // { path: 'courses/c-language', component: CLanguageComponent },
+  // { path: 'courses/python-developer', component: PythonComponent },
+  // { path: 'courses/autocad', component: AutoCADComponent },
+  // { path: 'courses/revit', component: RevitComponent },
+  // { path: 'courses/sql', component: SqlComponent },
+  // { path: 'courses/power-bi', component: PowerBIComponent },
+  // { path: 'courses/tableau', component: TableauComponent },
+  // { path: 'courses/business-analytics', component: BusinessAnalyticsComponent },
+  // { path: 'courses/ielts', component: IeltsComponent },
+  // { path: 'courses/advance-excel', component: AdvanceExcelComponent },
+  // { path: 'courses/salesforce-course', component: SalesforceComponent },
+  // // {path: 'courses/digital-marketing', component: DigitalMarketingComponent},
+  // { path: 'courses/aws', component: AwsComponent },
+  // { path: 'courses/data-analytics', component: DataAnalyticsComponent },
+  // { path: 'courses/data-science', component: DataScienceComponent },
+  // { path: 'sidebar', component: SingleCourseSidebarComponent },
+  // { path: 'student-journey', component: StudentJourneyComponent },
+  // { path: 'student-video-testimonals', component: StudentsVideoTestimonalsComponent},
+  // { path: 'categories', component: TopCourseCategoriesComponent },
+  // { path: 'updates', component: UpdatesComponent },
+  // { path: 'popular-courses', component: PopularcoursesComponent },
+  // { path: 'dsform', component: DsformComponent },
   // {path: 'enquiry-form', component: EnquiryFormComponent},
   // {path: 'slp-enquiry-form', component: SlpEnuiryFormComponent},
-  {
-    path: 'courses/post-graduate-diploma-in-computer-application-pgdca-self-learning-program',
-    component: SlpPgdcaComponent,
-  },
-  {
-    path: 'courses/digital-marketing-self-learning-program',
-    component: SlpDigitalMarketingComponent,
-  },
+  // {
+  //   path: 'courses/post-graduate-diploma-in-computer-application-pgdca-self-learning-program',
+  //   component: SlpPgdcaComponent,
+  // },
+  // {
+  //   path: 'courses/digital-marketing-self-learning-program',
+  //   component: SlpDigitalMarketingComponent,
+  // },
 { path:'courses/best-vlsi-course-training-institute-hyderabad', component:VlsiComponent},
-  { path: 'slp-overview-form', component: SlpOverviewFormComponent },
-  { path: 'placements', component: PlacementsComponent },
-  { path: 'our-gallery', component: OurGalleryComponent },
-  { path: 'tesing-from', component: TestingFormComponent },
+  // { path: 'slp-overview-form', component: SlpOverviewFormComponent },
+  // { path: 'placements', component: PlacementsComponent },
+  // { path: 'our-gallery', component: OurGalleryComponent },
+  // { path: 'tesing-from', component: TestingFormComponent },
   // {path: 'testimonals', component: TestimonialComponent},
-  { path: 'students-placements', component: StudentsPlacementsComponent },
+  // { path: 'students-placements', component: StudentsPlacementsComponent },
   // {path: 'media', component: MediaComponent},
   { path: 'thank-you', component: ThankYouComponent },
-  { path: 'slp-courses', component: SlpCoursesComponent },
-  { path: 'course-category/in-demand', component: IndemandCoursesComponent },
-  { path: 'course-category/popular', component: PopularCoursesComponent },
-  { path: 'course-category/essential', component: FoundationCoursesComponent },
-  { path: 'course-category/foundation', component: EssentialCoursesComponent },
-  { path: 'whatsappform', component: WhatsAppFormComponent },
-  { path: 'post-graduate-program', component: PgpComponent },
+  // { path: 'slp-courses', component: SlpCoursesComponent },
+  // { path: 'course-category/in-demand', component: IndemandCoursesComponent },
+  // { path: 'course-category/popular', component: PopularCoursesComponent },
+  // { path: 'course-category/essential', component: FoundationCoursesComponent },
+  // { path: 'course-category/foundation', component: EssentialCoursesComponent },
+  // { path: 'whatsappform', component: WhatsAppFormComponent },
+  // { path: 'post-graduate-program', component: PgpComponent },
   { path: 'workshop/medical-coding', component: MedicalcodingWebinarComponent },
   { path: 'job', component: CompanyComponent },
   { path: 'thankyoupage', component: ThankyoupageComponent },
@@ -429,27 +426,27 @@ const routes: Routes = [
         './components/pages/elearning-school/elearning-school.module'
       ).then((m) => m.ElearningSchoolModule),
   },
-  {
-    path: 'about-us',
-    loadChildren: () =>
-      import('./components/pages/about-style-one/about-style-one.module').then(
-        (m) => m.AboutStyleOneModule
-      ),
-  },
-  {
-    path: 'testimonals',
-    loadChildren: () =>
-      import('./components/common/testimonial/testimonial.module').then(
-        (m) => m.TestimonialModule
-      ),
-  },
-  {
-    path: 'media',
-    loadChildren: () =>
-      import('./components/pages/media/media.module').then(
-        (m) => m.MediaModule
-      ),
-  },
+  // {
+  //   path: 'about-us',
+  //   loadChildren: () =>
+  //     import('./components/pages/about-style-one/about-style-one.module').then(
+  //       (m) => m.AboutStyleOneModule
+  //     ),
+  // },
+  // {
+  //   path: 'testimonals',
+  //   loadChildren: () =>
+  //     import('./components/common/testimonial/testimonial.module').then(
+  //       (m) => m.TestimonialModule
+  //     ),
+  // },
+  // {
+  //   path: 'media',
+  //   loadChildren: () =>
+  //     import('./components/pages/media/media.module').then(
+  //       (m) => m.MediaModule
+  //     ),
+  // },
   {
     path: 'course',
     loadChildren: () =>
@@ -457,41 +454,41 @@ const routes: Routes = [
         './components/pages/courses-style-one/courses-style-one.module'
       ).then((m) => m.CoursesStyleOneModule),
   },
-  {
-    path: 'gallery',
-    loadChildren: () =>
-      import('./components/pages/gallery/gallery.module').then(
-        (m) => m.GalleryModule
-      ),
-  },
-  {
-    path: 'contact',
-    loadChildren: () =>
-      import('./components/pages/contact-us/contact-us.module').then(
-        (m) => m.ContactUsModule
-      ),
-  },
-  {
-    path: 'enquiry-form',
-    loadChildren: () =>
-      import('./components/pages/enquiry-form/enquiry-form.module').then(
-        (m) => m.EnquiryFormModule
-      ),
-  },
-  {
-    path: 'slp-enquiry-form',
-    loadChildren: () =>
-      import('./components/pages/slp-enuiry-form/slp-enuiry-form.module').then(
-        (m) => m.SlpEnuiryFormModule
-      ),
-  },
-  {
-    path: 'scholarship-program',
-    loadChildren: () =>
-      import(
-        './components/pages/scholarship-program/scholarship-program.module'
-      ).then((m) => m.ScholarshipProgramModule),
-  },
+  // {
+  //   path: 'gallery',
+  //   loadChildren: () =>
+  //     import('./components/pages/gallery/gallery.module').then(
+  //       (m) => m.GalleryModule
+  //     ),
+  // },
+  // {
+  //   path: 'contact',
+  //   loadChildren: () =>
+  //     import('./components/pages/contact-us/contact-us.module').then(
+  //       (m) => m.ContactUsModule
+  //     ),
+  // },
+  // {
+  //   path: 'enquiry-form',
+  //   loadChildren: () =>
+  //     import('./components/pages/enquiry-form/enquiry-form.module').then(
+  //       (m) => m.EnquiryFormModule
+  //     ),
+  // },
+  // {
+  //   path: 'slp-enquiry-form',
+  //   loadChildren: () =>
+  //     import('./components/pages/slp-enuiry-form/slp-enuiry-form.module').then(
+  //       (m) => m.SlpEnuiryFormModule
+  //     ),
+  // },
+  // {
+  //   path: 'scholarship-program',
+  //   loadChildren: () =>
+  //     import(
+  //       './components/pages/scholarship-program/scholarship-program.module'
+  //     ).then((m) => m.ScholarshipProgramModule),
+  // },
   // webinar landing
   {
     path: 'workshops',
@@ -544,133 +541,133 @@ const routes: Routes = [
       ).then((m) => m.DataScienceWebinarModule),
   },
 
-  { path: 'course-page', component: CoursePageComponent },
-  { path: 'preload', component: PreloaderComponent },
-  {
-    path: 'vendor-certification-etraining',
-    component: VendorCertificationEtrainingComponent,
-  },
-  { path: 'online-training-school', component: OnlineTrainingSchoolComponent },
-  { path: 'distance-learning', component: DistanceLearningComponent },
-  { path: 'language-school', component: LanguageSchoolComponent },
-  { path: 'modern-schooling', component: ModernSchoolingComponent },
-  { path: 'yoga-training', component: YogaTrainingComponent },
-  { path: 'health-coaching', component: HealthCoachingComponent },
-  { path: 'kindergarten', component: KindergartenComponent },
-  { path: 'gym-coaching', component: GymCoachingComponent },
-  { path: 'learning-management', component: LearningManagementComponent },
+  // { path: 'course-page', component: CoursePageComponent },
+  // { path: 'preload', component: PreloaderComponent },
+  // {
+  //   path: 'vendor-certification-etraining',
+  //   component: VendorCertificationEtrainingComponent,
+  // },
+  // { path: 'online-training-school', component: OnlineTrainingSchoolComponent },
+  // { path: 'distance-learning', component: DistanceLearningComponent },
+  // { path: 'language-school', component: LanguageSchoolComponent },
+  // { path: 'modern-schooling', component: ModernSchoolingComponent },
+  // { path: 'yoga-training', component: YogaTrainingComponent },
+  // { path: 'health-coaching', component: HealthCoachingComponent },
+  // { path: 'kindergarten', component: KindergartenComponent },
+  // { path: 'gym-coaching', component: GymCoachingComponent },
+  // { path: 'learning-management', component: LearningManagementComponent },
   // {path: 'about-us', component: AboutStyleOneComponent},
-  { path: 'about-2', component: AboutStyleTwoComponent },
-  { path: 'about-3', component: AboutStyleThreeComponent },
-  { path: 'about-4', component: AboutStyleFourComponent },
-  { path: 'success-story', component: SuccessStoryComponent },
-  { path: 'teacher', component: TeacherComponent },
-  { path: 'profile-authentication', component: ProfileAuthenticationComponent },
-  { path: 'faq', component: FaqComponent },
-  { path: 'coming-soon', component: ComingSoonComponent },
-  { path: 'purchase-guide', component: PurchaseGuideComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  // { path: 'about-2', component: AboutStyleTwoComponent },
+  // { path: 'about-3', component: AboutStyleThreeComponent },
+  // { path: 'about-4', component: AboutStyleFourComponent },
+  // { path: 'success-story', component: SuccessStoryComponent },
+  // { path: 'teacher', component: TeacherComponent },
+  // { path: 'profile-authentication', component: ProfileAuthenticationComponent },
+  // { path: 'faq', component: FaqComponent },
+  // { path: 'coming-soon', component: ComingSoonComponent },
+  // { path: 'purchase-guide', component: PurchaseGuideComponent },
+  // { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'terms-of-service', component: TermsOfServiceComponent },
   // {path: 'course', component: CoursesStyleOneComponent},
-  { path: 'courses-2', component: CoursesStyleTwoComponent },
-  { path: 'courses-3', component: CoursesStyleThreeComponent },
-  { path: 'courses-4', component: CoursesStyleFourComponent },
-  { path: 'courses-5', component: CoursesStyleFiveComponent },
-  { path: 'courses-6', component: CoursesStyleSixComponent },
-  { path: 'courses-7', component: CoursesStyleSevenComponent },
-  { path: 'single-courses-1', component: CoursesDetailsStyleOneComponent },
-  { path: 'single-courses-2', component: CoursesDetailsStyleTwoComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'profile-quiz', component: ProfileQuizComponent },
-  { path: 'membership-levels', component: MembershipLevelsComponent },
-  { path: 'become-a-teacher', component: BecomeATeacherComponent },
-  { path: 'old-categories', component: CategoriesComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'single-events', component: EventsDetailsComponent },
-  { path: 'products-list-1', component: ProductsListStyleOneComponent },
-  { path: 'products-list-2', component: ProductsListStyleTwoComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent },
-  { path: 'single-products', component: ProductsDetailsComponent },
+  // { path: 'courses-2', component: CoursesStyleTwoComponent },
+  // { path: 'courses-3', component: CoursesStyleThreeComponent },
+  // { path: 'courses-4', component: CoursesStyleFourComponent },
+  // { path: 'courses-5', component: CoursesStyleFiveComponent },
+  // { path: 'courses-6', component: CoursesStyleSixComponent },
+  // { path: 'courses-7', component: CoursesStyleSevenComponent },
+  // { path: 'single-courses-1', component: CoursesDetailsStyleOneComponent },
+  // { path: 'single-courses-2', component: CoursesDetailsStyleTwoComponent },
+  // { path: 'profile', component: ProfileComponent },
+  // { path: 'profile-quiz', component: ProfileQuizComponent },
+  // { path: 'membership-levels', component: MembershipLevelsComponent },
+  // { path: 'become-a-teacher', component: BecomeATeacherComponent },
+  // { path: 'old-categories', component: CategoriesComponent },
+  // { path: 'events', component: EventsComponent },
+  // { path: 'single-events', component: EventsDetailsComponent },
+  // { path: 'products-list-1', component: ProductsListStyleOneComponent },
+  // { path: 'products-list-2', component: ProductsListStyleTwoComponent },
+  // { path: 'cart', component: CartComponent },
+  // { path: 'checkout', component: CheckoutComponent },
+  // { path: 'single-products', component: ProductsDetailsComponent },
   // {path: 'gallery', component: GalleryComponent},
   { path: 'blogs', component: BlogStyleOneComponent },
-  { path: 'blog-2', component: BlogStyleTwoComponent },
-  { path: 'blog-3', component: BlogStyleThreeComponent },
-  { path: 'blog-4', component: BlogStyleFourComponent },
-  { path: 'blog-5', component: BlogStyleFiveComponent },
+  // { path: 'blog-2', component: BlogStyleTwoComponent },
+  // { path: 'blog-3', component: BlogStyleThreeComponent },
+  // { path: 'blog-4', component: BlogStyleFourComponent },
+  // { path: 'blog-5', component: BlogStyleFiveComponent },
   { path: 'single-blog-1/:id', component: BlogDetailsStyleOneComponent },
-  { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
-  { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
+  // { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
+  // { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
   // {path: 'contact', component: ContactUsComponent},
-  { path: 'courses/react-js', component: ReactjsComponent },
-  { path: 'courses/hvac', component: HvacComponent },
-  { path: 'courses/3ds-max-2', component: ThreedsmaxComponent },
-  { path: 'courses/full-stack-python', component: FullstackpythonComponent },
-  { path: 'courses/staad-pro', component: StaadproComponent },
-  { path: 'courses/primavera', component: PrimaveraComponent },
-  { path: 'courses/full-stack-java', component: FullstackjavaComponent },
-  { path: 'courses/revit-structure', component: RevitstructureComponent },
-  { path: 'courses/manual-testing', component: ManualtestingComponent },
+  // { path: 'courses/react-js', component: ReactjsComponent },
+  // { path: 'courses/hvac', component: HvacComponent },
+  // { path: 'courses/3ds-max-2', component: ThreedsmaxComponent },
+  // { path: 'courses/full-stack-python', component: FullstackpythonComponent },
+  // { path: 'courses/staad-pro', component: StaadproComponent },
+  // { path: 'courses/primavera', component: PrimaveraComponent },
+  // { path: 'courses/full-stack-java', component: FullstackjavaComponent },
+  // { path: 'courses/revit-structure', component: RevitstructureComponent },
+  // { path: 'courses/manual-testing', component: ManualtestingComponent },
 
-  {
-    path: 'courses/artificial-intelligence',
-    component: ArtificialIntelligenceComponent,
-  },
-  { path: 'courses/bim-course', component: BimComponent },
-  { path: 'courses/sketching', component: SketchingComponent },
-  { path: 'courses/devops', component: DevopsComponent },
-  { path: 'courses/revit-mep', component: RevitMepComponent },
-  { path: 'courses/c', component: CplusplusComponent },
-  { path: 'courses/c-language', component: CLanguageComponent },
-  { path: 'courses/python-developer', component: PythonComponent },
-  { path: 'courses/autocad', component: AutoCADComponent },
-  { path: 'courses/revit', component: RevitComponent },
-  { path: 'courses/sql', component: SqlComponent },
-  { path: 'courses/power-bi', component: PowerBIComponent },
-  { path: 'courses/tableau', component: TableauComponent },
-  { path: 'courses/business-analytics', component: BusinessAnalyticsComponent },
-  { path: 'courses/ielts', component: IeltsComponent },
-  { path: 'courses/advance-excel', component: AdvanceExcelComponent },
-  { path: 'courses/salesforce-course', component: SalesforceComponent },
+  // {
+  //   path: 'courses/artificial-intelligence',
+  //   component: ArtificialIntelligenceComponent,
+  // },
+  // { path: 'courses/bim-course', component: BimComponent },
+  // { path: 'courses/sketching', component: SketchingComponent },
+  // { path: 'courses/devops', component: DevopsComponent },
+  // { path: 'courses/revit-mep', component: RevitMepComponent },
+  // { path: 'courses/c', component: CplusplusComponent },
+  // { path: 'courses/c-language', component: CLanguageComponent },
+  // { path: 'courses/python-developer', component: PythonComponent },
+  // { path: 'courses/autocad', component: AutoCADComponent },
+  // { path: 'courses/revit', component: RevitComponent },
+  // { path: 'courses/sql', component: SqlComponent },
+  // { path: 'courses/power-bi', component: PowerBIComponent },
+  // { path: 'courses/tableau', component: TableauComponent },
+  // { path: 'courses/business-analytics', component: BusinessAnalyticsComponent },
+  // { path: 'courses/ielts', component: IeltsComponent },
+  // { path: 'courses/advance-excel', component: AdvanceExcelComponent },
+  // { path: 'courses/salesforce-course', component: SalesforceComponent },
   // {path: 'courses/digital-marketing', component: DigitalMarketingComponent},
-  { path: 'courses/aws', component: AwsComponent },
-  { path: 'courses/data-analytics', component: DataAnalyticsComponent },
-  { path: 'courses/data-science', component: DataScienceComponent },
-  { path: 'sidebar', component: SingleCourseSidebarComponent },
-  { path: 'student-journey', component: StudentJourneyComponent },
-  {
-    path: 'student-video-testimonals',
-    component: StudentsVideoTestimonalsComponent,
-  },
-  { path: 'categories', component: TopCourseCategoriesComponent },
-  { path: 'updates', component: UpdatesComponent },
-  { path: 'popular-courses', component: PopularcoursesComponent },
-  { path: 'dsform', component: DsformComponent },
+  // { path: 'courses/aws', component: AwsComponent },
+  // { path: 'courses/data-analytics', component: DataAnalyticsComponent },
+  // { path: 'courses/data-science', component: DataScienceComponent },
+  // { path: 'sidebar', component: SingleCourseSidebarComponent },
+  // { path: 'student-journey', component: StudentJourneyComponent },
+  // {
+  //   path: 'student-video-testimonals',
+  //   component: StudentsVideoTestimonalsComponent,
+  // },
+  // { path: 'categories', component: TopCourseCategoriesComponent },
+  // { path: 'updates', component: UpdatesComponent },
+  // { path: 'popular-courses', component: PopularcoursesComponent },
+  // { path: 'dsform', component: DsformComponent },
   // {path: 'enquiry-form', component: EnquiryFormComponent},
   // {path: 'slp-enquiry-form', component: SlpEnuiryFormComponent},
-  {
-    path: 'courses/post-graduate-diploma-in-computer-application-pgdca-self-learning-program',
-    component: SlpPgdcaComponent,
-  },
-  {
-    path: 'courses/digital-marketing-self-learning-program',
-    component: SlpDigitalMarketingComponent,
-  },
-  { path: 'slp-overview-form', component: SlpOverviewFormComponent },
-  { path: 'placements', component: PlacementsComponent },
-  { path: 'our-gallery', component: OurGalleryComponent },
-  { path: 'tesing-from', component: TestingFormComponent },
+  // {
+  //   path: 'courses/post-graduate-diploma-in-computer-application-pgdca-self-learning-program',
+  //   component: SlpPgdcaComponent,
+  // },
+  // {
+  //   path: 'courses/digital-marketing-self-learning-program',
+  //   component: SlpDigitalMarketingComponent,
+  // },
+  // { path: 'slp-overview-form', component: SlpOverviewFormComponent },
+  // { path: 'placements', component: PlacementsComponent },
+  // { path: 'our-gallery', component: OurGalleryComponent },
+  // { path: 'tesing-from', component: TestingFormComponent },
   // {path: 'testimonals', component: TestimonialComponent},
-  { path: 'students-placements', component: StudentsPlacementsComponent },
+  // { path: 'students-placements', component: StudentsPlacementsComponent },
   // {path: 'media', component: MediaComponent},
   { path: 'thank-you', component: ThankYouComponent },
-  { path: 'slp-courses', component: SlpCoursesComponent },
-  { path: 'course-category/in-demand', component: IndemandCoursesComponent },
-  { path: 'course-category/popular', component: PopularCoursesComponent },
-  { path: 'course-category/essential', component: FoundationCoursesComponent },
-  { path: 'course-category/foundation', component: EssentialCoursesComponent },
-  { path: 'whatsappform', component: WhatsAppFormComponent },
-  { path: 'post-graduate-program', component: PgpComponent },
+  // { path: 'slp-courses', component: SlpCoursesComponent },
+  // { path: 'course-category/in-demand', component: IndemandCoursesComponent },
+  // { path: 'course-category/popular', component: PopularCoursesComponent },
+  // { path: 'course-category/essential', component: FoundationCoursesComponent },
+  // { path: 'course-category/foundation', component: EssentialCoursesComponent },
+  // { path: 'whatsappform', component: WhatsAppFormComponent },
+  // { path: 'post-graduate-program', component: PgpComponent },
   { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
   { path: 'verifyCertificate/:registrationnumber', component: StudentverifypageComponent },
   {path:'franchise', component:FranchiseComponent},
@@ -682,27 +679,27 @@ const routes: Routes = [
         './components/pages/elearning-school/elearning-school.module'
       ).then((m) => m.ElearningSchoolModule),
   },
-  {
-    path: 'about-us',
-    loadChildren: () =>
-      import('./components/pages/about-style-one/about-style-one.module').then(
-        (m) => m.AboutStyleOneModule
-      ),
-  },
-  {
-    path: 'testimonals',
-    loadChildren: () =>
-      import('./components/common/testimonial/testimonial.module').then(
-        (m) => m.TestimonialModule
-      ),
-  },
-  {
-    path: 'media',
-    loadChildren: () =>
-      import('./components/pages/media/media.module').then(
-        (m) => m.MediaModule
-      ),
-  },
+  // {
+  //   path: 'about-us',
+  //   loadChildren: () =>
+  //     import('./components/pages/about-style-one/about-style-one.module').then(
+  //       (m) => m.AboutStyleOneModule
+  //     ),
+  // },
+  // {
+  //   path: 'testimonals',
+  //   loadChildren: () =>
+  //     import('./components/common/testimonial/testimonial.module').then(
+  //       (m) => m.TestimonialModule
+  //     ),
+  // },
+  // {
+  //   path: 'media',
+  //   loadChildren: () =>
+  //     import('./components/pages/media/media.module').then(
+  //       (m) => m.MediaModule
+  //     ),
+  // },
   {
     path: 'course',
     loadChildren: () =>
@@ -710,41 +707,41 @@ const routes: Routes = [
         './components/pages/courses-style-one/courses-style-one.module'
       ).then((m) => m.CoursesStyleOneModule),
   },
-  {
-    path: 'gallery',
-    loadChildren: () =>
-      import('./components/pages/gallery/gallery.module').then(
-        (m) => m.GalleryModule
-      ),
-  },
-  {
-    path: 'contact',
-    loadChildren: () =>
-      import('./components/pages/contact-us/contact-us.module').then(
-        (m) => m.ContactUsModule
-      ),
-  },
-  {
-    path: 'enquiry-form',
-    loadChildren: () =>
-      import('./components/pages/enquiry-form/enquiry-form.module').then(
-        (m) => m.EnquiryFormModule
-      ),
-  },
-  {
-    path: 'slp-enquiry-form',
-    loadChildren: () =>
-      import('./components/pages/slp-enuiry-form/slp-enuiry-form.module').then(
-        (m) => m.SlpEnuiryFormModule
-      ),
-  },
-  {
-    path: 'scholarship-program',
-    loadChildren: () =>
-      import(
-        './components/pages/scholarship-program/scholarship-program.module'
-      ).then((m) => m.ScholarshipProgramModule),
-  },
+  // {
+  //   path: 'gallery',
+  //   loadChildren: () =>
+  //     import('./components/pages/gallery/gallery.module').then(
+  //       (m) => m.GalleryModule
+  //     ),
+  // },
+  // {
+  //   path: 'contact',
+  //   loadChildren: () =>
+  //     import('./components/pages/contact-us/contact-us.module').then(
+  //       (m) => m.ContactUsModule
+  //     ),
+  // },
+  // {
+  //   path: 'enquiry-form',
+  //   loadChildren: () =>
+  //     import('./components/pages/enquiry-form/enquiry-form.module').then(
+  //       (m) => m.EnquiryFormModule
+  //     ),
+  // },
+  // {
+  //   path: 'slp-enquiry-form',
+  //   loadChildren: () =>
+  //     import('./components/pages/slp-enuiry-form/slp-enuiry-form.module').then(
+  //       (m) => m.SlpEnuiryFormModule
+  //     ),
+  // },
+  // {
+  //   path: 'scholarship-program',
+  //   loadChildren: () =>
+  //     import(
+  //       './components/pages/scholarship-program/scholarship-program.module'
+  //     ).then((m) => m.ScholarshipProgramModule),
+  // },
   // webinar landing
   {
     path: 'workshops',
@@ -790,99 +787,101 @@ const routes: Routes = [
       ).then((m) => m.DataScienceWebinarModule),
   },
 
-  { path: 'course-page', component: CoursePageComponent },
-  { path: 'preload', component: PreloaderComponent },
-  {
-    path: 'vendor-certification-etraining',
-    component: VendorCertificationEtrainingComponent,
-  },
-  { path: 'online-training-school', component: OnlineTrainingSchoolComponent },
-  { path: 'distance-learning', component: DistanceLearningComponent },
-  { path: 'language-school', component: LanguageSchoolComponent },
-  { path: 'modern-schooling', component: ModernSchoolingComponent },
-  { path: 'yoga-training', component: YogaTrainingComponent },
-  { path: 'health-coaching', component: HealthCoachingComponent },
-  { path: 'kindergarten', component: KindergartenComponent },
-  { path: 'gym-coaching', component: GymCoachingComponent },
-  { path: 'learning-management', component: LearningManagementComponent },
+  // { path: 'course-page', component: CoursePageComponent },
+  // { path: 'preload', component: PreloaderComponent },
+  // {
+  //   path: 'vendor-certification-etraining',
+  //   component: VendorCertificationEtrainingComponent,
+  // },
+  // { path: 'online-training-school', component: OnlineTrainingSchoolComponent },
+  // { path: 'distance-learning', component: DistanceLearningComponent },
+  // { path: 'language-school', component: LanguageSchoolComponent },
+  // { path: 'modern-schooling', component: ModernSchoolingComponent },
+  // { path: 'yoga-training', component: YogaTrainingComponent },
+  // { path: 'health-coaching', component: HealthCoachingComponent },
+  // { path: 'kindergarten', component: KindergartenComponent },
+  // { path: 'gym-coaching', component: GymCoachingComponent },
+  // { path: 'learning-management', component: LearningManagementComponent },
   // {path: 'about-us', component: AboutStyleOneComponent},
-  { path: 'about-2', component: AboutStyleTwoComponent },
-  { path: 'about-3', component: AboutStyleThreeComponent },
-  { path: 'about-4', component: AboutStyleFourComponent },
-  { path: 'success-story', component: SuccessStoryComponent },
-  { path: 'teacher', component: TeacherComponent },
-  { path: 'profile-authentication', component: ProfileAuthenticationComponent },
-  { path: 'faq', component: FaqComponent },
-  { path: 'coming-soon', component: ComingSoonComponent },
-  { path: 'purchase-guide', component: PurchaseGuideComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  // { path: 'about-2', component: AboutStyleTwoComponent },
+  // { path: 'about-3', component: AboutStyleThreeComponent },
+  // { path: 'about-4', component: AboutStyleFourComponent },
+  // { path: 'success-story', component: SuccessStoryComponent },
+  // { path: 'teacher', component: TeacherComponent },
+  // { path: 'profile-authentication', component: ProfileAuthenticationComponent },
+  // { path: 'faq', component: FaqComponent },
+  // { path: 'coming-soon', component: ComingSoonComponent },
+  // { path: 'purchase-guide', component: PurchaseGuideComponent },
+  // { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'terms-of-service', component: TermsOfServiceComponent },
-  { path: 'courses-2', component: CoursesStyleTwoComponent },
-  { path: 'courses-3', component: CoursesStyleThreeComponent },
-  { path: 'courses-4', component: CoursesStyleFourComponent },
-  { path: 'courses-5', component: CoursesStyleFiveComponent },
-  { path: 'courses-6', component: CoursesStyleSixComponent },
-  { path: 'courses-7', component: CoursesStyleSevenComponent },
-  { path: 'single-courses-1', component: CoursesDetailsStyleOneComponent },
-  { path: 'single-courses-2', component: CoursesDetailsStyleTwoComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'profile-quiz', component: ProfileQuizComponent },
-  { path: 'membership-levels', component: MembershipLevelsComponent },
-  { path: 'become-a-teacher', component: BecomeATeacherComponent },
-  { path: 'old-categories', component: CategoriesComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'single-events', component: EventsDetailsComponent },
-  { path: 'products-list-1', component: ProductsListStyleOneComponent },
-  { path: 'products-list-2', component: ProductsListStyleTwoComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent },
-  { path: 'single-products', component: ProductsDetailsComponent },
+  // { path: 'courses-2', component: CoursesStyleTwoComponent },
+  // { path: 'courses-3', component: CoursesStyleThreeComponent },
+  // { path: 'courses-4', component: CoursesStyleFourComponent },
+  // { path: 'courses-5', component: CoursesStyleFiveComponent },
+  // { path: 'courses-6', component: CoursesStyleSixComponent },
+  // { path: 'courses-7', component: CoursesStyleSevenComponent },
+  // { path: 'single-courses-1', component: CoursesDetailsStyleOneComponent },
+  // { path: 'single-courses-2', component: CoursesDetailsStyleTwoComponent },
+  // { path: 'profile', component: ProfileComponent },
+  // { path: 'profile-quiz', component: ProfileQuizComponent },
+  // { path: 'membership-levels', component: MembershipLevelsComponent },
+  // { path: 'become-a-teacher', component: BecomeATeacherComponent },
+  // { path: 'old-categories', component: CategoriesComponent },
+  // { path: 'events', component: EventsComponent },
+  // { path: 'single-events', component: EventsDetailsComponent },
+  // { path: 'products-list-1', component: ProductsListStyleOneComponent },
+  // { path: 'products-list-2', component: ProductsListStyleTwoComponent },
+  // { path: 'cart', component: CartComponent },
+  // { path: 'checkout', component: CheckoutComponent },
+  // { path: 'single-products', component: ProductsDetailsComponent },
   // {path: 'gallery', component: GalleryComponent},
   { path: 'blog-1', component: BlogStyleOneComponent },
-  { path: 'blog-2', component: BlogStyleTwoComponent },
-  { path: 'blog-3', component: BlogStyleThreeComponent },
-  { path: 'blog-4', component: BlogStyleFourComponent },
-  { path: 'blog-5', component: BlogStyleFiveComponent },
+  // { path: 'blog-2', component: BlogStyleTwoComponent },
+  // { path: 'blog-3', component: BlogStyleThreeComponent },
+  // { path: 'blog-4', component: BlogStyleFourComponent },
+  // { path: 'blog-5', component: BlogStyleFiveComponent },
   { path: 'single-blog-1', component: BlogDetailsStyleOneComponent },
-  { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
-  { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
+  // { path: 'single-blog-2', component: BlogDetailsStyleTwoComponent },
+  // { path: 'single-blog-3', component: BlogDetailsStyleThreeComponent },
   // {path: 'contact', component: ContactUsComponent},
-  { path: 'courses/react-js', component: ReactjsComponent },
-  { path: 'courses/hvac', component: HvacComponent },
-  { path: 'courses/3ds-max-2', component: ThreedsmaxComponent },
-  { path: 'courses/full-stack-python', component: FullstackpythonComponent },
-  { path: 'courses/staad-pro', component: StaadproComponent },
-  { path: 'courses/primavera', component: PrimaveraComponent },
-  { path: 'courses/full-stack-java', component: FullstackjavaComponent },
-  { path: 'courses/revit-structure', component: RevitstructureComponent },
-  { path: 'courses/manual-testing', component: ManualtestingComponent },
-  {
-    path: 'courses/artificial-intelligence',
-    component: ArtificialIntelligenceComponent,
-  },
-  { path: 'courses/bim-course', component: BimComponent },
-  { path: 'courses/sketching', component: SketchingComponent },
-  { path: 'courses/devops', component: DevopsComponent },
-  { path: 'courses/revit-mep', component: RevitMepComponent },
-  { path: 'courses/c', component: CplusplusComponent },
-  { path: 'courses/c-language', component: CLanguageComponent },
-  { path: 'courses/python-developer', component: PythonComponent },
-  { path: 'courses/autocad', component: AutoCADComponent },
-  { path: 'courses/revit', component: RevitComponent },
-  { path: 'courses/sql', component: SqlComponent },
-  { path: 'courses/power-bi', component: PowerBIComponent },
-  { path: 'courses/tableau', component: TableauComponent },
-  { path: 'courses/business-analytics', component: BusinessAnalyticsComponent },
-  { path: 'courses/ielts', component: IeltsComponent },
-  { path: 'courses/advance-excel', component: AdvanceExcelComponent },
-  { path: 'courses/salesforce-course', component: SalesforceComponent },
-  { path: 'courses/digital-marketing', component: DigitalMarketingComponent },
-  { path: 'courses/aws', component: AwsComponent },
-  { path: 'courses/data-analytics', component: DataAnalyticsComponent },
-  { path: 'courses/data-science', component: DataScienceComponent },
+  // { path: 'courses/react-js', component: ReactjsComponent },
+  // { path: 'courses/hvac', component: HvacComponent },
+  // { path: 'courses/3ds-max-2', component: ThreedsmaxComponent },
+  // { path: 'courses/full-stack-python', component: FullstackpythonComponent },
+  // { path: 'courses/staad-pro', component: StaadproComponent },
+  // { path: 'courses/primavera', component: PrimaveraComponent },
+  // { path: 'courses/full-stack-java', component: FullstackjavaComponent },
+  // { path: 'courses/revit-structure', component: RevitstructureComponent },
+  // { path: 'courses/manual-testing', component: ManualtestingComponent },
+  // {
+  //   path: 'courses/artificial-intelligence',
+  //   component: ArtificialIntelligenceComponent,
+  // },
+  // { path: 'courses/bim-course', component: BimComponent },
+  // { path: 'courses/sketching', component: SketchingComponent },
+  // { path: 'courses/devops', component: DevopsComponent },
+  // { path: 'courses/revit-mep', component: RevitMepComponent },
+  // { path: 'courses/c', component: CplusplusComponent },
+  // { path: 'courses/c-language', component: CLanguageComponent },
+  // { path: 'courses/python-developer', component: PythonComponent },
+  // { path: 'courses/autocad', component: AutoCADComponent },
+  // { path: 'courses/revit', component: RevitComponent },
+  // { path: 'courses/sql', component: SqlComponent },
+  // { path: 'courses/power-bi', component: PowerBIComponent },
+  // { path: 'courses/tableau', component: TableauComponent },
+  // { path: 'courses/business-analytics', component: BusinessAnalyticsComponent },
+  // { path: 'courses/ielts', component: IeltsComponent },
+  // { path: 'courses/advance-excel', component: AdvanceExcelComponent },
+  // { path: 'courses/salesforce-course', component: SalesforceComponent },
+  // { path: 'courses/digital-marketing', component: DigitalMarketingComponent },
+  // { path: 'courses/aws', component: AwsComponent },
+  // { path: 'courses/data-analytics', component: DataAnalyticsComponent },
+  // { path: 'courses/data-science', component: DataScienceComponent },
+
 
   // New URLS FOR COURSEs
 
+// 39 courses start here 
   { path: 'courses/best-hvac-training-institute', component: HvacComponent },
   {
     path: 'courses/best-3ds-max-course-training-institute',
@@ -1039,41 +1038,42 @@ const routes: Routes = [
     path: 'courses/best-medical-coding-course-training-institute',
     component: MedicalcodingComponent,
   },
-  {
-    path: 'single-course-sidebarform',
-    component: SingleCourseSidebarComponent,
-  },
-  { path: 'student-journey', component: StudentJourneyComponent },
-  {
-    path: 'student-video-testimonals',
-    component: StudentsVideoTestimonalsComponent,
-  },
-  { path: 'categories', component: TopCourseCategoriesComponent },
-  { path: 'updates', component: UpdatesComponent },
-  { path: 'popular-courses', component: PopularcoursesComponent },
-  { path: 'dsform', component: DsformComponent },
+
+  // 39 courses end here
+  {path: 'student-video-testimonals', component: StudentsVideoTestimonalsComponent},
+  { path: 'thank-you', component: ThankYouComponent },
+  { path: 'jobapplication', component: JobApplicationComponent },
+  { path: 'jobs', component: NaukriComponent },
+
+
+
+
+
+// shivaji and srilaskhmi 10 dec changing the urls
+
+  // { path: 'updates', component: UpdatesComponent },
+  // { path: 'single-course-sidebarform', component: SingleCourseSidebarComponent,},
+  // { path: 'student-journey', component: StudentJourneyComponent },
+  // { path: 'categories', component: TopCourseCategoriesComponent },
+  // { path: 'popular-courses', component: PopularcoursesComponent },
+  // { path: 'dsform', component: DsformComponent },
   // {path: 'enquiry-form', component: EnquiryFormComponent},
   // {path: 'slp-enquiry-form', component: SlpEnuiryFormComponent},
-  {
-    path: 'courses/digital-marketing-self-learning-program',
-    component: SlpDigitalMarketingComponent,
-  },
-
-  { path: 'slp-overview-form', component: SlpOverviewFormComponent },
-  { path: 'placements', component: PlacementsComponent },
-  { path: 'our-gallery', component: OurGalleryComponent },
-  { path: 'tesing-from', component: TestingFormComponent },
+  // { path: 'courses/digital-marketing-self-learning-program', component: SlpDigitalMarketingComponent },
+  // { path: 'slp-overview-form', component: SlpOverviewFormComponent },
+  // { path: 'placements', component: PlacementsComponent },
+  // { path: 'our-gallery', component: OurGalleryComponent },
+  // { path: 'tesing-from', component: TestingFormComponent },
   // {path: 'testimonals', component: TestimonialComponent},
-  { path: 'students-placements', component: StudentsPlacementsComponent },
+  // { path: 'students-placements', component: StudentsPlacementsComponent },
   // {path: 'media', component: MediaComponent},
-  { path: 'thank-you', component: ThankYouComponent },
-  { path: 'slp-courses', component: SlpCoursesComponent },
-  { path: 'course-category/in-demand', component: IndemandCoursesComponent },
-  { path: 'course-category/popular', component: PopularCoursesComponent },
-  { path: 'course-category/essential', component: FoundationCoursesComponent },
-  { path: 'course-category/foundation', component: EssentialCoursesComponent },
-  { path: 'whatsappform', component: WhatsAppFormComponent },
-  { path: 'post-graduate-program', component: PgpComponent },
+  // { path: 'slp-courses', component: SlpCoursesComponent },
+  // { path: 'course-category/in-demand', component: IndemandCoursesComponent },
+  // { path: 'course-category/popular', component: PopularCoursesComponent },
+  // { path: 'course-category/essential', component: FoundationCoursesComponent },
+  // { path: 'course-category/foundation', component: EssentialCoursesComponent },
+  // { path: 'whatsappform', component: WhatsAppFormComponent },
+  // { path: 'post-graduate-program', component: PgpComponent },
 
   // thankyou pages
   { path: 'thankyou-salesforce', component: ThankSalesforceComponent },
@@ -1086,15 +1086,10 @@ const routes: Routes = [
   { path: 'thankyou-data-science', component: ThankDataScienceComponent },
   { path: 'thankyou-awsplusdevops', component: ThankAwsDevopsComponent },
   { path: 'thankyou-medicalcoding', component: ThankMedicalCodingComponent },
-  { path: 'jobapplication', component: JobApplicationComponent },
-  { path: 'jobs', component: NaukriComponent },
-  { path: 'testing', component: TestingComponent },
-  {path:'newdigitalmarketing', component:NewdigitalmarketingComponent},
-
-  
-
+  // { path: 'testing', component: TestingComponent },
+  // {path:'newdigitalmarketing', component:NewdigitalmarketingComponent},
   // Here add new pages component
-  { path: 'dummy-page', component: DummycourseComponent },
+  // { path: 'dummy-page', component: DummycourseComponent },
 
   { path: '**', component: ErrorComponent },
 ];
