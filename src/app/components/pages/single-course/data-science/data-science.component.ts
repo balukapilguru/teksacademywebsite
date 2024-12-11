@@ -2,12 +2,11 @@ import {
   Component,
   ElementRef,
   OnInit,
-  OnDestroy,
   Inject,
   Renderer2,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { Title, Meta, DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Title, Meta, SafeHtml } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
 
@@ -37,7 +36,7 @@ export class DataScienceComponent implements OnInit{
     private metaService: Meta,
     private el: ElementRef,
     private renderer: Renderer2,
-    private sanitizer: DomSanitizer,
+ 
     @Inject(DOCUMENT) private document: Document
   ) {
     const captions = [''];
@@ -237,15 +236,15 @@ export class DataScienceComponent implements OnInit{
       this.renderer.appendChild(this.document.head, script);
     }
   }
-  ngOnDestroy() {
-    this.removeJsonLdScript();
-  }
-  private removeJsonLdScript() {
-    const script = this.document.getElementById(this.jsonLdScriptId);
-    if (script) {
-      this.renderer.removeChild(this.document.head, script);
-    }
-  }
+  // ngOnDestroy() {
+  //   this.removeJsonLdScript();
+  // }
+  // private removeJsonLdScript() {
+  //   const script = this.document.getElementById(this.jsonLdScriptId);
+  //   if (script) {
+  //     this.renderer.removeChild(this.document.head, script);
+  //   }
+  // }
  
  
   private sttmot(i: number): void {

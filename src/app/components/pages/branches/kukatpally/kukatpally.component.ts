@@ -282,7 +282,7 @@ export class KukatpallyComponent implements OnInit {
 
 "url": "https://teksacademy.com/branch/best-software-training-institute-kukatpally",
 
-"telephone": "9182278093",
+"telephone": "8688408352",
 
 "address": {
 

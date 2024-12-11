@@ -3,7 +3,6 @@ import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
 import { DOCUMENT } from '@angular/common';
-
 declare var $: any;
 declare var jQuery: any;
 
@@ -12,7 +11,7 @@ declare var jQuery: any;
   templateUrl: './awsplusdevops.component.html',
   styleUrls: ['./awsplusdevops.component.scss'],
 })
-export class AwsplusdevopsComponent {
+export class AwsplusdevopsComponent implements OnInit{
   private jsonLdScriptId = 'json-ld-about';
   private right!: HTMLCollectionOf<HTMLElement>;
   private si!: number;
@@ -173,15 +172,15 @@ export class AwsplusdevopsComponent {
     // Assuming you want to turn right on component initialization
     this.turnRight();
   }
-  ngOnDestroy() {
-    this.removeJsonLdScript();
-  }
-  private removeJsonLdScript() {
-    const script = this.document.getElementById(this.jsonLdScriptId);
-    if (script) {
-      this.renderer.removeChild(this.document.head, script);
-    }
-  }
+  // ngOnDestroy() {
+  //   this.removeJsonLdScript();
+  // }
+  // private removeJsonLdScript() {
+  //   const script = this.document.getElementById(this.jsonLdScriptId);
+  //   if (script) {
+  //     this.renderer.removeChild(this.document.head, script);
+  //   }
+  // }
   private sttmot(i: number): void {
     setTimeout(() => {
       if (this.right[i] && this.right[i].style) {

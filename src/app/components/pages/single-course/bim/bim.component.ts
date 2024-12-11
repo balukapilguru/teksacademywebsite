@@ -11,7 +11,7 @@ declare var jQuery: any;
   templateUrl: './bim.component.html',
   styleUrls: ['./bim.component.scss'],
 })
-export class BimComponent {
+export class BimComponent implements OnInit {
   private jsonLdScriptId = 'json-ld-about';
   // constructor(private titleService: Title, private metaService: Meta) {}
   private right!: HTMLCollectionOf<HTMLElement>;

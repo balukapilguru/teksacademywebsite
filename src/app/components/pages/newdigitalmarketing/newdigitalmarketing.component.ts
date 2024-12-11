@@ -261,7 +261,7 @@ export class NewdigitalmarketingComponent implements OnInit {
 
 "name": "Teks Academy",
 
-"image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.png ",
+"image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.jpg ",
 
 "description": " Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!",
 
