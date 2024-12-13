@@ -133,11 +133,11 @@ export class KukatpallyComponent implements OnInit {
 
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Top Data Science & AWS Courses in Kukatpally - Teks Academy');
+    this.titleService.setTitle('Best Software Training Institute in Kukatpally');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Enroll at Teks Academy Kukatpally for the best Data Science and AWS courses. Experienced trainers and hands-on learning. Placements | Live Project | Mockup Interviews.',
+      content: 'Join TeksAcademy Kukatpally for Full Stack Python, Java, Data Analytics, AWS DevOps, Digital Marketing, Salesforce, Testing Tools & more. Enroll today!',
     });
 
     const openBtn = document.getElementById('open-form')!;

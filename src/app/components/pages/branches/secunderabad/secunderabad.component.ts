@@ -133,11 +133,11 @@ export class SecunderabadComponent implements OnInit {
 
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Premier Salesforce & Digital Marketing Training in Secunderabad - Teks Academy');
+    this.titleService.setTitle('Best software training institute in secunderabad');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Discover Teks Academy Secunderabad for advanced Salesforce and Digital Marketing courses. Learn from industry experts and enhance your skills.',
+      content: 'Join top courses in Secunderabad: Data Science, Digital Marketing, Medical Coding, and Testing Tools. Learn job-oriented skills with expert-led training programs!',
     });
 
     // Popup form handling

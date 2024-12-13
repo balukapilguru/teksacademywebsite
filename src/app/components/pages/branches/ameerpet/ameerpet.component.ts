@@ -136,11 +136,11 @@ export class AmeerpetComponent implements OnInit {
     // }
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Best AutoCAD & Full Stack Python Courses in Ameerpet - Teks Academy');
+    this.titleService.setTitle('Best Software Training in Ameerpet: Python, Java, AWS Courses');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Join Teks Academy in Ameerpet for top-notch AutoCAD and Full Stack Python courses. Expert trainers and comprehensive curriculum.',
+      content: 'Enroll in the best software training in Ameerpet! Learn Python, Java, AWS, Data Science, BIM, AutoCAD, and more. Boost your career with expert-led courses.',
     });
 
     const openBtn = document.getElementById('open-form')!;

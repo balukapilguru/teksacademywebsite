@@ -129,11 +129,11 @@ export class DilsukhnagarComponent implements OnInit {
     // }
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Top Digital Marketing & Full Stack Java Training in Dilsukhnagar - Teks Academy');
+    this.titleService.setTitle('Best Software Training Institute in Dilsukhnagar');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Explore Teks Academy Dilsukhnagar for excellent Digital Marketing and Full Stack Java courses. Quality education from skilled professionals.',
+      content: 'Join our Dilsukhnagar branch for expert training in Data Science, Full Stack Python, Revit MEP, and AutoCAD. Build your skills and advance your career with us!',
     });
 
     const openBtn = document.getElementById('open-form')!;
