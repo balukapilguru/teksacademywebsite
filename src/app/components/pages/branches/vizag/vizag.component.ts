@@ -137,11 +137,11 @@ export class VizagComponent implements OnInit {
 
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Learn Data Science & Digital Marketing in Vizag - Teks Academy');
+    this.titleService.setTitle('Best software training institute in visakhapatnam');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Join Teks Academy, the top institute for Data Science and Digital Marketing courses in Vizag. Expert trainers, hands-on learning, and 100% job assistance await you!.',
+      content: 'Join our Vizag branch for expert training in Full Stack Python, Java, Digital Marketing, Data Science, AWS DevOps, Salesforce, and Testing Tools. Enroll now!',
     });
 
     // Popup form handling

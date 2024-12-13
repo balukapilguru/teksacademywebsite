@@ -907,10 +907,10 @@ const routes: Routes = [
     path: 'courses/best-full-stack-java-development-course-training-institute',
     component: FullstackjavaComponent,
   },
-  {
-    path: 'courses/best-manual-testing-software-testing-course-training-institute',
-    component: ManualtestingComponent,
-  },
+  // {
+  //   path: 'courses/best-manual-testing-software-testing-course-training-institute',
+  //   component: ManualtestingComponent,
+  // },
   {
     path: 'courses/best-artificial-intelligence-best-ai-course-training-institute',
     component: ArtificialIntelligenceComponent,

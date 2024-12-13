@@ -130,11 +130,11 @@ export class HitechComponent implements OnInit {
 
 
     this.addJsonLdScript();
-    this.titleService.setTitle('Leading Python & Data Science Institute in Hitec City - Teks Academy');
+    this.titleService.setTitle('Best software training institute in hitec city: Data science');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Join Teks Academy Hitec City for cutting-edge Python and Data Science courses. Expert instructors and practical learning experience.',
+      content: 'Best software training institute in hitec city: Data science Enroll at our HiTec City branch for Data Analytics, BIM, Revit MEP, and AutoCAD courses. Gain expert skills to boost your career with industry-relevant training!',
     });
 
     const openBtn = document.getElementById('open-form')!;
