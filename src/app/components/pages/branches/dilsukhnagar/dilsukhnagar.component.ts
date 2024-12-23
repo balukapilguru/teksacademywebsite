@@ -262,71 +262,50 @@ export class DilsukhnagarComponent implements OnInit {
       script.type = 'application/ld+json';
       script.text = `
 {
-
-"@context": "https://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy - Best Software Training Institute dilsukhnagar",
-
-"image": "",
-
-"@id": "",
-
-"url": "https://teksacademy.com/branch/best-software-training-institute-dilsukhnagar",
-
-"telephone": "6305481131",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "5th Floor, Padmavathi Complex, H.No. 16, 11-477/3/2/1, Dilsukh Nagar Main Rd, above Poornima Furnitures, opp. Pillar No 1521",
-
-"addressLocality": "Hyderabad",
-
-"postalCode": "500060",
-
-"addressCountry": "IN"
-
-},
-
-"geo": {
-
-"@type": "GeoCoordinates",
-
-"latitude": 17.3671482,
-
-"longitude": 78.5407772
-
-},
-
-"openingHoursSpecification": {
-
-"@type": "OpeningHoursSpecification",
-
-"dayOfWeek": [
-
-"Monday",
-
-"Tuesday",
-
-"Wednesday",
-
-"Thursday",
-
-"Friday",
-
-"Saturday"
-
-],
-
-"opens": "09:30",
-
-"closes": "06:30"
-
-}
-
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute Dilsukhnagar",
+  "image": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-dilsukhnagar",
+  "telephone": "+91-6305481131",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5th Floor, Padmavathi Complex, H.No. 16, 11-477/3/2/1, Dilsukh Nagar Main Rd, above Poornima Furnitures, opp. Pillar No 1521",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500060",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.3671482,
+    "longitude": 78.5407772
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "18:30"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "215"
+  },
+  "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "sameAs": [
+    "https://facebook.com/teksacademy",
+    "https://twitter.com/teksacademy"
+  ]
 }
              
 

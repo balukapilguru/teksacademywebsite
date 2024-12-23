@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Inject, Renderer2,} from '@angular/core';
+import { Component, ElementRef, OnInit, Inject, Renderer2, } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
@@ -166,87 +166,6 @@ export class MedicalcodingComponent {
     this.turnRight();
   }
 
-  private sttmot(i: number): void {
-    setTimeout(() => {
-      if (this.right[i] && this.right[i].style) {
-        this.right[i].style.zIndex = 'auto';
-      }
-    }, 300);
-  }
-
-  public turnRight(): void {
-    if (this.si >= 1) {
-      this.si--;
-    } else {
-      this.si = this.right.length - 1;
-      for (let i = 0; i < this.right.length; i++) {
-        if (this.right[i] && this.right[i].style) {
-          this.right[i].className = 'right';
-          this.sttmot(i);
-          this.z = 1;
-        }
-      }
-    }
-
-    if (
-      this.right[this.si] &&
-      this.right[this.si].classList &&
-      this.right[this.si].style
-    ) {
-      this.right[this.si].classList.add('flip');
-      this.z++;
-      this.right[this.si].style.zIndex = this.z.toString();
-    }
-  }
-
-  public turnLeft(): void {
-    if (this.si < this.right.length) {
-      this.si++;
-    } else {
-      this.si = 1;
-      for (let i = this.right.length - 1; i > 0; i--) {
-        if (this.right[i] && this.right[i].classList && this.right[i].style) {
-          this.right[i].classList.add('flip');
-          this.right[i].style.zIndex = (this.right.length + 1 - i).toString();
-        }
-      }
-    }
-
-    if (
-      this.right[this.si - 1] &&
-      this.right[this.si - 1].classList &&
-      this.right[this.si - 1].style
-    ) {
-      this.right[this.si - 1].className = 'right';
-      setTimeout(() => {
-        if (this.right[this.si - 1] && this.right[this.si - 1].style) {
-          this.right[this.si - 1].style.zIndex = 'auto';
-        }
-      }, 350);
-    }
-
-    // for curricullum end
-
-    // for video testimonals
-    $('#videoModal').on('hidden.bs.modal', function (e: Event) {
-      $('#videoModal iframe').attr('src', $('#videoModal iframe').attr('src'));
-    });
-
-    $('#videoModal2').on('hidden.bs.modal', function (e: Event) {
-      $('#videoModal2 iframe').attr(
-        'src',
-        $('#videoModal2 iframe').attr('src')
-      );
-    });
-    $('#videoModal3').on('hidden.bs.modal', function (e: Event) {
-      $('#videoModal3 iframe').attr(
-        'src',
-        $('#videoModal3 iframe').attr('src')
-      );
-    });
-    //
-  }
-
   private addJsonLdScript() {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
@@ -339,4 +258,86 @@ export class MedicalcodingComponent {
       this.renderer.appendChild(this.document.head, script);
     }
   }
+
+  private sttmot(i: number): void {
+    setTimeout(() => {
+      if (this.right[i] && this.right[i].style) {
+        this.right[i].style.zIndex = 'auto';
+      }
+    }, 300);
+  }
+
+  public turnRight(): void {
+    if (this.si >= 1) {
+      this.si--;
+    } else {
+      this.si = this.right.length - 1;
+      for (let i = 0; i < this.right.length; i++) {
+        if (this.right[i] && this.right[i].style) {
+          this.right[i].className = 'right';
+          this.sttmot(i);
+          this.z = 1;
+        }
+      }
+    }
+
+    if (
+      this.right[this.si] &&
+      this.right[this.si].classList &&
+      this.right[this.si].style
+    ) {
+      this.right[this.si].classList.add('flip');
+      this.z++;
+      this.right[this.si].style.zIndex = this.z.toString();
+    }
+  }
+
+  public turnLeft(): void {
+    if (this.si < this.right.length) {
+      this.si++;
+    } else {
+      this.si = 1;
+      for (let i = this.right.length - 1; i > 0; i--) {
+        if (this.right[i] && this.right[i].classList && this.right[i].style) {
+          this.right[i].classList.add('flip');
+          this.right[i].style.zIndex = (this.right.length + 1 - i).toString();
+        }
+      }
+    }
+
+    if (
+      this.right[this.si - 1] &&
+      this.right[this.si - 1].classList &&
+      this.right[this.si - 1].style
+    ) {
+      this.right[this.si - 1].className = 'right';
+      setTimeout(() => {
+        if (this.right[this.si - 1] && this.right[this.si - 1].style) {
+          this.right[this.si - 1].style.zIndex = 'auto';
+        }
+      }, 350);
+    }
+
+    // for curricullum end
+
+    // for video testimonals
+    $('#videoModal').on('hidden.bs.modal', function (e: Event) {
+      $('#videoModal iframe').attr('src', $('#videoModal iframe').attr('src'));
+    });
+
+    $('#videoModal2').on('hidden.bs.modal', function (e: Event) {
+      $('#videoModal2 iframe').attr(
+        'src',
+        $('#videoModal2 iframe').attr('src')
+      );
+    });
+    $('#videoModal3').on('hidden.bs.modal', function (e: Event) {
+      $('#videoModal3 iframe').attr(
+        'src',
+        $('#videoModal3 iframe').attr('src')
+      );
+    });
+    //
+  }
+
 }

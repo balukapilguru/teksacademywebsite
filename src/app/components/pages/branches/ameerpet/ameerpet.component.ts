@@ -26,15 +26,15 @@ export class AmeerpetComponent implements OnInit {
   apiUrl = environment.apiUrl;
 
 
-//  branches: { [key: string]: string } = {
-//     dilsukhnagar: 'Dilsukhnagar',
-//     ameerpet: 'Ameerpet',
-//     hiteccity: 'Hiteccity',
-//     kukatpally: 'Kukatpally',
-//     secunderabad: 'Secunderabad',
-//     visakhapatnam: 'Visakhapatnam'
-//   };
-  
+  //  branches: { [key: string]: string } = {
+  //     dilsukhnagar: 'Dilsukhnagar',
+  //     ameerpet: 'Ameerpet',
+  //     hiteccity: 'Hiteccity',
+  //     kukatpally: 'Kukatpally',
+  //     secunderabad: 'Secunderabad',
+  //     visakhapatnam: 'Visakhapatnam'
+  //   };
+
 
   private jsonLdScriptId = 'json-ld-about';
   private right!: HTMLCollectionOf<HTMLElement>;
@@ -124,13 +124,13 @@ export class AmeerpetComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
+
     // const currentPath = this.router.url.split('/').pop() as string;
 
     // // Set the branch based on the URL path
     // if (currentPath.includes('ameerpet')) {
     //   this.efbranch = 'Ameerpet';
-  
+
     // } else {
     //   this.efbranch = ''; // Fallback if no match is found
     // }
@@ -273,10 +273,10 @@ export class AmeerpetComponent implements OnInit {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Teks Academy - Best Software Training Institute Ameerpet",
-  "image": "",
+  "image": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
   "@id": "",
   "url": "https://teksacademy.com/branch/best-software-training-institute-ameerpet",
-  "telephone": "6305459989",
+  "telephone": "+91-6305459989",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "501, 5th Floor, Green House Building, next to Passport Office, Ameerpet",
@@ -289,21 +289,32 @@ export class AmeerpetComponent implements OnInit {
     "latitude": 17.4369137,
     "longitude": 78.44686449999999
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:30",
-    "closes": "06:30"
-  } 
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "18:30"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "321"
+  },
+  "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "sameAs": [
+    "https://facebook.com/teksacademy",
+    "https://twitter.com/teksacademy"
+  ]
 }
-
 
       `;
       this.renderer.appendChild(this.document.head, script);

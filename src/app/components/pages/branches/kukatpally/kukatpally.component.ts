@@ -269,71 +269,50 @@ export class KukatpallyComponent implements OnInit {
       script.type = 'application/ld+json';
       script.text = `
 {
-
-"@context": "https://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy - Best Software Training Institute kukatpally",
-
-"image": "",
-
-"@id": "",
-
-"url": "https://teksacademy.com/branch/best-software-training-institute-kukatpally",
-
-"telephone": "8688408352",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "2-22-293, Maruti Complex, Plot No 1, near KPHB Metro, Bhagya Nagar Colony, Kukatpally",
-
-"addressLocality": "Hyderabad",
-
-"postalCode": "500085",
-
-"addressCountry": "IN"
-
-},
-
-"geo": {
-
-"@type": "GeoCoordinates",
-
-"latitude": 17.4937761,
-
-"longitude": 78.4017033
-
-},
-
-"openingHoursSpecification": {
-
-"@type": "OpeningHoursSpecification",
-
-"dayOfWeek": [
-
-"Monday",
-
-"Tuesday",
-
-"Wednesday",
-
-"Thursday",
-
-"Friday",
-
-"Saturday"
-
-],
-
-"opens": "09:30",
-
-"closes": "06:30"
-
-}
-
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute Kukatpally",
+  "image": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-kukatpally",
+  "telephone": "+91-9182278093",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2-22-293, Maruti Complex, Plot No 1, near KPHB Metro, Bhagya Nagar Colony, Kukatpally",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500085",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4937761,
+    "longitude": 78.4017033
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "18:30"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "198"
+  },
+  "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "sameAs": [
+    "https://facebook.com/teksacademy",
+    "https://twitter.com/teksacademy"
+  ]
 }
 
       `;
