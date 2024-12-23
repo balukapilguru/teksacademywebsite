@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit,  Inject, Renderer2, } from '@angular/core';
+import { Component, ElementRef, OnInit, Inject, Renderer2, } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
@@ -167,6 +167,30 @@ export class VlsiComponent {
     this.turnRight();
   }
 
+
+  private addJsonLdScript() {
+    if (!document.getElementById(this.jsonLdScriptId)) {
+      const script = this.renderer.createElement('script');
+      script.type = 'application/ld+json';
+      //   script.id = this.jsonLdScriptId;
+      script.text = `
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "VLSI Course",
+  "image": "https://teksacademy.com/assets/img/vlsi.jpg",
+  "description": "Rated as one of the best VLSI training institutes in Hyderabad, we offer comprehensive VLSI courses tailored to meet industry standards. Our VLSI course in Hyderabad includes online and offline training options, making it accessible for learners everywhere. With expert trainers, real-world projects, and advanced curriculum, we ensure top-notch VLSI training in Hyderabad. Whether you're looking for an online VLSI course or in-person training, our institute provides unmatched learning experiences to help you excel in the field.",
+  "brand": {
+    "@type": "Brand",
+    "name": "teksacademy"
+  }
+}
+      `;
+
+      this.renderer.appendChild(this.document.head, script);
+    }
+  }
+  
   private sttmot(i: number): void {
     setTimeout(() => {
       if (this.right[i] && this.right[i].style) {
@@ -246,52 +270,5 @@ export class VlsiComponent {
       );
     });
     //
-  }
-
-  private addJsonLdScript() {
-    if (!document.getElementById(this.jsonLdScriptId)) {
-      const script = this.renderer.createElement('script');
-      script.type = 'application/ld+json';
-      //   script.id = this.jsonLdScriptId;
-      script.text = `
-  
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "Best VLSI Training Institute in Hyderabad",
-  "description": "Teks Academy is a top VLSI training institute in Hyderabad, offering expert-led courses in VLSI design, digital circuit design, and verification. Our curriculum is tailored for engineering students and professionals, providing hands-on training with industry-standard tools. Students benefit from real-world projects, experienced trainers, and strong placement support to help them succeed in the semiconductor field.",
-  "provider": {
-    "@type": "EducationalOrganization",
-    "name": "Teks Academy",
-    "url": "https://teksacademy.com/"
-  },
-  "courseMode": ["Online", "In-Person"],
-  "audience": {
-    "@type": "EducationalAudience",
-    "educationalRole": "Student",
-    "audienceType": "Professional"
-  },
-  "educationalLevel": ["Beginner", "Intermediate", "Advanced"],
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": "In-Person",
-    "location": {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "H.no: 9-1-127/4, Flat No: 501 & 502, 5th Floor, Amsri Faust Building, S.D. Road, Secunderabad",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "postalCode": "500003",
-        "addressCountry": "IN"
-      }
-    }
-  }
-}
-
-      `;
-
-      this.renderer.appendChild(this.document.head, script);
-    }
   }
 }

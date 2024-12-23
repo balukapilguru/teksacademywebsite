@@ -17,7 +17,7 @@ declare var jQuery: any;
   templateUrl: './data-science.component.html',
   styleUrls: ['./data-science.component.scss'],
 })
-export class DataScienceComponent implements OnInit{
+export class DataScienceComponent implements OnInit {
   private jsonLdScriptId = 'json-ld-about';
   // constructor(private titleService: Title, private metaService: Meta) {}
   private right!: HTMLCollectionOf<HTMLElement>;
@@ -36,7 +36,7 @@ export class DataScienceComponent implements OnInit{
     private metaService: Meta,
     private el: ElementRef,
     private renderer: Renderer2,
- 
+
     @Inject(DOCUMENT) private document: Document
   ) {
     const captions = [''];
@@ -122,10 +122,10 @@ export class DataScienceComponent implements OnInit{
     // set meta description
     this.metaService.updateTag({
       name: 'description',
-      content:'Join the Data Science Certification Course and upskill yourself with fast-track. Join today to get the Best Data Science course in Hyderabad at Teks Academy',
+      content: 'Join the Data Science Certification Course and upskill yourself with fast-track. Join today to get the Best Data Science course in Hyderabad at Teks Academy',
     });
-     // Add meta keywords
-     this.metaService.updateTag({
+    // Add meta keywords
+    this.metaService.updateTag({
       name: 'keywords',
       content: 'Data science course in hyderabad, Best data science course, Data science online course, Data science course with placement',
     });
@@ -186,7 +186,7 @@ export class DataScienceComponent implements OnInit{
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
-        // script.id = this.jsonLdScriptId;
+      // script.id = this.jsonLdScriptId;
       script.text = `
       {
         "@context": "https://schema.org/", 
@@ -245,8 +245,8 @@ export class DataScienceComponent implements OnInit{
   //     this.renderer.removeChild(this.document.head, script);
   //   }
   // }
- 
- 
+
+
   private sttmot(i: number): void {
     setTimeout(() => {
       if (this.right[i] && this.right[i].style) {

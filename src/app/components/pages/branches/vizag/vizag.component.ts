@@ -1,6 +1,3 @@
-
-
-
 // --------------------
 import { Component, ElementRef, OnInit, Inject, Renderer2 } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
@@ -265,83 +262,63 @@ export class VizagComponent implements OnInit {
     }
   }
 
+  // private jsonLdScriptId = 'localBusinessJsonLd';
+
   private addJsonLdScript() {
     if (!document.getElementById(this.jsonLdScriptId)) {
       const script = this.renderer.createElement('script');
+      script.id = this.jsonLdScriptId;
       script.type = 'application/ld+json';
       script.text = `
-
-{
-
-"@context": "https://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy - Best Software Training Institute Visakhapatnam",
-
-"image": "",
-
-"@id": "",
-
-"url": "https://teksacademy.com/branch/best-software-training-institute-visakhapatnam",
-
-"telephone": "9133308352",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "3rd Floor, Pavan Towers, Dwaraka Nagar 1st Lane, Opp Budhil Park",
-
-"addressLocality": "Visakhapatnam",
-
-"postalCode": "530016",
-
-"addressCountry": "IN"
-
-},
-
-"geo": {
-
-"@type": "GeoCoordinates",
-
-"latitude": 17.7258656,
-
-"longitude": 83.30648769999999
-
-},
-
-"openingHoursSpecification": {
-
-"@type": "OpeningHoursSpecification",
-
-"dayOfWeek": [
-
-"Monday",
-
-"Tuesday",
-
-"Wednesday",
-
-"Thursday",
-
-"Friday",
-
-"Saturday"
-
-],
-
-"opens": "09:30",
-
-"closes": "06:30"
-
-}
-
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Teks Academy - Best Software Training Institute Visakhapatnam",
+    "image": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+    "url": "https://teksacademy.com/branch/best-software-training-institute-visakhapatnam",
+    "telephone": "+91-9133308352",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3rd Floor, Pavan Towers, Dwaraka Nagar 1st Lane, Opp Budhil Park",
+      "addressLocality": "Visakhapatnam",
+      "postalCode": "530016",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 17.7258656,
+      "longitude": 83.30648769999999
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:30",
+        "closes": "18:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "245"
+    },
+    "sameAs": [
+      "https://facebook.com/teksacademy",
+      "https://twitter.com/teksacademy"
+    ]
+  }
       `;
       this.renderer.appendChild(this.document.head, script);
     }
   }
+  
 }
 
 

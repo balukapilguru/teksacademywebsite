@@ -37,15 +37,15 @@ export class SecunderabadComponent implements OnInit {
   apiUrl = environment.apiUrl;
 
 
-//  branches: { [key: string]: string } = {
-//     dilsukhnagar: 'Dilsukhnagar',
-//     ameerpet: 'Ameerpet',
-//     hiteccity: 'Hiteccity',
-//     kukatpally: 'Kukatpally',
-//     secunderabad: 'Secunderabad',
-//     visakhapatnam: 'Visakhapatnam'
-//   };
-  
+  //  branches: { [key: string]: string } = {
+  //     dilsukhnagar: 'Dilsukhnagar',
+  //     ameerpet: 'Ameerpet',
+  //     hiteccity: 'Hiteccity',
+  //     kukatpally: 'Kukatpally',
+  //     secunderabad: 'Secunderabad',
+  //     visakhapatnam: 'Visakhapatnam'
+  //   };
+
 
   constructor(
     private _lightbox: Lightbox,
@@ -267,73 +267,51 @@ export class SecunderabadComponent implements OnInit {
       script.type = 'application/ld+json';
       script.text = `
 
-
-      {
-
-"@context": "https://schema.org",
-
-"@type": "LocalBusiness",
-
-"name": "Teks Academy - Best Software Training Institute secunderabad",
-
-"image": "",
-
-"@id": "",
-
-"url": "https://teksacademy.com/branch/best-software-training-institute-secunderabad",
-
-"telephone": "6281159905",
-
-"address": {
-
-"@type": "PostalAddress",
-
-"streetAddress": "H.no: 9- 1-127/4, Flat No: 501 & 502 5th Floor, Amsri Faust Building, S.D. Road, Secunderabad",
-
-"addressLocality": "Hyderabad",
-
-"postalCode": "500025",
-
-"addressCountry": "IN"
-
-},
-
-"geo": {
-
-"@type": "GeoCoordinates",
-
-"latitude": 17.4411082,
-
-"longitude": 78.4999186
-
-},
-
-"openingHoursSpecification": {
-
-"@type": "OpeningHoursSpecification",
-
-"dayOfWeek": [
-
-"Monday",
-
-"Tuesday",
-
-"Wednesday",
-
-"Thursday",
-
-"Friday",
-
-"Saturday"
-
-],
-
-"opens": "09:30",
-
-"closes": "06:30"
-
-}
-
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Teks Academy - Best Software Training Institute Secunderabad",
+  "image": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "@id": "",
+  "url": "https://teksacademy.com/branch/best-software-training-institute-secunderabad",
+  "telephone": "+91-6281159905",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "H.no: 9-1-127/4, Flat No: 501 & 502 5th Floor, Amsri Faust Building, S.D. Road, Secunderabad",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500025",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4411082,
+    "longitude": 78.4999186
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "18:30"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "175"
+  },
+  "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "sameAs": [
+    "https://facebook.com/teksacademy",
+    "https://twitter.com/teksacademy"
+  ]
 }
 
       `;

@@ -265,14 +265,14 @@ export class HitechComponent implements OnInit {
       const script = this.renderer.createElement('script');
       script.type = 'application/ld+json';
       script.text = `
-    {
+   {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Teks Academy - Best Software Training Institute hiteccity",
-  "image": "",
+  "name": "Teks Academy - Best Software Training Institute Hitec City",
+  "image": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
   "@id": "",
   "url": "https://teksacademy.com/branch/best-software-training-institute-hiteccity",
-  "telephone": "6281159905",
+  "telephone": "+91-6281159905",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini Layout Rd, Madhapur",
@@ -285,19 +285,31 @@ export class HitechComponent implements OnInit {
     "latitude": 17.4510735,
     "longitude": 78.38199449999999
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:30",
-    "closes": "06:30"
-  } 
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "18:30"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "185"
+  },
+  "logo": "https://teksacademy.com/assets/img/logo/mainlogo.svg",
+  "sameAs": [
+    "https://facebook.com/teksacademy",
+    "https://twitter.com/teksacademy"
+  ]
 }
 
       `;
