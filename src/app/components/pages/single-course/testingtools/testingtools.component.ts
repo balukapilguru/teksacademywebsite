@@ -302,7 +302,7 @@ export class TestingtoolsComponent {
 
 "price": "30000",
 
-"priceValidUntil": "2024-11-10",
+"priceValidUntil": "2025-11-10",
 
 "availability": "https://schema.org/InStock"
 

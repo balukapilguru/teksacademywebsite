@@ -301,6 +301,7 @@ import { FeaturedinComponent } from './components/pages/featuredin/featuredin.co
 import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
 import { BlogcategoriesComponent } from './components/pages/blogcategories/blogcategories.component';
 import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
+import { TopbarComponent } from './components/common/topbar/topbar.component';
 
 
 
@@ -585,6 +586,7 @@ import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
     BranchenquiryformComponent,
     BlogcategoriesComponent,
     SanitizeHtmlPipe,
+    TopbarComponent,
    
   ],
 

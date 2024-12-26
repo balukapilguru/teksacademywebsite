@@ -226,25 +226,18 @@ export class DsformComponent {
           // Set the course name to the ebcourse property
           window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/VBAMACROS.pdf'
         }
-         else if (path.includes('https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Medical+Coding+(1).pdf')) {
+        else if (path.includes('best-medical-coding-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'best-medical-coding-course-training-institute'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Medical+Coding+(1).pdf'
         }
-        else if (path.includes('https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Multimedia.pdf')) {
+        else if (path.includes('best-multimedia-course-training-institute')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'best-multimedia-course-training-institute'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/Multimedia.pdf'
         }
-        else if (path.includes('https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/VLSI+Design+Verification+IE+P+1.pdf')) {
+        else if (path.includes('best-vlsi-course-training-institute-hyderabad')) {
           // Set the course name to the ebcourse property
-          window.location.href = 'best-vlsi-course-training-institute-hyderabad'
+          window.location.href = 'https://teksacademy.s3.ap-south-1.amazonaws.com/studentManagement/download-syllabus/VLSI+Design+Verification+IE+P+1.pdf'
         }
-      
-
-
-
-
-
-
 
       },
       error => {
