@@ -1,0 +1,32 @@
+
+  /* Navbar Logo */
+.navbar-brand img {
+    height: 40px;
+  }
+  
+  /* Top Section Icons */
+  .bg-primary a {
+    font-size: 1rem;
+    text-decoration: none;
+  }
+    .bg-primary {
+    background-color: #2a619d !important;
+  }
+  
+  .bg-primary a:hover {
+    color: #ffc107; /* Highlight on hover */
+  }
+  
+  /* Adjust Register Button */
+  .btn-warning {
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .bg-primary div {
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  }
+  
