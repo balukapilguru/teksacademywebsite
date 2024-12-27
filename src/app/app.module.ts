@@ -306,10 +306,10 @@ import { TopbarComponent } from './components/common/topbar/topbar.component';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
+    TopbarComponent,
     NavbarComponent,
     FooterComponent,
     ElearningSchoolComponent,
@@ -586,7 +586,6 @@ import { TopbarComponent } from './components/common/topbar/topbar.component';
     BranchenquiryformComponent,
     BlogcategoriesComponent,
     SanitizeHtmlPipe,
-    TopbarComponent,
    
   ],
 
