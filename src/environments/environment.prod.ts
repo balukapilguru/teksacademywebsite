@@ -10,8 +10,7 @@
 
 export const environment = {
   production: true,
-  // apiUrl: 'https://apierp.infozit.com',   //localhost
-  apiUrl: 'https://apiadmin.infozit.com', //live
+  apiUrl: 'https://apierp.infozit.com',   //live
   // apiUrl:'http://192.168.1.250:3030'
   // apiUrl:'https://mainbackup.teksacademy.com',
   
