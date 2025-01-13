@@ -302,7 +302,12 @@ import { BranchenquiryformComponent } from './components/pages/branches/branchen
 import { BlogcategoriesComponent } from './components/pages/blogcategories/blogcategories.component';
 import { SanitizeHtmlPipe } from './pipes/sanitize-html.pipe';
 import { TopbarComponent } from './components/common/topbar/topbar.component';
-
+import { PythonguwahatiComponent } from './components/pages/single-course/pythonguwahati/pythonguwahati.component';
+import { JavaguwahatiComponent } from './components/pages/single-course/javaguwahati/javaguwahati.component';
+import { DatascienceguwahatiComponent } from './components/pages/single-course/datascienceguwahati/datascienceguwahati.component';
+import { AwsguwahatiComponent } from './components/pages/single-course/awsguwahati/awsguwahati.component';
+import { DigitialmarketingguwahatiComponent } from './components/pages/single-course/digitialmarketingguwahati/digitialmarketingguwahati.component';
+import { BimguwahatiComponent } from './components/pages/single-course/bimguwahati/bimguwahati.component';
 
 
 
@@ -587,6 +592,12 @@ import { TopbarComponent } from './components/common/topbar/topbar.component';
     BlogcategoriesComponent,
     SanitizeHtmlPipe,
     TopbarComponent,
+    PythonguwahatiComponent,
+    JavaguwahatiComponent,
+    DatascienceguwahatiComponent,
+    AwsguwahatiComponent,
+    DigitialmarketingguwahatiComponent,
+    BimguwahatiComponent
    
   ],
 
