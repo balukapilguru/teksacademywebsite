@@ -2336,3 +2336,204 @@ p.awesome_line {
 }
 
 // ACCordion styles
+
+
+
+
+
+
+//------new css lakshmi---------------------------
+.nutshell_bg{
+  background-image: url(../../../../../assets/img/nushell_bg.png);
+  background-color: #f1f5f9;
+  // background-repeat: no-repeat;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+/* Card Container */
+// .card_guwathi {
+//   width: 20rem; 
+//   height: 8rem; /* Fixed height for all cards */
+//   border: 2px solid #fe543d; /* Red border */
+//   border-radius: 8px; /* Rounded corners */
+//   overflow: hidden; /* Prevent overflow of content */
+//   display: flex; /* Flexbox for consistent layout */
+// }
+.card_guwathi {
+  // width: 20rem; /* Fixed width for all cards */
+  // height: 8rem; /* Fixed height for all cards */
+  border: 2px solid #fe543d; /* Red border */
+  border-radius: 8px; /* Rounded corners */
+  // overflow: hidden; /* Prevent overflow of content */
+  // display: flex; /* Flexbox for consistent layout */
+}
+
+/* Image Styling */
+.card_guwathi img {
+  // width: 40%; /* Image occupies 40% of the card width */
+  height: 100%; /* Image height matches the card height */
+  // object-fit: cover; /* Ensure the image scales proportionally */
+  border-radius: 4px; /* Optional: Slight rounding for the image */
+}
+
+/* Blue Background for Text Content */
+.bg_blue_color {
+  background-color: #2a619d; /* Blue background */
+  color: #fff; /* White text */
+  flex: 1; /* Take up the remaining space */
+  display: flex; /* Flexbox for alignment */
+  align-items: start; /* Vertically center the text */
+  justify-content: start; /* Horizontally center the text */
+  padding: 1rem; /* Padding for spacing */
+  
+}
+
+/* Text Styling */
+.bg_blue_color p {
+  margin: 0; /* Remove default margin */
+  // font-size: 1rem; /* Adjust font size */
+  line-height: 1.5; /* Improve readability */
+  // text-align: center; /* Center align text */
+  font-size: 15px;
+}
+
+.border_blue{
+  border: 1px solid #2a619d;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.orange_name{
+  font-size: 24px;
+  color: #fe543d;
+  font-weight: bold;
+}
+.black_color{
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+}
+
+.ii_academy{
+  width: 15% !important;
+}.btn-style-one {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px 10px;
+  font-weight: 600;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  background-color: #2a619d;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.btn-style-one:hover {
+  background-color: #2a619d;
+  color: #ffffff;
+}
+
+/* Extra Large Devices (Desktops) */
+@media screen and (max-width: 1920px) {
+  .header_one {
+    width: 40%;
+  }
+  .header_two {
+    width: 70%;
+  }
+  .header_three {
+    width:40%;
+  }
+  .header_four {
+    width: 30%;
+  }
+}
+
+/* Large Devices (Desktops) */
+@media screen and (max-width: 1440px) {
+  .header_one {
+    width: 50%;
+  }
+  .header_two {
+    width: 68%;
+  }
+  .header_three {
+    width: 46%;
+  }
+  .header_four {
+    width: 42%;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 1024px) {
+  .header_one {
+    width: 60%;
+  }
+  .header_two {
+    width: 80%;
+  }
+  .header_three {
+    width: 55%;
+  }
+  .header_four {
+    width: 50%;
+  }
+}
+
+/* Small Devices (Large Smartphones) */
+@media screen and (max-width: 768px) {
+  .header_one {
+    width: 75%;
+  }
+  .header_two {
+    width: 100%;
+  }
+  .header_three {
+    width: 53%;
+  }
+  .header_four {
+    width: 50%;
+  }
+}
+
+/* Extra Small Devices (Smartphones) */
+@media screen and (max-width: 576px) {
+  .header_one {
+    width: 85%;
+  }
+  .header_two {
+    width: 100%;
+  }
+  .header_three {
+    width: 95%;
+  }
+  .header_four {
+    width: 90%;
+  }
+}
+
+/* Ultra Small Devices (Small Smartphones) */
+@media screen and (max-width: 425px) {
+  .header_one {
+    width: 90%;
+  }
+  .header_two {
+    width: 100%;
+  }
+  .header_three {
+    width: 100%;
+  }
+  .header_four {
+    width: 100%;
+  }
+}
