@@ -294,7 +294,7 @@ export class MultimediaComponent {
 
 "price": "30000",
 
-"priceValidUntil": "2024-11-10",
+"priceValidUntil": "2025-11-10",
 
 "availability": "https://schema.org/InStock"
 
@@ -336,7 +336,7 @@ export class MultimediaComponent {
 
 },
 
-"datePublished": "2024-02-11",
+"datePublished": "2025-02-11",
 
 "author": {"@type": "Person", "name": "Teks Academy"}
 

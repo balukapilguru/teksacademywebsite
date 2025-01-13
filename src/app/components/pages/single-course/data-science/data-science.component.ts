@@ -116,7 +116,7 @@ export class DataScienceComponent implements OnInit {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Learn the best data science course in Hyderabad - 2024'
+      'Learn the best data science course in Hyderabad - 2025'
     );
 
     // set meta description
@@ -205,7 +205,7 @@ export class DataScienceComponent implements OnInit {
           "url": "https://teksacademy.com/courses/best-data-science-course-training-institute",
           "priceCurrency": "INR",
           "price": "30000",
-          "priceValidUntil": "2024-11-10",
+          "priceValidUntil": "2025-11-10",
           "availability": "https://schema.org/InStock"
         },
         "aggregateRating": {
@@ -227,7 +227,7 @@ export class DataScienceComponent implements OnInit {
             "bestRating": "5",
             "worstRating": "1"
           },
-          "datePublished": "2024-02-11",
+          "datePublished": "2025-02-11",
           "author": {"@type": "Person", "name": "Teks Academy"}
         }
       }
