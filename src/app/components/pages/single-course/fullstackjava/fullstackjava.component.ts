@@ -108,7 +108,7 @@ export class FullstackjavaComponent {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Best Training Institute for Full-Stack Java Course 2024'
+      'Best Training Institute for Full-Stack Java Course 2025'
     );
 
     // set meta description
@@ -303,7 +303,7 @@ export class FullstackjavaComponent {
 
 "price": "30000",
 
-"priceValidUntil": "2024-11-10", "availability": "https://schema.org/InStock"
+"priceValidUntil": "2025-11-10", "availability": "https://schema.org/InStock"
 
 },
 
@@ -341,7 +341,7 @@ export class FullstackjavaComponent {
 
 },
 
-"datePublished": "2024-02-11",
+"datePublished": "2025-02-11",
 
 "author": {"@type": "Person", "name": "Teks Academy"}
 
