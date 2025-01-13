@@ -161,8 +161,27 @@ import { EbookformComponent } from './components/common/ebookform/ebookform.comp
 import { FeaturedComponent } from './components/common/featured/featured.component';
 import { BranchenquiryformComponent } from './components/pages/branches/branchenquiryform/branchenquiryform.component';
 import { BlogcategoriesComponent } from './components/pages/blogcategories/blogcategories.component';
+import { PythonguwahatiComponent } from './components/pages/single-course/pythonguwahati/pythonguwahati.component';
+import { JavaguwahatiComponent } from './components/pages/single-course/javaguwahati/javaguwahati.component';
+import { DatascienceguwahatiComponent } from './components/pages/single-course/datascienceguwahati/datascienceguwahati.component';
+import { AwsguwahatiComponent } from './components/pages/single-course/awsguwahati/awsguwahati.component';
+import { DigitialmarketingguwahatiComponent } from './components/pages/single-course/digitialmarketingguwahati/digitialmarketingguwahati.component';
+import { BimguwahatiComponent } from './components/pages/single-course/bimguwahati/bimguwahati.component';
 
 const routes: Routes = [
+  { path: 'courses/iit-guwahati/best-full-stack-python-development-course-training-institute',
+    component: PythonguwahatiComponent },
+ { path: 'courses/iit-guwahati/best-full-stack-java-development-course-training-institute', 
+   component: JavaguwahatiComponent },
+ { path: 'courses/iit-guwahati/best-data-science-course-training-institute',
+    component: DatascienceguwahatiComponent },
+ { path: 'courses/iit-guwahati/best-awsplusdevops-course-training-institute', 
+   component: AwsguwahatiComponent },
+ { path: 'courses/iit-guwahati/best-digital-marketing-course-training-institute', 
+   component: DigitialmarketingguwahatiComponent },
+ { path: 'courses/iit-guwahati/best-bim-building-information-modeling-course-training-institute', 
+  component: BimguwahatiComponent },
+ { path: 'courses/best-staad-pro-civil-engineering-course-training-institute', component: StaadproComponent},
   // {path: '', component: ElearningSchoolComponent},
 
   {
@@ -243,7 +262,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
- 
+
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -387,7 +406,7 @@ const routes: Routes = [
   //   path: 'courses/digital-marketing-self-learning-program',
   //   component: SlpDigitalMarketingComponent,
   // },
-{ path:'courses/best-vlsi-course-training-institute-hyderabad', component:VlsiComponent},
+  { path: 'courses/best-vlsi-course-training-institute-hyderabad', component: VlsiComponent },
   // { path: 'slp-overview-form', component: SlpOverviewFormComponent },
   // { path: 'placements', component: PlacementsComponent },
   // { path: 'our-gallery', component: OurGalleryComponent },
@@ -411,11 +430,12 @@ const routes: Routes = [
   { path: 'branch/best-software-training-institute-hiteccity', component: HitechComponent },
   { path: 'branch/best-software-training-institute-kukatpally', component: KukatpallyComponent },
   { path: 'branch/best-software-training-institute-secunderabad', component: SecunderabadComponent },
-  {path:'branch/best-software-training-institute-visakhapatnam', component:VizagComponent},
-  {path:'branchenquiryform', component:BranchenquiryformComponent},
-  {path:'blogcategory/:category', component:BlogcategoriesComponent},
-  {path:'ebook', component:EbookformComponent},
-  {path:'featuredin', component:FeaturedComponent},
+  { path: 'branch/best-software-training-institute-visakhapatnam', component: VizagComponent },
+  { path: 'branchenquiryform', component: BranchenquiryformComponent },
+  { path: 'blogcategory/:category', component: BlogcategoriesComponent },
+
+  { path: 'ebook', component: EbookformComponent },
+  { path: 'featuredin', component: FeaturedComponent },
 
   // {path: '', component: ElearningSchoolComponent},
 
@@ -497,7 +517,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  
+
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -670,7 +690,7 @@ const routes: Routes = [
   // { path: 'post-graduate-program', component: PgpComponent },
   { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
   { path: 'verifyCertificate/:registrationnumber', component: StudentverifypageComponent },
-  {path:'franchise', component:FranchiseComponent},
+  { path: 'franchise', component: FranchiseComponent },
 
   {
     path: '',
@@ -750,7 +770,7 @@ const routes: Routes = [
         (m) => m.WebinarsListModule
       ),
   },
-  
+
   {
     path: 'workshop/salesforce',
     loadChildren: () =>
@@ -881,7 +901,7 @@ const routes: Routes = [
 
   // New URLS FOR COURSEs
 
-// 39 courses start here 
+  // 39 courses start here 
   { path: 'courses/best-hvac-training-institute', component: HvacComponent },
   {
     path: 'courses/best-3ds-max-course-training-institute',
@@ -895,10 +915,7 @@ const routes: Routes = [
     path: 'courses/best-full-stack-python-development-course-training-institute',
     component: FullstackpythonComponent,
   },
-  {
-    path: 'courses/best-staad-pro-civil-engineering-course-training-institute',
-    component: StaadproComponent,
-  },
+
   {
     path: 'courses/best-primavera-p6-course-training-institute',
     component: PrimaveraComponent,
@@ -1040,7 +1057,7 @@ const routes: Routes = [
   },
 
   // 39 courses end here
-  {path: 'student-video-testimonals', component: StudentsVideoTestimonalsComponent},
+  { path: 'student-video-testimonals', component: StudentsVideoTestimonalsComponent },
   { path: 'thank-you', component: ThankYouComponent },
   { path: 'jobapplication', component: JobApplicationComponent },
   { path: 'jobs', component: NaukriComponent },
@@ -1049,7 +1066,7 @@ const routes: Routes = [
 
 
 
-// shivaji and srilaskhmi 10 dec changing the urls
+  // shivaji and srilaskhmi 10 dec changing the urls
 
   // { path: 'updates', component: UpdatesComponent },
   // { path: 'single-course-sidebarform', component: SingleCourseSidebarComponent,},

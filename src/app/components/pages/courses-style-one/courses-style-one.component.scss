@@ -1,2 +1,16 @@
 @import "../../common/courses/courses.component.scss";
 
+.nav-link{
+    color:#2a619d !important;
+    border: 1px solid #2a619d !important;
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #fff !important;
+    margin-left: 12px;
+    background-color: #2a619d;
+    font-size: 20px;
+    font-weight: bold;
+}

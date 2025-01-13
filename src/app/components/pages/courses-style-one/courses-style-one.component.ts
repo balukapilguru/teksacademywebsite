@@ -9,6 +9,7 @@ export class CoursesStyleOneComponent implements OnInit {
   selectedSort: string = 'viewall';
   searchText: string = '';
 
+
   onSortSelectChange(event: any){
     this.selectedSort = event.target.value;
   }
