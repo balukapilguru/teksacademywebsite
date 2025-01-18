@@ -384,22 +384,26 @@ a#tab-instructor-tab {
   display: none;
 }
 @media only screen and (max-width: 2560px) and (min-width: 2000px) {
-  .transfer{
-    background-color: #f16227;
-    color: white;
-    margin-top: 10px;
-    align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    // width: 50px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 53px;
-}
+  
+    .transfer {
+      background-color: #f16227;
+      color: white;
+      margin-top: 10px;
+      align-items: center;
+      padding: 0; /* Remove padding */
+      width: 75px; /* Set consistent width */
+      text-align: center;
+      line-height: 75px; /* Ensure vertical alignment */
+      font-size: 53px;
+      display: inline-block; /* Ensure spacing works as expected */
+    }
+
 }
 @media only screen and (max-width: 2000px) and (min-width: 1500px) {
 
   .banner_heading{
+    font-size: 40px !important;
+  } .banner_heading{
     font-size: 40px !important;
   }
   .bnnrcard {
@@ -410,60 +414,61 @@ a#tab-instructor-tab {
     max-width: 453px !important;
   }
   
-  .transfer{
+  .transfer {
     background-color: #f16227;
     color: white;
     margin-top: 10px;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    // width: 50px;
+    padding: 0; /* Remove padding */
+    width: 75px; /* Set consistent width */
     text-align: center;
-    line-height: 75px;
+    line-height: 75px; /* Ensure vertical alignment */
     font-size: 53px;
-}
+    display: inline-block; /* Ensure spacing works as expected */
+  }
 }
 @media only screen and (max-width: 1440px) and (min-width: 1025px) {
-  .main-banner-courses-list{
-    margin-left: 10rem Im !important;
-  }
+  // .main-banner-courses-list{
+    // margin-left: 10rem !important;
+  // }
   .bnnrcard {
     margin-top: 31px;
   }
   .banner_heading{
     font-size: 38px !important;
   }
-  .transfer{
-    background-color: #f16227;
-    color: white;
-    margin-top: 10px;
-    align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    // width: 50px;
-    text-align: center;
-    line-height: 75px;
-    margin-left: -1rem;
-    font-size: 53px;
-}
+
+    .transfer {
+      background-color: #f16227;
+      color: white;
+      margin-top: 10px;
+      align-items: center;
+      padding: 0; /* Remove padding */
+      width: 75px; /* Set consistent width */
+      text-align: center;
+      line-height: 75px; /* Ensure vertical alignment */
+      font-size: 53px;
+      display: inline-block; /* Ensure spacing works as expected */
+    }
+
 
 }
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   .bnnrcard {
     margin-top: 26px;
   }
-  .transfer{
+  .transfer {
     background-color: #f16227;
     color: white;
     margin-top: 10px;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    // width: 50px;
+    padding: 0; /* Remove padding */
+    width: 75px; /* Set consistent width */
     text-align: center;
-    line-height: 75px;
+    line-height: 75px; /* Ensure vertical alignment */
     font-size: 53px;
-}
+    display: inline-block; /* Ensure spacing works as expected */
+  }
 .main_text_device{
   margin-top: -90%;
 }
@@ -483,18 +488,18 @@ a#tab-instructor-tab {
     height: 50%;
     margin-top: 20px;
   }
-  .transfer{
+  .transfer {
     background-color: #f16227;
     color: white;
     margin-top: 10px;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    // width: 50px;
+    padding: 0; /* Remove padding */
+    width: 75px; /* Set consistent width */
     text-align: center;
-    line-height: 75px;
+    line-height: 75px; /* Ensure vertical alignment */
     font-size: 53px;
-}
+    display: inline-block; /* Ensure spacing works as expected */
+  }
 .banner_heading{
   font-size: 34px !important;
 }
@@ -507,18 +512,18 @@ a#tab-instructor-tab {
     height: 50%;
     margin-top: 20px;
   }
-  .transfer{
+  .transfer {
     background-color: #f16227;
     color: white;
     margin-top: 10px;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    // width: 50px;
+    padding: 0; /* Remove padding */
+    width: 75px; /* Set consistent width */
     text-align: center;
-    line-height: 75px;
+    line-height: 75px; /* Ensure vertical alignment */
     font-size: 53px;
-}
+    display: inline-block; /* Ensure spacing works as expected */
+  }
 .banner_heading{
   font-size: 23px !important;
 }
