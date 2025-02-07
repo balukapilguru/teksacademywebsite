@@ -16,125 +16,139 @@
     <!-- <span class="tab-button" (click)="activeTab = 'images'">Images</span>
   <span class="tab-button" (click)="activeTab = 'videos'">Videos</span> -->
 
-            <div class="col-lg-12" style="display: flex;
+    <div class="col-lg-12" style="display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         margin: 30px auto;">
-                <span class="tab-button" (click)="activeTab = 'fullstactdevelopment'">Full Stack Developement</span>
-                <span class="tab-button" (click)="activeTab = 'autocad'">AutoCad</span>
-                <span class="tab-button" (click)="activeTab = 'aws'">AWS</span>
-                <span class="tab-button" (click)="activeTab = 'dataanalytics'">Data Analytics</span>
-                <span class="tab-button" (click)="activeTab = 'datascience'">Data Science</span>
-            </div>
-            <div class="col-lg-12" style="display: flex;
+        <span class="tab-button" (click)="activeTab = 'fullstactdevelopment'">Full Stack Developement</span>
+        <span class="tab-button" (click)="activeTab = 'autocad'">AutoCad</span>
+        <span class="tab-button" (click)="activeTab = 'aws'">AWS</span>
+        <span class="tab-button" (click)="activeTab = 'dataanalytics'">Data Analytics</span>
+        <span class="tab-button" (click)="activeTab = 'datascience'">Data Science</span>
+    </div>
+    <div class="col-lg-12" style="display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         margin: 30px auto;">
-                <span class="tab-button" (click)="activeTab = 'digitalmarketing'">Digital Marketing</span>
-                <span class="tab-button" (click)="activeTab = 'fullstackjava'">Full Stack Java</span>
-                <span class="tab-button" (click)="activeTab = 'fullstackpython'">Full Stack Python</span>
-                <span class="tab-button" (click)="activeTab = 'iso'">ISO Programming</span>
-        </div>    
-        <div class="col-lg-12" style="display: flex;
+        <span class="tab-button" (click)="activeTab = 'digitalmarketing'">Digital Marketing</span>
+        <span class="tab-button" (click)="activeTab = 'fullstackjava'">Full Stack Java</span>
+        <span class="tab-button" (click)="activeTab = 'fullstackpython'">Full Stack Python</span>
+        <span class="tab-button" (click)="activeTab = 'iso'">ISO Programming</span>
+    </div>
+    <div class="col-lg-12" style="display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         margin: 30px auto;">
-            <span class="tab-button" (click)="activeTab = 'pgdca'">PGDCA</span>
-            <span class="tab-button" (click)="activeTab = 'python'">Python</span>
-            <span class="tab-button" (click)="activeTab = 'revitbim'">Revit BIM</span>
-            <span class="tab-button" (click)="activeTab = 'salesforce'">Salesforce</span>
-            <span class="tab-button" (click)="activeTab = 'spokenenglish'">Spoken English</span>
-        </div>
+        <span class="tab-button" (click)="activeTab = 'pgdca'">PGDCA</span>
+        <span class="tab-button" (click)="activeTab = 'python'">Python</span>
+        <span class="tab-button" (click)="activeTab = 'revitbim'">Revit BIM</span>
+        <span class="tab-button" (click)="activeTab = 'salesforce'">Salesforce</span>
+        <span class="tab-button" (click)="activeTab = 'spokenenglish'">Spoken English</span>
+    </div>
 </div>
 
 <!-- full stack development start-->
-    <div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'fullstactdevelopment'" >
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3>Our Students Experience Gallery</h3>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _album; let i=index;">
-                    <div class="single-gallery-item">
-                        <img [src]="image.thumb" (click)="open(i)" />
-                    </div>
-                </div>
-
-                <div class="col-12 text-center">
-                    <h3>What Our Students Say</h3>
-                </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/testimonials/fullstackdevelopment/fullstackvideo1.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/shorts/fhr4zBMi0gM" target="_blank"
-                            class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/testimonials/fullstackdevelopment/fullstackvideo2.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/shorts/Ur7Wrc_38bg" class="video-btn popup-youtube" target="_blank"><i
-                                class="flaticon-play" ></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/testimonials/fullstackdevelopment/fullstackvideo3.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
-                    </div>
-    
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'fullstactdevelopment'">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Our Students Experience Gallery</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _album; let i=index;">
+                <div class="single-gallery-item">
+                    <img [src]="image.thumb" (click)="open(i)" />
                 </div>
             </div>
+
+            <div class="col-12 text-center">
+                <h3>What Our Students Say</h3>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/testimonials/fullstackdevelopment/fullstackvideo1.png" class="shadow"
+                            alt="image">
+                    </div>
+                    <a href="https://www.youtube.com/shorts/fhr4zBMi0gM" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/testimonials/fullstackdevelopment/fullstackvideo2.png" class="shadow"
+                            alt="image">
+                    </div>
+                    <a href="https://www.youtube.com/shorts/Ur7Wrc_38bg" class="video-btn popup-youtube"
+                        target="_blank"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/testimonials/fullstackdevelopment/fullstackvideo3.png" class="shadow"
+                            alt="image">
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/_ePt-s-hNmM?si=_WoGp2Rp31r7koJD" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+
         </div>
     </div>
+</div>
 <!-- full stack development end -->
 <!-- autocad start -->
-    <div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'autocad'" >
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3>Our Students Experience Gallery</h3>
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'autocad'">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Our Students Experience Gallery</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _autocad; let i=index;">
+                <div class="single-gallery-item">
+                    <img [src]="image.thumb" (click)="autocadopen(i)" />
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _autocad; let i=index;">
-                    <div class="single-gallery-item">
-                        <img [src]="image.thumb" (click)="autocadopen(i)" />
-                    </div>
-                </div>
+            </div>
 
-                <div class="col-12 text-center">
-                    <h3>What Our Students Say</h3>
-                </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/testimonials/autocad/autocadvideo1.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/shorts/1J8UY_duY24" target="_blank"
-                            class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            <div class="col-12 text-center">
+                <h3>What Our Students Say</h3>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/testimonials/autocad/autocadvideo1.png" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/shorts/1J8UY_duY24" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
         </div>
     </div>
+</div>
 <!-- autocad end -->
 <!-- AWS start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'aws'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'aws'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -154,8 +168,48 @@
                     <div class="image">
                         <img src="assets/img/testimonials/aws/awsvideo1.png" class="shadow" alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/Zm_aiVAyXMQ" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
+                    <a href="https://www.youtube.com/shorts/Zm_aiVAyXMQ" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/V8TGpvRiTCA?si=NZrck7SyXiTSx6LU" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/bIe5zkjdwm4?si=ms2dTQlLwd1tRb97" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/Mbtz34JMLoU?si=wsgmSUIqxh62xM-b" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/TPJ2Mf46iEw?si=YBqR332plGvB2S8Y" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
@@ -165,7 +219,7 @@
 </div>
 <!-- AWS end -->
 <!-- data analytics start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'dataanalytics'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'dataanalytics'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -183,18 +237,19 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Data Analytics/dataanalyticsvideo1.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Data Analytics/dataanalyticsvideo1.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/ORQiZX4Y7Mg" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/ORQiZX4Y7Mg" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Data Analytics/dataanalyticsvideo2.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Data Analytics/dataanalyticsvideo2.jpg" class="shadow"
+                            alt="image">
                     </div>
                     <a href="https://www.youtube.com/shorts/CQDRYd0nBsA" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
@@ -206,7 +261,7 @@
 </div>
 <!-- data analytics end -->
 <!-- data science start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'datascience'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'datascience'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -224,18 +279,19 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Data Science/datasciencevideo1.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Data Science/datasciencevideo1.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/oMRsZ43q8ZE" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/oMRsZ43q8ZE" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Data Science/datasciencevideo2.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Data Science/datasciencevideo2.jpg" class="shadow"
+                            alt="image">
                     </div>
                     <a href="https://www.youtube.com/shorts/4GAqn8Mermo" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
@@ -245,9 +301,54 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Data Science/datasciencevideo3.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Data Science/datasciencevideo3.jpg" class="shadow"
+                            alt="image">
                     </div>
                     <a href="https://www.youtube.com/shorts/jkAXZrJOhS4" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/aYG2FHSO5QM?si=B9vTOTl7hC_4omkH" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/r5zYtrtN0RE?si=sbIY7Rcc1IrnRUNy" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/aye1Ary7D9s?si=wxpTHFynQdONlGyy" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/aoOxDCYGl7I?si=eZAxxWfNyOUrNros" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
@@ -258,11 +359,11 @@
 </div>
 <!-- data science end -->
 <!-- digital marketing start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'digitalmarketing'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'digitalmarketing'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                
+
                 <h3>Our Students Experience Gallery</h3>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _digitalmarketing; let i=index;">
@@ -277,21 +378,32 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Digital Marketing/digitalmarketingvideo1.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Digital Marketing/digitalmarketingvideo1.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/ZpnU3Kz-HzU" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/ZpnU3Kz-HzU" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
             
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtube.com/shorts/byXHBMt5UpU?si=TfQV1Cu6irZQ7WB7" class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>
 <!-- digital marketing end -->
 <!-- full stack java start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'fullstackjava'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'fullstackjava'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -309,18 +421,19 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo1.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo1.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/NAcbO34IPJ8" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/NAcbO34IPJ8" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo2.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo2.jpg" class="shadow"
+                            alt="image">
                     </div>
                     <a href="https://www.youtube.com/shorts/nh9Ur4IF69Y" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
@@ -330,10 +443,11 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo3.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo3.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/NDFYrC-AXDU" class="video-btn popup-youtube" target="_blank"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/NDFYrC-AXDU" class="video-btn popup-youtube"
+                        target="_blank"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
 
@@ -341,10 +455,11 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo4.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo4.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/KwTZw1JjfQg" class="video-btn popup-youtube" target="_blank"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/KwTZw1JjfQg" class="video-btn popup-youtube"
+                        target="_blank"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
 
@@ -352,9 +467,33 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo5.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Full Stack Java/fullstackjavavideo5.jpg" class="shadow"
+                            alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/fTyRPOuCgVA" class="video-btn popup-youtube" target="_blank"><i
+                    <a href="https://www.youtube.com/shorts/fTyRPOuCgVA" class="video-btn popup-youtube"
+                        target="_blank"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/o7skRkScd-Q?si=Os7uDjFNwjgdlYe6" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/RH2NvA3arEg?si=uqjRG8GIgUKpn4GV" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
@@ -365,7 +504,7 @@
 </div>
 <!-- full stack java end -->
 <!-- full stack python start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'fullstackpython'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'fullstackpython'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -383,7 +522,8 @@
             <div class="col-3">
                 <div class="video-box">
                     <div class="image">
-                        <img src="assets/img/testimonials/Full Stack Python/fullstackpythonvideo1.jpg" class="shadow" alt="image">
+                        <img src="assets/img/testimonials/Full Stack Python/fullstackpythonvideo1.jpg" class="shadow"
+                            alt="image">
                     </div>
                     <a href="https://www.youtube.com/watch?v=QSSXiv882s8" target="_blank"
                         class="video-btn popup-youtube" class="video-btn popup-youtube"><i
@@ -391,12 +531,78 @@
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/Qbr0AcO8vHw?si=kdMOs4VTW-Yr-hOv" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/HqnedLQjTsM?si=g6oPnb5GXKZxStih" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/2Rr-h7dokoU?si=JUAvFYh6OMeqzhfz" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/2DoglxGphek?si=CHiv9WBZhcz1SZne" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/cOZnMdUppLc?si=Ls3l6ER5-A6UMj76" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/QG9-3Rf4d4I?si=HKGr_ESIpPy2yGTF" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
 <!-- full stack python end -->
 <!-- iso start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'iso'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'iso'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -416,19 +622,18 @@
                     <div class="image">
                         <img src="assets/img/testimonials/ISO Programming/isovideo1.jpg" class="shadow" alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/qzZxi1TWfaI" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/qzZxi1TWfaI" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>
 <!-- iso end -->
 <!-- pgdca start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'pgdca'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'pgdca'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -459,7 +664,7 @@
 </div>
 <!-- pgdca end -->
 <!-- python start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'python'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'python'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -479,9 +684,8 @@
                     <div class="image">
                         <img src="assets/img/testimonials/Python/pythonvideo1.jpg" class="shadow" alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/GWUFZWz9noc" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/GWUFZWz9noc" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
@@ -490,7 +694,7 @@
 </div>
 <!-- python end -->
 <!-- revitbim start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'revitbim'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'revitbim'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -510,18 +714,28 @@
                     <div class="image">
                         <img src="assets/img/testimonials/Revit BIM/revitbimvideo1.jpg" class="shadow" alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/yMMJ3KSX1eo" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
+                    <a href="https://www.youtube.com/shorts/yMMJ3KSX1eo" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/websita-testimonial.jpg" class="shadow" alt="image">
+                    </div>
+                    <a href="https://youtu.be/qNAAwL3r_Hs?si=-e04iOv9f3biGZV5" class="video-btn popup-youtube"><i
                             class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
+
             </div>
         </div>
     </div>
 </div>
 <!-- revitbim end -->
 <!-- salesforce start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'salesforce'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'salesforce'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -541,9 +755,8 @@
                     <div class="image">
                         <img src="assets/img/testimonials/Salesforce/salesforcevideo1.jpg" class="shadow" alt="image">
                     </div>
-                    <a href="https://www.youtube.com/shorts/L-LucrgAdjo" target="_blank"
-                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                            class="flaticon-play"></i></a>
+                    <a href="https://www.youtube.com/shorts/L-LucrgAdjo" target="_blank" class="video-btn popup-youtube"
+                        class="video-btn popup-youtube"><i class="flaticon-play"></i></a>
                     <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
@@ -572,7 +785,7 @@
 </div>
 <!-- salesforce end -->
 <!-- spokenenglish start-->
-<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'spokenenglish'" >
+<div class="gallery-area pt-30 pb-70" *ngIf="activeTab === 'spokenenglish'">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -629,7 +842,7 @@
 
 
 
-    <!-- <div class="gallery-area pt-30" *ngIf="activeTab === 'images'" >
+<!-- <div class="gallery-area pt-30" *ngIf="activeTab === 'images'" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let image of _album; let i=index;">
@@ -643,181 +856,181 @@
 
 
 
-    <div class="courses-curriculum" *ngIf="activeTab === 'videos'">
-        <div class="container video-container">
-            <div class="row">
-                <!-- <span class="text-center hheading"> Students Video Testimonals </span> -->
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt1.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
-                            class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+<div class="courses-curriculum" *ngIf="activeTab === 'videos'">
+    <div class="container video-container">
+        <div class="row">
+            <!-- <span class="text-center hheading"> Students Video Testimonals </span> -->
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt1.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
+                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt2.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt2.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt3.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt3.png" class="shadow" alt="image">
                     </div>
-    
+                    <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt4.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt4.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt1.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
-                            class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt1.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
+                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt2.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt2.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt3.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt3.png" class="shadow" alt="image">
                     </div>
-    
+                    <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt4.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt4.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt1.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
-                            class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt1.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
+                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt2.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt2.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt3.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt3.png" class="shadow" alt="image">
                     </div>
-    
+                    <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt4.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt4.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt1.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
-                            class="video-btn popup-youtube" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt1.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=A66kf2ck_dU&t=6s" target="_blank"
+                        class="video-btn popup-youtube" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt2.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt2.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=u9upGI3F4z4" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt3.png" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt3.png" class="shadow" alt="image">
                     </div>
-    
+                    <a href="https://www.youtube.com/watch?v=Yt9VmoTQ5oI" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
-                <div class="col-3">
-                    <div class="video-box">
-                        <div class="image">
-                            <img src="assets/img/svt4.jpg" class="shadow" alt="image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
-                                class="flaticon-play"></i></a>
-                        <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
+
+            </div>
+            <div class="col-3">
+                <div class="video-box">
+                    <div class="image">
+                        <img src="assets/img/svt4.jpg" class="shadow" alt="image">
                     </div>
+                    <a href="https://www.youtube.com/watch?v=QSSXiv882s8" class="video-btn popup-youtube"><i
+                            class="flaticon-play"></i></a>
+                    <!-- <div class="shape10"><img src="assets/img/shape9.png" alt="image"></div> -->
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 
