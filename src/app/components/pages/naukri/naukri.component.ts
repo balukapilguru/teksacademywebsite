@@ -24,11 +24,13 @@ export class NaukriComponent implements OnInit {
   imagePath: string = 'https://teksacademy.s3.ap-south-1.amazonaws.com/HRM/jobposting_companylogos/';
   shareUrl: string = '';
   copied: boolean = false;
+  today: Date = new Date();
 
   constructor(private jobService: JobssService, private router: Router) {}
 
   ngOnInit() {
     this.fetchJobPostings();
+    this.today = new Date();
   }
 
   fetchJobPostings() {
@@ -55,6 +57,12 @@ export class NaukriComponent implements OnInit {
     });
   }
 
+  isExpired(closingDate: string): boolean {
+    const today = new Date();
+    const closingDateObj = new Date(closingDate); // Convert the string to Date
+    return closingDateObj < today;
+  }
+  
   onSearchChange() {
     this.currentPage = 1;
     this.fetchJobPostings();
@@ -86,6 +94,8 @@ export class NaukriComponent implements OnInit {
       this.fetchJobPostings();
     }
   }
+
+  
 
   onNextPage() {
     if (this.currentPage < this.totalPages) {
