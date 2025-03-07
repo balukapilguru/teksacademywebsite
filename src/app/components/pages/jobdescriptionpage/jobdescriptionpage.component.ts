@@ -304,9 +304,9 @@ export class JobdescriptionpageComponent implements OnInit {
       formData.append('tenth_percentage', this.form.get('tenth')?.value || '');
       
       const resumeFile = this.form.get('file')?.value;
-      if (resumeFile instanceof File) {
-        formData.append('resume', resumeFile, resumeFile.name);
-      }
+      
+        formData.append('resume', resumeFile);
+      
       console.log("Anvesh")
 
       this.http.post(this.apiUrl + '/jobs/apply', formData, { responseType: 'text' }).subscribe(
