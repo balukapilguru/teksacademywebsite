@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit,  Inject, Renderer2, } from '@angular/core';
+import { Component, ElementRef, OnInit, Inject, Renderer2, } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
@@ -11,7 +11,7 @@ declare var jQuery: any;
   templateUrl: './awsplusdevops.component.html',
   styleUrls: ['./awsplusdevops.component.scss'],
 })
-export class AwsplusdevopsComponent implements OnInit{
+export class AwsplusdevopsComponent implements OnInit {
   private jsonLdScriptId = 'json-ld-about';
   private right!: HTMLCollectionOf<HTMLElement>;
   private si!: number;
@@ -107,18 +107,18 @@ export class AwsplusdevopsComponent implements OnInit{
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'AWS and DevOps Training Institute in Hyderabad'
+      'Best AWS & DevOps Course Training | Master Cloud & Automation'
     );
 
     // set meta description
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Join the AWS and DevOps comprehensive course. Teks Academy is the best training institute to learn AWS DevOps Certification course with 100% job assistance.',
+        'Join the best AWS & DevOps course training and learn AWS cloud computing, Linux, Docker, Kubernetes, Terraform, CI/CD pipelines, and infrastructure automation',
     });
 
-     // Add meta keywords
-     this.metaService.updateTag({
+    // Add meta keywords
+    this.metaService.updateTag({
       name: 'keywords',
       content: 'aws course training, aws training and certification, aws devops training, devops course in hyderabad',
     });

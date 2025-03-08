@@ -116,13 +116,13 @@ export class DataScienceComponent implements OnInit {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Learn the best data science course in Hyderabad - 2025'
+      'Best Data Science Course in Hyderabad | Training with Real-Time Projects'
     );
 
     // set meta description
     this.metaService.updateTag({
       name: 'description',
-      content: 'Join the Data Science Certification Course and upskill yourself with fast-track. Join today to get the Best Data Science course in Hyderabad at Teks Academy',
+      content: 'Join the best Data Science course in Hyderabad and master Python, Machine Learning, AI, Data Analytics, Deep Learning, SQL, and Tableau. Hands-on training with real-time projects.',
     });
     // Add meta keywords
     this.metaService.updateTag({
