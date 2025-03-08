@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class JobssService {
-  private apiUrl = 'https://apierp.infozit.com/jobs/job-postings';
+  private apiUrl = 'http://192.168.1.203:3030/jobs/job-postings';
 
   constructor(private http: HttpClient) { }
 
