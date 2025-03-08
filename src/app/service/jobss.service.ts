@@ -1,12 +1,15 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobssService {
-  private apiUrl = 'http://192.168.1.203:3030/jobs/job-postings';
+  apiurl = environment.apiUrl;
+  //private apiUrl = 'https://apiadmin.infozit.com/jobs/job-postings';
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +23,6 @@ export class JobssService {
 
     console.log('API Call with queryParams:', queryParams.toString()); // Debug log
 
-    return this.http.get<any>(this.apiUrl, { params: queryParams });
+    return this.http.get<any>(environment.apiUrl +  `/jobs/job-postings`, { params: queryParams });
   }
 }

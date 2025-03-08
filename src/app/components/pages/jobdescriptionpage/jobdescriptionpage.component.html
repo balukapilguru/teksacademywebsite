@@ -11,8 +11,13 @@
             <div class="course_name">{{ jobDetails.title }}</div>
             <div class="company_name">{{ jobDetails.company_name }}</div>
           </div>
+          <!-- <div>
+            <img [src]="imagePath+jobDetails.company_logo" alt="Job Image" class="img_size img-thumbnail"
+              style="max-width: 200px;">
+          </div> -->
           <div>
-            <img [src]="imagePath+jobDetails.company_logo" alt="Job Image" class="img_size img-thumbnail" style="max-width: 200px;">
+            <img [src]="imagePath + (jobDetails.company_logo && jobDetails.company_logo !== 'null' ? jobDetails.company_logo : '1741243278140_banklogo.png')"
+                 alt="Job Image" class="img_size img-thumbnail" style="max-width: 200px;">
           </div>
         </div>
         <div class="mt-2">
@@ -24,18 +29,31 @@
         </div>
         <hr class="line" />
         <div class="apply_share">
-          <div class="date mt-2">Posted On:
-            <span class="text_bold">{{ jobDetails.posted_date ? (jobDetails.posted_date | date: 'dd-MM-yyyy') : 'Invalid date' }}</span>
+          <div class="date mt-2">{{closingDateValid ? "Apply before :" : ""}}
+            <span class="text_bold">
+              {{ closingDateValid ? (jobDetails.closing_date | date: 'dd-MM-yyyy') : 'Expired' }}
+            </span>
+
+
+
+
           </div>
-       <div class="mt-2">
-        <button type="button" class="btn btn-primary btn_color me-3" data-bs-toggle="modal" data-bs-target="#shareModal"
-        (click)="setShareUrl(job)">
-        <i class="fa fa-share-alt"></i> share
-          </button>
-        <button type="button" class="btn btn-primary btn_color" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Apply
-        </button>  
-       </div>
+          <div class="mt-2">
+            <button type="button" class="btn btn-primary btn_color me-3" data-bs-toggle="modal"
+              data-bs-target="#shareModal" (click)="setShareUrl(job)">
+              <i class="fa fa-share-alt"></i> share
+            </button>
+
+
+            <button *ngIf="closingDateValid" type="button" class="btn btn-primary btn_color" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Apply
+            </button>
+
+
+
+
+          </div>
         </div>
       </div>
       <div class="box_shadow mt-3 mb-2">
@@ -46,11 +64,12 @@
           <p>Job not found or an error occurred.</p>
         </div>
         <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary btn_color me-3" data-bs-toggle="modal" data-bs-target="#shareModal"
-          (click)="setShareUrl(job)">
-          <i class="fa fa-share-alt"></i> share
-  </button>
-          <button type="button" class="btn btn-primary btn_color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn btn-primary btn_color me-3" data-bs-toggle="modal"
+            data-bs-target="#shareModal" (click)="setShareUrl(job)">
+            <i class="fa fa-share-alt"></i> share
+          </button>
+          <button *ngIf="closingDateValid" type="button" class="btn btn-primary btn_color " data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             Apply
           </button>
         </div>
@@ -60,111 +79,146 @@
 
   <!-- Modal for form -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="job-model-header" id="exampleModalLabel">
+
+        </div>
+
+
+        <div class="modal-body">
+          <div class="job-model">
+            <div class="business-structure">
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <div *ngIf="!additionalFields">
+                  <div class="mb-3 mt-1">
+                    <label for="validationTextarea" class="form-label">Enrollment ID</label>
+                    <input type="text" class="form-control" [ngClass]="validateRegistrationNumber" id="enrollmentId"
+                      aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required
+                      (input)="fetchStudentDetails($event)" formControlName="enrollmentId" placeholder="Please enter a valid enrollment ID ">
+                      <div class="text-danger" *ngIf="enrollmentIdError">
+                        {{ enrollmentIdError }}
+                      </div>
+                  </div>
+                  <div class="mb-1 mt-1">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input class="form-control py-1 not-allowed" placeholder="Enter Full Name" id="name"
+                      formControlName="name" required [disabled]="isDisabled" />
+                  </div>
+
+                  <div class="mb-1 mt-1">
+                    <label for="validationTextarea" class="form-label">Email</label>
+                    <input class="form-control py-1" placeholder="Enter Gmail" id="email" formControlName="email"
+                      required />
+                  </div>
+                  <div class="mb-1 mt-1">
+                    <label for="validationTextarea" class="form-label">Contact Number</label>
+                    <input class="form-control py-1" placeholder="Enter Mobile Number" formControlName="contactNumber"
+                      id="contactNumber" required maxlength="10" type="number">
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn text-white mt-3" type="button" style=" background-color:#2a619d;"
+                      [disabled]="validateRegistrationNumber === 'is-invalid'" (click)="showAdditionalFields()">
+                      Continue →
+                    </button>
+                  </div>
+                </div>
+
+
+                <div *ngIf="additionalFields" @fadeIn>
+                  <div *ngFor="let field of newFields" class="mb-1 mt-1">
+                    <label [for]="field.id" class="form-label">{{ field.placeholder }}</label>
+                    <input *ngIf="field.type !== 'file'" class="form-control py-1" [placeholder]="field.placeholder"
+                      [id]="field.id" [(ngModel)]="field.value" [formControlName]="field.id"
+                      [type]="field.type || 'text'" [required]="true" (input)="onNumberInput($event, field)">
+                    <input *ngIf="field.type === 'file'" type="file" class="form-control py-1" [id]="field.id"
+                      (change)="onFileChange($event)" [formControlName]="field.id" />
+                  
+                    <div *ngIf="form.get(field.id)?.invalid && formSubmitted" class="text-danger">
+                      <span *ngIf="form.get(field.id)?.errors?.['required']">{{ field.placeholder }} is required.</span>
+                      <span *ngIf="form.get(field.id)?.errors?.['pattern']">Enter a valid {{ field.placeholder }}.</span>
+                    </div>
+                  </div>
+                
+                  <!-- Display Resume with download icon -->
+                  <div *ngIf="resume" class="resume-container mt-2">
+                    <p class="resume-link text-primary d-flex align-items-center" (click)="downloadCV(resume)" style="cursor: pointer; color:#2a619d;">
+                      Last uploaded resume <i class="fa-solid fa-file-arrow-down ms-2"></i>
+                    </p>
+                  </div>
+                  
+                  <div *ngIf="fileUploadErrorMessage" class="text-danger text-center">
+                    {{ fileUploadErrorMessage }}
+                  </div>
+                
+                  <div class="d-flex justify-content-between mt-2">
+                    <button class="btn btn-secondary" (click)="backForm($event)">Back</button>
+                    <button class="btn text-white" style=" background-color:#2a619d;" type="submit" [disabled]="applyButtonDisabled">Apply</button>
+                  </div>
+                </div>
+                
+                
+
+
+              </form>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Share Modal -->
+  <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Please Fill Your Details</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="shareModalLabel">Share this job</h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
         </div>
         <div class="modal-body">
-          <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="form_height">
-              <label for="name" class="form-label mb-1">Full Name<span class="text-danger">*</span></label>
-              <input type="text" class="form-control py-1" id="name" formControlName="name" placeholder="Enter Name">
-              <div *ngIf="formSubmitted && form.get('name')?.hasError('required')">
-                <small class="text-danger lh-1 fs_12">Name is required</small>
-              </div>
-            </div>
-            <div class="form_height">
-              <label for="email" class="form-label mb-1">Email<span class="text-danger">*</span></label>
-              <input type="email" class="form-control py-1" id="email" formControlName="email" placeholder="Enter Email">
-              <div *ngIf="formSubmitted && form.get('email')?.hasError('required')">
-                <small class="text-danger lh-1 fs_12">Email is required</small>
-              </div>
-              <div *ngIf="formSubmitted && form.get('email')?.hasError('email')">
-                <small class="text-danger lh-1 fs_12">Enter a valid email</small>
-              </div>
-            </div>
-            <div class="form_height">
-              <label for="contactNumber" class="form-label mb-1">Contact Number<span class="text-danger">*</span></label>
-              <input type="text" class="form-control py-1" id="contactNumber" formControlName="contactNumber" maxlength="10" placeholder="Enter Contact Number">
-              <div *ngIf="formSubmitted && form.get('contactNumber')?.hasError('required')">
-                <small class="text-danger lh-1 fs_12">Contact number is required</small>
-              </div>
-              <div *ngIf="formSubmitted && form.get('contactNumber')?.hasError('pattern')">
-                <small class="text-danger lh-1 fs_12">Enter a valid contact number</small>
-              </div>
-            </div>
-            <div class="form_height">
-              <label for="location" class="form-label mb-1">Location<span class="text-danger">*</span></label>
-              <input type="text" class="form-control py-1" id="location" formControlName="location" placeholder="Enter Location">
-              <div *ngIf="formSubmitted && form.get('location')?.hasError('required')">
-                <small class="text-danger lh-1 fs_12">Location is required</small>
-              </div>
-            </div>
-            <div class="form_height">
-              <label for="enrollmentId" class="form-label mb-1">Enrollment ID</label>
-              <input type="text" class="form-control py-1" id="enrollmentId" formControlName="enrollmentId" placeholder="Enter Enrollment ID">
-            </div>
-            <div class="form_height">
-              <label for="file" class="form-label mb-1">Upload Resume<span class="text-danger">*</span></label>
-              <input type="file" class="form-control py-1" id="file" (change)="onFileChange($event)" #fileInput>
-              <div *ngIf="formSubmitted && form.get('file')?.hasError('required')">
-                <small class="text-danger lh-1 fs_12">File is required</small>
-              </div>
-              <div *ngIf="fileErrorMessage">
-                <small class="text-danger lh-1 fs_12">{{ fileErrorMessage }}</small>
-              </div>
-            </div>
-            <div class="text-end mt-3">
-              <button type="submit" class="btn btn-primary btn_color">Submit</button>
-            </div>
-          </form>
+          <!-- First Row: Social Media Icons -->
+          <div class="d-flex justify-content-around align-items-center mb-3">
+            <a [href]="'https://api.whatsapp.com/send?text=' + encodedShareUrl" target="_blank" class="d-inline-block">
+              <img src="../../../../assets/img/branch_images/whatsapp.svg" alt="WhatsApp" width="28px" height="28px" />
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com" target="_blank"
+              class="d-inline-block">
+              <img src="../../../../assets/img/branch_images/facebook.svg" alt="Facebook" width="28px" height="28px" />
+            </a>
+            <a [href]="'https://www.instagram.com/?url=' + encodedShareUrl" target="_blank" class="d-inline-block">
+              <img src="../../../../assets/img/branch_images/instagram.svg" alt="Instagram" width="28px"
+                height="28px" />
+            </a>
+          </div>
+
+          <!-- Link Copy Section -->
+          <div class="mt-3 d-flex align-items-center">
+            <input type="text" [value]="shareUrl" readonly class="form-control" />
+            <a (click)="copyLink()" class="ms-2 btn" type="button">
+              <i class="fas fa-copy" style="cursor: pointer"></i>
+            </a>
+          </div>
+          <!-- Success Message Display -->
+          <div class="mt-2" *ngIf="copied">
+            <p class="ms-2" style="color: green; font-weight: bold;">Link copied to clipboard!</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-
-<!-- Share Modal -->
-<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="shareModalLabel">Share this job</h5>
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-      </div>
-      <div class="modal-body">
-        <!-- First Row: Social Media Icons -->
-        <div class="d-flex justify-content-around align-items-center mb-3">
-          <a [href]="'https://api.whatsapp.com/send?text=' + encodedShareUrl" target="_blank" class="d-inline-block">
-            <img src="../../../../assets/img/branch_images/whatsapp.svg" alt="WhatsApp" width="28px" height="28px" />
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com" target="_blank" class="d-inline-block">
-            <img src="../../../../assets/img/branch_images/facebook.svg" alt="Facebook" width="28px" height="28px" />
-          </a>
-          <a [href]="'https://www.instagram.com/?url=' + encodedShareUrl" target="_blank" class="d-inline-block">
-            <img src="../../../../assets/img/branch_images/instagram.svg" alt="Instagram" width="28px" height="28px" />
-          </a>
-        </div>
-
-      <!-- Link Copy Section -->
-<div class="mt-3 d-flex align-items-center">
-  <input type="text" [value]="shareUrl" readonly class="form-control" />
-  <a (click)="copyLink()" class="ms-2 btn" type="button">
-    <i class="fas fa-copy" style="cursor: pointer"></i>
-  </a>
-</div>
-<!-- Success Message Display -->
-<div class="mt-2" *ngIf="copied">
-  <p class="ms-2" style="color: green; font-weight: bold;">Link copied to clipboard!</p>
-</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
   <div style="height: 15vh;"></div>
 </div>

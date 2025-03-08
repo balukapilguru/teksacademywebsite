@@ -9081,3 +9081,84 @@ i.flaticon-tag {
 .advance_microsoft {
   width: 10% !important;
 }
+
+
+
+//RECENT//
+
+.job-model {
+  background: rgba(255, 255, 255, 0.5);  
+  border-radius: 30.54px;
+  backdrop-filter: blur(10px);            
+}
+.modal-content {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-model-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+  pointer-events: none;  
+}
+
+#enrollmentId {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+
+.address-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.address-fields input {
+  flex: 1 1 48%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.continue-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #5a54f7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.continue-btn:hover {
+  background: #4a44d8;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+//RECENT//
