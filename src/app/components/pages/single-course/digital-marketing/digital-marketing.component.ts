@@ -265,7 +265,7 @@ export class DigitalMarketingComponent implements OnInit {
 
 "image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.jpg ",
 
-"description": " Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!",
+"description": " The digital marketing creating high-demand jobs. Join the best Digital Marketing course training institute in Hyderabad to master SEO, Google Ads, social media, etc",
 
 "mpn": "001",
 
