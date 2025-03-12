@@ -9161,4 +9161,86 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+
+.custom-select {
+  appearance: none; /* Remove default select styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 30px; /* Space for the custom arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path d="M5 6l5-5H0z" fill="currentColor"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the arrow on the right */
+  background-size: 10px 6px; /* Size of the arrow */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #2a619d; /* Focus border color */
+}
+
+.custom-select option {
+  padding: 10px;
+}
+
+.default-btn-home {
+  border: none;
+  position: relative;
+  
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  color: var(--whiteColor);
+  background-color: var(--mainColor);
+  transition: var(--transition);
+  border-radius: 10px;
+  font: {
+    weight: 700;
+    size: var(--fontSize);
+  }
+  padding: {
+    left: 20px;
+    right: 20px;
+    top: 11px;
+    bottom: 11px;
+  }
+  span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--blackColor);
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 5px;
+  }
+  i {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
+  &:hover {
+    color: var(--whiteColor);
+
+    span {
+      width: 225%;
+      height: 562.5px;
+    }
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+
+
 //RECENT//

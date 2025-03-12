@@ -114,7 +114,7 @@ export class AwsplusdevopsComponent implements OnInit {
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Join the best AWS & DevOps course training and learn AWS cloud computing, Linux, Docker, Kubernetes, Terraform, CI/CD pipelines, and infrastructure automation',
+        'Join the best AWS & DevOps course training and learn AWS cloud computing, Linux, Docker, Kubernetes, Terraform, CI/CD pipelines, and infrastructure automatio',
     });
 
     // Add meta keywords
