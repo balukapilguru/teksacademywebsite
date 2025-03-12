@@ -108,14 +108,14 @@ export class FullstackpythonComponent {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Full Stack Python Course Online & Offline Training Hyderabad'
+      'Best Full Stack Python Course Training Institute in Hyderabad'
     );
 
     // set meta description
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Enroll in our Best Full Stack Python Developer course at Teks Academy Hyderabad. Get real-time training in IT Company. Join now to become a Full Stack Developer',
+        'Join the best Python training institute in Hyderabad. Learn Full Stack Python with hands-on projects. Enroll in job-oriented Python courses, online & offline.',
     });
 
      // Add meta keywords
@@ -318,7 +318,7 @@ export class FullstackpythonComponent {
       
       "image": " https://teksacademy.com/assets/img/allcourses/fullstackpython.png ",
       
-      "description": " Enroll in our Best Full Stack Python Developer course at Teks Academy Hyderabad. Get real-time training in IT Company. Join now to become a Full Stack Developer",
+      "description": "Join the best Python training institute in Hyderabad. Learn Full Stack Python with hands-on projects. Enroll in job-oriented Python courses, online & offline.",
       
       "mpn": "001",
       

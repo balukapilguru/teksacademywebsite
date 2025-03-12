@@ -108,14 +108,14 @@ export class FullstackjavaComponent {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Best Training Institute for Full-Stack Java Course 2025'
+      'Best Java Full Stack Developer Course in Hyderabad | job Assurance'
     );
 
     // set meta description
     this.metaService.updateTag({
       name: 'description',
       content:
-        'TEKS Academy is providing the best Java programming course online and offline in Hyderabad, to Skill up, & kick-start your career as a successful Java Developer',
+        'Join the best Java course training in Hyderabad and master Full Stack Java. Learn Core Java, Spring Boot, Hibernate, front-end, and databases with hands-on projects.',
     });
 
      // Add meta keywords
@@ -279,7 +279,7 @@ export class FullstackjavaComponent {
 
 "image": " https://teksacademy.com/assets/img/allcourses/fullstackjava.png ",
 
-"description": " TEKS Academy is providing the best Java programming course online and offline in Hyderabad, to Skill up, & kick-start your career as a successful Java Developer",
+"description": "Join the best Java course training in Hyderabad and master Full Stack Java. Learn Core Java, Spring Boot, Hibernate, front-end, and databases with hands-on projects.",
 
 "mpn": "001",
 

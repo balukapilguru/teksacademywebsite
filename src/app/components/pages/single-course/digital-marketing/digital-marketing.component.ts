@@ -107,12 +107,12 @@ export class DigitalMarketingComponent implements OnInit {
     this.addJsonLdScript();
     // set the title
     this.titleService.setTitle(
-      'Best Digital Marketing Course | Hyderabad |online & offline'
+      'Best Digital Marketing Course Training Institute in Hyderabad'
     );
 
     // set meta description
     this.metaService.updateTag({
-      name: 'description', content: 'Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!',
+      name: 'description', content: 'The digital marketing creating high-demand jobs. Join the best Digital Marketing course training institute in Hyderabad to master SEO, Google Ads, social media, etc',
     });
     // Add meta keywords
     this.metaService.updateTag({
@@ -137,7 +137,7 @@ export class DigitalMarketingComponent implements OnInit {
 
     openBtnm.addEventListener('click', function () {
       popupForm.style.display = 'block';
-      
+
     });
 
     popupForm.addEventListener('submit', function (event) {
@@ -265,7 +265,7 @@ export class DigitalMarketingComponent implements OnInit {
 
 "image": " https://teksacademy.com/assets/img/allcourses/Digital-Marketing.jpg ",
 
-"description": " Our Digital Marketing Certification Training Course will prepare you to become an expert in areas like SEO, social media, and pay-per-click. Enroll now!",
+"description": " The digital marketing creating high-demand jobs. Join the best Digital Marketing course training institute in Hyderabad to master SEO, Google Ads, social media, etc",
 
 "mpn": "001",
 
