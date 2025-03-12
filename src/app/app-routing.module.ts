@@ -968,10 +968,10 @@ const routes: Routes = [
     path: 'courses/best-sql-course-training-institute',
     component: SqlComponent,
   },
-  {
-    path: 'courses/best-power-bi-course-training-institute',
-    component: PowerBIComponent,
-  },
+  // {
+  //   path: 'courses/best-power-bi-course-training-institute',
+  //   component: PowerBIComponent,
+  // },
   {
     path: 'courses/best-tableau-course-training-institute',
     component: TableauComponent,
@@ -992,22 +992,22 @@ const routes: Routes = [
     path: 'courses/best-salesforce-admin-development-course-training-institute',
     component: SalesforceComponent,
   },
-  {
-    path: 'courses/best-aws-amazon-web-services-course-training-institute',
-    component: AwsComponent,
-  },
-  {
-    path: 'courses/best-data-analytics-course-training-institute',
-    component: DataAnalyticsComponent,
-  },
+  // {
+  //   path: 'courses/best-aws-amazon-web-services-course-training-institute',
+  //   component: AwsComponent,
+  // },
+  // {
+  //   path: 'courses/best-data-analytics-course-training-institute',
+  //   component: DataAnalyticsComponent,
+  // },
   {
     path: 'courses/best-data-science-course-training-institute',
     component: DataScienceComponent,
   },
-  {
-    path: 'courses/best-revit-structure-course-training-institute',
-    component: RevitstructureComponent,
-  },
+  // {
+  //   path: 'courses/best-revit-structure-course-training-institute',
+  //   component: RevitstructureComponent,
+  // },
   {
     path: 'courses/best-c++-course-training-institute',
     component: CplusplusComponent,

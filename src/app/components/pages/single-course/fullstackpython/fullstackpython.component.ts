@@ -115,7 +115,7 @@ export class FullstackpythonComponent {
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Join the best Python training institute in Hyderabad. Learn Full Stack Python with hands-on projects. Enroll in job-oriented Python courses, online & offline.',
+        'Join the best Python training institute in Hyderabad. Learn Full Stack Python with hands-on projects. Enroll in job-oriented Python courses, online & offline',
     });
 
      // Add meta keywords
@@ -318,7 +318,7 @@ export class FullstackpythonComponent {
       
       "image": " https://teksacademy.com/assets/img/allcourses/fullstackpython.png ",
       
-      "description": "Join the best Python training institute in Hyderabad. Learn Full Stack Python with hands-on projects. Enroll in job-oriented Python courses, online & offline.",
+      "description": " Join the best Python training institute in Hyderabad. Learn Full Stack Python with hands-on projects. Enroll in job-oriented Python courses, online & offline",
       
       "mpn": "001",
       

@@ -112,7 +112,8 @@ export class DigitalMarketingComponent implements OnInit {
 
     // set meta description
     this.metaService.updateTag({
-      name: 'description', content: 'The digital marketing creating high-demand jobs. Join the best Digital Marketing course training institute in Hyderabad to master SEO, Google Ads, social media, etc',
+      name: 'description',
+       content: 'The digital marketing creating high-demand jobs. Join the best Digital Marketing course training institute in Hyderabad to master SEO, Google Ads, social media, etc',
     });
     // Add meta keywords
     this.metaService.updateTag({

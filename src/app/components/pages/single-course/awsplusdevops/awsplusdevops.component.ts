@@ -276,7 +276,7 @@ export class AwsplusdevopsComponent implements OnInit {
 
 "image": " https://teksacademy.com/assets/img/allcourses/AWS+DEVEOPS.png ",
 
-"description": " Enroll for an AWS + DevOps Course in Hyderabad from one of the leading training institutes.We offer real-time trainers, course materials, and 100% employment assistance. ",
+"description": "Join the best AWS & DevOps course training and learn AWS cloud computing, Linux, Docker, Kubernetes, Terraform, CI/CD pipelines, and infrastructure automatio",
 
 "mpn": "001",
 

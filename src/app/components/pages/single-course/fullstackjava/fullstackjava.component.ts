@@ -279,7 +279,7 @@ export class FullstackjavaComponent {
 
 "image": " https://teksacademy.com/assets/img/allcourses/fullstackjava.png ",
 
-"description": "Join the best Java course training in Hyderabad and master Full Stack Java. Learn Core Java, Spring Boot, Hibernate, front-end, and databases with hands-on projects.",
+"description": " Join the best Java course training in Hyderabad and master Full Stack Java. Learn Core Java, Spring Boot, Hibernate, front-end, and databases with hands-on projects.",
 
 "mpn": "001",
 
