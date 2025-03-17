@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '../auth.guard';
 // import { ElearningSchoolComponent } from './components/pages/elearning-school/elearning-school.component';
 import { VendorCertificationEtrainingComponent } from './components/pages/vendor-certification-etraining/vendor-certification-etraining.component';
 import { OnlineTrainingSchoolComponent } from './components/pages/online-training-school/online-training-school.component';
@@ -688,7 +689,7 @@ const routes: Routes = [
   // { path: 'course-category/foundation', component: EssentialCoursesComponent },
   // { path: 'whatsappform', component: WhatsAppFormComponent },
   // { path: 'post-graduate-program', component: PgpComponent },
-  { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent },
+  { path: ':id/:companyName/:jobTitle', component: JobdescriptionpageComponent, canActivate: [AuthGuard]},
   { path: 'verifyCertificate/:registrationnumber', component: StudentverifypageComponent },
   { path: 'franchise', component: FranchiseComponent },
 
@@ -1060,7 +1061,7 @@ const routes: Routes = [
   { path: 'student-video-testimonals', component: StudentsVideoTestimonalsComponent },
   { path: 'thank-you', component: ThankYouComponent },
   { path: 'jobapplication', component: JobApplicationComponent },
-  { path: 'jobs', component: NaukriComponent },
+  { path: 'jobs', component: NaukriComponent , canActivate: [AuthGuard]},
 
 
 
