@@ -39,7 +39,7 @@
     "ngx-slick-carousel": "^17.0.0",
     "ngx-tabset": "^2.2.0",
     "owl.carousel": "^2.3.4",
-    "rxjs": "~6.5.5",
+    "rxjs": "^7.8.2",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.17.2",
     "tslib": "^2.0.0",

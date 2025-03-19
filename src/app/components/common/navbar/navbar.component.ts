@@ -115,7 +115,7 @@ export class NavbarComponent implements OnInit {
 
     if(this.reDirectTo === null) {
         Swal.fire({
-            title: 'Please enter your registered gmail ID to access the job portal',
+            title: 'Please enter your registered Mail ID to access the job portal',
             input: 'text',
             inputAttributes: {
               autocapitalize: 'off',
@@ -140,11 +140,11 @@ export class NavbarComponent implements OnInit {
                     this.sessionStorageService.setItem('username',responseBody);
                   this.router.navigate(['/jobs']);
                   
-                  return `Hi ${responseBody?.name}, welcome back to the Job Portal`;
+                  return `Hi ${responseBody?.name}, Welcome Back to the Job Portal`;
                 } else {
                   const errorData = await response.json();
                   Swal.showValidationMessage(
-                    `Request failed: ${errorData.message || 'Invalid gamil'}`
+                    `Request failed: ${errorData.message || 'Invalid Mail'}`
                   );
                   return 'Invalid User';
                 }

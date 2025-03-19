@@ -270,32 +270,64 @@ export class JobdescriptionpageComponent implements OnInit {
   class="swal2-file" 
   style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-size: 14px;">
   <option value="">Select Highest Qualification</option>
-  <option value="10th" ${
-    this.userData?.students[index]?.highest_qualification === '10th'
+  
+  <option value="B.Tech/B.E" ${
+    this.userData?.students[index]?.highest_qualification === 'B.Tech/B.E'
       ? 'selected'
       : ''
-  }>10th</option>
-  <option value="Intermediate" ${
-    this.userData?.students[index]?.highest_qualification === 'Intermediate'
+  }>B.Tech/B.E</option>
+  <option value="M.Tech" ${
+    this.userData?.students[index]?.highest_qualification === 'M.Tech'
       ? 'selected'
       : ''
-  }>Intermediate</option>
-  <option value="Graduation" ${
-    this.userData?.students[index]?.highest_qualification === 'Graduation'
+  }>M.Tech</option>
+  <option value="MCA" ${
+    this.userData?.students[index]?.highest_qualification === 'MCA'
       ? 'selected'
       : ''
-  }>Graduation</option>
-  <option value="Post Graduation" ${
-    this.userData?.students[index]?.highest_qualification === 'Post Graduation'
+  }>MCA</option>
+  <option value="BCA" ${
+    this.userData?.students[index]?.highest_qualification === 'BCA'
       ? 'selected'
       : ''
-  }>Post Graduation</option>
-  <option value="PhD" ${
-    this.userData?.students[index]?.highest_qualification === 'PhD'
+  }>BCA</option>
+  <option value="BSC" ${
+    this.userData?.students[index]?.highest_qualification === 'BSC'
       ? 'selected'
       : ''
-  }>PhD</option>
+  }>BSC</option>
+  <option value="MSC" ${
+    this.userData?.students[index]?.highest_qualification === 'MSC'
+      ? 'selected'
+      : ''
+  }>MSC</option>
+  <option value="B.COM" ${
+    this.userData?.students[index]?.highest_qualification === 'B.COM'
+      ? 'selected'
+      : ''
+  }>B.COM</option>
+  <option value="M.COM" ${
+    this.userData?.students[index]?.highest_qualification === 'M.COM'
+      ? 'selected'
+      : ''
+  }>M.COM</option>
+  <option value="BBA" ${
+    this.userData?.students[index]?.highest_qualification === 'BBA'
+      ? 'selected'
+      : ''
+  }>BBA</option>
+  <option value="MBA" ${
+    this.userData?.students[index]?.highest_qualification === 'MBA'
+      ? 'selected'
+      : ''
+  }>MBA</option>
+  <option value="other" ${
+    this.userData?.students[index]?.highest_qualification === 'other'
+      ? 'selected'
+      : ''
+  }>other</option>
 </select>
+
               <span style="text-align: left; margin-bottom: 3px; margin-top: 0px;" id="highestqualification-error" class="error-message"></span>
         
               <label for="stream" style="font-weight: bold; font-size: 14px; color: #333; margin-bottom: 1px; display: block; text-align: left;">Stream</label>
@@ -310,7 +342,7 @@ export class JobdescriptionpageComponent implements OnInit {
               }" >
               <span style="text-align: left; margin-bottom: 3px; margin-top: 0px;" id="percentage-error" class="error-message"></span>
         
-              <label for="twelfth" style="font-weight: bold; font-size: 14px; color: #333; margin-bottom: 1px; display: block; text-align: left;">12th Percentage</label>
+              <label for="twelfth" style="font-weight: bold; font-size: 14px; color: #333; margin-bottom: 1px; display: block; text-align: left;">12th / Diploma Percentage</label>
               <input type="number" id="twelfth" class="swal2-file" style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-size: 14px;" value="${
                 this.userData?.students[index]?.twelve_percentage || ''
               }" >
