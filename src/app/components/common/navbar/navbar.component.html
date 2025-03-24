@@ -1,8 +1,20 @@
-<div class="navbar-area" ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
+<div
+  class="navbar-area"
+  ngStickyNav
+  stickyClass="sticky-box-shadow"
+  ngStickyNav
+>
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light " [class.active]="classApplied">
-      <a class="navbar-brand" (click)="reloadPage()" routerLink="/">
-        <img src="assets/img/logo/mainlogo.svg" alt="logo" style="width: 230px; height: 80px" /></a>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light"
+      [class.active]="classApplied"
+    >
+      <a class="navbar-brand" routerLink="/"
+        ><img
+          src="assets/img/logo/mainlogo.svg"
+          alt="logo"
+          style="width: 200px; height: 80px"
+      /></a>
       <button class="navbar-toggler" type="button" (click)="toggleClass()">
         <span class="burger-menu">
           <span class="top-bar"></span>
@@ -18,77 +30,331 @@
         <ul class="navbar-nav">
           <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Home <i class='bx bx-chevron-down'></i></a> -->
           <li class="nav-item">
-            <a routerLink="/" class="nav-link" routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">Home</a>
-            
+            <a
+              routerLink="/"
+              class="nav-link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+            <!-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">eLearning School</a></li>
+                            <li class="nav-item"><a routerLink="/vendor-certification-etraining" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Vendor Certification eTraining</a></li>
+                            <li class="nav-item"><a routerLink="/online-training-school" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Online Training School</a></li>
+                            <li class="nav-item"><a routerLink="/distance-learning" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Distance Learning</a></li>
+                            <li class="nav-item"><a routerLink="/language-school" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Language School</a></li>
+                            <li class="nav-item"><a routerLink="/modern-schooling" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Modern Schooling</a></li>
+                            <li class="nav-item"><a routerLink="/yoga-training" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Yoga Training</a></li>
+                            <li class="nav-item"><a routerLink="/health-coaching" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Health Coaching</a></li>
+                            <li class="nav-item"><a routerLink="/kindergarten" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Kindergarten</a></li>
+                            <li class="nav-item"><a routerLink="/gym-coaching" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gym Coaching</a></li>
+                            <li class="nav-item"><a routerLink="/learning-management" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Learning Management</a></li>
+                        </ul> -->
           </li>
           <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a> -->
           <li class="nav-item">
-            <a class="nav-link cursor__pointer" routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">About Us&nbsp;&nbsp;<i class="fa fa-angle-down"
-                style="font-size:16px"></i></a>
+            <a
+              class="nav-link cursor__pointer"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >About Us&nbsp;&nbsp;<i class="fa fa-angle-down" style="font-size:16px"></i></a
+            >
 
             <ul class="dropdown-menu">
               <li class="nav-item">
-                <a routerLink="/about-us" class="nav-link" routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }">About Teks</a>
+                <a
+                  routerLink="/about-us"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >About Teks</a
+                >
               </li>
               <li class="nav-item">
-                <a routerLink="/franchise" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                  (click)="toggleClass()" class="nav-link">Franchise</a>
+                <a
+                  routerLink="/franchise"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  (click)="toggleClass()"
+                  class="nav-link"
+                  >Franchise</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link cursor__pointer" routerLinkActive="active">Branches</a>
+                <a
+                  class="nav-link cursor__pointer"
+                  routerLinkActive="active"
+             >Branches</a>
                 <ul class="dropdown-menu">
                   <li class="nav-item">
-                    <a routerLink="/branch/best-software-training-institute-ameerpet" class="nav-link"
-                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Ameerpet</a>
+                    <a
+                      routerLink="/branch/ameerpet-best-training-institute-full-stack-java-auto-cad"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Ameerpet</a>
                   </li>
                   <li class="nav-item">
-                    <a routerLink="/branch/best-software-training-institute-kukatpally" class="nav-link"
-                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Kukatpally</a>
+                    <a
+                      routerLink="/branch/kukatpally-best-data-science-aws-course-training"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Kukatpally</a>
                   </li>
                   <li class="nav-item">
-                    <a routerLink="/branch/best-software-training-institute-secunderabad" class="nav-link"
-                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Secunderabad</a>
+                    <a
+                      routerLink="/branch/secunderabad-sales-force-medical-coding-course-training"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Secunderabad</a>
                   </li>
                   <li class="nav-item">
-                    <a routerLink="/branch/best-software-training-institute-hiteccity" class="nav-link"
-                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Hitec City</a>
+                    <a
+                      routerLink="/branch/hitech-best-python-data-science-training-institute"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Hitech City</a>
                   </li>
                   <li class="nav-item">
-                    <a routerLink="/branch/best-software-training-institute-dilsukhnagar" class="nav-link"
-                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dilsukhnagar</a>
+                    <a
+                      routerLink="/branch/dilsukhnagar-digitial-marketing-full-stack-java-training"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Dilsukhnagar</a>
                   </li>
                   <li class="nav-item">
-                    <a routerLink="/branch/best-software-training-institute-visakhapatnam" class="nav-link"
-                      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Visakhapatnam</a>
+                    <a
+                      routerLink="branch/visakhapatnam-best-software-training-institute"
+                      class="nav-link"
+                      routerLinkActive="active"
+                      [routerLinkActiveOptions]="{ exact: true }">Visakhapatnam</a>
                   </li>
-                </ul>
+                  </ul>
               </li>
               <!-- <li class="nav-item"><a routerLink="/students-placements" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Placements</a></li> -->
               <!-- <li class="nav-item"><a routerLink="/testimonals" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Testimonials</a></li> -->
               <li class="nav-item">
-                <a routerLink="/gallery" class="nav-link" routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }">Gallery</a>
+                <a
+                  routerLink="/gallery"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Gallery</a
+                >
               </li>
               <li class="nav-item">
-                <a routerLink="/media" class="nav-link" routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: true }">Media</a>
+                <a
+                  routerLink="/media"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Media</a
+                >
               </li>
-
+             
             </ul>
           </li>
-         
+          <!-- <li class="nav-item">
+            <a
+             
+              class="nav-link"
+              routerLinkActive="active"
+         >Branches</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a
+                  routerLink="/branch/ameerpet-best-training-institute-full-stack-java-auto-cad"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Ameerpet</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  routerLink="/branch/kukatpally-best-data-science-aws-course-training"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Kukatpally</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  routerLink="/branch/secunderabad-sales-force-medical-coding-course-training"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Secunderabad</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  routerLink="/branch/hitech-best-python-data-science-training-institute"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Hitech City</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  routerLink="/branch/dilsukhnagar-digitial-marketing-full-stack-java-training"
+                  class="nav-link"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }">Dilsukhnagar</a>
+              </li>
+              </ul>
+          </li> -->
+          <!-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">About Us <i class='bx bx-chevron-right'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a routerLink="/about-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Us 01</a></li>
+                                    <li class="nav-item"><a routerLink="/about-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Us 02</a></li>
+                                    <li class="nav-item"><a routerLink="/about-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Us 03</a></li>
+                                    <li class="nav-item"><a routerLink="/about-4" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">About Us 04</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a routerLink="/success-story" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Success Story</a></li>
+                            <li class="nav-item"><a routerLink="/teacher" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Teacher</a></li>
+                            <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li>
+                            <li class="nav-item"><a routerLink="/faq" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">FAQ</a></li>
+                            <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Contact Us</a></li>
+                            <li class="nav-item"><a routerLink="/profile-authentication" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Login/Register</a></li>
+                            <li class="nav-item"><a routerLink="/error" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">404 Error Page</a></li>
+                            <li class="nav-item"><a routerLink="/coming-soon" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Coming Soon</a></li>
+                            <li class="nav-item"><a routerLink="/purchase-guide" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Purchase Guide</a></li>
+                            <li class="nav-item"><a routerLink="/privacy-policy" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Privacy Policy</a></li>
+                            <li class="nav-item"><a routerLink="/terms-of-service" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Terms of Service</a></li>
+                        </ul> -->
+          <!-- </li> -->
+        
           <li class="nav-item megamenu">
-            <a routerLink="/course" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-              (click)="toggleClass()" class="nav-link">Courses</a>
+            <a
+              routerLink="/course"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              (click)="toggleClass()"
+              class="nav-link"
+              >Courses</a
+            >
           </li>
 
-         
+          <!-- <li class="nav-item megamenu"><a href="javascript:void(0)" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 01</a></li>
+                                                <li><a routerLink="/courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 02</a></li>
+                                                <li><a routerLink="/courses-3" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 03</a></li>
+                                                <li><a routerLink="/courses-4" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 04</a></li>
+                                                <li><a routerLink="/courses-5" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses List</a></li>
+                                                <li><a routerLink="/courses-6" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Masonry</a></li>
+                                                <li><a routerLink="/courses-7" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Right Sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/single-courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Single Layout 01</a></li>
+                                                <li><a routerLink="/single-courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Single Layout 02</a></li>
+                                                <li><a routerLink="/categories" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Categories</a></li>
+                                                <li><a routerLink="/membership-levels" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Membership Levels</a></li>
+                                                <li><a routerLink="/become-a-teacher" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Become a Teacher</a></li>
+                                                <li><a routerLink="/profile" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Profile</a></li>
+                                                <li><a routerLink="/profile-quiz" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Profile Quiz</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 01</a></li>
+                                                <li><a routerLink="/courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 02</a></li>
+                                                <li><a routerLink="/courses-3" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 03</a></li>
+                                                <li><a routerLink="/courses-4" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Grid 04</a></li>
+                                                <li><a routerLink="/courses-5" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses List</a></li>
+                                                <li><a routerLink="/courses-6" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Masonry</a></li>
+                                                <li><a routerLink="/courses-7" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Right Sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/single-courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Single Layout 01</a></li>
+                                                <li><a routerLink="/single-courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Single Layout 02</a></li>
+                                                <li><a routerLink="/categories" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Courses Categories</a></li>
+                                                <li><a routerLink="/membership-levels" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Membership Levels</a></li>
+                                                <li><a routerLink="/become-a-teacher" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Become a Teacher</a></li>
+                                                <li><a routerLink="/profile" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Profile</a></li>
+                                                <li><a routerLink="/profile-quiz" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Profile Quiz</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-code-alt'></i>
+                                                </div>
+                                                <h3>Development</h3>
+                                                <span class="sub-title">60 Courses</span>
+                                                <a routerLink="/courses-1" class="link-btn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-camera'></i>
+                                                </div>
+                                                <h3>Photography</h3>
+                                                <span class="sub-title">21 Courses</span>
+                                                <a routerLink="/courses-2" class="link-btn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-layer'></i>
+                                                </div>
+                                                <h3>Design</h3>
+                                                <span class="sub-title">58 Courses</span>
+                                                <a routerLink="/courses-3" class="link-btn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bxs-flag-checkered'></i>
+                                                </div>
+                                                <h3>Language</h3>
+                                                <span class="sub-title">99 Courses</span>
+                                                <a routerLink="/courses-4" class="link-btn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-health'></i>
+                                                </div>
+                                                <h3>Fitness</h3>
+                                                <span class="sub-title">21 Courses</span>
+                                                <a routerLink="/courses-5" class="link-btn"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-line-chart'></i>
+                                                </div>
+                                                <h3>Business</h3>
+                                                <span class="sub-title">49 Courses</span>
+                                                <a routerLink="/courses-6" class="link-btn"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li> -->
           <li class="nav-item">
-            <a routerLink="/testimonals" class="nav-link" routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">Testimonials</a>
+            <a
+              routerLink="/testimonals"
+              class="nav-link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Testimonials</a
+            >
           </li>
           <!-- <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Gallery</a></li> -->
           <li class="nav-item">
@@ -100,40 +366,227 @@
               (click)="toggleClass()"
               >Blog</a
             >
-            <!-- <a routerLink="/blogs" class="nav-link" routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">Blogs</a> -->
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" class="nav-link" routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">Contact Us</a>
+            <a
+              routerLink="/contact"
+              class="nav-link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Contact Us</a
+            >
           </li>
 
-         
+          <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Events <i class='bx bx-chevron-down'></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/events" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Events</a></li>
+                            <li class="nav-item"><a routerLink="/single-events" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Events Details</a></li>
+                        </ul>
+                    </li> -->
+          <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/products-list-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Product List 01</a></li>
+                            <li class="nav-item"><a routerLink="/products-list-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Product List 02</a></li>
+                            <li class="nav-item"><a routerLink="/cart" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Cart</a></li>
+                            <li class="nav-item"><a routerLink="/checkout" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Checkout</a></li>
+                            <li class="nav-item"><a routerLink="/single-products" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Product Details</a></li>
+                        </ul>
+                    </li> -->
+          <!-- <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Blog <i class='bx bx-chevron-down'></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/blog-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Grid (2 in Row)</a></li>
+                            <li class="nav-item"><a routerLink="/blog-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Grid (3 in Row)</a></li>
+                            <li class="nav-item"><a routerLink="/blog-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Grid (Full Width)</a></li>
+                            <li class="nav-item"><a routerLink="/blog-4" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Right Sidebar</a></li>
+                            <li class="nav-item"><a routerLink="/blog-5" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Masonry (3 in Row)</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Single Post <i class='bx bx-chevron-right'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a routerLink="/single-blog-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Default</a></li>
+                                    <li class="nav-item"><a routerLink="/single-blog-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">With Video</a></li>
+                                    <li class="nav-item"><a routerLink="/single-blog-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">With Image Slider</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> -->
         </ul>
 
         <!-- mobile responsive -->
         <ul class="navbar-nav for-responsive">
           <li class="nav-item">
             <a routerLink="/" class="nav-link" (click)="toggleClass()">Home </a>
-           
+            <!-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">eLearning School</a></li>
+                            <li class="nav-item"><a routerLink="/vendor-certification-etraining" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Vendor Certification eTraining</a></li>
+                            <li class="nav-item"><a routerLink="/online-training-school" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Online Training School</a></li>
+                            <li class="nav-item"><a routerLink="/distance-learning" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Distance Learning</a></li>
+                            <li class="nav-item"><a routerLink="/language-school" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Language School</a></li>
+                            <li class="nav-item"><a routerLink="/modern-schooling" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Modern Schooling</a></li>
+                            <li class="nav-item"><a routerLink="/yoga-training" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Yoga Training</a></li>
+                            <li class="nav-item"><a routerLink="/health-coaching" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Health Coaching</a></li>
+                            <li class="nav-item"><a routerLink="/kindergarten" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Kindergarten</a></li>
+                            <li class="nav-item"><a routerLink="/gym-coaching" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Gym Coaching</a></li>
+                            <li class="nav-item"><a routerLink="/learning-management" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Learning Management</a></li>
+                        </ul> -->
           </li>
           <li class="nav-item">
-            <a routerLink="/about-us" class="nav-link" (click)="toggleClass()">About Us
+            <a routerLink="/about-us" class="nav-link" (click)="toggleClass()"
+              >About Us
             </a>
-            
+            <!-- <ul class="dropdown-menu">
+                            <li class="nav-item"><a href="javascript:void(0)" class="nav-link">About Us <i class='bx bx-chevron-right'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a routerLink="/about-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">About Us 01</a></li>
+                                    <li class="nav-item"><a routerLink="/about-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">About Us 02</a></li>
+                                    <li class="nav-item"><a routerLink="/about-3" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">About Us 03</a></li>
+                                    <li class="nav-item"><a routerLink="/about-4" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">About Us 04</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a routerLink="/success-story" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Success Story</a></li>
+                            <li class="nav-item"><a routerLink="/teacher" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Teacher</a></li>
+                            <li class="nav-item"><a routerLink="/gallery" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Gallery</a></li>
+                            <li class="nav-item"><a routerLink="/faq" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">FAQ</a></li>
+                            <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Contact Us</a></li>
+                            <li class="nav-item"><a routerLink="/profile-authentication" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Login/Register</a></li>
+                            <li class="nav-item"><a routerLink="/error" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">404 Error Page</a></li>
+                            <li class="nav-item"><a routerLink="/coming-soon" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Coming Soon</a></li>
+                            <li class="nav-item"><a routerLink="/purchase-guide" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Purchase Guide</a></li>
+                            <li class="nav-item"><a routerLink="/privacy-policy" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Privacy Policy</a></li>
+                            <li class="nav-item"><a routerLink="/terms-of-service" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Terms of Service</a></li>
+                        </ul> -->
           </li>
           <li class="nav-item megamenu">
-            <a routerLink="/franchise" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-              (click)="toggleClass()" class="nav-link">Franchise</a>
+            <a
+              routerLink="/franchise"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              (click)="toggleClass()"
+              class="nav-link"
+              >Franchise</a
+            >
           </li>
           <li class="nav-item megamenu">
-            <a routerLink="/course" class="nav-link" (click)="toggleClass()">Courses
+            <a routerLink="/course" class="nav-link" (click)="toggleClass()"
+              >Courses
             </a>
-           
+            <!-- <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 01</a></li>
+                                                <li><a routerLink="/courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 02</a></li>
+                                                <li><a routerLink="/courses-3" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 03</a></li>
+                                                <li><a routerLink="/courses-4" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 04</a></li>
+                                                <li><a routerLink="/courses-5" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses List</a></li>
+                                                <li><a routerLink="/courses-6" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Masonry</a></li>
+                                                <li><a routerLink="/courses-7" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Right Sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/single-courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Single Layout 01</a></li>
+                                                <li><a routerLink="/single-courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Single Layout 02</a></li>
+                                                <li><a routerLink="/categories" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Categories</a></li>
+                                                <li><a routerLink="/membership-levels" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Membership Levels</a></li>
+                                                <li><a routerLink="/become-a-teacher" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Become a Teacher</a></li>
+                                                <li><a routerLink="/profile" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Profile</a></li>
+                                                <li><a routerLink="/profile-quiz" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Profile Quiz</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 01</a></li>
+                                                <li><a routerLink="/courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 02</a></li>
+                                                <li><a routerLink="/courses-3" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 03</a></li>
+                                                <li><a routerLink="/courses-4" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Grid 04</a></li>
+                                                <li><a routerLink="/courses-5" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses List</a></li>
+                                                <li><a routerLink="/courses-6" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Masonry</a></li>
+                                                <li><a routerLink="/courses-7" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Right Sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="megamenu-submenu">
+                                                <li><a routerLink="/single-courses-1" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Single Layout 01</a></li>
+                                                <li><a routerLink="/single-courses-2" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Single Layout 02</a></li>
+                                                <li><a routerLink="/categories" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Courses Categories</a></li>
+                                                <li><a routerLink="/membership-levels" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Membership Levels</a></li>
+                                                <li><a routerLink="/become-a-teacher" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Become a Teacher</a></li>
+                                                <li><a routerLink="/profile" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Profile</a></li>
+                                                <li><a routerLink="/profile-quiz" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Profile Quiz</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-code-alt'></i>
+                                                </div>
+                                                <h3>Development</h3>
+                                                <span class="sub-title">60 Courses</span>
+                                                <a routerLink="/courses-1" class="link-btn" (click)="toggleClass()"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-camera'></i>
+                                                </div>
+                                                <h3>Photography</h3>
+                                                <span class="sub-title">21 Courses</span>
+                                                <a routerLink="/courses-2" class="link-btn" (click)="toggleClass()"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-layer'></i>
+                                                </div>
+                                                <h3>Design</h3>
+                                                <span class="sub-title">58 Courses</span>
+                                                <a routerLink="/courses-3" class="link-btn" (click)="toggleClass()"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bxs-flag-checkered'></i>
+                                                </div>
+                                                <h3>Language</h3>
+                                                <span class="sub-title">99 Courses</span>
+                                                <a routerLink="/courses-4" class="link-btn" (click)="toggleClass()"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-health'></i>
+                                                </div>
+                                                <h3>Fitness</h3>
+                                                <span class="sub-title">21 Courses</span>
+                                                <a routerLink="/courses-5" class="link-btn" (click)="toggleClass()"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-4 col-md-3 col-6">
+                                            <div class="single-category-widget">
+                                                <div class="icon">
+                                                    <i class='bx bx-line-chart'></i>
+                                                </div>
+                                                <h3>Business</h3>
+                                                <span class="sub-title">49 Courses</span>
+                                                <a routerLink="/courses-6" class="link-btn" (click)="toggleClass()"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> -->
           </li>
 
           <li class="nav-item">
-            <a routerLink="/gallery" class="nav-link" (click)="toggleClass()">Gallery
+            <a routerLink="/gallery" class="nav-link" (click)="toggleClass()"
+              >Gallery
             </a>
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item"><a routerLink="/events" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Events</a></li>
@@ -153,8 +606,6 @@
             <a href="https://blog.teksacademy.com" class="nav-link" (click)="toggleClass()"
               >Blog
             </a>
-            <!-- <a routerLink="/blogs" class="nav-link" routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }">Blogs</a> -->
             <!-- <ul class="dropdown-menu">
                             <li class="nav-item"><a routerLink="/blog-1" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Grid (2 in Row)</a></li>
                             <li class="nav-item"><a routerLink="/blog-2" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">Grid (3 in Row)</a></li>
@@ -171,37 +622,38 @@
                         </ul> -->
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-ameerpet" class="nav-link"
-              (click)="toggleClass()">Ameerpet Branch
+            <a routerLink="/branch/ameerpet-best-training-institute-full-stack-java-auto-cad" class="nav-link" (click)="toggleClass()"
+              >Ameerpet Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-dilsukhnagar" class="nav-link"
-              (click)="toggleClass()">Dilsukhnagar Branch
+            <a routerLink="/branch/dilsukhnagar-digitial-marketing-full-stack-java-training" class="nav-link" (click)="toggleClass()"
+              >Dilsukhnagar Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-hiteccity" class="nav-link"
-              (click)="toggleClass()">Hitec City Branch
+            <a routerLink="/branch/hitech-best-python-data-science-training-institute" class="nav-link" (click)="toggleClass()"
+              >Hitech City Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-kukatpally" class="nav-link"
-              (click)="toggleClass()">Kukatpally Branch
+            <a routerLink="/branch/kukatpally-best-data-science-aws-course-training" class="nav-link" (click)="toggleClass()"
+              >Kukatpally Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-secunderabad" class="nav-link"
-              (click)="toggleClass()">Secunderabad Branch
+            <a routerLink="/branch/secunderabad-sales-force-medical-coding-course-training" class="nav-link" (click)="toggleClass()"
+              >Secunderabad Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/branch/best-software-training-institute-visakhapatnam" class="nav-link"
-              (click)="toggleClass()">Visakhapatnam Branch
+            <a routerLink="/branch/visakhapatnam-best-software-training-institute" class="nav-link" (click)="toggleClass()"
+              >Visakhapatnam Branch
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" class="nav-link" (click)="toggleClass()">Contact
+            <a routerLink="/contact" class="nav-link" (click)="toggleClass()"
+              >Contact
             </a>
           </li>
         </ul>
@@ -213,11 +665,19 @@
                     </div>
                 </div> -->
         <div class="option-item" *ngIf="shouldDisplayOptionItem()">
-          <a href="tel:18001204748" class="default-btn-home" style="background-color: #2a619d"><i class="fa fa-phone mt-1"
-              style="background-color: transparent"></i>&nbsp;&nbsp;&nbsp; 1800-120-4748</a>
+          <a
+            href="tel:18001204748"
+            class="default-btn"
+            style="background-color: #2a619d"
+            ><i
+              class="fa fa-phone mt-1"
+              style="background-color: transparent"
+            ></i
+            >&nbsp;&nbsp;&nbsp; 1800-120-4748</a
+          >
         </div>
 
-        <!--         
+<!--         
         <div class="option-item">
           <a
             href="https://teksacademylms.graphy.com/"
@@ -230,25 +690,20 @@
             >&nbsp;&nbsp;&nbsp;&nbsp; Login</a
           >
         </div> -->
-
-        <!-- <div class="option-item " >
-          <button href="https://teksacademylms.graphy.com/" routerLink="/jobs" class="default-btn-home"
-            style="background-color: #2a619d">
-            <i class="fas fa-bullhorn mt-1" style="background-color: transparent"></i>&nbsp;&nbsp;&nbsp;&nbsp; Job
-            Portal</button>
-        </div> -->
-
+         
         <div class="option-item">
-          <button (click)="openJobPortalById()" 
-                  
-                  class="default-btn-home"
-                  style="background-color: #2a619d" 
-                  >
-            <i class="fas fa-bullhorn mt-1" style="background-color: transparent"></i>&nbsp;&nbsp;&nbsp;&nbsp; Job
-            Portal
-          </button>
+          <a 
+            href="https://teksacademylms.graphy.com/" routerLink="/jobs"
+            class="default-btn" 
+            style="background-color: #2a619d"
+            >
+            <i
+              class="fas fa-bullhorn mt-1"
+              style="background-color: transparent"
+            ></i
+            >&nbsp;&nbsp;&nbsp;&nbsp; Job Portal</a
+          >
         </div>
-        
         <!-- <div class="option-item">
           <a routerLink="/company"
             href=""

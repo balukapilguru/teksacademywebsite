@@ -6,7 +6,7 @@ import {
   Renderer2,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { Title, Meta, SafeHtml } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Lightbox } from 'ngx-lightbox';
 
@@ -182,60 +182,7 @@ export class DataScienceComponent implements OnInit {
 
 
 
-  private addJsonLdScript() {
-    if (!document.getElementById(this.jsonLdScriptId)) {
-      const script = this.renderer.createElement('script');
-      script.type = 'application/ld+json';
-      // script.id = this.jsonLdScriptId;
-      script.text = `
-      {
-        "@context": "https://schema.org/", 
-        "@type": "Product", 
-        "name": "Teks Academy",
-        "image": "https://teksacademy.com/assets/img/Teks_Website/Teks_Website/Banners/Compressed/Data_Scinece.png",
-        "description": "Join the best Data Science course in Hyderabad and master Python, Machine Learning, AI, Data Analytics, Deep Learning, SQL, and Tableau. Hands-on training with real-time projects.",
-          "mpn": "001",
-        "sku": "1800-120-4748",
-        "brand": {
-          "@type": "brand",
-          "name": "Teks Academy"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://teksacademy.com/courses/best-data-science-course-training-institute",
-          "priceCurrency": "INR",
-          "price": "30000",
-          "priceValidUntil": "2025-11-10",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "ratingCount": "1630",
-          "reviewCount": "1630"
-        },
-        
-        "review": {
-          "@type": "Review",
-          "name": "Prashanth",
-          "reviewBody": "Having finished the Data Science course with the R program at TeksAcademy Secunderabad, it was an amazing experience. The program is comprehensive, covering all facets of data analytics, and participation in the Data Analytics Masters Program ensures a well-rounded education. TeksAcademy excels at providing hands-on learning experiences and real-world projects, so the trip is both enjoyable and beneficial. The emphasis on placement opportunities demonstrates their commitment to ensuring that students are job-ready. If you're looking for the best data science education in Hyderabad with an assurance of placement, TeksAcademy is the place to be. Highly recommended for anyone looking to understand data science and earn a Data Scientist Certification..",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "datePublished": "2025-02-11",
-          "author": {"@type": "Person", "name": "Teks Academy"}
-        }
-      }
-      `;
 
-      this.renderer.appendChild(this.document.head, script);
-    }
-  }
   // ngOnDestroy() {
   //   this.removeJsonLdScript();
   // }
@@ -325,8 +272,64 @@ export class DataScienceComponent implements OnInit {
         $('#videoModal3 iframe').attr('src')
       );
     });
-    //
+
   }
+
+    private addJsonLdScript() {
+    if (!document.getElementById(this.jsonLdScriptId)) {
+      const script = this.renderer.createElement('script');
+      script.type = 'application/ld+json';
+      // script.id = this.jsonLdScriptId;
+      script.text = `
+        {
+          "@context": "https://schema.org/", 
+          "@type": "Product", 
+          "name": "Teks Academy",
+          "image": "https://teksacademy.com/assets/img/Teks_Website/Teks_Website/Banners/Compressed/Data_Scinece.png",
+          "description": "Join the best Data Science course in Hyderabad and master Python, Machine Learning, AI, Data Analytics, Deep Learning, SQL, and Tableau. Hands-on training with real-time projects.",
+            "mpn": "001",
+          "sku": "1800-120-4748",
+          "brand": {
+            "@type": "brand",
+            "name": "Teks Academy"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://teksacademy.com/courses/best-data-science-course-training-institute",
+            "priceCurrency": "INR",
+            "price": "30000",
+            "priceValidUntil": "2025-11-10",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "1630",
+            "reviewCount": "1630"
+          },
+          
+          "review": {
+            "@type": "Review",
+            "name": "Prashanth",
+            "reviewBody": "Having finished the Data Science course with the R program at TeksAcademy Secunderabad, it was an amazing experience. The program is comprehensive, covering all facets of data analytics, and participation in the Data Analytics Masters Program ensures a well-rounded education. TeksAcademy excels at providing hands-on learning experiences and real-world projects, so the trip is both enjoyable and beneficial. The emphasis on placement opportunities demonstrates their commitment to ensuring that students are job-ready. If you're looking for the best data science education in Hyderabad with an assurance of placement, TeksAcademy is the place to be. Highly recommended for anyone looking to understand data science and earn a Data Scientist Certification..",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "datePublished": "2025-02-11",
+            "author": {"@type": "Person", "name": "Teks Academy"}
+          }
+        }
+        `;
+
+      this.renderer.appendChild(this.document.head, script);
+    }
+  }
+
 }
 
 
